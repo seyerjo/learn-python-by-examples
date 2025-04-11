@@ -1,5 +1,9 @@
 # Learn Python by Examples
 
+[![Dev Branch](https://img.shields.io/badge/Dev%20Branch-main-blue.svg)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/seyerjo/learn-python-by-examples?label=Last%20commit)](https://github.com/seyerjo/learn-python-by-examples/commits/main)
+[![GitHub license](https://img.shields.io/github/license/seyerjo/learn-python-by-examples?label=License)](LICENSE)
+
 ## Table of Contents
 
 1. [Overview](#overview)
