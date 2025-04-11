@@ -2,14 +2,14 @@
 
 ## Table of Contents
 
-1. [Description](#description)
+1. [Overview](#overview)
 2. [Main Features](#main-features)
 3. [Quick Start Guide](#quick-start-guide)
 4. [Examples List](#examples-list)
 5. [Difficulty Levels](#difficulty-levels)
 6. [License](#license)
 
-## Description
+## Overview
 
 This repository contains a collection of Python examples designed to help learners understand various concepts in Python programming. The examples are organized by topic and include detailed comments to explain the code.
 
