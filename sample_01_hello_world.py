@@ -1,9 +1,5 @@
 # MAIN CODE
 
-"""
-Hello World! is displayed in console. We can use single
-or double quotes to wrap the text string to be displayed.
-"""
-
-print("Hello, World!")
-print('Hello, World!')
+"""Example of printing 'Hello, World!' to the console."""
+print("Hello, World!")  # Using double quotes
+print('Hello, World!')  # Using single quotes
