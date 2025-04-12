@@ -9,27 +9,34 @@ to document functions, classes, modules, etc.
 """
 
 # Inline comment after a line of code.
-number_x = 10  # This is an inline comment.
+INITIAL_VALUE = 10  # This is an inline comment.
 
-# Inline comment and a multi-line comment with single quotes inside a function.
+# Example of a functions with a docstring.
 
-
-def my_function():
-    '''This function calculates
-    the square of a number.'''
-    number_y = 5
-    # Calculates the square.
-    number_z = number_y * number_y
-    return number_z
+# This function calculates the square of a number.
 
 
-# Comment before a function call.
-result = my_function()
-print(result)  # Inline comment after a function call.
+def calculate_square(number):
+    """Calculate the square of a number."""
+    square_value = number * number
+    return square_value
 
-# Code commented ignored by the interpreter.
+# Example of calling a function and printing the result.
+
+
+def main():
+    """Main function to demonstrate example usage."""
+    # Call the function and print the result.
+    calculation_result = calculate_square(5)
+    print(calculation_result)  # Inline comment after a function call.
+
+
+if __name__ == "__main__":
+    main()
+
+# Code commented out, ignored by the interpreter.
 # if True:
-#    print("This code will not be executed")
+#     print("This code will not be executed")
 
 # Comment explaining a complex part of the code.
 # The following code block handles the ZeroDivisionError exception.
