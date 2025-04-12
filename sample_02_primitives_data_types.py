@@ -24,7 +24,7 @@ def main():
     print(type(string_variable))        # str
     print(type(list_variable))          # list
     print(type(tuple_variable))         # tuple
-    print(type(dictionary_variable))    # dict
+    print(type(dictionary_variable))    # dictionary
     print(type(set_variable))           # set
     print(type(boolean_variable))       # bool
     print(type(none_variable))          # NoneType
