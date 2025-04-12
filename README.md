@@ -11,7 +11,9 @@
 3. [Quick Start Guide](#quick-start-guide)
 4. [Examples List](#examples-list)
 5. [Difficulty Levels](#difficulty-levels)
-6. [License](#license)
+6. [Project Status](#project-status)
+7. [Code Quality](#code-quality)
+8. [License](#license)
 
 ## Overview
 
@@ -69,6 +71,14 @@ The difficulty of each example is indicated by the following icons:
 - 📗 **Basic**: Introduces the basics of the language and its syntax.
 - 📙 **Intermediate**: Covers more advanced topics and concepts.
 - 📕 **Advanced**: Demonstrates more complex and advanced techniques.
+
+## Project Status
+
+This project is actively maintained and updated periodically. New examples and modifications to existing ones are added regularly to enhance the learning experience.
+
+## Code Quality
+
+The code in this repository is formatted using autopep8 and adheres to the guidelines set by Pylint, ensuring high code quality and readability.
 
 ## License
 

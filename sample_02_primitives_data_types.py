@@ -4,8 +4,8 @@
 
 
 def main():
-    """Main function to demonstrate various primitive data types."""
-    # Variables with different data types.
+    """Main function."""
+    # Variables of different data types.
     integer_variable = 1
     float_variable = 3.14
     complex_variable = 1 + 2j

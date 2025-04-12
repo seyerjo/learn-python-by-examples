@@ -1,73 +1,84 @@
 # MAIN CODE
 
-"""Let's work with strings."""
+"""Example demonstrating various string operations in Python."""
 
-# Variables
-my_first_string = "123"
-my_second_string = "456"
-my_third_string = "Hip"
-my_fourth_string = "Hurra"
-my_large_string = """This is a large string
-that spans multiple lines
-and contains various characters."""
-my_other_string = "World"
 
-# The content in the variable 'my_first_string' is displayed in console.
-print(my_first_string)
-print("\n")  # Separation blank line.
+def main():
+    """Main function to demonstrate string operations."""
+    # Variables
+    first_string = "123"
+    second_string = "456"
+    hip_string = "Hip"
+    hurra_string = "Hurra"
+    large_string = """This is a large string
+    that spans multiple lines
+    and contains various characters."""
+    world_string = "World"
 
-# The content in the variable 'my_first_string' is displayed in console in triplicate.
-print(my_first_string * 3)
-print("\n")
+    # Displaying string content.
+    print(first_string)  # Output: 123
+    print()  # Print a blank line for separation
 
-# Concatenated strings.
-print(my_first_string + my_second_string)
-print("\n")
+    # Displaying string content in triplicate.
+    print(first_string * 3)  # Output: 123123123
+    print()
 
-# Strings duplicate and concatenation.
-print(((my_third_string + " ") * 2) + my_fourth_string)
-print("\n")
+    # Concatenated strings.
+    print(first_string + second_string)  # Output: 123456
+    print()
 
-# Strings duplicate and concatenation using 'Format'.
-print(f'{((my_third_string + " ") * 2)}Hurra')
-print("\n")
+    # Strings duplicate and concatenation.
+    print(((hip_string + " ") * 2) + hurra_string)  # Output: Hip Hip Hurra
+    print()
 
-# Strings length.
-print(len(my_large_string))
-print("\n")
+    # Using f-strings for concatenation.
+    print(f'{((hip_string + " ") * 2)}{hurra_string}')  # Output: Hip Hip Hurra
+    print()
 
-# Select characters from a string .
-print(my_other_string[0])
-print(my_other_string[1])
-print(my_other_string[2])
-print(my_other_string[3])
-print(my_other_string[4])
-print("\n")
+    # String length.
+    print(len(large_string))  # Output: length of large_string
+    print()
 
-# The string is displayed from the third character.
-print(my_other_string[2:])
-print("\n")
+    # Selecting characters from a string.
+    print(world_string[0])  # Output: W
+    print(world_string[1])  # Output: o
+    print(world_string[2])  # Output: r
+    print(world_string[3])  # Output: l
+    print(world_string[4])  # Output: d
+    print()
 
-# The first three characters are displayed.
-print(my_other_string[:3])
-print("\n")
+    # Slicing the string.
+    print(world_string[2:])  # Output: rld
+    print()
+    print(world_string[:3])  # Output: Wor
+    print()
+    print(world_string[:-1])  # Output: Worl
+    print()
+    print(world_string[::2])  # Output: Wrd
+    print()
 
-# Display the string from the beginning minus the last character.
-print(my_other_string[:-1])
-print("\n")
+    # Example of string concatenation using the '+' operator.
+    # Output: I am a citizen of the World
+    print("I am a citizen of the " + world_string)
+    print()
 
-# The odd letters of the string are displayed.
-print(my_other_string[::2])
-print("\n")
+    # Example of string formatting using f-strings.
 
-# Simple concatenation.
-print("I am a citizen of the " + my_other_string)
-print("\n")
+    # f-strings provide a modern and readable way to embed
+    # expressions inside string literals.
 
-# Concatenation with the 'Format' function.
-print(f"I am a citizen of the {my_other_string}")
-print("\n")
+    # The syntax f"{}" is used for string interpolation, where {}
+    # is replaced with the value of the variable inside the brackets.
 
-# Multiplicity with the 'Format' function.
-print(f"I am a citizen of the {my_other_string}, " * 20)
-print("\n")
+    # Output: I am a citizen of the World
+    print(f"I am a citizen of the {world_string}")
+    print()
+
+    # Example of string repetition and concatenation using f-strings.
+    # Output: repeated string
+    print(f"I am a citizen of the {world_string}, " * 20)
+    print()
+
+
+if __name__ == "__main__":
+    main()

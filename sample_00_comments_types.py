@@ -3,9 +3,9 @@
 # This is a single-line comment.
 
 """
-This is a multi-line comment also
-known as a docstring. It is often used
-to document functions, classes, modules, etc.
+This is a multi-line comment also known as a docstring.
+It is often used at the beginning of a module, function,
+or class to document functions, classes, modules, etc.
 """
 
 # Inline comment after a line of code.
@@ -28,6 +28,7 @@ def main():
     """Main function to demonstrate example usage."""
     # Call the function and print the result.
     calculation_result = calculate_square(5)
+    # The print() function is used to output text to the console.
     print(calculation_result)  # Inline comment after a function call.
 
 
@@ -38,7 +39,7 @@ if __name__ == "__main__":
 # if True:
 #     print("This code will not be executed")
 
-# Comment explaining a complex part of the code.
+# Comment explaining a part of the code.
 # The following code block handles the ZeroDivisionError exception.
 try:
     result = 10 / 0
