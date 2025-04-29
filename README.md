@@ -2,7 +2,7 @@
 
 Learn Python through practical and commented examples.
 
-[![Code Style: autopep8](https://img.shields.io/badge/Code%20Style-autopepe8-blue.svg)](https://github.com/hhatto/autopep8)
+[![Code Style: autopep8](https://img.shields.io/badge/Code%20Style-autopepe8-blue.svg)](https://github.com/hhatto/autopep8) [![License](https://img.shields.io/github/license/seyerjo/learn-python-by-examples)](./LICENSE)
 
 ## 🔍 Overview
 
