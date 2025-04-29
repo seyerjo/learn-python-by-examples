@@ -12,15 +12,15 @@ For a more detailed overview, see the [Project Overview](docs/public/project_ove
 
 ```mermaid
 graph LR
-    A[Basic Examples] --> B[Intermediate Examples]
-    B --> C[Advanced Examples]
-    A --> D[Types of comments]
-    A --> E[Hello World!]
-    B --> F[While iterations]
-    B --> G[For iterations]
-    C --> H[Recursive Functions]
-    C --> I[Binary Search Algorithm]
-
+    A[code] --> B[basic];
+    A --> C[intermediate];
+    A --> D[advanced];
+    B --> E[Types of comments];
+    B --> F[Hello World!];
+    C --> G[While iterations];
+    C --> H[For iterations];
+    D --> I[Recursive Functions];
+    D --> J[Binary Search Algorithm];
 ```
 
 ## ✨ Main Features
@@ -129,4 +129,16 @@ All examples in this repository are under the [MIT license](./LICENSE), allowing
 
 ## 📖 Full Documentation
 
-Comprehensive documentation for the project
+The project documentation is organized in the `/docs/public` directory. You can find the following documents:
+
+- **[Project Overview](docs/public/project_overview.md)**: Detailed overview of the project.
+- **[Features](docs/public/features.md)**: Description of the main features of the project.
+- **[Requirements](docs/public/requirements.md)**: System and software requirements for the project.
+- **[Setup and Installation Guide](docs/public/setup_and_installation.md)**: Step-by-step guide on how to set up and install the project.
+- **[Usage Guide](docs/public/usage_guide.md)**: Guide on how to use the project and its examples.
+- **[Code Style Guide](docs/public/code_style_guide.md)**: Coding standards and best practices followed in the project.
+- **[Contribution Guidelines](docs/public/contribution_guidelines.md)**: Guidelines for contributing to the project.
+- **[Code of Conduct](docs/public/code_of_conduct.md)**: Code of conduct for contributors and maintainers.
+- **[Changelog](docs/public/changelog.md)**: Record of changes made to the project.
+
+These documents provide comprehensive information about the project, its usage, and its development.
