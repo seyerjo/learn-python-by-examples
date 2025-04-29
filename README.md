@@ -2,20 +2,7 @@
 
 Learn Python through practical and commented examples.
 
-[![Code Style: autopep8](https://img.shields.io/badge/Code%20Style-autopep8-blue.svg)](https://github.com/hhatto/autopep8)
-
-## 📚 Table of Contents
-
-1. [Overview](#overview)
-2. [Main Features](#main-features)
-3. [Quick Start Guide](#quick-start-guide)
-4. [Examples List](#examples-list)
-5. [Difficulty Levels](#difficulty-levels)
-6. [Project Status](#project-status)
-7. [Code Quality](#code-quality)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Full Documentation](#full-documentation)
+[![Code Style: autopep8](https://img.shields.io/badge/Code%20Style-autopepe8-blue.svg)](https://github.com/hhatto/autopep8)
 
 ## 🔍 Overview
 
@@ -126,7 +113,7 @@ For more details on the project's status and development notes, refer to the doc
 
 ## 💻 Code Quality
 
-The code in this repository is formatted using autopep8 and adheres to the guidelines set by Pylint, ensuring high code quality and readability.
+The code in this repository is formatted using autopepe8 and adheres to the guidelines set by Pylint, ensuring high code quality and readability.
 
 For detailed coding standards, see the [Code Style Guide](docs/public/code_style_guide.md).
 

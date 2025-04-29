@@ -15,20 +15,19 @@ Before you begin, make sure you have completed the initial setup steps described
 The typical usage flow of the project involves cloning the repository (a one-time action), navigating through the difficulty level folders, selecting an example, reading its documentation, and running the Python code.
 
 ```mermaid
-graph TD
-    A[Start] --> B{Clone Repository<br>(If you haven't already)};
-    B -- Repository Cloned --> C[Navigate to Project Directory];
-    C --> D[Explore Level Folders<br>(basic, intermediate, advanced)];
+graph LR
+    A[Start] --> B[Clone Repository];
+    B --> C[Navigate to Project Directory];
+    C --> D[Explore Level Folders];
     D --> E[Select an Example];
-    E --> F[Read Documentation (.md)];
-    E --> G[Run Code (.py)];
+    E --> F[Read Documentation];
+    E --> G[Run Code];
     F --> H[Understand the Example];
     G --> I[See Result];
     H --> J[Continue Exploring];
     I --> J;
     J --> D;
     J --> K[End];
-
 ```
 
 _Flowchart illustrating the typical usage of the project._
@@ -69,15 +68,10 @@ Each code example has a corresponding `.md` file with the same name (except for 
 1. Open the `.md` file corresponding to the example you are viewing in your text editor or a Markdown viewer.
 
 2. Read the documentation to understand:
-
    - The purpose of the example.
-
    - The Python concepts it illustrates.
-
    - How the code works step-by-step.
-
    - The expected output.
-
    - Possible variations or points to consider.
 
 ## Expected Output
@@ -89,13 +83,9 @@ When running an example script, the expected output is that the code executes wi
 If you encounter issues when running an example:
 
 - **Python not found error:** Make sure Python is correctly installed and configured in your PATH. Refer to the [Setup and Installation Guide](setup_and_installation.md).
-
 - **Git not found error:** Make sure Git is correctly installed and configured in your PATH. Refer to the [Setup and Installation Guide](setup_and_installation.md).
-
 - **"File not found" error:** Verify that you are in the correct directory in your terminal and that the `.py` filename you are trying to run is correct.
-
 - **Syntax or execution errors in the code:** Carefully review the code and compare it with the documentation. There might be a typo or you might need to install a dependency (although initial examples should avoid this). If you believe there is an error in the example itself, consider reporting it through the contribution process.
-
 - **Output is not as expected:** Read the example's documentation again to ensure you have understood its purpose and how it should work.
 
 If you encounter a problem you cannot solve, you can search the [GitHub Issues](https://github.com/seyerjo/learn-python-by-examples/issues) to see if someone else has had the same problem, or open a new issue to ask for help.
