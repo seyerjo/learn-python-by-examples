@@ -49,51 +49,51 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 ### Basic Examples 📗
 
-- [Types of comments](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_00_comments_types.py)
+- [Types of comments](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
 
-- [Hello World!](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_01_hello_world.py)
+- [Hello World!](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
 
-- [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_02_primitives_data_types.py)
+- [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
 
-- [Character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_03_strings_operations.py)
+- [Character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
 
-- [Operators](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_04_operators.py)
+- [Operators](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
 
-- [Console user inputs](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_05_inputs.py)
+- [Console user inputs](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
 
-- [User inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_06_inputs_variables_and_strings.py)
+- [User inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_inputs_variables_and_strings.py)
 
-- [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_07_flow_control.py)
+- [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
 
-- [More](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_08_more_inputs_variables_and_strings.py) user inputs, global variables and character strings operations
+- [More](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py) user inputs, global variables and character strings operations
 
-- [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_09_escape_character_and_strings.py)
+- [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
 
 ### Intermediate Examples 📙
 
-- ['While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_10_while_iterations.py)
+- ['While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
 
-- [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_11_more_while_iterations.py)
+- [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
 
-- [Additional](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_12_additional_while_iterations.py) 'While'[ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_12_additional_while_iterations.py)
+- [Additional](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) 'While'[ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
 
-- ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_13_for_iterations.py)
+- ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
 
-- [More 'For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_14_more_for_iterations.py)
+- [More 'For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_14_more_for_iterations.py)
 
-- [Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_15_functions.py)
+- [Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_15_functions.py)
+
+- [Recursive Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_16_recursive_functions.py)
+
+- [Recursion Limit](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
 
 ### Advanced Examples 📕
 
-- [Recursive Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_16_recursive_functions.py)
+- [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_18_exhaustive_listing_algorithm.py)
 
-- [Recursion Limit](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_17_recursion_limit.py)
+- [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_solution_approximation_algorithm.py)
 
-- [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_18_exhaustive_listing_algorithm.py)
-
-- [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_19_solution_approximation_algorithm.py)
-
-- [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/sample_20_binary_search_algorithm.py)
+- [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_binary_search_algorithm.py)
 
 ## 📊 Difficulty Levels
 
