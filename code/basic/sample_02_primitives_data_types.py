@@ -4,7 +4,7 @@
 
 
 def main():
-    """Main function."""
+    """Main function to demonstrate example usage."""
     # Variables of different data types.
     integer_variable = 1
     float_variable = 3.14

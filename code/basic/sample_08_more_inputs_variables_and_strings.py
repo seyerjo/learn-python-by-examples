@@ -1,34 +1,35 @@
-#  MAIN CODE
+# MAIN CODE
 
-#  Variables are declared and initialized.
-name_first_user = ""
-name_second_user = ""
+"""Demonstrate user input handling and comparison with multiple users.
 
-age_first_user = 0
-age_second_user = 0
+Collects names and ages from two users and compares their ages.
+"""
 
 
-#  The name and age of the first user are asked.
-print(">>> FIRST USER <<<")
-name_first_user = input("Hi, what's your name?: ")
-print(f"Hello {name_first_user}")
-age_first_user = int(input("And how old are you?: "))
-print("Thank you very much for the information!")
-print("\n")
+def main():
+    """Main function to demonstrate multi-user input and comparison."""
+    # Get first user's information
+    print(">>> FIRST USER <<<")
+    name_first = input("Hi, what's your name?: ")
+    print(f"Hello {name_first}")
+    age_first = int(input("And how old are you?: "))
+    print("Thank you very much for the information!", end='\n\n')
 
-#  The name and age of the second user are asked too.
-print(">>> SECOND USER <<<")
-name_second_user = input("Hi to you too,what's your name?: ")
-print(f"Hello {name_second_user}")
-age_second_user = int(input("And how old are you?: "))
-print("Thank you very much for the information!")
-print("\n")
+    # Get second user's information
+    print(">>> SECOND USER <<<")
+    name_second = input("Hi to you too, what's your name?: ")
+    print(f"Hello {name_second}")
+    age_second = int(input("And how old are you?: "))
+    print("Thank you very much for the information!", end='\n\n')
 
-#  The ages are compared and, depending on the result, one message or another is displayed.
-if age_first_user > age_second_user:
-    print(name_first_user + ", you are older than " + name_second_user)
-elif age_first_user < age_second_user:
-    print(name_first_user + ", you are younger than " + name_second_user)
-else:
-    print(name_first_user + ", you are the same age as " + name_second_user)
-print("\n")
+    # Compare ages and show result
+    if age_first > age_second:
+        print(f"{name_first}, you are older than {name_second}", end='\n\n')
+    elif age_first < age_second:
+        print(f"{name_first}, you are younger than {name_second}", end='\n\n')
+    else:
+        print(f"{name_first}, you are the same age as {name_second}", end='\n\n')
+
+
+if __name__ == "__main__":
+    main()

@@ -1,42 +1,34 @@
 # MAIN CODE
 
-"""Let's work with inputs."""
+"""Demonstrate different ways to handle user input in Python.
 
-# The user is asked in the console and the answer is stored in a variable.
-# The console response always returns a string.
-name = input("What's your name?: ")
-print("\n")
-
-# Different ways to display user response in console.
-print(name)
-print("\n")
-
-print("Your name is " + name)
-print("\n")
-
-print("Your name is", name)
-print("\n")
-
-print(f"Your name is {name}")
-print("\n")
+Shows string and numeric input handling, type conversion,
+and various output formatting methods.
+"""
 
 
-# The user is asked for a number in the console and the answer is stored in a variable.
-# The console response always returns a string.
-number = input("Enter a number that will be multiplied by two: ")
-print("\n")
+def main():
+    """Main function to demonstrate input handling examples."""
+    # String input example
+    name = input("What's your name?: ")
+    print()  # Single blank line
 
-# If you want to operate with the number, you have to convert it to an integer.
-number = int(number) * 2
+    # Different output formatting methods
+    print(name)
+    print("Your name is " + name)
+    print("Your name is", name)
+    # Using end='\n\n' to print two newlines after the string
+    print(f"Your name is {name}", end='\n\n')
 
-# To show it again in console, is not necessary to convert it to string.
-# print() function automatically converts it.
-print(number)
-print("\n")
+    # Numeric input with conversion
+    number = input("Enter a number that will be multiplied by two: ")
+    number = int(number) * 2
+    print(number, end='\n\n')
 
-#  Another way.
-number = int(input("Enter a number that will be multiplied by two: "))
-print("\n")
+    # Combined input and conversion
+    number = int(input("Enter a number that will be multiplied by two: "))
+    print(number * 2)
 
-number = number * 2
-print(number)
+
+if __name__ == "__main__":
+    main()

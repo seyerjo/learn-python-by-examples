@@ -81,7 +81,7 @@ def demonstrate_identity_operators():
 
 
 def main():
-    """Main function."""
+    """Main function to demonstrate example usage."""
     demonstrate_arithmetic_operators()
     demonstrate_comparison_operators()
     demonstrate_logical_operators()
