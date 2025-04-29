@@ -6,7 +6,7 @@
 
 # Best practices for variable names in Python:
 #   . The name may not begin with a number
-#   . The use of hyphens ‘-’ is not allowed.
+#   . The use of hyphens '-' is not allowed.
 #   . Spaces are not allowed.
 #   . The use of special characters is not allowed.
 #   . The use of reserved words is not allowed.
@@ -26,7 +26,7 @@ variable5 = "string"
 myVariable = "33"
 
 # As a good practice it is advisable to name variables in lower case and with
-# underscores ‘_’, also known as ‘snake case’.
+# underscores '_', also known as 'snake case'.
 variable_one = 1
 variable_two = 2.50
 variable_three = "string"
@@ -63,7 +63,7 @@ greeting_string = ""
 nombre = input("What's your name?: ")
 print("\n")
 
-#  We assign to the variable a string consisting of a text and the variable ‘name’.
+#  We assign to the variable a string consisting of a text and the variable 'name'.
 greeting_string = "Hi " + nombre + ", my best regards."
 
 #  String variable is displayed in console.
@@ -75,7 +75,7 @@ print(
     "Did you know that the length of this greeting is "
     + str(len(greeting_string))
     + " characters?."
-    # The system function ‘len’ returns an integer that has to be converted into
+    # The system function 'len' returns an integer that has to be converted into
     # a string to be displayed on the console.
 )
 print("\n")
