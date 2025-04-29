@@ -19,9 +19,19 @@
    - **Error Handling:** Correcting documentation errors or inaccuracies.
 
 3. **FEAT-03:** Repository Structure
+
    - **Description:** An organized repository structure that is easy to navigate.
    - **Associated Requirements:** FR-04
    - **Detailed Operation:** The repository is structured with clear directories and file naming conventions.
    - **Edge Cases:** Handling large numbers of examples and maintaining organization.
    - **Validation Rules:** Ensuring the structure remains logical and easy to follow.
    - **Error Handling:** Addressing any structural issues that arise from contributions or updates.
+
+4. **FEAT-04:** New Feature - Intermediate and Advanced Examples
+
+   - **Description:** Addition of new examples for intermediate and advanced levels, covering topics such as functions, iterations, and recursive functions.
+   - **Associated Requirements:** FR-01, FR-02, FR-03
+   - **Detailed Operation:** New examples are added to the respective directories (`intermediate`, `advanced`) with detailed documentation.
+   - **Edge Cases:** Ensuring new examples are correctly classified by difficulty.
+   - **Validation Rules:** New examples must follow the existing code style and documentation standards.
+   - **Error Handling:** Reviewing new examples for accuracy and clarity.
