@@ -1,14 +1,22 @@
-#  MAIN CODE
+# MAIN CODE
 
-#  Variable is declared.
-counter = 0
+"""Demonstrate basic while loop iteration in Python.
 
-#  The loop will continue to run as long as the counter
-#  is less than 10. In each iteration of the loop, the
-#  value of the counter is increased by one.
-while counter < 10:
-    print(counter)
-    counter += 1
+Shows a simple counter that increments from 0 to 9.
+"""
 
-#  Once the loop has finished running, a blank line is printed.
-print("\n")
+
+def main():
+    """Main function demonstrating while loop usage."""
+    counter = 0  # Initialize counter
+
+    # Loop while counter is less than 10
+    while counter < 10:
+        print(counter)
+        counter += 1  # Increment counter
+
+    print()  # Final newline
+
+
+if __name__ == "__main__":
+    main()

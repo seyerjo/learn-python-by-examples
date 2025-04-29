@@ -1,34 +1,27 @@
-#  MAIN CODE
+# MAIN CODE
 
-#  Declared a list of numbers.
-numbers = [1, 2, 3, 4, 5]
+"""Demonstrate for loops with list operations in Python.
 
-#  Print the list of numbers.
-print("For this list of numbers:")
-print(numbers)
+Shows how to calculate sum and average of numbers in a list.
+"""
 
-#  Print a blank line
-print("\n")
 
-#  Declared a variable to hold the sum of the numbers.
-sum = 0
+def main():
+    """Main function demonstrating list operations with for loops."""
+    numbers = [1, 2, 3, 4, 5]
+    print(f"For this list of numbers: {numbers}", end='\n\n')
 
-#  Use a for loop to iterate over the list of numbers.
-for number in numbers:
-    # Add each number to the sum.
-    sum += number
+    # Calculate sum of numbers
+    total = 0  # Avoid using 'sum' as it's a built-in function
+    for num in numbers:
+        total += num
 
-#  Print the sum of numbers.
-print("The sum is: " + str(sum))
+    print(f"The sum is: {total}", end='\n\n')
 
-#  Print a blank line
-print("\n")
+    # Calculate average
+    average = total / len(numbers)
+    print(f"The average is: {average:.2f}", end='\n\n')
 
-#  Calculate the average of the numbers.
-average = sum / len(numbers)
 
-#  Print the result.
-print("The average of the numbers is:", average)
-
-#  Print a blank line
-print("\n")
+if __name__ == "__main__":
+    main()

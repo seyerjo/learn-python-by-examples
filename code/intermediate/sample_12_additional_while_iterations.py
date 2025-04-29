@@ -1,28 +1,33 @@
-#  MAIN CODE
+# MAIN CODE
 
-#  This code uses two nested loops to print a series of numbers.
+"""Demonstrate nested while loops with break statement in Python.
 
-#  Two variables are declared for two counters, one for each loop.
-external_counter = 0
-internal_counter = 0
+Shows how to use nested loops with conditional break to control iterations.
+The inner loop breaks when counter reaches 3, despite having a higher limit.
+"""
 
-#  The outer loop will run 5 times.
-while external_counter < 5:
-  #  The inner loop will run, in principle, 6 times (in the end there will be only three).
-  while internal_counter < 6:
-    #  Print the current values of the counters.
-    print(external_counter, internal_counter)
-    #  Increment the internal counter.
-    internal_counter += 1
 
-    #  If the internal counter is greater than or equal to 3, break out of the loop
-    if internal_counter >= 3:
-      break
+def main():
+    """Main function demonstrating nested while loops with break."""
+    outer_count = 0  # Outer loop counter
 
-  #  Increment the external counter
-  external_counter += 1
-  #  Reset the internal counter to 0
-  internal_counter = 0
+    # Outer loop runs 5 times
+    while outer_count < 5:
+        inner_count = 0  # Inner loop counter
 
-#  Print a blank line
-print("\n")
+        # Inner loop breaks when count reaches 3
+        while inner_count < 6:
+            print(outer_count, inner_count)
+            inner_count += 1
+
+            # Exit inner loop early when count reaches 3
+            if inner_count >= 3:
+                break
+
+        outer_count += 1  # Increment outer counter
+
+    print()  # Final newline
+
+
+if __name__ == "__main__":
+    main()

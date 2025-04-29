@@ -1,24 +1,28 @@
-#  MAIN CODE
+# MAIN CODE
 
-#  This code uses two nested loops to print a series of numbers.
+"""Demonstrate nested while loops in Python.
 
-#  Two variables are declared for two counters, one for each loop.
-external_counter = 0
-internal_counter = 0
+Shows how to use nested loops to print combinations of numbers.
+"""
 
-#  The outer loop will run 5 times.
-while external_counter < 5:
-  #  The inner loop will run 6 times.
-  while internal_counter < 6:
-    #  Print the current values of the counters.
-    print(external_counter, internal_counter)
-    #  Increment the internal counter.
-    internal_counter += 1
 
-  #  Increment the external counter.
-  external_counter += 1
-  #  Reset the internal counter to 0.
-  internal_counter = 0
+def main():
+    """Main function demonstrating nested while loops."""
+    outer_count = 0  # Outer loop counter
 
-#  Print a blank line.
-print("\n")
+    # Outer loop runs 5 times
+    while outer_count < 5:
+        inner_count = 0  # Inner loop counter
+
+        # Inner loop runs 6 times
+        while inner_count < 6:
+            print(outer_count, inner_count)
+            inner_count += 1  # Increment inner counter
+
+        outer_count += 1  # Increment outer counter
+
+    print()  # Final newline
+
+
+if __name__ == "__main__":
+    main()

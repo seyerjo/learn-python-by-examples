@@ -1,22 +1,34 @@
-#  MAIN CODE
+# MAIN CODE
 
+"""Demonstrate Python's recursion limit and how to modify it.
+
+Shows the default recursion limit, how to check it, and how to change it,
+with warnings about modifying this limit.
+"""
+
+# Import sys module to access system-specific parameters and functions
+# including getrecursionlimit() and setrecursionlimit()
 import sys
 
-"""
-The default limit is 1000 recursive calls. It can be seen by calling
-'sys.getrecursionlimit()'. The maximum size of the recursion stack can be
-changed using the 'sys.setrecursionlimit(n)' statement. However, if this
-limit is being reached, it is usually a good idea to think about whether
-the recursive algorithm is really the one that best solves the problem.
 
-"""
-print(sys.getrecursionlimit())
-print("\n")
+def main():
+    """Main function to demonstrate recursion limit operations."""
+    # Show default recursion limit
+    print(f"Default recursion limit: {sys.getrecursionlimit()}", end='\n\n')
 
-sys.setrecursionlimit(999)
-print(sys.getrecursionlimit())
-print("\n")
+    # Demonstrate changing the limit
+    sys.setrecursionlimit(999)
+    print(f"New recursion limit set to: {sys.getrecursionlimit()}", end='\n\n')
 
-sys.setrecursionlimit(1000)
-print(sys.getrecursionlimit())
-print("\n")
+    # Reset to default
+    sys.setrecursionlimit(1000)
+    print(
+        f"Recursion limit reset to default: {sys.getrecursionlimit()}", end='\n\n')
+
+    # Warning about changing recursion limit
+    print("Warning: Modifying recursion limit can lead to stack overflow!")
+    print("Consider using iterative solutions for deep recursion cases.", end='\n\n')
+
+
+if __name__ == "__main__":
+    main()

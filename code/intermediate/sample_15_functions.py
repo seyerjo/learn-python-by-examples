@@ -1,53 +1,50 @@
-#  MAIN CODE
+# MAIN CODE
 
-def sum(a, b):
-    """
-    This Python function takes two arguments (a and b) and returns the sum of
-    the two as a result.
+"""Demonstrate function definitions and usage in Python.
+
+Shows basic function syntax, docstrings, parameters and return values.
+"""
+
+
+def sum_numbers(a, b):
+    """Return the sum of two numbers.
 
     Args:
-        a (integer): First argument.
-        b (integer): Second argument.
+        a (int): First number
+        b (int): Second number
 
     Returns:
-        integer: Returns the sum of the two arguments.
+        int: Sum of a and b
     """
-    total = a + b
-    return total
+    return a + b
 
-#  This line prints the result of the sum function with arguments 3 and 2.
-print("\n")  # Line break.
-print(sum(3, 2))
-print("\n")  # Line break.
 
 def full_name(name, last_name, inverse=False):
-    """
-    This function takes two arguments, 'name' and 'last_name', and combines them into a
-    string with the first name first followed by the last name. If the optional argument
-    'inverse' is set to True, then the names will be reversed with the last name first
-    followed by the first name. The function will return the resulting string.
+    """Combine first and last name, with optional reverse order.
 
     Args:
-        name (string): name
-        last_name (string): last name
-        inverse (bool, optional): inverse order, defaults to False.
+        name (str): First name
+        last_name (str): Last name
+        inverse (bool, optional): Reverse name order if True. Defaults to False.
 
     Returns:
-        string: The function returns the first and last name depending on the arguments.
+        str: Combined name string
     """
     if inverse:
         return f"{last_name} {name}"
-    else:
-        return f"{name} {last_name}"
+    return f"{name} {last_name}"
 
-# Print the full name without the inverse parameter.
-print(full_name("Michael", "Smith"))
-print("\n")  # Line break.
 
-# Print the full name with the inverse parameter.
-print(full_name("Michael", "Smith", inverse=True))
-print("\n")  # Line break.
+def main():
+    """Main function demonstrating function usage."""
+    # Demonstrate sum_numbers function
+    print(sum_numbers(3, 2), end='\n\n')
 
-# Print the full name using keyword arguments
-print(full_name(last_name="Smith", name="Michael"))
-print("\n")  # Line break.
+    # Demonstrate full_name function variations
+    print(full_name("Michael", "Smith"), end='\n\n')
+    print(full_name("Michael", "Smith", inverse=True), end='\n\n')
+    print(full_name(last_name="Smith", name="Michael"), end='\n\n')
+
+
+if __name__ == "__main__":
+    main()

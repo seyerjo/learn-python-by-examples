@@ -1,62 +1,49 @@
-#  VARIABLES
+# MAIN CODE
 
-#  Stores the number entered by the user.
-value = 0
+"""Demonstrate recursive functions in Python.
 
-# FUNCTIONS
+Shows factorial calculation and recursive user input validation.
+"""
+
 
 def factorial(n):
-    """
-    Calculate the factorial of 'n'.
+    """Calculate the factorial of a positive integer recursively.
 
     Args:
-        - n (integer) > 0.
+        n (int): Positive integer to calculate factorial for
 
-    The function returns factorial of 'n'.
-    If 'n' is equal to 1, this value is returned directly as a result of the function.
-    The function is recursive because it calls itself.
-
+    Returns:
+        int: Factorial of n
     """
-
     if n == 1:
         return 1
-    else:
-        return n * factorial(n - 1)
+    return n * factorial(n - 1)
 
-def request_number():
+
+def get_positive_number():
+    """Recursively request a positive integer from the user.
+
+    Returns:
+        int: Valid positive integer entered by user
     """
-    Prompts the user to enter an integer greater than zero.
+    try:
+        num = int(input("Enter a positive integer: "))
+        if num > 0:
+            return num
+        print("Number must be greater than 0. Try again.")
+        return get_positive_number()
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return get_positive_number()
 
-    Args:
-        - None.
 
-    The character entered by the user is converted to an integer.
-    The entered value is assigned to the global variable 'value'.
-    The function is recursive because it calls itself.
+def main():
+    """Main function to demonstrate recursive functions."""
+    print("\n>>> Factorial Calculator <<<", end='\n\n')
 
-    """
+    number = get_positive_number()
+    print(f"\nThe factorial of {number} is {factorial(number)}", end='\n\n')
 
-    #  The user is prompted for the value.
-    value = int(input("Enter an integer greater than zero, please: "))
 
-    #  If the global variable 'value' is greater than zero, the factorial of the value
-    #  entered by the user is calculated and displayed on the console after a line break.
-
-    #  If the global variable 'value' is not greater or equal than zero, the user is
-    #  prompted again on the console after a line break.
-    if value > 0:
-        print("\n")
-        print("El factorial de " + str(value) + " es " + str(factorial(value)))
-    else:
-        print("\n")
-        request_number()
-
-#  MAIN CODE
-
-#  Presentation of the routine in the console between a pair of line breaks.
-print("\n")
-print(">>> Calculate the factorial of a number <<<")
-print("\n")
-
-# The user is prompted for a number.
-request_number()
+if __name__ == "__main__":
+    main()
