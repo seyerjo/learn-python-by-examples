@@ -35,36 +35,32 @@
 
 """
 
-#  MAIN CODE
 
-#  Variables are declared.
+def main():
+    """Main function demonstrating solution approximation algorithm."""
+    # Set precision level (epsilon) and step size
+    epsilon = 0.01  # Controls accuracy of approximation
+    step = epsilon**2  # Smaller step for finer approximation
 
-#  Set the precision level of the algorithm. The more precision, the more computation time.
-#  You must choose between the speed in obtaining the result versus the precision.
-epsilon = 0.01
+    # Get target number from user
+    target = int(input("Enter an integer number: "))
+    print()  # Blank line
 
-#  Step of the algorithm. Epsilon squared is smaller than epsilon.
-step = epsilon**2
+    # Initialize guess and perform approximation
+    guess = 0.0
+    while abs(guess**2 - target) >= epsilon and guess <= target:
+        print(
+            f"Current error: {abs(guess**2 - target):.4f}, Guess: {guess:.4f}")
+        guess += step
 
-#  Response variable.
-response = 0.0
+    print()  # Blank line
 
-#  Get number from user.
-objective = int(input("Enter a integer number, please: "))
+    # Check if approximation was successful
+    if abs(guess**2 - target) < epsilon:
+        print(f"Approximate square root of {target} is {guess:.4f}")
+    else:
+        print(f"Could not find square root of {target} within given precision")
 
-#  Line break.
-print("\n")
 
-#  Loop until the square root of the response is within the epsilon margin.
-while abs(response**2 - objective) >= epsilon and response <= objective:
-    print(abs(response**2 - objective), response)
-    response += step
-
-#  Line break.
-print("\n")
-
-#  If the square root of the response is within the epsilon margin, print the response.
-if abs(response**2 - objective) >= epsilon:
-    print(f"The square root of {objective} could not be found.")
-else:
-    print(f"The square root of {objective} is {response}.")
+if __name__ == "__main__":
+    main()

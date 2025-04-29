@@ -18,35 +18,36 @@
 
 """
 
-#  MAIN CODE
 
-#  'objective' is assigned the value of the integer input by the user.
-objective = int(input("Enter a integer number: "))
-print("\n")  #  Line break.
+def main():
+    """Main function demonstrating binary search algorithm for square root."""
+    # Get target number from user
+    target = int(input("Enter a positive integer number: "))
+    print()  # Blank line
 
-# 'epsilon' is assigned a small value to define the precision of the result.
-epsilon = 0.01
+    if target < 0:
+        print("Error: Cannot calculate square root of negative numbers")
+        return
 
-#  'low_limit' and 'high_limit' are initialized to 0.0 and the maximum of 1.0 and the objective respectively.
-low_limit = 0.0
-high_limit = max(1.0, objective)
+    epsilon = 0.01  # Precision level
+    low = 0.0
+    high = max(1.0, target)
+    guess = (high + low) / 2  # Initial guess
 
-#  'response' is initialized to the average of the low_limit and high_limit.
-response = (high_limit + low_limit) / 2
+    # Binary search loop
+    while abs(guess**2 - target) >= epsilon:
+        print(f"Search range: [{low:.4f}, {high:.4f}], Guess: {guess:.4f}")
 
-#  While loop is used to find the square root of the objective until the difference between the
-#  response squared and the objective is smaller than the epsilon.
-while abs(response**2 - objective) >= epsilon:
-    print(f"Low Limit = {low_limit}, High Limit = {high_limit}, Response = {response}")
+        if guess**2 < target:
+            low = guess
+        else:
+            high = guess
 
-    # The 'low_limit' and 'high_limit' are adjusted accordingly in the while loop.
-    if response**2 < objective:
-        low_limit = response
-    else:
-        high_limit = response
+        guess = (high + low) / 2  # New guess
 
-    response = (high_limit + low_limit) / 2
+    print()  # Blank line
+    print(f"The square root of {target} is approximately {guess:.4f}")
 
-# Finally, the square root of the objective is printed out.
-print("\n")  #  Line break.
-print(f"The square root of {objective} is {response}")
+
+if __name__ == "__main__":
+    main()

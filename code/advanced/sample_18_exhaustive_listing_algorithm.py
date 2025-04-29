@@ -18,30 +18,27 @@
 
 """
 
-#  MAIN CODE
 
-#  Variables are declared.
-objective = 0
-response = 0
+def main():
+    """Main function to demonstrate exhaustive listing algorithm."""
+    # Get number from user
+    target_number = int(input("Enter an integer number: "))
+    print()  # Blank line
 
-#  The square root of a number that we will request from the user will be calculated.
-objective = int(input("Enter a integer number, please: "))
+    # Find square root by exhaustive listing
+    guess = 0
+    while guess**2 < target_number:
+        print(guess)  # Show current guess
+        guess += 1    # Increment guess
 
-#  Line break.
-print("\n")
+    print()  # Blank line
 
-#  If the stored in 'response' squared is less than the number entered by the user...
-while response**2 < objective:
-    print(response)  #  'Response' is printed.
-    response += 1  #  It iterates by adding one to response.
+    # Check if perfect square was found
+    if guess**2 == target_number:
+        print(f"The square root of {target_number} is {guess}")
+    else:
+        print(f"{target_number} does not have an exact square root")
 
-#  Line break.
-print("\n")
 
-#  If after iterating 'response' raised to the square, it is obtained that it is equal to the number entered by the user...
-if response**2 == objective:
-    #  Square root can be calculated.
-    print(f"The square root of {objective} is {response}")
-else:
-    #  If not, the number entered by the user does not have an exact square root.
-    print(f"{objective} does not have an exact square root")
+if __name__ == "__main__":
+    main()
