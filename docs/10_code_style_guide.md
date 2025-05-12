@@ -84,17 +84,37 @@ Follow the naming conventions recommended by PEP 8:
 
 - Use iterators and generators for working with large datasets efficiently.
 
+# Code Style Guide: Learn Python by Examples
+## Naming Conventions
+
+- Use descriptive and meaningful names for variables, functions, classes, and modules.
+- Variable and function names should be written in `snake_case`.
+- Class names should use `CamelCase`.
+- Constants should be written in `UPPER_SNAKE_CASE`.
+- Private variables and functions should start with a single underscore (`_`).
+- Avoid abbreviations unless they are well known and improve clarity.
+
+## Recommended Patterns
+
+- Follow the Single Responsibility Principle: each function or class should have one clear purpose.
+- Use list comprehensions and generator expressions for concise and readable data transformations.
+- Prefer explicit over implicit code; make logic clear and direct.
+- Use context managers (`with` statements) for resource management (files, locks, etc.).
+- Document functions and classes with clear docstrings following the project's docstring style.
+- Handle exceptions specifically and provide informative error messages.
+- Use type hints to improve code readability and facilitate static analysis.
+
 ## Anti-Patterns to Avoid
 
 - Avoid importing unused modules or functions.
-
 - Avoid single-letter variable names (except in short loops where context is obvious, like `i` or `j`).
-
 - Avoid global imports of all content from a module (`from module import *`).
-
 - Avoid code duplication. If you need to perform the same task in multiple places, consider creating a function.
-
 - Avoid excessive use of obvious comments that simply repeat the code. Comments should explain _why_ something is done, not _what_ is done.
+- Avoid deeply nested code blocks; refactor into smaller functions if necessary.
+- Do not ignore exceptions silently; always handle or log them appropriately.
+- Avoid hardcoding values; use constants or configuration files.
+- Do not use mutable default arguments in function definitions.
 
 ## Linting and Formatting Tools
 
