@@ -65,7 +65,7 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 -   [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
 
--   [More](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py) user inputs, global variables and character strings operations
+-   [More user inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py)
 
 -   [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
 
@@ -75,7 +75,7 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 -   [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
 
--   [Additional](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) 'While'[ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
+-   [Additional 'While' ](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
 
 -   ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
 

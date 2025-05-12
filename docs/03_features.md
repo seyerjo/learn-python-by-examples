@@ -2,65 +2,49 @@
 
 1. **FEAT-01:** Collection of Python Code Examples
 
-   - **Description:** A comprehensive collection of Python code examples covering various concepts and difficulty levels.
-   - **Associated Requirements:** FR-01, FR-02, FR-03
-   - **Detailed Operation:** Users can browse through the examples, which are organized by difficulty and topic.
-   - **Edge Cases:**
-     - Examples with unexpected input types (e.g., string instead of int).
-     - Handling empty or null input values in code samples.
-     - Processing extremely large or small numeric values.
-     - Examples that require external resources (e.g., files, network) and those resources are missing or inaccessible.
-   - **Validation Rules:**
-     - All code examples must be syntactically correct and executable.
-     - Examples must include input validation where appropriate.
-     - Each example should handle and document edge cases explicitly.
-   - **Error Handling:**
-     - If an example fails due to invalid input, a clear error message is provided in the output or comments.
-     - For examples involving external services (e.g., API calls), the code should handle connection errors and timeouts gracefully, showing how to catch exceptions and log or display user-friendly messages.
-     - If permissions are insufficient (e.g., file write access), the example must demonstrate catching the exception and reporting the issue.
-     - All error scenarios are documented with sample outputs or comments explaining the expected behavior.
+    - **Description:** A comprehensive collection of Python code examples covering various concepts and difficulty levels.
+    - **Associated Requirements:** FR-01, FR-02
+    - **Detailed Operation:** Users can browse through the examples, which are organized by difficulty and topic.
+    - **Edge Cases:**
+        - Examples with unexpected input types (e.g., string instead of int).
+        - Handling empty or null input values in code samples.
+        - Processing extremely large or small numeric values.
+        - Examples that require external resources (e.g., files, network) and those resources are missing or inaccessible.
+    - **Validation Rules:**
+        - All code examples must be syntactically correct and executable.
+        - Examples must include input validation where appropriate.
+        - Each example should handle and document edge cases explicitly.
+    - **Error Handling:**
+        - If an example fails due to invalid input, a clear error message is provided in the output or comments.
+        - For examples involving external services (e.g., API calls), the code should handle connection errors and timeouts gracefully, showing how to catch exceptions and log or display user-friendly messages.
+        - If permissions are insufficient (e.g., file write access), the example must demonstrate catching the exception and reporting the issue.
+        - All error scenarios are documented with sample outputs or comments explaining the expected behavior.
 
 2. **FEAT-02:** Documentation for Examples
 
-   - **Description:** Clear and concise documentation for each code example, explaining its purpose and usage.
-   - **Associated Requirements:** FR-03
-   - **Detailed Operation:** Documentation is provided alongside each example, explaining the code and its expected output.
-   - **Edge Cases:**
-     - Documentation must address cases where code behavior changes due to input variations.
-     - Updates are required if code changes or new edge cases are discovered.
-   - **Validation Rules:**
-     - Documentation must be accurate, up-to-date, and reflect all known edge cases and error handling strategies.
-   - **Error Handling:**
-     - If documentation is found to be incorrect or misleading, it must be corrected immediately.
-     - Examples of documentation errors (e.g., outdated parameter descriptions) are tracked and resolved.
+    - **Description:** Clear and concise documentation for each code example, explaining its purpose and usage.
+    - **Associated Requirements:** FR-03, FR-04, FR-06
+    - **Detailed Operation:** Documentation is provided alongside each example, explaining the code and its expected output.
+    - **Edge Cases:**
+        - Documentation must address cases where code behavior changes due to input variations.
+        - Updates are required if code changes or new edge cases are discovered.
+    - **Validation Rules:**
+        - Documentation must be accurate, up-to-date, and reflect all known edge cases and error handling strategies.
+    - **Error Handling:**
+        - If documentation is found to be incorrect or misleading, it must be corrected immediately.
+        - Examples of documentation errors (e.g., outdated parameter descriptions) are tracked and resolved.
 
 3. **FEAT-03:** Repository Structure
 
-   - **Description:** An organized repository structure that is easy to navigate.
-   - **Associated Requirements:** FR-04
-   - **Detailed Operation:** The repository is structured with clear directories and file naming conventions.
-   - **Edge Cases:**
-     - Managing a large number of examples without losing clarity.
-     - Handling contributions that do not follow the established structure.
-     - Ensuring cross-platform compatibility for file paths.
-   - **Validation Rules:**
-     - All new files and directories must adhere to naming conventions and placement rules.
-   - **Error Handling:**
-     - If a contribution breaks the structure, maintainers must provide feedback and request corrections.
-     - Automated checks may reject PRs that do not comply with the structure.
-
-4. **FEAT-04:** New Feature - Intermediate and Advanced Examples
-
-   - **Description:** Addition of new examples for intermediate and advanced levels, covering topics such as functions, iterations, and recursive functions.
-   - **Associated Requirements:** FR-01, FR-02, FR-03
-   - **Detailed Operation:** New examples are added to the respective directories (`intermediate`, `advanced`) with detailed documentation.
-   - **Edge Cases:**
-     - Misclassification of example difficulty (e.g., an advanced example placed in the intermediate folder).
-     - Examples that require complex input or produce large outputs.
-     - Handling recursion depth limits or stack overflows in recursive examples.
-   - **Validation Rules:**
-     - All new examples must be reviewed for correct classification and adherence to code style and documentation standards.
-   - **Error Handling:**
-     - If an example causes a runtime error (e.g., RecursionError), the documentation must explain the cause and suggest mitigation (e.g., input limits).
-     - For examples requiring permissions (e.g., file system access), the code must handle PermissionError and document the expected behavior.
-     - Any failure in adding or running new examples must be logged and addressed before merging.
+    - **Description:** An organized repository structure that is easy to navigate.
+    - **Associated Requirements:** FR-02, FR-05
+    - **Detailed Operation:** The repository is structured with clear directories and file naming conventions.
+    - **Edge Cases:**
+        - Managing a large number of examples without losing clarity.
+        - Handling contributions that do not follow the established structure.
+        - Ensuring cross-platform compatibility for file paths.
+    - **Validation Rules:**
+        - All new files and directories must adhere to naming conventions and placement rules.
+    - **Error Handling:**
+        - If a contribution breaks the structure, maintainers must provide feedback and request corrections.
+        - Automated checks may reject PRs that do not comply with the structure.

@@ -33,7 +33,7 @@ The project relies on a set of well-established technologies suitable for an edu
 ## Other Relevant Technologies
 
 -   **Mermaid:** Used for generating diagrams within Markdown documentation, improving clarity and visual understanding of project structure and workflows.
--   **Prettier/Black (optional):** Formatting tools for Markdown and Python code, respectively, to ensure code and documentation consistency.
+-   **Prettier/autopep8:** Formatting tools for Markdown and Python code, respectively, to ensure code and documentation consistency.
 
 ## Considered and Discarded Technologies
 

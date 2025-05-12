@@ -10,21 +10,21 @@ Before you begin, make sure you have the following installed on your system:
 
 1.  **Python:** You will need to have Python 3.x installed. You can download it from the official Python website: <https://www.python.org/downloads/>
 
-    - To check if Python is installed and which version you have, open a terminal or command prompt and run:
+    -   To check if Python is installed and which version you have, open a terminal or command prompt and run:
 
-      ```bash
-      python --version
-      # or
-      python3 --version
-      ```
+        ```bash
+        python --version
+        # or
+        python3 --version
+        ```
 
 2.  **Git:** You will need Git to clone the project repository. You can download it from the official Git website: <https://git-scm.com/downloads>
 
-    - To check if Git is installed, open a terminal or command prompt and run:
+    -   To check if Git is installed, open a terminal or command prompt and run:
 
-      ```bash
-      git --version
-      ```
+        ```bash
+        git --version
+        ```
 
 ## Environment Setup and Usage
 
@@ -42,14 +42,14 @@ Follow these steps to get a local copy of the project and start exploring the ex
     cd learn-python-by-examples
     ```
 
-3.  **Explore Examples:** Inside the main directory, you will find folders organized by difficulty level (`basic`, `intermediate`, `advanced`). Navigate into the folder for the level you are interested in:
+3.  **Explore Examples:** Inside the `/code` directory, you will find folders organized by difficulty level (`basic`, `intermediate`, `advanced`). Navigate into the folder for the level you are interested in:
 
     ```bash
-    cd basic
+    cd /code/basic
     # or
-    cd intermediate
+    cd /code/intermediate
     # or
-    cd advanced
+    cd /code/advanced
     ```
 
 4.  **Run Examples:** Inside each level folder, you will find the example files (`sample_0x_description.py`) and their associated documentation (`sample_0x_description.md`). To run a Python example, use the Python interpreter:

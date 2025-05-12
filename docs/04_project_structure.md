@@ -10,21 +10,21 @@ The project architecture is simple and based on a file and folder structure with
 
 The main components of the project are the files and directories that make up the repository:
 
-- **`/` (Repository Root):** Contains general project configuration files and the main `README.md`.
+-   **`/` (Repository Root):** Contains general project configuration files and the main `README.md`.
 
-- **`README.md`:** Main entry file that provides an overview of the project, how to navigate it, requirements and how to get started.
+-   **`README.md`:** Main entry file that provides an overview of the project, how to navigate it, requirements and how to get started.
 
-- **`/docs`:** Directory that will contain the general project documentation (such as this file, `project_overview.md`, `requirements.md`, etc.).
+-   **`/docs`:** Directory that will contain the general project documentation (such as this file, `01_project_overview.md`, `02_requirements.md`, etc.).
 
-- **`/basic`:** Directory intended to contain code examples and their documentation for the **Basic** difficulty level.
+-   **`/code/basic`:** Directory intended to contain code examples and their documentation for the **Basic** difficulty level.
 
-- **`/intermediate`:** Directory intended to contain code examples and their documentation for the **Intermediate** difficulty level.
+-   **`/code/intermediate`:** Directory intended to contain code examples and their documentation for the **Intermediate** difficulty level.
 
-- **`/advanced`:** Directory intended to contain code examples and their documentation for the **Advanced** difficulty level.
+-   **`/code/advanced`:** Directory intended to contain code examples and their documentation for the **Advanced** difficulty level.
 
-- **`sample_0x_description.py` (within level folders):** Files containing Python code for a specific example. Filenames will follow the pattern `sample_` followed by a sequential two-digit number (`00`, `01`, `02`, ...) and a brief description in lowercase separated by underscores.
+-   **`sample_0x_description.py` (within level folders):** Files containing Python code for a specific example. Filenames will follow the pattern `sample_` followed by a sequential two-digit number (`00`, `01`, `02`, ...) and a brief description in lowercase separated by underscores.
 
-- **`sample_0x_description.md` (within level folders):** Files containing documentation associated with the corresponding `.py` file. The filename will match the `.py` file, only changing the extension to `.md`.
+-   **`sample_0x_description.md` (within level folders):** Files containing documentation associated with the corresponding `.py` file. The filename will match the `.py` file, only changing the extension to `.md`.
 
 ## Communication Between Components
 
@@ -76,7 +76,7 @@ _Simple diagram illustrating the user's conceptual navigation through the reposi
 
 The project is primarily based on:
 
-- **Python**: The programming language used for code examples.
-- **Markdown**: The markup language used for documentation.
-- **Git**: The version control system for managing the repository.
-- **GitHub**: The repository hosting platform.
+-   **Python**: The programming language used for code examples.
+-   **Markdown**: The markup language used for documentation.
+-   **Git**: The version control system for managing the repository.
+-   **GitHub**: The repository hosting platform.
