@@ -65,7 +65,7 @@ Direct contributions to the code and documentation are very welcome! Follow thes
 
 - **Step 4: Make Your Changes:** Implement your changes, whether adding a new example, improving an existing one, fixing a bug, or updating documentation.
 
-  - Make sure to follow the project's [Code Style Guide](./09_code_style_guide.md).
+  - Make sure to follow the project's [Code Style Guide](docs/09_code_style_guide.md).
 
   - If adding a new example, make sure to include its `.py` file and corresponding `.md` documentation, following the `sample_0x_description` naming pattern.
 
@@ -94,7 +94,7 @@ Direct contributions to the code and documentation are very welcome! Follow thes
 
 ## Code Style Guide
 
-It is important that all code and documentation follow the defined standards to maintain project consistency. Please consult the [Code Style Guide](./09_code_style_guide.md) document before submitting your code contributions.
+It is important that all code and documentation follow the defined standards to maintain project consistency. Please consult the [Code Style Guide](docs/09_code_style_guide.md) document before submitting your code contributions.
 
 ## Questions
 
