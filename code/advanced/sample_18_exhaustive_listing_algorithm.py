@@ -21,8 +21,16 @@
 
 def main():
     """Main function to demonstrate exhaustive listing algorithm."""
-    # Get number from user
-    target_number = int(input("Enter an integer number: "))
+    # Get a valid integer from the user
+    while True:
+        try:
+            target_number = int(input("Enter an integer number: "))
+            if target_number < 0:
+                print("Please enter a non-negative integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
     print()  # Blank line
 
     # Find square root by exhaustive listing

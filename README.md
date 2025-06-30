@@ -18,9 +18,9 @@ graph LR
     A --> D[advanced];
     B --> E[Types of comments];
     B --> F[Hello World!];
-    C --> G[While iterations];
-    C --> H[For iterations];
-    D --> I[Recursive Functions];
+    C --> G[For iterations];
+    C --> H[Recursive Functions];
+    D --> I[Exhaustive Listing Algorithm];
     D --> J[Binary Search Algorithm];
 ```
 
