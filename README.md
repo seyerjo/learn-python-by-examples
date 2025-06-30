@@ -144,4 +144,6 @@ All examples in this repository are under the [MIT license](./LICENSE), allowing
 
 ## 📖 Full Documentation
 
-The project documentation is organized in the `/docs/` directory. These documents provide comprehensive information about the project, its usage, and its development.
+For a complete and structured view of all project documentation, including vision, requirements, architecture, and development guidelines, please visit our main documentation index:
+
+- [**📚 Full Documentation Index**](./docs/00_documentation_index.md)
