@@ -21,8 +21,6 @@ This project documentation is designed to provide a comprehensive understanding 
 - **[Setup and Installation](./07_setup_and_installation.md):** A guide for setting up the development environment to run the examples locally.
 - **[Usage Guide](./08_usage_guide.md):** A step-by-step guide for users on how to explore and use the examples.
 - **[Code Style Guide](./09_code_style_guide.md):** Detailed coding standards, linting rules, and naming conventions to ensure code consistency.
-- **[To Do List](./10_to_do_list.md):** A list of pending tasks and future improvements for the project.
-- **[Development Notes](./11_development_notes.md):** A log of key decisions, development progress, and technical insights.
 - **[CHANGELOG](../CHANGELOG.md):** A log of all notable changes made to the project, organized by version.
 - **[Contribution Guidelines](../CONTRIBUTION_GUIDELINES.md):** Guidelines for how to contribute to the project.
 - **[Code of Conduct](../CODE_OF_CONDUCT.md):** The code of conduct for all contributors.
