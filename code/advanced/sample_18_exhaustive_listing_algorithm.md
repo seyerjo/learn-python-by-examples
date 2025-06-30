@@ -1,18 +1,53 @@
-# Exhaustive Listing Algorithm in Python
+# Exhaustive Enumeration (Guess and Check)
 
-This example demonstrates an exhaustive listing algorithm in Python.
+This example demonstrates the exhaustive enumeration algorithm, also known as "guess and check," to find the exact square root of an integer.
 
 ## Code
 
 ```python
-# Implementing an exhaustive listing algorithm
-def exhaustive_listing(items):
-    for item in items:
-        print(item)
+""" EXHAUSTIVE LISTING algorithm, also called GUESS AND CHECK.
 
-# Example usage
-items = [1, 2, 3, 4, 5]
-exhaustive_listing(items)
+    This algorithm iterates through all possible solutions to find the correct
+    one. In this case, it starts guessing from 0 and increments by 1 until
+    its square is equal to or greater than the target number.
+
+"""
+
+# ############################################################################ #
+# NOTE: This example uses Type Hinting, a concept explained in detail in      #
+# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# understand the type annotations used here (e.g., `-> None`).                 #
+# ############################################################################ #
+
+
+def main() -> None:
+    """Main function to demonstrate exhaustive listing algorithm."""
+    # Get a valid non-negative integer from the user
+    while True:
+        try:
+            target_number = int(input("Enter an integer number: "))
+            if target_number < 0:
+                print("Please enter a non-negative integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+    print()
+
+    # Find square root by exhaustive listing
+    guess = 0
+    while guess**2 < target_number:
+        guess += 1
+
+    # Check if a perfect square was found
+    if guess**2 == target_number:
+        print(f"The square root of {target_number} is {guess}")
+    else:
+        print(f"{target_number} does not have an exact square root")
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 ## Explanation

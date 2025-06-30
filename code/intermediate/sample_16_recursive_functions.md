@@ -5,15 +5,44 @@ This example demonstrates how to use recursive functions in Python.
 ## Code
 
 ```python
-# Defining a recursive function
+"""Demonstrate recursive functions in Python.
+
+Shows factorial calculation and recursive user input validation.
+"""
+
+
 def factorial(n):
+    """Calculate the factorial of a positive integer recursively."""
     if n == 0:
         return 1
-    else:
-        return n * factorial(n-1)
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
 
-# Calling the function
-print(factorial(5))
+
+def get_positive_number():
+    """Recursively request a positive integer from the user."""
+    try:
+        num = int(input("Enter a positive integer: "))
+        if num >= 0:
+            return num
+        print("Number must be positive or zero. Try again.")
+        return get_positive_number()
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return get_positive_number()
+
+
+def main():
+    """Main function to demonstrate recursive functions."""
+    print("\n>>> Factorial Calculator <<<", end='\n\n')
+
+    number = get_positive_number()
+    print(f"\nThe factorial of {number} is {factorial(number)}", end='\n\n')
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 ## Explanation

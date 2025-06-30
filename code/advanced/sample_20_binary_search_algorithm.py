@@ -18,17 +18,27 @@
 
 """
 
+# ############################################################################ #
+# NOTE: This example uses Type Hinting, a concept explained in detail in      #
+# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# understand the type annotations used here (e.g., `-> None`).                 #
+# ############################################################################ #
 
-def main():
+
+def main() -> None:
     """Main function demonstrating binary search algorithm for square root."""
-    # Get target number from user
-    target = int(input("Enter a positive integer number: "))
+    # Get a valid positive integer from the user
+    while True:
+        try:
+            target = int(input("Enter a positive integer number: "))
+            if target < 0:
+                print("Error: Please enter a non-negative integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
     print()  # Blank line
-
-    if target < 0:
-        print("Error: Cannot calculate square root of negative numbers")
-        return
-
     epsilon = 0.01  # Precision level
     low = 0.0
     high = max(1.0, target)

@@ -35,15 +35,27 @@
 
 """
 
+# ############################################################################ #
+# NOTE: This example uses Type Hinting, a concept explained in detail in      #
+# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# understand the type annotations used here (e.g., `-> None`).                 #
+# ############################################################################ #
 
-def main():
+
+def main() -> None:
     """Main function demonstrating solution approximation algorithm."""
     # Set precision level (epsilon) and step size
     epsilon = 0.01  # Controls accuracy of approximation
     step = epsilon**2  # Smaller step for finer approximation
 
-    # Get target number from user
-    target = int(input("Enter an integer number: "))
+    # Get a valid integer from the user
+    while True:
+        try:
+            target = int(input("Enter an integer number: "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
     print()  # Blank line
 
     # Initialize guess and perform approximation

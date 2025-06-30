@@ -5,9 +5,15 @@ Learn Python through practical and commented examples.
 [![Code Style: autopep8](https://img.shields.io/badge/Code%20Style-autopepe8-blue.svg)](https://github.com/hhatto/autopep8) [![License](https://img.shields.io/github/license/seyerjo/learn-python-by-examples)](./LICENSE)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/seyerjo/learn-python-by-examples)
 
+## 👋 Welcome!
+
+Welcome to the "Learn Python by Examples" repository! This project is designed to be a practical and accessible resource for anyone looking to learn or improve their Python skills. Here you will find a carefully curated collection of code examples, from the most basic concepts to more advanced topics, all with detailed comments to guide you through your learning journey.
+
+We invite you to explore, experiment, and, of course, contribute. _Happy coding!_
+
 ## 🔍 Overview
 
-This repository contains a collection of Python examples designed to help learners understand various concepts in Python programming. The examples are organized by topic and include detailed comments to explain the code.
+This project is structured into three main difficulty levels: _basic_, _intermediate_, and _advanced_. Each example is self-contained and includes detailed documentation to facilitate understanding. The following diagram illustrates the main topics covered within the project.
 
 For a more detailed overview, see the [Project Overview](docs/01_project_overview.md).
 
@@ -20,8 +26,12 @@ graph LR
     B --> F[Hello World!];
     C --> G[For iterations];
     C --> H[Recursive Functions];
-    D --> I[Exhaustive Listing Algorithm];
-    D --> J[Binary Search Algorithm];
+    D --> I[Algorithms];
+    I --> J[Exhaustive Enumeration];
+    I --> K[Binary Search];
+    D --> L[Good Practices];
+    L --> M[Robust Input Validation];
+    L --> N[Type Hinting];
 ```
 
 ## ✨ Main Features
@@ -95,6 +105,10 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 - [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_solution_approximation_algorithm.py)
 
 - [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_binary_search_algorithm.py)
+
+- [Robust Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_robust_input_validation.py)
+
+- [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_type_hinting.py)
 
 ## 📊 Difficulty Levels
 

@@ -18,8 +18,14 @@
 
 """
 
+# ############################################################################ #
+# NOTE: This example uses Type Hinting, a concept explained in detail in      #
+# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# understand the type annotations used here (e.g., `-> None`).                 #
+# ############################################################################ #
 
-def main():
+
+def main() -> None:
     """Main function to demonstrate exhaustive listing algorithm."""
     # Get a valid integer from the user
     while True:
