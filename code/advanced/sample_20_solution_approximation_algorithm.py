@@ -61,8 +61,8 @@ def main() -> None:
     # Initialize guess and perform approximation
     guess: float = 0.0
     while abs(guess**2 - target) >= epsilon and guess <= target:
-        print(
-            f"Current error: {abs(guess**2 - target):.4f}, Guess: {guess:.4f}")
+        error = abs(guess**2 - target)
+        print(f"Current error: {error:.4f}, Guess: {guess:.4f}")
         guess += step
 
     print()  # Blank line

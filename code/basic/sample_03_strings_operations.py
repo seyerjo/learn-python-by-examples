@@ -76,7 +76,8 @@ def main():
 
     # Example of string repetition and concatenation using f-strings.
     # Output: repeated string
-    print(f"I am a citizen of the {world_string}, " * 20)
+    repeated_string = f"I am a citizen of the {world_string}, " * 2
+    print(repeated_string)
     print()
 
 

@@ -12,6 +12,9 @@ All notable changes to this project will be documented in this file.
 
 - Renumbered advanced examples in `code/advanced/` from `sample_18` to `sample_22` to `sample_19` to `sample_23` respectively, to accommodate new `intermediate` examples and maintain sequential order.
 - Added type hints to variables in all advanced examples (`sample_19` through `sample_23`) to ensure full compliance with code style guidelines.
+- Refactored code in `sample_03_strings_operations.py`, `sample_06_inputs_variables_and_strings.py`, and `sample_20_solution_approximation_algorithm.py` to fix lines exceeding 79 characters.
+- Restructured `sample_01_hello_world.py` to include a `main` function and an `if __name__ == "__main__":` guard for better code organization.
+- Added detailed explanation of `if __name__ == "__main__":` in `sample_01_hello_world.py` and its corresponding documentation (`sample_01_hello_world.md`).
 
 ## [1.0.3]
 

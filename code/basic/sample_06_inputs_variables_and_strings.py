@@ -54,9 +54,9 @@ def main():
     print(greeting, end='\n\n')
 
     # String length example using f-string
-    print(
-        f"Did you know that the length of this greeting is {len(greeting)} characters?"
-    )
+    message = (f"Did you know that the length of this greeting is "
+               f"{len(greeting)} characters?")
+    print(message)
 
 
 if __name__ == "__main__":
