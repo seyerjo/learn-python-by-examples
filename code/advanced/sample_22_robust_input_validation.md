@@ -22,7 +22,7 @@ This example demonstrates how to create a robust input validation loop to preven
 
 # ############################################################################ #
 # NOTE: This example uses Type Hinting, a concept explained in detail in      #
-# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# sample_23_type_hinting.py. It is recommended to review that example to fully #
 # understand the type annotations used here (e.g., `-> int`, `-> None`).       #
 # ############################################################################ #
 

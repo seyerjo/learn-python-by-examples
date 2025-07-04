@@ -85,6 +85,7 @@ If you encounter issues when running an example:
 - **Python not found error:** Make sure Python is correctly installed and configured in your PATH. Refer to the [Setup and Installation Guide](./07_setup_and_installation.md).
 - **Git not found error:** Make sure Git is correctly installed and configured in your PATH. Refer to the [Setup and Installation Guide](./07_setup_and_installation.md).
 - **"File not found" error:** Verify that you are in the correct directory in your terminal and that the `.py` filename you are trying to run is correct.
+- **`ValueError` on input:** Some `basic` examples will intentionally raise a `ValueError` if you provide text when a number is expected. This is the default behavior in Python. The solution, using `try-except`, is a more advanced topic covered in the `intermediate` examples (see `sample_18_exception_handling.md`).
 - **Syntax or execution errors in the code:** Carefully review the code and compare it with the documentation. There might be a typo or you might need to install a dependency (although initial examples should avoid this). If you believe there is an error in the example itself, consider reporting it through the contribution process.
 - **Output is not as expected:** Read the example's documentation again to ensure you have understood its purpose and how it should work.
 

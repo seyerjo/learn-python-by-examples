@@ -35,6 +35,7 @@ graph LR
     B --> F[Hello World!];
     C --> G[For iterations];
     C --> H[Recursive Functions];
+    C --> O[Exception Handling];
     D --> I[Algorithms];
     I --> J[Exhaustive Enumeration];
     I --> K[Binary Search];
@@ -107,17 +108,19 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 - [Recursion Limit](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
 
+- [Exception Handling: try-except](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_18_exception_handling.py)
+
 ### Advanced Examples 📕
 
-- [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_18_exhaustive_listing_algorithm.py)
+- [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_exhaustive_listing_algorithm.py)
 
-- [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_solution_approximation_algorithm.py)
+- [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_solution_approximation_algorithm.py)
 
-- [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_binary_search_algorithm.py)
+- [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_binary_search_algorithm.py)
 
-- [Robust Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_robust_input_validation.py)
+- [Robust Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_robust_input_validation.py)
 
-- [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_type_hinting.py)
+- [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_23_type_hinting.py)
 
 ## 📊 Difficulty Levels
 

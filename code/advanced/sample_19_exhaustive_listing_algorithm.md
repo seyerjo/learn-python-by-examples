@@ -15,7 +15,7 @@ This example demonstrates the exhaustive enumeration algorithm, also known as "g
 
 # ############################################################################ #
 # NOTE: This example uses Type Hinting, a concept explained in detail in      #
-# sample_22_type_hinting.py. It is recommended to review that example to fully #
+# sample_23_type_hinting.py. It is recommended to review that example to fully #
 # understand the type annotations used here (e.g., `-> None`).                 #
 # ############################################################################ #
 

@@ -21,6 +21,7 @@ This project documentation is designed to provide a comprehensive understanding 
 - **[Setup and Installation](./07_setup_and_installation.md):** A guide for setting up the development environment to run the examples locally.
 - **[Usage Guide](./08_usage_guide.md):** A step-by-step guide for users on how to explore and use the examples.
 - **[Code Style Guide](./09_code_style_guide.md):** Detailed coding standards, linting rules, and naming conventions to ensure code consistency.
+- **[Exception Handling](./code/intermediate/sample_18_exception_handling.md):** A guide to understanding and implementing robust error handling using `try-except` blocks.
 - **[CHANGELOG](../CHANGELOG.md):** A log of all notable changes made to the project, organized by version.
 - **[Contribution Guidelines](../CONTRIBUTION_GUIDELINES.md):** Guidelines for how to contribute to the project.
 - **[Code of Conduct](../CODE_OF_CONDUCT.md):** The code of conduct for all contributors.

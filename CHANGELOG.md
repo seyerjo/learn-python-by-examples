@@ -2,17 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4]
+
+### Added
+
+- New intermediate example `sample_18_exception_handling.py` and its documentation (`sample_18_exception_handling.md`) demonstrating robust input validation using `try-except` blocks.
+
+### Changed
+
+- Renumbered advanced examples in `code/advanced/` from `sample_18` to `sample_22` to `sample_19` to `sample_23` respectively, to accommodate new `intermediate` examples and maintain sequential order.
+
 ## [1.0.3]
 
 ### Added
 
-- New advanced example `sample_21_robust_input_validation.py` to teach robust user input handling.
-- New advanced example `sample_22_type_hinting.py` to explain the use and benefits of Type Hinting (PEP 484).
-- Cross-reference comments in advanced examples (`18` to `21`) pointing to the new Type Hinting explanation.
+- New advanced example `sample_22_robust_input_validation.py` to teach robust user input handling.
+- New advanced example `sample_23_type_hinting.py` to explain the use and benefits of Type Hinting (PEP 484).
+- Cross-reference comments in advanced examples (`19` to `22`) pointing to the new Type Hinting explanation.
 
 ### Changed
 
-- Improved advanced examples (`18`, `19`, `20`) by adding robust input validation and Type Hinting.
+- Improved advanced examples (`19`, `20`, `21`) by adding robust input validation and Type Hinting.
 - Improved intermediate example `sample_16_recursive_functions.py` to correctly handle the `n=0` edge case for factorials.
 - Updated documentation for all modified examples (`.md` files) to ensure code and explanations are synchronized and accurate.
 
