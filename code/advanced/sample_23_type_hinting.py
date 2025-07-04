@@ -34,7 +34,7 @@ def add_numbers(a: int, b: int) -> int:
 
 def main() -> None:
     """Main function to demonstrate type hinting."""
-    result = add_numbers(10, 5)
+    result: int = add_numbers(10, 5)  # Adding type hint for 'result'
     print(f"The result of adding two numbers is: {result}")
     print(f"The type of PI is declared as float, its value is: {PI}")
 

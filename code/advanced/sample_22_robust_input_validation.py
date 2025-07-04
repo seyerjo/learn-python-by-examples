@@ -32,9 +32,8 @@ def get_valid_integer(prompt: str) -> int:
     while True:  # Start an infinite loop
         try:
             # Attempt to get input and convert it to an integer
-            user_input = int(input(prompt))
-            # If conversion is successful, return the value and exit the loop
-            return user_input
+            user_input: str = input(prompt)
+            return int(user_input)
         except ValueError:
             # If a ValueError occurs, the input was not a valid integer.
             # Inform the user and the loop will continue to the next iteration.
@@ -49,7 +48,7 @@ def main() -> None:
     # age = int(input("Please enter your age: "))
 
     # The robust way
-    age = get_valid_integer("Please enter your age: ")
+    age: int = get_valid_integer("Please enter your age: ")
     print(f"\nThank you. You have entered {age} as your age.")
 
 

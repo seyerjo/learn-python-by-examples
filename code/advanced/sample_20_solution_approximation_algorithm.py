@@ -45,13 +45,13 @@
 def main() -> None:
     """Main function demonstrating solution approximation algorithm."""
     # Set precision level (epsilon) and step size
-    epsilon = 0.01  # Controls accuracy of approximation
-    step = epsilon**2  # Smaller step for finer approximation
+    epsilon: float = 0.01  # Controls accuracy of approximation
+    step: float = epsilon**2  # Smaller step for finer approximation
 
     # Get a valid integer from the user
     while True:
         try:
-            target = int(input("Enter an integer number: "))
+            target: int = int(input("Enter an integer number: "))
             break
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
@@ -59,7 +59,7 @@ def main() -> None:
     print()  # Blank line
 
     # Initialize guess and perform approximation
-    guess = 0.0
+    guess: float = 0.0
     while abs(guess**2 - target) >= epsilon and guess <= target:
         print(
             f"Current error: {abs(guess**2 - target):.4f}, Guess: {guess:.4f}")

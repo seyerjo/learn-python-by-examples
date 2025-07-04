@@ -30,7 +30,7 @@ def main() -> None:
     # Get a valid integer from the user
     while True:
         try:
-            target_number = int(input("Enter an integer number: "))
+            target_number: int = int(input("Enter an integer number: "))
             if target_number < 0:
                 print("Please enter a non-negative integer.")
                 continue
@@ -40,7 +40,7 @@ def main() -> None:
     print()  # Blank line
 
     # Find square root by exhaustive listing
-    guess = 0
+    guess: int = 0
     while guess**2 < target_number:
         print(guess)  # Show current guess
         guess += 1    # Increment guess

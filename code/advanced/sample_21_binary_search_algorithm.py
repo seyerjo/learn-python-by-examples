@@ -30,7 +30,7 @@ def main() -> None:
     # Get a valid positive integer from the user
     while True:
         try:
-            target = int(input("Enter a positive integer number: "))
+            target: int = int(input("Enter a positive integer number: "))
             if target < 0:
                 print("Error: Please enter a non-negative integer.")
                 continue
@@ -39,10 +39,11 @@ def main() -> None:
             print("Invalid input. Please enter a valid integer.")
 
     print()  # Blank line
-    epsilon = 0.01  # Precision level
-    low = 0.0
-    high = max(1.0, target)
-    guess = (high + low) / 2  # Initial guess
+    epsilon: float = 0.01  # Precision level
+    low: float = 0.0
+    # Ensure high uses float for max comparison
+    high: float = max(1.0, float(target))
+    guess: float = (high + low) / 2  # Initial guess
 
     # Binary search loop
     while abs(guess**2 - target) >= epsilon:
