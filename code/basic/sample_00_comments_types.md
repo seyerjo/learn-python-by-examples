@@ -1,64 +1,94 @@
-# Comments and Data Types in Python
+# Types of Comments in Python
 
-This example illustrates how to use comments and basic data types in Python.
+This example illustrates the different ways to use comments in Python to document and explain the code.
 
 ## Code
 
 ```python
-# This is a single-line comment. Anything written after the "#" symbol on the same line is ignored by Python.
+# MAIN CODE
+
+#  This is a single-line comment.
 
 """
-This is a multi-line comment or docstring. It can span multiple lines and is often used to provide a description of a function, class, or module.
+This is a multi-line comment also known as a docstring.
+It is often used at the beginning of a module, function,
+or class to document functions, classes, modules, etc.
 """
 
-# Basic data types in Python include integers, floats, strings, and booleans.
+# Inline comment after a line of code.
+INITIAL_VALUE = 10  # This is an inline comment.
 
-# Integer: a whole number, either positive, negative, or zero.
-integer = 10  # int
-print("Integer:", integer)
+# Example of a function with a docstring.
 
-# Float: a number with a fractional part.
-float_num = 3.14  # float
-print("Float:", float_num)
 
-# String: a sequence of characters, such as letters, numbers, or symbols, enclosed in quotes.
-string = "Hello, world!"  # str
-print("String:", string)
+def calculate_square(number):
+    """Calculate the square of a number.
 
-# Boolean: a logical value that can be either True or False.
-boolean = True  # bool
-print("Boolean:", boolean)
+    Args:
+        number (int): The number to be squared.
+
+    Returns:
+        int: The square of the input number.
+    """
+    square_value = number * number
+    return square_value
+
+
+# Example of calling a function and printing the result.
+
+
+def main():
+    """Main function to demonstrate example usage."""
+    # Call the function and print the result.
+    calculation_result = calculate_square(5)
+    # The print() function is used to output text to the console.
+    print(calculation_result)  # Inline comment after a function call.
+
+
+if __name__ == "__main__":
+    main()
+
+
+# Code commented out, ignored by the interpreter.
+# if True:
+#     print("This code will not be executed")
+
+# Comment explaining a part of the code.
+# The following code block handles the ZeroDivisionError exception.
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
 ```
 
 ## Explanation
 
-1. **Comments**: Comments are used to explain what the code is doing. They are ignored by the Python interpreter, so they don't affect how the code runs. There are two main types of comments:
+1.  **Single-Line Comments**: Start with the `#` symbol. Python ignores everything from the `#` to the end of the line. They are useful for brief explanations.
 
-   - **Single-line comments**: Start with the `#` symbol and continue until the end of the line.
-   - **Multi-line comments or docstrings**: Enclosed between triple double quotes `""" """`. These are often used at the beginning of functions, classes, or modules to describe what they do.
+2.  **Inline Comments**: These are single-line comments placed on the same line as a statement. They should be used sparingly and are useful for explaining specific parts of a line of code.
 
-2. **Basic Data Types**: Python has several basic data types that are used to store different kinds of data.
+3.  **Multi-Line Comments (Docstrings)**: Enclosed in triple quotes (`"""..."""` or `'''...'''`). While the interpreter does not ignore them like `#` comments (they become string literals), they are the standard convention for writing documentation for modules, classes, and functions. This documentation can be accessed at runtime using `help()`.
 
-   - **Integers (`int`)**: Whole numbers, like 1, 2, 3, etc. They can be positive, negative, or zero.
-   - **Floats (`float`)**: Numbers with a fractional part, like 3.14 or -0.5.
-   - **Strings (`str`)**: Sequences of characters, like "hello" or 'hello'. Strings are enclosed in quotes (either single, double, or triple quotes).
-   - **Booleans (`bool`)**: Logical values that can be either `True` or `False`.
+4.  **Function Docstrings**: As shown in the `calculate_square` function, docstrings are crucial for explaining what a function does, its arguments (`Args`), and what it returns (`Returns`). This is a key practice for writing maintainable code.
 
-3. **Printing Values**: The `print()` function is used to output the values of variables to the screen. This is a simple way to see what your code is doing.
+5.  **Commenting Out Code**: You can use `#` at the beginning of one or more lines to temporarily disable code without deleting it. This is useful for debugging.
+
+6.  **Main Execution Block**: The `if __name__ == "__main__":` block is standard Python practice. It ensures that the code inside the `main()` function only runs when the script is executed directly, and not when it's imported as a module into another script.
+
+7.  **Descriptive Comments**: Comments can also be used to explain the purpose of a subsequent block of code, as seen before the `try...except` block.
 
 ## Expected Output
 
 When you run this code, you should see the following output:
 
 ```
-Integer: 10
-Float: 3.14
-String: Hello, world!
-Boolean: True
+25
+Cannot divide by zero!
 ```
 
 ## Points to Consider
 
-- **Readability**: Using clear and descriptive variable names and adding comments can make your code much easier to understand.
-- **Data Types**: Understanding the different data types available in Python and when to use them is crucial for writing effective code.
-- **Practice**: Try changing the values of the variables and see how it affects the output. Experimenting with different data types and operations can help solidify your understanding.
+- **Why use comments?** Comments make code more readable and easier to maintain, both for other developers and for your future self.
+- **Good vs. Bad Comments**: Good comments explain _why_ the code is doing something, not _what_ it is doing. The `what` should be clear from the code itself (e.g., using good variable names).
+- **Docstrings are for Documentation**: Always use docstrings for any public function, class, or module. Tools can automatically generate documentation from them.
