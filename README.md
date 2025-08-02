@@ -2,17 +2,12 @@
 
 Learn Python through practical and commented examples.
 
-<p align="center">
-  <a href="https://github.com/hhatto/autopep8">
-    <img alt="Code Style: autopep8" src="https://img.shields.io/badge/Code%20Style-autopepe8-blue.svg">
-  </a>
-  <a href="./LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/seyerjo/learn-python-by-examples">
-  </a>
-  <a href="https://deepwiki.com/seyerjo/learn-python-by-examples">
-    <img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg">
-  </a>
-</p>
+![Project Status](https://img.shields.io/badge/status-developing-yellow.svg)
+![Technology](https://img.shields.io/badge/tech-Python-blue.svg)
+![Code Style](https://img.shields.io/badge/code%20style-autopep8-ff69b4.svg)
+![License](https://img.shields.io/badge/license-MIT-red.svg)<a href="https://deepwiki.com/seyerjo/learn-python-by-examples">
+<img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg">
+</a>
 
 ## 👋 Welcome!
 
