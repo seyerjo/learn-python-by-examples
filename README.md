@@ -2,12 +2,11 @@
 
 Learn Python through practical and commented examples.
 
+<a href="https://deepwiki.com/seyerjo/learn-python-by-examples"><img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg"></a>
 ![Project Status](https://img.shields.io/badge/status-developing-yellow.svg)
 ![Technology](https://img.shields.io/badge/tech-Python-blue.svg)
 ![Code Style](https://img.shields.io/badge/code%20style-autopep8-ff69b4.svg)
-![License](https://img.shields.io/badge/license-MIT-red.svg)<a href="https://deepwiki.com/seyerjo/learn-python-by-examples">
-<img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg">
-</a>
+![License](https://img.shields.io/badge/license-MIT-red.svg)
 
 ## 👋 Welcome!
 
