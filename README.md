@@ -48,6 +48,16 @@ graph LR
 
 For a detailed breakdown of features and requirements, see the [Requirements](docs/02_requirements.md) and [Features](docs/03_features.md) documents.
 
+## 🧑‍💻 Who is this project for?
+
+While this repository is designed to be accessible, it is assumed that the user has a basic understanding of programming concepts from any language. To get the most out of these examples, it is recommended to be familiar with:
+
+- What variables and constants are.
+- Basic data types (integers, strings, booleans).
+- Common operators (arithmetic, comparison).
+- Basic use of a code editor or IDE (like Visual Studio Code).
+- Basic command line/console navigation.
+
 ## 🚀 Quick Start Guide
 
 1. Clone or download the repository.
@@ -153,3 +163,23 @@ All examples in this repository are under the [MIT license](./LICENSE), allowing
 For a complete and structured view of all project documentation, including vision, requirements, architecture, and development guidelines, please visit our main documentation index:
 
 - [**📚 Full Documentation Index**](./docs/00_documentation_index.md)
+
+## 📚 Additional Resources
+
+To complement your learning, here are some valuable official and unofficial resources:
+
+### Official Resources
+
+- [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
+- [Python for Non-Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
+- [Python for Programmers](https://wiki.python.org/moin/BeginnersGuide/Programmers)
+- [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
+- [Using Python on Windows](https://docs.python.org/3/faq/windows.html)
+- [Using Python on /Linux](https://docs.python.org/3/using/unix.html)
+- [Using Python on macOS](https://docs.python.org/3/using/mac.html)
+
+### Unofficial Resources
+
+- [Python Tutorial](https://python.land/python-tutorial)
+- [Codédex](https://www.codedex.io/python)
+- [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
