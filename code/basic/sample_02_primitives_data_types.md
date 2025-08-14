@@ -73,5 +73,6 @@ When you run this code, you should see the following output, which shows the cla
 
 ## Points to Consider
 
-- Python is a dynamically-typed language, meaning you don't have to explicitly declare the data type of a variable.
-- The `type()` function is a useful built-in tool for debugging and understanding the data you are working with.
+-   Python is a dynamically-typed language, meaning you don't have to explicitly declare the data type of a variable.
+-   The `type()` function is a useful built-in tool for debugging and understanding the data you are working with.
+-   **Mutability**: Some types are _mutable_ (their value can change), like `list`, `dict`, and `set`. Others are _immutable_ (their value cannot change after creation), like `int`, `float`, `str`, and `tuple`.

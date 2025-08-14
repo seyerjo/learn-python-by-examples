@@ -2,7 +2,6 @@
 
 """
 Example demonstrating various operators in Python.
-This version includes descriptive print statements for better clarity.
 """
 
 

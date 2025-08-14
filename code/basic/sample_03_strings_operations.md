@@ -11,10 +11,11 @@ This example demonstrates various common operations that can be performed on str
 Example demonstrating various string operations in Python.
 
 A note on functions:
-This code is organized into 'functions' (e.g., `def demonstrate_slicing():`).
-A function is a reusable block of code that performs a specific task.
-Using functions helps keep our code clean, organized, and easy to read.
-We will cover functions in much more detail in a later example (sample_15_functions.py).
+
+- This code is organized into 'functions' (e.g., `def demonstrate_slicing():`).
+- A function is a reusable block of code that performs a specific task.
+- Using functions helps keep our code clean, organized, and easy to read.
+- We will cover functions in much more detail in a later example (sample_15_functions.py).
 """
 
 
@@ -142,6 +143,6 @@ f-string repeated: I am a citizen of the World, I am a citizen of the World,
 
 ## Points to Consider
 
-- **Modularity**: Structuring code into smaller, single-purpose functions makes it easier to read, test, and maintain.
-- **Immutability**: Strings in Python are immutable. Operations like concatenation or slicing don't change the original string; they create and return a new one.
-- **Formatting**: While older methods like using commas in `print` work, f-strings are generally preferred in modern Python for their clarity and power.
+-   **Modularity**: Structuring code into smaller, single-purpose functions makes it easier to read, test, and maintain.
+-   **Immutability**: Strings in Python are immutable. Operations like concatenation or slicing don't change the original string; they create and return a new one.
+-   **Formatting**: While older methods like using commas in `print` work, f-strings are generally preferred in modern Python for their clarity and power.

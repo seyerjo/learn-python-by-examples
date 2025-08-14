@@ -9,7 +9,6 @@ This example illustrates the various operators available in Python, categorized 
 
 """
 Example demonstrating various operators in Python.
-This version includes descriptive print statements for better clarity.
 """
 
 
@@ -168,5 +167,5 @@ a == b -> True
 
 ## Points to Consider
 
-- The distinction between `is` (identity) and `==` (equality) is a key concept. `is` checks if two variables refer to the _same object_ in memory, while `==` checks if the _values_ of the objects are equivalent.
-- Operators are fundamental building blocks in Python for performing virtually any computation or logic.
+-   The distinction between `is` (identity) and `==` (equality) is a key concept. `is` checks if two variables refer to the _same object_ in memory, while `==` checks if the _values_ of the objects are equivalent.
+-   Operators are fundamental building blocks in Python for performing virtually any computation or logic.
