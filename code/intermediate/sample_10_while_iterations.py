@@ -1,21 +1,68 @@
 # MAIN CODE
 
-"""Demonstrate basic while loop iteration in Python.
-
-Shows a simple counter that increments from 0 to 9.
+"""
+Demonstrates various uses of the while loop in Python, from a simple
+counter to more advanced control with user input, break, and continue.
 """
 
 
+def demonstrate_counter_loop():
+    """Demonstrates a basic while loop as a counter."""
+    print("--- Example 1: Simple Counter Loop ---")
+    # 1. Initialization: Start with a counter variable.
+    counter = 0
+    print(f"Starting the loop. Counter is initially {counter}.")
+
+    # 2. Condition: The loop will continue as long as this is True.
+    while counter < 5:
+        print(f"  - Inside the loop. Counter is now: {counter}")
+        # 3. Update: Increment the counter. Without this, it would be an infinite loop!
+        counter += 1
+
+    print(f"Loop finished. Final value of counter is {counter}.\n")
+
+
+def demonstrate_interactive_loop():
+    """Demonstrates a while loop controlled by user input."""
+    print("--- Example 2: Interactive Loop ---")
+    command = ""
+    # The loop continues as long as the user's command is not 'quit'.
+    while command.lower() != "quit":
+        command = input("Enter a command (or 'quit' to exit): ")
+        print(f"  You entered: {command}")
+
+    print("Exited the interactive loop.\n")
+
+
+def demonstrate_loop_control():
+    """Demonstrates using 'break' and 'continue' inside a while loop."""
+    print("--- Example 3: Loop Control with break and continue ---")
+    numbers = [1, 5, -2, 8, 0, 3, -7]
+    index = 0
+    print(f"Processing the list: {numbers}")
+
+    while index < len(numbers):
+        num = numbers[index]
+        index += 1  # Increment index early to avoid infinite loop on 'continue'
+
+        if num < 0:
+            print(f"  Skipping negative number: {num}")
+            continue  # Skip the rest of this iteration and go to the next
+
+        if num == 0:
+            print("  Found a zero. Breaking the loop.")
+            break  # Exit the loop entirely
+
+        print(f"  Processing number: {num}")
+
+    print("Finished processing the list.\n")
+
+
 def main():
-    """Main function demonstrating while loop usage."""
-    counter = 0  # Initialize counter
-
-    # Loop while counter is less than 10
-    while counter < 10:
-        print(counter)
-        counter += 1  # Increment counter
-
-    print()  # Final newline
+    """Main function to demonstrate all while loop examples."""
+    demonstrate_counter_loop()
+    demonstrate_interactive_loop()
+    demonstrate_loop_control()
 
 
 if __name__ == "__main__":
