@@ -40,11 +40,11 @@ graph LR
 
 ## ✨ Main Features
 
-- **📈 Pedagogical Progression**: Examples range from basic to advanced levels.
+-   **📈 Pedagogical Progression**: Examples range from basic to advanced levels.
 
-- **📦 Self-contained**: Each example is independent and does not require external dependencies.
+-   **📦 Self-contained**: Each example is independent and does not require external dependencies.
 
-- **💡 Detailed Comments**: Comments explain the code to facilitate understanding.
+-   **💡 Detailed Comments**: Comments explain the code to facilitate understanding.
 
 For a detailed breakdown of features and requirements, see the [Requirements](docs/02_requirements.md) and [Features](docs/03_features.md) documents.
 
@@ -52,11 +52,11 @@ For a detailed breakdown of features and requirements, see the [Requirements](do
 
 While this repository is designed to be accessible, it is assumed that the user has a basic understanding of programming concepts from any language. To get the most out of these examples, it is recommended to be familiar with:
 
-- What variables and constants are.
-- Basic data types (integers, strings, booleans).
-- Common operators (arithmetic, comparison).
-- Basic use of a code editor or IDE (like Visual Studio Code).
-- Basic command line/console navigation.
+-   What variables and constants are.
+-   Basic data types (integers, strings, booleans).
+-   Common operators (arithmetic, comparison).
+-   Basic use of a code editor or IDE (like Visual Studio Code).
+-   Basic command line/console navigation.
 
 ## 🚀 Quick Start Guide
 
@@ -74,67 +74,67 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 ### Basic Examples 📗
 
-- [Types of comments](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
+-   [Types of comments](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
 
-- [Hello World!](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
+-   [Hello World!](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
 
-- [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
+-   [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
 
-- [Character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
+-   [Character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
 
-- [Operators](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
+-   [Operators](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
 
-- [Console user inputs](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
+-   [Console user inputs](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
 
-- [User inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_inputs_variables_and_strings.py)
+-   [User inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_inputs_variables_and_strings.py)
 
-- [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
+-   [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
 
-- [More user inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py)
+-   [More user inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py)
 
-- [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
+-   [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
 
 ### Intermediate Examples 📙
 
-- ['While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
+-   ['While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
 
-- [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
+-   [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
 
-- [Additional 'While' ](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
+-   [Additional 'While' ](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
 
-- ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
+-   ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
 
-- [More 'For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_14_more_for_iterations.py)
+-   [More 'For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_14_more_for_iterations.py)
 
-- [Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_15_functions.py)
+-   [Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_15_functions.py)
 
-- [Recursive Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_16_recursive_functions.py)
+-   [Recursive Functions](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_16_recursive_functions.py)
 
-- [Recursion Limit](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
+-   [Recursion Limit](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
 
-- [Exception Handling: try-except](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_18_exception_handling.py)
+-   [Exception Handling: try-except](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_18_exception_handling.py)
 
 ### Advanced Examples 📕
 
-- [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_exhaustive_listing_algorithm.py)
+-   [Exhaustive Listing Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_exhaustive_listing_algorithm.py)
 
-- [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_solution_approximation_algorithm.py)
+-   [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_solution_approximation_algorithm.py)
 
-- [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_binary_search_algorithm.py)
+-   [Binary Search Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_binary_search_algorithm.py)
 
-- [Robust Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_robust_input_validation.py)
+-   [Robust Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_robust_input_validation.py)
 
-- [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_23_type_hinting.py)
+-   [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_23_type_hinting.py)
 
 ## 📊 Difficulty Levels
 
 The difficulty of each example is indicated by the following icons:
 
-- 📗 **Basic**: Introduces the basics of the language and its syntax.
+-   📗 **Basic**: Introduces the basics of the language and its syntax.
 
-- 📙 **Intermediate**: Covers more advanced topics and concepts.
+-   📙 **Intermediate**: Covers more advanced topics and concepts.
 
-- 📕 **Advanced**: Demonstrates more complex and advanced techniques.
+-   📕 **Advanced**: Demonstrates more complex and advanced techniques.
 
 ## 🔄 Project Status
 
@@ -162,7 +162,7 @@ All examples in this repository are under the [MIT license](./LICENSE), allowing
 
 For a complete and structured view of all project documentation, including vision, requirements, architecture, and development guidelines, please visit our main documentation index:
 
-- [**📚 Full Documentation Index**](./docs/00_documentation_index.md)
+-   [**📚 Full Documentation Index**](./docs/00_documentation_index.md)
 
 ## 📚 Additional Resources
 
@@ -170,16 +170,16 @@ To complement your learning, here are some valuable official and unofficial reso
 
 ### Official Resources
 
-- [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
-- [Python for Non-Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
-- [Python for Programmers](https://wiki.python.org/moin/BeginnersGuide/Programmers)
-- [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
-- [Using Python on Windows](https://docs.python.org/3/faq/windows.html)
-- [Using Python on /Linux](https://docs.python.org/3/using/unix.html)
-- [Using Python on macOS](https://docs.python.org/3/using/mac.html)
+-   [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
+-   [Python for Non-Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
+-   [Python for Programmers](https://wiki.python.org/moin/BeginnersGuide/Programmers)
+-   [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
+-   [Using Python on Windows](https://docs.python.org/3/faq/windows.html)
+-   [Using Python on Linux](https://docs.python.org/3/using/unix.html)
+-   [Using Python on macOS](https://docs.python.org/3/using/mac.html)
 
 ### Unofficial Resources
 
-- [Python Tutorial](https://python.land/python-tutorial)
-- [Codédex](https://www.codedex.io/python)
-- [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+-   [Python Tutorial](https://python.land/python-tutorial)
+-   [Codédex](https://www.codedex.io/python)
+-   [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
