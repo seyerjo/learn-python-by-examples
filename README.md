@@ -74,33 +74,33 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 
 ### Basic Examples 📗
 
--   [Types of comments](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
+-   [Types of comments in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
 
--   [Hello World!](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
+-   [Hello World in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
 
 -   [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
 
--   [Character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
+-   [String Operations in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
 
--   [Operators](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
+-   [Operators in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
 
--   [Console user inputs](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
+-   [Getting User Input in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
 
--   [User inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_inputs_variables_and_strings.py)
+-   [Python Fundamentals: Naming, Keywords, and Dynamic Typing](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_fundamentals.py)
 
--   [Flow control: 'if-else' statement](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
+-   [Flow control in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
 
--   [More user inputs, global variables and character strings operations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_inputs_variables_and_strings.py)
+-   [Code Reusability and the DRY Principle](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_fundamentals.py)
 
--   [Escape character and strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
+-   [Escape character in Python strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
 
 ### Intermediate Examples 📙
 
--   ['While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
+-   [While Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
 
--   [More 'While' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
+-   [Nested 'while' Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
 
--   [Additional 'While' ](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
+-   [Advanced 'while' Loop control with 'break'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
 
 -   ['For' iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
 
