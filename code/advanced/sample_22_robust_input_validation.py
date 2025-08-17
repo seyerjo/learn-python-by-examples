@@ -1,16 +1,13 @@
-""" ROBUST INPUT VALIDATION
+# MAIN CODE
 
-    When writing interactive programs, it's crucial to anticipate that users
-    might not always provide the input you expect. If your program expects an
-    integer but receives text, it will crash with a `ValueError`.
+"""
+Demonstrates a ROBUST AND REUSABLE INPUT VALIDATION function.
 
-    Robust input validation is the practice of creating a loop that repeatedly
-    asks the user for input until they provide data in the correct format. This
-    prevents crashes and provides a much better user experience.
+A common task in programming is getting a specific type of numerical input
+from a user within a certain range. This example builds a single, flexible
+function that can be reused for integers, floats, and ranges.
 
-    The most common pattern for this in Python is to use a `while True` loop
-    combined with a `try-except` block.
-
+The core pattern remains a `while True` loop combined with `try-except`.
 """
 
 # ############################################################################ #
@@ -19,37 +16,77 @@
 # understand the type annotations used here (e.g., `-> int`, `-> None`).       #
 # ############################################################################ #
 
+from typing import Union, Type
 
-def get_valid_integer(prompt: str) -> int:
-    """Continuously prompts the user until a valid integer is entered.
+
+def get_valid_number(
+    prompt: str,
+    num_type: Type[Union[int, float]] = int,
+    min_val: Union[int, float] = None,
+    max_val: Union[int, float] = None,
+) -> Union[int, float]:
+    """
+    Continuously prompts the user until a valid number of a specific type and
+    within a specific range is entered.
 
     Args:
         prompt (str): The message to display to the user.
+        num_type (type): The required number type (e.g., `int` or `float`).
+        min_val (int or float, optional): The minimum allowed value.
+        max_val (int or float, optional): The maximum allowed value.
 
     Returns:
-        int: The validated integer provided by the user.
+        A valid number of the specified type and within the specified range.
     """
-    while True:  # Start an infinite loop
+    while True:
         try:
-            # Attempt to get input and convert it to an integer
-            user_input: str = input(prompt)
-            return int(user_input)
+            # 1. Attempt to get and convert the input to the desired type.
+            user_input = input(prompt)
+            number = num_type(user_input)
+
+            # 2. Check if the number is above the minimum value.
+            if min_val is not None and number < min_val:
+                print(f"Error: The value must be at least {min_val}.")
+                continue  # Ask for input again.
+
+            # 3. Check if the number is below the maximum value.
+            if max_val is not None and number > max_val:
+                print(f"Error: The value must be no more than {max_val}.")
+                continue  # Ask for input again.
+
+            # 4. If all checks pass, return the valid number.
+            return number
+
         except ValueError:
-            # If a ValueError occurs, the input was not a valid integer.
-            # Inform the user and the loop will continue to the next iteration.
-            print("Invalid input. Please enter a whole number.")
+            # This catches errors from the type conversion (e.g., `int("abc")`).
+            print(f"Invalid input. Please enter a valid {num_type.__name__}.")
 
 
 def main() -> None:
-    """Main function to demonstrate robust input validation."""
-    print("Let's get your age.")
+    """Main function to demonstrate robust and flexible input validation."""
+    print("--- Demonstrating a general-purpose number validation function ---\n")
 
-    # The vulnerable way (uncomment to see it crash with non-numeric input)
-    # age = int(input("Please enter your age: "))
+    # Example 1: Get any integer.
+    age = get_valid_number("Please enter your age (any integer): ")
+    print(f"Valid age entered: {age}\n")
 
-    # The robust way
-    age: int = get_valid_integer("Please enter your age: ")
-    print(f"\nThank you. You have entered {age} as your age.")
+    # Example 2: Get a float between 0.0 and 1.0.
+    probability = get_valid_number(
+        "Enter a probability (a decimal between 0.0 and 1.0): ",
+        num_type=float,
+        min_val=0.0,
+        max_val=1.0,
+    )
+    print(f"Valid probability entered: {probability}\n")
+
+    # Example 3: Get an integer within a specific range.
+    rating = get_valid_number(
+        "Please rate our service (an integer from 1 to 5): ",
+        num_type=int,
+        min_val=1,
+        max_val=5,
+    )
+    print(f"Valid rating entered: {rating}\n")
 
 
 if __name__ == "__main__":

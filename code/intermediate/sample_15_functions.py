@@ -1,49 +1,69 @@
 # MAIN CODE
 
-"""Demonstrate function definitions and usage in Python.
+"""
+Demonstrates the fundamentals of defining and using functions in Python.
 
-Shows basic function syntax, docstrings, parameters and return values.
+This example covers:
+- Basic function definition with parameters.
+- Functions that return a value.
+- Functions with default parameter values (optional arguments).
+- Calling functions using positional and keyword arguments.
 """
 
 
-def sum_numbers(a, b):
-    """Return the sum of two numbers.
+def add_numbers(a, b):
+    """
+    Takes two numbers as input and returns their sum.
+    This is an example of a function with positional parameters and a return value.
 
     Args:
-        a (int): First number
-        b (int): Second number
+        a (int): The first number.
+        b (int): The second number.
 
     Returns:
-        int: Sum of a and b
+        int: The sum of a and b.
     """
     return a + b
 
 
-def full_name(name, last_name, inverse=False):
-    """Combine first and last name, with optional reverse order.
+def format_full_name(first_name, last_name, reverse=False):
+    """
+    Combines a first and last name into a single string.
+    This demonstrates default arguments and conditional logic.
 
     Args:
-        name (str): First name
-        last_name (str): Last name
-        inverse (bool, optional): Reverse name order if True. Defaults to False.
+        first_name (str): The person's first name.
+        last_name (str): The person's last name.
+        reverse (bool, optional): If True, formats as "Last, First".
+                                  Defaults to False.
 
     Returns:
-        str: Combined name string
+        str: The formatted full name.
     """
-    if inverse:
-        return f"{last_name} {name}"
-    return f"{name} {last_name}"
+    if reverse:
+        return f"{last_name}, {first_name}"
+    return f"{first_name} {last_name}"
 
 
 def main():
-    """Main function demonstrating function usage."""
-    # Demonstrate sum_numbers function
-    print(sum_numbers(3, 2), end='\n\n')
+    """Main function to demonstrate various ways to call functions."""
+    print("--- Demonstrating `add_numbers` function ---")
+    # Calling with positional arguments
+    sum_result = add_numbers(5, 3)
+    print(f"The result of add_numbers(5, 3) is: {sum_result}\n")
 
-    # Demonstrate full_name function variations
-    print(full_name("Michael", "Smith"), end='\n\n')
-    print(full_name("Michael", "Smith", inverse=True), end='\n\n')
-    print(full_name(last_name="Smith", name="Michael"), end='\n\n')
+    print("--- Demonstrating `format_full_name` function ---")
+    # Calling with only the required positional arguments
+    regular_name = format_full_name("John", "Doe")
+    print(f"Default order: {regular_name}")
+
+    # Calling with the optional argument set to True
+    reversed_name = format_full_name("John", "Doe", reverse=True)
+    print(f"Reversed order: {reversed_name}")
+
+    # Calling using keyword arguments allows changing the order
+    kw_name = format_full_name(last_name="Doe", first_name="John")
+    print(f"Called with keyword arguments: {kw_name}\n")
 
 
 if __name__ == "__main__":

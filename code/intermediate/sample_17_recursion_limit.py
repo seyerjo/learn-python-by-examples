@@ -1,33 +1,54 @@
 # MAIN CODE
 
-"""Demonstrate Python's recursion limit and how to modify it.
+"""
+Demonstrates Python's recursion limit and how to handle the RecursionError.
 
-Shows the default recursion limit, how to check it, and how to change it,
-with warnings about modifying this limit.
+Python sets a limit on the depth of recursion to prevent infinite recursions
+from causing an overflow of the C stack and crashing Python. This example
+shows how to check this limit and what happens when it's exceeded.
 """
 
-# Import sys module to access system-specific parameters and functions
-# including getrecursionlimit() and setrecursionlimit()
+# Import the sys module to access system-specific parameters and functions.
 import sys
 
 
+def countdown(n):
+    """
+    A simple recursive function that counts down from n.
+    This function is designed to demonstrate hitting the recursion limit.
+    """
+    # This print helps visualize the recursion, but it will stop when the
+    # error occurs, so you won't see it count all the way down.
+    print(n)
+    # The recursive step: call itself with a decremented value.
+    countdown(n - 1)
+
+
 def main():
-    """Main function to demonstrate recursion limit operations."""
-    # Show default recursion limit
-    print(f"Default recursion limit: {sys.getrecursionlimit()}", end='\n\n')
+    """
+    Main function to check the recursion limit and then intentionally cause
+    a RecursionError.
+    """
+    # 1. Check and display the current recursion limit.
+    # This is typically 1000 by default.
+    current_limit = sys.getrecursionlimit()
+    print(f"The current recursion limit is: {current_limit}\n")
 
-    # Demonstrate changing the limit
-    sys.setrecursionlimit(999)
-    print(f"New recursion limit set to: {sys.getrecursionlimit()}", end='\n\n')
+    # 2. We will attempt to call a recursive function with a number slightly
+    #    higher than the limit to trigger the error.
+    call_depth = current_limit + 5
 
-    # Reset to default
-    sys.setrecursionlimit(1000)
-    print(
-        f"Recursion limit reset to default: {sys.getrecursionlimit()}", end='\n\n')
+    print(f"Attempting to call a recursive function {call_depth} times...")
+    print("This will exceed the limit and raise a RecursionError.")
 
-    # Warning about changing recursion limit
-    print("Warning: Modifying recursion limit can lead to stack overflow!")
-    print("Consider using iterative solutions for deep recursion cases.", end='\n\n')
+    try:
+        # 3. We use a try...except block to safely handle the expected error
+        #    without crashing the program.
+        countdown(call_depth)
+    except RecursionError as e:
+        # 4. When the recursion limit is hit, this block will execute.
+        print(f"\nSuccessfully caught the expected error: {e}")
+        print("This error prevents a stack overflow, which could crash the interpreter.")
 
 
 if __name__ == "__main__":

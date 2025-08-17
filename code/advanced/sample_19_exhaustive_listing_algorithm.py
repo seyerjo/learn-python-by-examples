@@ -1,57 +1,66 @@
-""" EXHAUSTIVE LISTING algorithm, also called GUESS AND CHECK.
+# MAIN CODE
 
-    The exhaustive enumeration algorithm is a method of finding the optimal
-    solution to a given problem. It uses a brute-force search of all possible
-    solutions to a problem to find the best solution. This means the algorithm
-    reviews all possible options and tries to evaluate each one to find the
-    best solution. The exhaustive enumeration algorithm is useful when the
-    number of possible solutions is small. However, it is inefficient when the
-    number of possible solutions is large, as it would have to review each
-    solution to find the best one.
+"""
+Demonstrates the EXHAUSTIVE ENUMERATION algorithm, also known as GUESS AND CHECK.
 
-    This Python code is an example of the Exhaustive Listing algorithm, also
-    called Guess and Check. The algorithm requests the user to enter an integer
-    number, then it iterates by adding one to the response until it is obtained
-    that the square of the response is equal to the number entered by the user.
-    If so, then the square root of the number can be calculated and if not, then
-    the number entered by the user does not have an exact square root. 
+This algorithm finds a solution to a problem by trying every possible answer
+(enumerating all possibilities) until the correct one is found. It is a simple
+brute-force approach.
 
+This example uses it to find the integer square root of a number.
 """
 
 # ############################################################################ #
 # NOTE: This example uses Type Hinting, a concept explained in detail in      #
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> None`).                 #
+# understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
 
 
+def find_square_root(target: int) -> None:
+    """
+    Finds the integer square root of a target number using exhaustive enumeration.
+
+    Args:
+        target (int): The number to find the square root of.
+    """
+    guess: int = 0
+    iterations: int = 0
+
+    # We keep guessing until our guess squared is greater than or equal to the target.
+    while guess**2 < target:
+        guess += 1
+        iterations += 1
+
+    print(f"Algorithm finished after {iterations} iterations.")
+
+    # After the loop, we check if we found an exact square root.
+    if guess**2 == target:
+        print(f"The exact square root of {target} is {guess}.")
+    else:
+        print(f"{target} does not have an exact integer square root.")
+
+
 def main() -> None:
-    """Main function to demonstrate exhaustive listing algorithm."""
-    # Get a valid integer from the user
+    """
+    Main function to get user input and run the algorithm.
+    """
+    print("--- Exhaustive Enumeration: Integer Square Root Finder ---")
+
+    # Get a valid non-negative integer from the user.
     while True:
         try:
-            target_number: int = int(input("Enter an integer number: "))
+            target_number: int = int(input("Enter a non-negative integer: "))
             if target_number < 0:
-                print("Please enter a non-negative integer.")
+                print("Error: Please enter a non-negative integer.")
                 continue
             break
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
-    print()  # Blank line
 
-    # Find square root by exhaustive listing
-    guess: int = 0
-    while guess**2 < target_number:
-        print(guess)  # Show current guess
-        guess += 1    # Increment guess
-
-    print()  # Blank line
-
-    # Check if perfect square was found
-    if guess**2 == target_number:
-        print(f"The square root of {target_number} is {guess}")
-    else:
-        print(f"{target_number} does not have an exact square root")
+    print()  # Add a blank line for readability.
+    find_square_root(target_number)
+    print()
 
 
 if __name__ == "__main__":

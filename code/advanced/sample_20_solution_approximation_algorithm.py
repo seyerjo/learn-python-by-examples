@@ -1,77 +1,77 @@
-""" SOLUTION APPROXIMATION algorithm
+# MAIN CODE
 
-    The approximation algorithm is a method for finding an approximate solution to a
-    problem. This is achieved by using a series of iterative steps that are applied
-    until a satisfactory solution is obtained.
-    
-    The basic steps followed to find the approximation to the solution are: 
+"""
+Demonstrates the SOLUTION APPROXIMATION algorithm.
 
-    1. Define the problem.
-    2. Establish the parameters of the solution.
-    3. Generate an initial solution.
-    4. Evaluate the initial solution.
-    5. Generate a new solution.
-    6. Re-evaluate the new solution.
-    7. Compare the initial solution with the new solution.
-    8. Repeat steps 5 to 7 until the approximate solution is found.
-    
-    This code is an approximation algorithm that tries to find the square root of
-    an integer number given by the user.
+This type of algorithm is used to find a solution that is "close enough" when
+an exact solution is either impossible or too computationally expensive to find.
+It works by starting with a guess and iteratively improving it until the guess
+is within a specified margin of error (epsilon).
 
-    First, the user chooses a number and a constant "epsilon" is declared with a
-    value of 0.01. This constant will control the level of accuracy of the algorithm.
-    Then, a variable "response" is initialized at 0.0 which will then be incremented
-    with the step of the algorithm.
-
-    A while loop is initiated to calculate the square root of the number. The loop
-    compares the square root of the response variable with the target number. If the
-    difference is less than the epsilon value, the algorithm assumes it has found the
-    answer. If the difference is greater, the loop continues and the response variable
-    is incremented with the defined step.
-
-    Finally, the algorithm checks if the square root of the response is within the epsilon
-    margin and, if so, prints the response on the screen. If not, it prints a message
-    indicating that the square root has not been found.
-
+This example uses it to find an approximate square root of a number.
 """
 
 # ############################################################################ #
 # NOTE: This example uses Type Hinting, a concept explained in detail in      #
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> None`).                 #
+# understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
 
 
-def main() -> None:
-    """Main function demonstrating solution approximation algorithm."""
-    # Set precision level (epsilon) and step size
-    epsilon: float = 0.01  # Controls accuracy of approximation
-    step: float = epsilon**2  # Smaller step for finer approximation
+def find_root_by_approximation(target: int) -> None:
+    """
+    Finds an approximate square root of a target number.
 
-    # Get a valid integer from the user
+    Args:
+        target (int): The number to find the square root of.
+    """
+    # Epsilon is the margin of error we are willing to accept.
+    epsilon: float = 0.01
+    # The step is how much we increment our guess in each iteration.
+    step: float = epsilon**2
+    guess: float = 0.0
+    iterations: int = 0
+
+    # The loop continues as long as our guess is not "close enough"
+    # (i.e., the error is greater than epsilon).
+    # We also check `guess <= target` to prevent infinite loops for negative numbers,
+    # although our main function already validates for non-negative input.
+    while abs(guess**2 - target) >= epsilon and guess <= target:
+        guess += step
+        iterations += 1
+
+    print(f"Algorithm finished after {iterations} iterations.")
+
+    # After the loop, we check if the final guess is within the margin of error.
+    if abs(guess**2 - target) < epsilon:
+        print(f"The approximate square root of {target} is {guess:.4f}")
+    else:
+        print(
+            f"Failed to find the square root of {target} within the allowed error.")
+
+
+def main() -> None:
+    """
+    Main function to get user input and run the algorithm.
+    """
+    print("--- Solution Approximation: Square Root Finder ---")
+
+    # Get a valid integer from the user.
+    # Note: This algorithm works for negative numbers, but the concept of a
+    # real square root for them is undefined. We will stick to non-negatives.
     while True:
         try:
-            target: int = int(input("Enter an integer number: "))
+            target_number: int = int(input("Enter a non-negative integer: "))
+            if target_number < 0:
+                print("Error: Please enter a non-negative integer.")
+                continue
             break
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
-    print()  # Blank line
-
-    # Initialize guess and perform approximation
-    guess: float = 0.0
-    while abs(guess**2 - target) >= epsilon and guess <= target:
-        error = abs(guess**2 - target)
-        print(f"Current error: {error:.4f}, Guess: {guess:.4f}")
-        guess += step
-
-    print()  # Blank line
-
-    # Check if approximation was successful
-    if abs(guess**2 - target) < epsilon:
-        print(f"Approximate square root of {target} is {guess:.4f}")
-    else:
-        print(f"Could not find square root of {target} within given precision")
+    print()  # Add a blank line for readability.
+    find_root_by_approximation(target_number)
+    print()
 
 
 if __name__ == "__main__":

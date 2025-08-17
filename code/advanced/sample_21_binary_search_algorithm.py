@@ -1,63 +1,75 @@
-""" BINARY SEARCH Algorithm.
+# MAIN CODE
 
-    The Binary Search Algorithm is an efficient search algorithm for finding an element in a
-    sorted list. It works by measuring the middle of the list and determining if the sought
-    element is greater or lesser than the element in the middle of the list. If it's greater,
-    the lower half of the list is discarded and searched in the upper part; otherwise, the
-    upper part of the list is discarded and searched in the lower part. This is repeated until
-    the element is found or it is determined that it is not in the list.
+"""
+Demonstrates the BINARY SEARCH algorithm adapted for finding a numerical solution.
 
-    This code calculates the square root of a given integer number. It uses a binary search
-    algorithm to find the answer, dividing the search range in half each time. The process
-    starts with a lower limit of 0.0 and an upper limit of the given number, or 1.0, whichever
-    is greater. The response is calculated as the midpoint of the limits. If the square of the
-    response is less than the given number, the lower limit is changed to the response, otherwise
-    the upper limit is changed to the response. The process is repeated until the difference
-    between the square of the response and the given number is less than a certain amount
-    (epsilon). After this, the response is printed as the square root of the given number.
+This "divide and conquer" algorithm is significantly more efficient than linear
+methods like exhaustive enumeration or simple approximation. Instead of checking
+every value, it repeatedly divides the search space in half.
 
+This example uses it to find the approximate square root of a number.
 """
 
 # ############################################################################ #
 # NOTE: This example uses Type Hinting, a concept explained in detail in      #
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> None`).                 #
+# understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
 
 
+def find_root_by_binary_search(target: int) -> None:
+    """
+    Finds an approximate square root using a binary search algorithm.
+
+    Args:
+        target (int): The number to find the square root of.
+    """
+    epsilon: float = 0.01  # Our margin of error.
+    low: float = 0.0
+    # The answer can't be larger than the target itself (unless target is < 1).
+    high: float = max(1.0, float(target))
+    guess: float = (high + low) / 2
+    iterations: int = 0
+
+    # Continue as long as our guess is not "close enough".
+    while abs(guess**2 - target) >= epsilon:
+        # If our guess is too low, we know the answer is in the upper half
+        # of the current search space. So, we move the 'low' boundary up.
+        if guess**2 < target:
+            low = guess
+        # If our guess is too high, the answer is in the lower half.
+        # So, we move the 'high' boundary down.
+        else:
+            high = guess
+
+        # The new guess is the midpoint of the *new*, smaller search space.
+        guess = (high + low) / 2
+        iterations += 1
+
+    print(f"Algorithm finished after {iterations} iterations.")
+    print(f"The approximate square root of {target} is {guess:.4f}")
+
+
 def main() -> None:
-    """Main function demonstrating binary search algorithm for square root."""
-    # Get a valid positive integer from the user
+    """
+    Main function to get user input and run the algorithm.
+    """
+    print("--- Binary Search: Square Root Finder ---")
+
+    # Get a valid non-negative integer from the user.
     while True:
         try:
-            target: int = int(input("Enter a positive integer number: "))
-            if target < 0:
+            target_number: int = int(input("Enter a non-negative integer: "))
+            if target_number < 0:
                 print("Error: Please enter a non-negative integer.")
                 continue
             break
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
-    print()  # Blank line
-    epsilon: float = 0.01  # Precision level
-    low: float = 0.0
-    # Ensure high uses float for max comparison
-    high: float = max(1.0, float(target))
-    guess: float = (high + low) / 2  # Initial guess
-
-    # Binary search loop
-    while abs(guess**2 - target) >= epsilon:
-        print(f"Search range: [{low:.4f}, {high:.4f}], Guess: {guess:.4f}")
-
-        if guess**2 < target:
-            low = guess
-        else:
-            high = guess
-
-        guess = (high + low) / 2  # New guess
-
-    print()  # Blank line
-    print(f"The square root of {target} is approximately {guess:.4f}")
+    print()  # Add a blank line for readability.
+    find_root_by_binary_search(target_number)
+    print()
 
 
 if __name__ == "__main__":

@@ -1,78 +1,123 @@
-# Exception Handling: `try-except` for Robust Input
+# Exception Handling: The `try-except-else-finally` Block
 
-## 1. Introduction to Exception Handling
+In programming, an "exception" is an error that occurs during program execution. Python uses **exception handling** to manage these errors gracefully, preventing the program from crashing.
 
-In programming, an "exception" is an event that occurs during the execution of a program that disrupts the normal flow of instructions. When an error occurs, Python raises an exception. If unhandled, this can lead to your program crashing.
+This example demonstrates the full power of Python's exception handling by using the complete `try-except-else-finally` structure.
 
-"Exception handling" is the mechanism that allows you to "catch" these errors and respond to them gracefully, preventing crashes and providing a better user experience.
+## The `try-except-else-finally` Structure
 
-## 2. The `try-except` Block
+This structure provides a robust way to control program flow when errors might occur.
 
-The primary construct in Python for handling exceptions is the `try-except` block.
+1.  **`try`**: You place the code that might raise an exception inside the `try` block.
+2.  **`except`**: If an error occurs in the `try` block, Python looks for a matching `except` block to handle it. You can have multiple `except` blocks to handle different, specific types of exceptions.
+3.  **`else`**: The code in the `else` block is executed **only if no exceptions were raised** in the `try` block. It's useful for code that should run only when the initial operation was successful.
+4.  **`finally`**: The code in the `finally` block is **always executed**, no matter what. It runs whether an exception occurred or not. This is the perfect place for cleanup actions, like closing a file or a network connection.
 
-- The `try` block contains the code that might raise an exception.
-- The `except` block contains the code that will be executed if a specific type of exception occurs within the `try` block.
+## Code
 
-**Syntax:**
+The following code implements a "Safe Division Calculator" that asks the user for two numbers and demonstrates how each part of the `try-except-else-finally` block works.
 
 ```python
-try:
-    # Code that might cause an error
-    # (e.g., type conversion, file operations)
-except ExceptionType:
-    # Code to handle the error
-    # (e.g., print an error message, ask for input again)
+# MAIN CODE
+
+"""
+Demonstrates the full structure of exception handling in Python using a
+`try-except-else-finally` block.
+
+This example shows how to handle multiple, specific exceptions and how to use
+the `else` and `finally` clauses for more robust program flow.
+"""
+
+
+def safe_division():
+    """
+    Performs division on two numbers entered by the user, handling potential
+    errors gracefully.
+    """
+    print("--- Safe Division Calculator ---")
+    print("This program will calculate numerator / denominator.")
+
+    try:
+        # The `try` block contains code that might raise an error.
+        numerator_str = input("Enter the numerator: ")
+        numerator = float(numerator_str)
+
+        denominator_str = input("Enter the denominator: ")
+        denominator = float(denominator_str)
+
+        result = numerator / denominator
+
+    except ValueError:
+        # This block runs ONLY if a `ValueError` occurs (e.g., `float("abc")`).
+        print("\nError: Invalid input. Please enter valid numbers.")
+
+    except ZeroDivisionError:
+        # This block runs ONLY if a `ZeroDivisionError` occurs.
+        print("\nError: Cannot divide by zero.")
+
+    else:
+        # The `else` block runs ONLY if NO exceptions occurred in the `try` block.
+        print(f"\nSuccess! The result of the division is: {result:.2f}")
+
+    finally:
+        # The `finally` block runs ALWAYS, regardless of whether an exception
+        # occurred or not. It's often used for cleanup operations.
+        print("\n--- Calculation attempt finished. ---")
+
+
+def main():
+    """Main function to demonstrate the exception handling example."""
+    safe_division()
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-## 3. Robust Input Validation with `try-except`
+## How to Run and Test
 
-A common scenario where `try-except` is invaluable is when handling user input. Users might accidentally or intentionally enter data that is not in the expected format (e.g., entering "hello" when a number is required). Without exception handling, `int("hello")` would cause a `ValueError` and crash your program.
+Run the script and try entering different values to see how each block is executed:
 
-This example demonstrates how to create a robust input function that repeatedly prompts the user until a valid integer is provided, ensuring your program continues to run smoothly.
+1.  **Successful Case**: Enter `10` and `5`. The `try` and `else` blocks will run, followed by `finally`.
+2.  **`ValueError` Case**: Enter `abc` for the numerator. The `try` block will fail, and the `except ValueError` block will run, followed by `finally`.
+3.  **`ZeroDivisionError` Case**: Enter `10` for the numerator and `0` for the denominator. The `try` block will fail, and the `except ZeroDivisionError` block will run, followed by `finally`.
 
-## 4. `sample_18_exception_handling.py` Explained
+## Expected Output
 
-The script defines a function `get_integer_input()` that takes a `prompt` string as an argument.
-
-1.  **Infinite Loop (`while True`):** The function uses an infinite loop to keep asking for input.
-2.  **`try` Block:**
-    - It attempts to get `user_input` using `input(prompt)`.
-    - It then tries to convert `user_input` to an integer using `int()`.
-    - If successful, the `number` is returned, and the `while True` loop is exited.
-3.  **`except ValueError` Block:**
-    - If `int(user_input)` raises a `ValueError` (because the input was not a valid integer), the code within this block is executed.
-    - An informative error message (`"Invalid input. Please enter a whole number."`) is printed to the user.
-    - The loop then continues (`while True`), prompting the user again for input.
-
-The `main()` function calls `get_integer_input()` to demonstrate its usage, showing how it gracefully handles incorrect entries.
-
-## 5. How to Run the Example
-
-1.  Navigate to the `code/intermediate/` directory in your terminal.
-2.  Run the script using Python:
-
-    ```bash
-    python sample_18_exception_handling.py
-    ```
-
-    or
-
-    ```bash
-    python3 sample_18_exception_handling.py
-    ```
-
-3.  The program will ask you to enter your age. Try entering text (e.g., "abc") and observe how the program informs you of the error and asks again. Then, enter a valid number.
-
-## 6. Expected Output
-
-When running the script, you will see output similar to this:
+### Scenario 1: Success
 
 ```
---- Integer Input Validation Example ---
-Please enter your age: abc
-Invalid input. Please enter a whole number.
-Please enter your age: twenty
-Invalid input. Please enter a whole number.
-Please enter your age: 30
-Thank you. You have entered 30 as your age.
+--- Safe Division Calculator ---
+This program will calculate numerator / denominator.
+Enter the numerator: 10
+Enter the denominator: 4
+
+Success! The result of the division is: 2.50
+
+--- Calculation attempt finished. ---
+```
+
+### Scenario 2: Invalid Input
+
+```
+--- Safe Division Calculator ---
+This program will calculate numerator / denominator.
+Enter the numerator: ten
+
+Error: Invalid input. Please enter valid numbers.
+
+--- Calculation attempt finished. ---
+```
+
+### Scenario 3: Division by Zero
+
+```
+--- Safe Division Calculator ---
+This program will calculate numerator / denominator.
+Enter the numerator: 10
+Enter the denominator: 0
+
+Error: Cannot divide by zero.
+
+--- Calculation attempt finished. ---
 ```
