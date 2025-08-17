@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - Major Refactoring and Synchronization
+
+### Changed
+
+-   **Project-Wide Refactoring (Samples 11-23):** Performed a comprehensive, sample-by-sample review and refactoring of the entire existing codebase.
+-   **Code Quality and Modularity:** Refactored monolithic scripts into smaller, single-purpose functions to improve clarity, reusability, and demonstrate best practices (e.g., `sample_19`, `sample_20`, `sample_21`).
+-   **Pedagogical Enhancements:** Systematically improved comments, docstrings, and console outputs across all samples to make the code more educational and easier to follow for beginners.
+-   **Robustness:** Introduced and standardized robust input validation and error handling patterns where appropriate (e.g., `sample_16`, `sample_22`).
+-   **Consistency:** Ensured all code examples strictly adhere to the project's style guide (PEP 8) and naming conventions.
+
+### Fixed
+
+-   **Documentation Synchronization:** Corrected all identified inconsistencies between code examples (`.py`) and their corresponding documentation (`.md`), ensuring perfect synchronization and accuracy. The documentation for every sample has been rewritten to reflect the improved code.
+
 ## [1.1.0] - Quality and Pedagogy Refactor
 
 ### Changed

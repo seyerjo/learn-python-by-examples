@@ -41,9 +41,7 @@ graph LR
 ## ✨ Main Features
 
 -   **📈 Pedagogical Progression**: Examples range from basic to advanced levels.
-
 -   **📦 Self-contained**: Each example is independent and does not require external dependencies.
-
 -   **💡 Detailed Comments**: Comments explain the code to facilitate understanding.
 
 For a detailed breakdown of features and requirements, see the [Requirements](docs/02_requirements.md) and [Features](docs/03_features.md) documents.
@@ -60,13 +58,10 @@ While this repository is designed to be accessible, it is assumed that the user 
 
 ## 🚀 Quick Start Guide
 
-1. Clone or download the repository.
-
-2. Open the example files in your preferred code editor.
-
-3. Study the code and comments.
-
-4. Experiment with the examples to see how changes affect the program's behavior.
+1.  Clone or download the repository.
+2.  Open the example files in your preferred code editor.
+3.  Study the code and comments.
+4.  Experiment with the examples to see how changes affect the program's behavior.
 
 For detailed instructions on setup, installation, and usage, refer to the [Setup and Installation Guide](docs/07_setup_and_installation.md) and the [Usage Guide](docs/08_usage_guide.md).
 
@@ -75,55 +70,34 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 ### Basic Examples 📗
 
 -   [Types of comments in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
-
 -   [Hello World in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
-
 -   [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
-
 -   [String Operations in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
-
 -   [Operators in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
-
 -   [Getting User Input in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
-
 -   [Python Fundamentals: Naming, Keywords, and Dynamic Typing](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_fundamentals.py)
-
 -   [Flow control in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
-
 -   [Code Reusability and the DRY Principle](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_fundamentals.py)
-
 -   [Escape character in Python strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
 
 ### Intermediate Examples 📙
 
 -   [While Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
-
 -   [Nested 'while' Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
-
--   [Advanced 'while' Loop control with 'break'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py) [ iterations](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
-
+-   [Advanced 'while' Loop control with 'break'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
 -   ['for' Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
-
 -   [More 'for' Loop Examples in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_14_more_for_iterations.py)
-
 -   [Functions in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_15_functions.py)
-
 -   [Recursive Functions in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_16_recursive_functions.py)
-
 -   [Python's Recursion Limit and 'RecursionError'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
-
 -   [Exception Handling: The 'try-except-else-finally' Block](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_18_exception_handling.py)
 
 ### Advanced Examples 📕
 
 -   [Exhaustive Enumeration (Guess and Check) Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_exhaustive_listing_algorithm.py)
-
 -   [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_solution_approximation_algorithm.py)
-
 -   [Binary Search for Solution Finding Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_binary_search_algorithm.py)
-
 -   [Robust and Reusable Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_robust_input_validation.py)
-
 -   [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_23_type_hinting.py)
 
 ## 📊 Difficulty Levels
@@ -131,9 +105,7 @@ For detailed instructions on setup, installation, and usage, refer to the [Setup
 The difficulty of each example is indicated by the following icons:
 
 -   📗 **Basic**: Introduces the basics of the language and its syntax.
-
 -   📙 **Intermediate**: Covers more advanced topics and concepts.
-
 -   📕 **Advanced**: Demonstrates more complex and advanced techniques.
 
 ## 🔄 Project Status
