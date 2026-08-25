@@ -69,7 +69,7 @@ A curated, modular repository of standalone and packaged Python code examples or
 ### FEAT-03: Structured & Predictable Repository Architecture
 - **Description:** Standardized directory hierarchy and naming convention (`sample_00_description.py` / `sample_00_description.md`) enforcing consistency across all levels.
 - **Associated Requirements:** FR-02, FR-05, NFR-01
-- **Detailed Operation:** Tiered folder structure isolating `basic/`, `intermediate/`, and `advanced/` samples, with `/docs` holding the core Memory Bank and `/` holding repository metadata.
+- **Detailed Operation:** Tiered folder structure isolating `basic/`, `intermediate/`, and `advanced/` samples, with `/docs` holding the core project documentation and `/` holding repository metadata.
 - **Edge Cases & Validation:**
   - All file and directory names must strictly use lowercase letters with underscore separators.
   - Numbering must maintain sequential two-digit zero-padding (`sample_01_...`, `sample_02_...`).

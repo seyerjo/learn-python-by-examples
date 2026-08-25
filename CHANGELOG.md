@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Changed
-- Consolidated project documentation into the 4-anchor Fused Memory Bank architecture (`docs/01_project_blueprint.md`, `docs/02_engineering_guidelines.md`, `docs/03_project_log.md`).
+- Consolidated project documentation into a streamlined 4-anchor architecture (`docs/01_project_blueprint.md`, `docs/02_engineering_guidelines.md`, `docs/03_project_log.md`).
 
 ## [1.2.0] - Major Refactoring and Synchronization
 

@@ -9,7 +9,7 @@
 - [ ] **TASK-04 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
 
 ### Completed Tasks
-- [x] **TASK-05:** Consolidate legacy 12-file documentation into the Fused Memory Bank 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
+- [x] **TASK-05:** Consolidate legacy 12-file documentation into a streamlined 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
 - [x] **TASK-06:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
 - [x] **TASK-07:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
 - [x] **TASK-08:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
@@ -20,8 +20,8 @@
 
 ## Development Log
 
-### Milestone: Memory Bank Fused Architecture (v2)
-- **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor Fused Memory Bank system.
+### Milestone: Streamlined Documentation Architecture (v2)
+- **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system.
 - **Key Decisions:**
   - Standardized on 3 core documentation anchors in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
   - Preserved all Mermaid architecture diagrams, requirement definitions (FR/NFR), and pedagogical decisions.

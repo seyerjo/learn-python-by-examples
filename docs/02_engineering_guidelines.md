@@ -16,7 +16,7 @@ learn-python-by-examples/
 │   │   └── sample_01_hello_world.md
 │   ├── intermediate/           # Intermediate-level scripts (control flow, functions, OOP)
 │   └── advanced/               # Advanced scripts (algorithms, optimization, generators)
-├── docs/                       # Consolidated Fused Memory Bank (4 anchors)
+├── docs/                       # Consolidated project documentation (3 core guides)
 │   ├── 01_project_blueprint.md
 │   ├── 02_engineering_guidelines.md
 │   └── 03_project_log.md
@@ -30,7 +30,7 @@ learn-python-by-examples/
 
 ### 2. Main Components Breakdown
 - **Root Metadata (`/`):** Contains general repository configuration, public documentation (`README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `LICENSE`), and release history (`CHANGELOG.md`).
-- **Memory Bank (`/docs`):** The consolidated, persistent 3-file documentation core + root `CHANGELOG.md` maintaining project vision, architecture, and backlog.
+- **Project Documentation (`/docs`):** The consolidated 3-file documentation core + root `CHANGELOG.md` maintaining project vision, architecture, and backlog.
 - **Categorized Code Levels (`/code/basic`, `/code/intermediate`, `/code/advanced`):** Isolated folders grouping code examples by pedagogical complexity.
 - **Twin File Standard:** Every script `sample_XX_description.py` has an exact twin `sample_XX_description.md` providing step-by-step technical breakdown, concepts illustrated, and sample execution output.
 

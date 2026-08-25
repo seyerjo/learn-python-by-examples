@@ -57,8 +57,8 @@ graph TD
 ---
 
 ## 📚 Project Documentation
-Access the consolidated Fused Memory Bank inside `/docs`:
-* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Central vision, measurable objectives, functional/non-functional requirements (FR/NFR), and product feature specifications.
+Access the core project documentation inside `/docs`:
+* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements (FR/NFR), and product feature specifications.
 * 🛠️ **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, Mermaid topologies, tech stack justifications, environment setup, and PEP 8 / Google-style coding standards.
 * 📋 **[Project Log](./docs/03_project_log.md):** Active prioritized task backlog (`To-Do List`) and historical development milestone records.
 * 📜 **[Changelog](./CHANGELOG.md):** Chronological version history following the *Keep a Changelog* standard.
