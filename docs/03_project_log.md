@@ -4,17 +4,20 @@
 
 ### Active & Pending Tasks
 - [ ] **TASK-01 (Priority: High):** Execute the expansion plan (`.dev/docs/plan2.md`) to add new basic, intermediate, and advanced examples toward the 100+ samples milestone.
-- [ ] **TASK-02 (Priority: Medium):** Add practical examples demonstrating popular Python Standard Library modules (`datetime`, `collections`, `itertools`, `pathlib`, `json`, `csv`).
-- [ ] **TASK-03 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/intermediate` (classes, inheritance, polymorphism, dataclasses).
-- [ ] **TASK-04 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
+- [ ] **TASK-02 (Priority: Medium):** Add dedicated examples for advanced collection data structures (tuples, dictionary operations, sets, list/dict comprehensions).
+- [ ] **TASK-03 (Priority: Medium):** Add practical File I/O and data serialization samples (`pathlib`, JSON parsing, CSV handling, context managers).
+- [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/intermediate` (classes, inheritance, polymorphism, dataclasses).
+- [ ] **TASK-05 (Priority: Medium):** Add practical examples demonstrating popular Python Standard Library modules (`datetime`, `collections`, `itertools`, `argparse`, `logging`).
+- [ ] **TASK-06 (Priority: Low):** Standardize console execution metadata across baseline samples (add shebang `#!/usr/bin/env python3` and explicit `sys.exit()` status codes where applicable).
+- [ ] **TASK-07 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
 
 ### Completed Tasks
-- [x] **TASK-05:** Consolidate legacy 12-file documentation into a streamlined 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
-- [x] **TASK-06:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
-- [x] **TASK-07:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
-- [x] **TASK-08:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
-- [x] **TASK-09:** Create repository governance files (`LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`).
-- [x] **TASK-10:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
+- [x] **TASK-08:** Consolidate legacy 12-file documentation into a streamlined 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
+- [x] **TASK-09:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
+- [x] **TASK-10:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
+- [x] **TASK-11:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
+- [x] **TASK-12:** Create repository governance files (`LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`).
+- [x] **TASK-13:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
 
 ---
 
