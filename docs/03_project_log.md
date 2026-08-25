@@ -3,7 +3,10 @@
 ## To-Do List
 
 ### Active & Pending Tasks
-- [ ] **TASK-01 (Priority: High):** Execute the expansion plan (`.archive/docs/plan_expansion.md`) to add new basic, intermediate, and advanced examples toward the 100+ samples milestone.
+- [ ] **TASK-01 (Priority: High):** Execute the expansion plan (`.archive/docs/plan_expansion.md`) to add new basic, intermediate, and advanced examples (`sample_24` to `sample_65`) toward the 100+ milestone:
+  - *Phase 1 (Basic / `code/01_basic`):* Implement data structures (`sample_24` to `sample_32`: lists, tuples, dicts, sets, boolean logic, and f-string formatting).
+  - *Phase 2 (Intermediate / `code/02_intermediate`):* Implement building blocks (`sample_33` to `sample_50`), prioritizing modern `pathlib` over legacy `os.path` for file I/O, OOP fundamentals, context managers, and packaging (`venv`/`pip`).
+  - *Phase 3 (Advanced & AI / `code/03_advanced`):* Implement advanced systems and API series (`sample_51` to `sample_65`), enforcing strict credentials security via `python-dotenv` and `.env.example` (zero hardcoded secrets), async streaming, and LLM tool use / function calling.
 - [ ] **TASK-02 (Priority: Medium):** Add dedicated examples for advanced collection data structures (tuples, dictionary operations, sets, list/dict comprehensions).
 - [ ] **TASK-03 (Priority: Medium):** Add practical File I/O and data serialization samples (`pathlib`, JSON parsing, CSV handling, context managers).
 - [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/02_intermediate` (classes, inheritance, polymorphism, dataclasses).
