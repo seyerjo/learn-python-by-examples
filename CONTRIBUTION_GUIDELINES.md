@@ -7,11 +7,11 @@ Before creating a new issue, please search the active repository issue tracker t
 * 📝 A clear, descriptive title.
 * 📝 Exact steps to reproduce the unexpected behavior.
 * 📝 Expected vs. actual outcomes, including environment specifications (Python version, OS) and terminal logs.
-* 📝 The affected example file (e.g., `code/intermediate/sample_18_exception_handling.py`).
+* 📝 The affected example file (e.g., `code/02_intermediate/sample_18_exception_handling.py`).
 
 ## 2. 💡 Suggesting Enhancements
 We welcome ideas for new examples, explanations, or optimizations! To propose a change:
-* Open an enhancement issue explaining the explicit use case, target difficulty level (`basic`, `intermediate`, `advanced`), and pedagogical value it adds to the project blueprint.
+* Open an enhancement issue explaining the explicit use case, target difficulty level (`01_basic`, `02_intermediate`, `03_advanced`), and pedagogical value it adds to the project blueprint.
 * Wait for project maintainers to evaluate and greenlight the architectural impact before submitting code.
 
 ## 3. 🌿 Pull Request Process & Branching Strategy

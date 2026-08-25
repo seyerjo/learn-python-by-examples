@@ -6,7 +6,7 @@
 - [ ] **TASK-01 (Priority: High):** Execute the expansion plan (`.dev/docs/plan2.md`) to add new basic, intermediate, and advanced examples toward the 100+ samples milestone.
 - [ ] **TASK-02 (Priority: Medium):** Add dedicated examples for advanced collection data structures (tuples, dictionary operations, sets, list/dict comprehensions).
 - [ ] **TASK-03 (Priority: Medium):** Add practical File I/O and data serialization samples (`pathlib`, JSON parsing, CSV handling, context managers).
-- [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/intermediate` (classes, inheritance, polymorphism, dataclasses).
+- [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/02_intermediate` (classes, inheritance, polymorphism, dataclasses).
 - [ ] **TASK-05 (Priority: Medium):** Add practical examples demonstrating popular Python Standard Library modules (`datetime`, `collections`, `itertools`, `argparse`, `logging`).
 - [ ] **TASK-06 (Priority: Low):** Standardize console execution metadata across baseline samples (add shebang `#!/usr/bin/env python3` and explicit `sys.exit()` status codes where applicable).
 - [ ] **TASK-07 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.

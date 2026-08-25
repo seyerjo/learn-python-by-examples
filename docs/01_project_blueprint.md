@@ -48,7 +48,7 @@ A curated, modular repository of standalone and packaged Python code examples or
 ### FEAT-01: Modular Collection of Python Code Examples
 - **Description:** A progressive library of Python code samples covering syntax fundamentals, data structures, algorithms, standard library utilities, and idiomatic patterns.
 - **Associated Requirements:** FR-01, FR-02, FR-05, FR-07, NFR-03, NFR-07
-- **Detailed Operation:** Users browse through categorized level folders (`/code/basic`, `/code/intermediate`, `/code/advanced`), choose an example, and execute it locally via CLI.
+- **Detailed Operation:** Users browse through categorized level folders (`/code/01_basic`, `/code/02_intermediate`, `/code/03_advanced`), choose an example, and execute it locally via CLI.
 - **Edge Cases & Handling:**
   - *Invalid or Unexpected Inputs:* Examples requiring user input validate data types and gracefully intercept malformed entries.
   - *Null / Empty Values:* String and collection examples explicitly demonstrate operations on empty inputs.
@@ -69,7 +69,7 @@ A curated, modular repository of standalone and packaged Python code examples or
 ### FEAT-03: Structured & Predictable Repository Architecture
 - **Description:** Standardized directory hierarchy and naming convention (`sample_00_description.py` / `sample_00_description.md`) enforcing consistency across all levels.
 - **Associated Requirements:** FR-02, FR-05, NFR-01
-- **Detailed Operation:** Tiered folder structure isolating `basic/`, `intermediate/`, and `advanced/` samples, with `/docs` holding the core project documentation and `/` holding repository metadata.
+- **Detailed Operation:** Tiered folder structure isolating `01_basic/`, `02_intermediate/`, and `03_advanced/` samples, with `/docs` holding the core project documentation and `/` holding repository metadata.
 - **Edge Cases & Validation:**
   - All file and directory names must strictly use lowercase letters with underscore separators.
   - Numbering must maintain sequential two-digit zero-padding (`sample_01_...`, `sample_02_...`).

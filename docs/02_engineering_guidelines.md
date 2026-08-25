@@ -11,11 +11,11 @@ learn-python-by-examples/
 │   ├── rules/                  # Active project rules (v2)
 │   └── workflows/              # Structured operational workflows
 ├── code/                       # Main educational source code repository
-│   ├── basic/                  # Beginner-level scripts and twin documentation
+│   ├── 01_basic/               # Beginner-level scripts and twin documentation
 │   │   ├── sample_01_hello_world.py
 │   │   └── sample_01_hello_world.md
-│   ├── intermediate/           # Intermediate-level scripts (control flow, functions, OOP)
-│   └── advanced/               # Advanced scripts (algorithms, optimization, generators)
+│   ├── 02_intermediate/        # Intermediate-level scripts (control flow, functions, OOP)
+│   └── 03_advanced/            # Advanced scripts (algorithms, optimization, generators)
 ├── docs/                       # Consolidated project documentation (3 core guides)
 │   ├── 01_project_blueprint.md
 │   ├── 02_engineering_guidelines.md
@@ -31,7 +31,7 @@ learn-python-by-examples/
 ### 2. Main Components Breakdown
 - **Root Metadata (`/`):** Contains general repository configuration, public documentation (`README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `LICENSE`), and release history (`CHANGELOG.md`).
 - **Project Documentation (`/docs`):** The consolidated 3-file documentation core + root `CHANGELOG.md` maintaining project vision, architecture, and backlog.
-- **Categorized Code Levels (`/code/basic`, `/code/intermediate`, `/code/advanced`):** Isolated folders grouping code examples by pedagogical complexity.
+- **Categorized Code Levels (`/code/01_basic`, `/code/02_intermediate`, `/code/03_advanced`):** Isolated folders grouping code examples by pedagogical complexity.
 - **Twin File Standard:** Every script `sample_XX_description.py` has an exact twin `sample_XX_description.md` providing step-by-step technical breakdown, concepts illustrated, and sample execution output.
 
 ### 3. Conceptual Data Flow & User Navigation
@@ -42,9 +42,9 @@ graph TD
     A[User] --> B(Clone Repository)
     B --> C{Local Repository}
     C --> D[README.md]
-    C --> E[code/basic]
-    C --> F[code/intermediate]
-    C --> G[code/advanced]
+    C --> E[code/01_basic]
+    C --> F[code/02_intermediate]
+    C --> G[code/03_advanced]
     E --> H[sample_0x_description.py]
     E --> I[sample_0x_description.md]
     F --> J[sample_0y_description.py]
@@ -102,7 +102,7 @@ git clone https://github.com/seyerjo/learn-python-by-examples.git
 cd learn-python-by-examples
 
 # 3. Navigate to the desired level directory
-cd code/basic
+cd code/01_basic
 
 # 4. Execute an example script
 python3 sample_01_hello_world.py

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Consolidated project documentation into a streamlined 4-anchor architecture (`docs/01_project_blueprint.md`, `docs/02_engineering_guidelines.md`, `docs/03_project_log.md`).
+- Renamed code subdirectories to `01_basic`, `02_intermediate`, and `03_advanced` to enforce natural pedagogical sorting in file trees and synchronized all documentation cross-references.
 
 ## [1.2.0] - Major Refactoring and Synchronization
 
