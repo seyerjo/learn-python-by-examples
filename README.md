@@ -2,7 +2,7 @@
 > A comprehensive, practical Python learning repository featuring self-contained code examples, synchronized twin documentation, and defensive programming patterns.
 
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
-![Version](https://img.shields.io/badge/Version-v1.2.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)
 ![Stage](https://img.shields.io/badge/Stage-Production-blue.svg)
 ![Stack](https://img.shields.io/badge/Stack-Python_3.7+-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-red.svg)
@@ -129,8 +129,8 @@ python3 sample_01_hello_world.py
 ---
 
 ## 📜 Version History & Changelog
-* **Current Version:** `1.2.0` (Tracked via [`CHANGELOG.md`](./CHANGELOG.md)).
-* Refer to [`CHANGELOG.md`](./CHANGELOG.md) to inspect recent milestone implementations under `## [Unreleased]` and `## [1.2.0]`.
+* **Current Version:** `1.2.5` (Tracked via [`CHANGELOG.md`](./CHANGELOG.md)).
+* Refer to [`CHANGELOG.md`](./CHANGELOG.md) to inspect recent milestone implementations under `## [Unreleased]` and `## [1.2.5]`.
 
 ---
 

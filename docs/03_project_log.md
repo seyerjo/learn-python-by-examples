@@ -26,12 +26,14 @@
 
 ## Development Log
 
-### Milestone: Streamlined Documentation Architecture (v2)
-- **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system.
+### Milestone [1.2.5] - Streamlined Documentation Architecture & Structure Reorganization (2026-08-25)
+- **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system and reorganized code difficulty folders.
 - **Key Decisions:**
   - Standardized on 3 core documentation anchors in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
-  - Preserved all Mermaid architecture diagrams, requirement definitions (FR/NFR), and pedagogical decisions.
-  - Aligned project rules with modern Python console engineering standards and strict Git safety rules.
+  - Reorganized code subdirectories into `01_basic/`, `02_intermediate/`, and `03_advanced/` to enforce natural pedagogical sorting in file trees and synchronized all cross-references.
+  - Aligned root governance files (`README.md`, `CONTRIBUTION_GUIDELINES.md`, `CODE_OF_CONDUCT.md`) with official workflows.
+  - Archived legacy memory bank and planning documentation to `.archive/mbank/` and `.archive/docs/`.
+  - Enriched expansion task `TASK-01` with phase breakdowns, modern `pathlib` preference, and strict credentials security for the AI series.
 
 ### Milestone [1.2.0] - Project-Wide Refactoring & Synchronization (Samples 00-23)
 - **Summary:** Completed comprehensive quality overhaul of all initial samples.

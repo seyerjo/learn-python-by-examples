@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.2.5] - 2026-08-25
+
 ### Changed
 - Consolidated project documentation into a streamlined 4-anchor architecture (`docs/01_project_blueprint.md`, `docs/02_engineering_guidelines.md`, `docs/03_project_log.md`).
 - Renamed code subdirectories to `01_basic`, `02_intermediate`, and `03_advanced` to enforce natural pedagogical sorting in file trees and synchronized all documentation cross-references.
+- Updated root governance files (`README.md`, `CONTRIBUTION_GUIDELINES.md`, `CODE_OF_CONDUCT.md`) to align with project workflows.
+- Archived legacy documentation and planning files to `.archive/mbank/` and `.archive/docs/`.
+- Sanitized internal development terminology across all public repository documentation.
 
 ## [1.2.0] - Major Refactoring and Synchronization
 
