@@ -1,157 +1,145 @@
-# 🐍 Learn Python by Examples
+# 🚀 Learn Python by Examples
+> A comprehensive, practical Python learning repository featuring self-contained code examples, synchronized twin documentation, and defensive programming patterns.
 
-Learn Python through practical and commented examples.
-
-<a href="https://deepwiki.com/seyerjo/learn-python-by-examples"><img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg"></a>
-![Project Status](https://img.shields.io/badge/Status-Developing-yellow.svg)
-![Technology](https://img.shields.io/badge/Tech-Python-blue.svg)
-![Code Style](https://img.shields.io/badge/Code%20Style-autopep8-ff69b4.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
+![Version](https://img.shields.io/badge/Version-v1.2.0-blue.svg)
+![Stage](https://img.shields.io/badge/Stage-Production-blue.svg)
+![Stack](https://img.shields.io/badge/Stack-Python_3.7+-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-red.svg)
 
-## 👋 Welcome!
+---
 
-Welcome to the "Learn Python by Examples" repository! This project is designed to be a practical and accessible resource for anyone looking to learn or improve their Python skills. Here you will find a carefully curated collection of code examples, from the most basic concepts to more advanced topics, all with detailed comments to guide you through your learning journey.
+## 🎯 Project Overview
+* 👁️ **Vision:** To serve as an essential and practical guide for anyone learning Python, offering clean, structured, and progressively challenging code examples classified by difficulty.
+* 📌 **Core Objectives:**
+  * 🎯 Deliver a growing collection of 100+ Python code examples covering basic syntax, data structures, control flow, algorithms, and design patterns.
+  * 🎯 Categorize all scripts into clearly defined tiers: **Basic** (`code/basic`), **Intermediate** (`code/intermediate`), and **Advanced** (`code/advanced`).
+  * 🎯 Provide dedicated, companion markdown documentation for every single script (`sample_XX_description.md`).
+  * 🎯 Maintain high engineering standards including PEP 8 style, Google-style docstrings, and PEP 484 type hinting.
 
-We invite you to explore, experiment, and, of course, contribute. _Happy coding!_
+---
 
-## 🔍 Overview
+## ⚡ Main Product Features
+* 💎 **Modular Code Examples (FEAT-01):** Standalone, executable Python scripts illustrating specific programming concepts without heavyweight external dependencies (maps to `FR-01`, `FR-02`, `NFR-03`).
+* 💎 **Synchronized Twin Documentation (FEAT-02):** Companion markdown guides paired 1:1 with each script, explaining syntax mechanics, line-by-line breakdown, and expected terminal output (maps to `FR-03`, `FR-04`, `NFR-02`).
+* 💎 **Tiered Repository Architecture (FEAT-03):** Predictable directory layout and standardized two-digit sequential naming (`sample_00` to `sample_23+`) for zero-friction navigation (maps to `FR-05`, `NFR-01`).
+* 💎 **Defensive Error Handling (FEAT-04):** Real-world demonstration of input sanitization, exception interception (`try-except-else-finally`), and graceful error recovery (maps to `NFR-03`).
 
-This project is structured into three main difficulty levels: _basic_, _intermediate_, and _advanced_. Each example is self-contained and includes detailed documentation to facilitate understanding. The following diagram illustrates the main topics covered within the project.
+---
 
-For a more detailed overview, see the [Project Overview](docs/01_project_overview.md).
+## 🗺️ Application Workflow & Architecture
 
 ```mermaid
-graph LR
-    A[code] --> B[basic];
-    A --> C[intermediate];
-    A --> D[advanced];
-    B --> E[Types of comments];
-    B --> F[Hello World!];
-    C --> G[For iterations];
-    C --> H[Recursive Functions];
-    C --> O[Exception Handling];
-    D --> I[Algorithms];
-    I --> J[Exhaustive Enumeration];
-    I --> K[Binary Search];
-    D --> L[Good Practices];
-    L --> M[Robust Input Validation];
-    L --> N[Type Hinting];
+graph TD
+    A[Learner / Developer] --> B(Clone Repository)
+    B --> C{Local Workspace}
+    C --> D[README.md]
+    C --> E[code/basic]
+    C --> F[code/intermediate]
+    C --> G[code/advanced]
+    E --> H[sample_XX_description.py]
+    E --> I[sample_XX_description.md]
+    F --> J[sample_YY_description.py]
+    F --> K[sample_YY_description.md]
+    G --> L[sample_ZZ_description.py]
+    G --> M[sample_ZZ_description.md]
+    D --> A
+    I --> A
+    K --> A
+    M --> A
+    H --> N(Run Code via CLI)
+    J --> N
+    L --> N
+    N --> O[Console Output & Telemetry]
+    O --> A
 ```
 
-## ✨ Main Features
+---
 
--   **📈 Pedagogical Progression**: Examples range from basic to advanced levels.
--   **📦 Self-contained**: Each example is independent and does not require external dependencies.
--   **💡 Detailed Comments**: Comments explain the code to facilitate understanding.
+## 📚 Project Documentation
+Access the consolidated Fused Memory Bank inside `/docs`:
+* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Central vision, measurable objectives, functional/non-functional requirements (FR/NFR), and product feature specifications.
+* 🛠️ **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, Mermaid topologies, tech stack justifications, environment setup, and PEP 8 / Google-style coding standards.
+* 📋 **[Project Log](./docs/03_project_log.md):** Active prioritized task backlog (`To-Do List`) and historical development milestone records.
+* 📜 **[Changelog](./CHANGELOG.md):** Chronological version history following the *Keep a Changelog* standard.
 
-For a detailed breakdown of features and requirements, see the [Requirements](docs/02_requirements.md) and [Features](docs/03_features.md) documents.
+---
 
-## 🧑‍💻 Who is this project for?
+## 🛠️ Getting Started & Installation
 
-While this repository is designed to be accessible, it is assumed that the user has a basic understanding of programming concepts from any language. To get the most out of these examples, it is recommended to be familiar with:
+### 📋 Prerequisites
+* **Python 3.7+** installed on your system (`python3 --version` or `python --version`).
+* **Git** installed on your system (`git --version`).
 
--   What variables and constants are.
--   Basic data types (integers, strings, booleans).
--   Common operators (arithmetic, comparison).
--   Basic use of a code editor or IDE (like Visual Studio Code).
--   Basic command line/console navigation.
+### ⚙️ Quick Installation & Execution
+```bash
+# 1. Clone the repository
+git clone https://github.com/seyerjo/learn-python-by-examples.git
 
-## 🚀 Quick Start Guide
+# 2. Navigate to the project directory
+cd learn-python-by-examples
 
-1.  Clone or download the repository.
-2.  Open the example files in your preferred code editor.
-3.  Study the code and comments.
-4.  Experiment with the examples to see how changes affect the program's behavior.
+# 3. Choose a difficulty level and navigate into it
+cd code/basic
 
-For detailed instructions on setup, installation, and usage, refer to the [Setup and Installation Guide](docs/07_setup_and_installation.md) and the [Usage Guide](docs/08_usage_guide.md).
+# 4. Execute any sample script
+python3 sample_01_hello_world.py
+```
 
-## 📝 Examples List
+---
 
-### Basic Examples 📗
+## 📝 Code Examples Directory
 
--   [Types of comments in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_00_comments_types.py)
--   [Hello World in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_01_hello_world.py)
--   [Primitive data types in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_02_primitives_data_types.py)
--   [String Operations in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_03_strings_operations.py)
--   [Operators in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_04_operators.py)
--   [Getting User Input in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_05_inputs.py)
--   [Python Fundamentals: Naming, Keywords, and Dynamic Typing](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_06_fundamentals.py)
--   [Flow control in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_07_flow_control.py)
--   [Code Reusability and the DRY Principle](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_08_more_fundamentals.py)
--   [Escape character in Python strings](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/basic/sample_09_escape_character_and_strings.py)
+### 📗 Basic Level (`code/basic`)
+| Script | Documentation | Description |
+| :--- | :--- | :--- |
+| [`sample_00_comments_types.py`](./code/basic/sample_00_comments_types.py) | [`sample_00_comments_types.md`](./code/basic/sample_00_comments_types.md) | Single-line, multi-line, and inline comment conventions. |
+| [`sample_01_hello_world.py`](./code/basic/sample_01_hello_world.py) | [`sample_01_hello_world.md`](./code/basic/sample_01_hello_world.md) | Standard entry point and `if __name__ == "__main__":` guard. |
+| [`sample_02_primitives_data_types.py`](./code/basic/sample_02_primitives_data_types.py) | [`sample_02_primitives_data_types.md`](./code/basic/sample_02_primitives_data_types.md) | Primitive types (`int`, `float`, `str`, `bool`) and `type()`. |
+| [`sample_03_strings_operations.py`](./code/basic/sample_03_strings_operations.py) | [`sample_03_strings_operations.md`](./code/basic/sample_03_strings_operations.md) | String concatenation, repetition, indexing, and slicing. |
+| [`sample_04_operators.py`](./code/basic/sample_04_operators.py) | [`sample_04_operators.md`](./code/basic/sample_04_operators.md) | Arithmetic, comparison, and logical operators. |
+| [`sample_05_inputs.py`](./code/basic/sample_05_inputs.py) | [`sample_05_inputs.md`](./code/basic/sample_05_inputs.md) | Reading console input using `input()` and type casting. |
+| [`sample_06_fundamentals.py`](./code/basic/sample_06_fundamentals.py) | [`sample_06_fundamentals.md`](./code/basic/sample_06_fundamentals.md) | Variable naming rules, reserved keywords, and dynamic typing. |
+| [`sample_07_flow_control.py`](./code/basic/sample_07_flow_control.py) | [`sample_07_flow_control.md`](./code/basic/sample_07_flow_control.md) | Conditional branching with `if`, `elif`, and `else`. |
+| [`sample_08_more_fundamentals.py`](./code/basic/sample_08_more_fundamentals.py) | [`sample_08_more_fundamentals.md`](./code/basic/sample_08_more_fundamentals.md) | Code reusability, function encapsulation, and DRY principle. |
+| [`sample_09_escape_character_and_strings.py`](./code/basic/sample_09_escape_character_and_strings.py) | [`sample_09_escape_character_and_strings.md`](./code/basic/sample_09_escape_character_and_strings.md) | Escape sequences (`\n`, `\t`, `\\`) and raw string literals (`r"..."`). |
 
-### Intermediate Examples 📙
+### 📙 Intermediate Level (`code/intermediate`)
+| Script | Documentation | Description |
+| :--- | :--- | :--- |
+| [`sample_10_while_iterations.py`](./code/intermediate/sample_10_while_iterations.py) | [`sample_10_while_iterations.md`](./code/intermediate/sample_10_while_iterations.md) | While loops, condition checks, and counter increments. |
+| [`sample_11_more_while_iterations.py`](./code/intermediate/sample_11_more_while_iterations.py) | [`sample_11_more_while_iterations.md`](./code/intermediate/sample_11_more_while_iterations.md) | Nested `while` loops and multi-variable state tracking. |
+| [`sample_12_additional_while_iterations.py`](./code/intermediate/sample_12_additional_while_iterations.py) | [`sample_12_additional_while_iterations.md`](./code/intermediate/sample_12_additional_while_iterations.md) | Loop control flow with `break` and conditional termination. |
+| [`sample_13_for_iterations.py`](./code/intermediate/sample_13_for_iterations.py) | [`sample_13_for_iterations.md`](./code/intermediate/sample_13_for_iterations.md) | Sequence traversal with `for` loops and `range()`. |
+| [`sample_14_more_for_iterations.py`](./code/intermediate/sample_14_more_for_iterations.py) | [`sample_14_more_for_iterations.md`](./code/intermediate/sample_14_more_for_iterations.md) | Iterating over strings, collections, and step ranges. |
+| [`sample_15_functions.py`](./code/intermediate/sample_15_functions.py) | [`sample_15_functions.md`](./code/intermediate/sample_15_functions.md) | Defining modular functions, parameters, and return values. |
+| [`sample_16_recursive_functions.py`](./code/intermediate/sample_16_recursive_functions.py) | [`sample_16_recursive_functions.md`](./code/intermediate/sample_16_recursive_functions.md) | Base cases and recursive calls for factorials. |
+| [`sample_17_recursion_limit.py`](./code/intermediate/sample_17_recursion_limit.py) | [`sample_17_recursion_limit.md`](./code/intermediate/sample_17_recursion_limit.md) | Stack overflow protection and `sys.getrecursionlimit()`. |
+| [`sample_18_exception_handling.py`](./code/intermediate/sample_18_exception_handling.py) | [`sample_18_exception_handling.md`](./code/intermediate/sample_18_exception_handling.md) | Defensive `try-except-else-finally` blocks and `ValueError` interception. |
 
--   [While Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_10_while_iterations.py)
--   [Nested 'while' Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_11_more_while_iterations.py)
--   [Advanced 'while' Loop control with 'break'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_12_additional_while_iterations.py)
--   ['for' Loops in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_13_for_iterations.py)
--   [More 'for' Loop Examples in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_14_more_for_iterations.py)
--   [Functions in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_15_functions.py)
--   [Recursive Functions in Python](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_16_recursive_functions.py)
--   [Python's Recursion Limit and 'RecursionError'](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_17_recursion_limit.py)
--   [Exception Handling: The 'try-except-else-finally' Block](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/intermediate/sample_18_exception_handling.py)
+### 📕 Advanced Level (`code/advanced`)
+| Script | Documentation | Description |
+| :--- | :--- | :--- |
+| [`sample_19_exhaustive_listing_algorithm.py`](./code/advanced/sample_19_exhaustive_listing_algorithm.py) | [`sample_19_exhaustive_listing_algorithm.md`](./code/advanced/sample_19_exhaustive_listing_algorithm.md) | Brute-force exhaustive enumeration (guess-and-check). |
+| [`sample_20_solution_approximation_algorithm.py`](./code/advanced/sample_20_solution_approximation_algorithm.py) | [`sample_20_solution_approximation_algorithm.md`](./code/advanced/sample_20_solution_approximation_algorithm.md) | Numerical root approximation using incremental step tolerances. |
+| [`sample_21_binary_search_algorithm.py`](./code/advanced/sample_21_binary_search_algorithm.py) | [`sample_21_binary_search_algorithm.md`](./code/advanced/sample_21_binary_search_algorithm.md) | Logarithmic binary search for root finding with iteration counters. |
+| [`sample_22_robust_input_validation.py`](./code/advanced/sample_22_robust_input_validation.py) | [`sample_22_robust_input_validation.md`](./code/advanced/sample_22_robust_input_validation.md) | Reusable numeric validation loop with bounds checking. |
+| [`sample_23_type_hinting.py`](./code/advanced/sample_23_type_hinting.py) | [`sample_23_type_hinting.md`](./code/advanced/sample_23_type_hinting.md) | PEP 484 type annotations, function signatures, and static type safety. |
 
-### Advanced Examples 📕
+---
 
--   [Exhaustive Enumeration (Guess and Check) Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_19_exhaustive_listing_algorithm.py)
--   [Solution Approximation Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_20_solution_approximation_algorithm.py)
--   [Binary Search for Solution Finding Algorithm](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_21_binary_search_algorithm.py)
--   [Robust and Reusable Input Validation](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_22_robust_input_validation.py)
--   [Type Hinting (PEP 484)](https://github.com/seyerjo/learn-python-by-examples/blob/main/code/advanced/sample_23_type_hinting.py)
+## 📜 Version History & Changelog
+* **Current Version:** `1.2.0` (Tracked via [`CHANGELOG.md`](./CHANGELOG.md)).
+* Refer to [`CHANGELOG.md`](./CHANGELOG.md) to inspect recent milestone implementations under `## [Unreleased]` and `## [1.2.0]`.
 
-## 📊 Difficulty Levels
+---
 
-The difficulty of each example is indicated by the following icons:
+## 🤝 Contributing & Code of Conduct
+Contributions are welcome! Please ensure you review our governing documents before submitting Pull Requests:
+* 🚀 **[Contribution Guidelines](./CONTRIBUTION_GUIDELINES.md):** Bug reporting, feature suggestions, branching strategy, and PR submission workflow.
+* 🤝 **[Code of Conduct](./CODE_OF_CONDUCT.md):** Community standards, inclusive participation pledges, and reporting contacts.
 
--   📗 **Basic**: Introduces the basics of the language and its syntax.
--   📙 **Intermediate**: Covers more advanced topics and concepts.
--   📕 **Advanced**: Demonstrates more complex and advanced techniques.
+---
 
-## 🔄 Project Status
-
-This project is actively maintained and updated periodically. New examples and modifications to existing ones are added regularly to enhance the learning experience.
-
-For more details on the project's status and development notes, refer to the documentation.
-
-## 💻 Code Quality
-
-The code in this repository is formatted using autopepe8 and adheres to the guidelines set by Pylint, ensuring high code quality and readability.
-
-For detailed coding standards, see the [Code Style Guide](docs/09_code_style_guide.md).
-
-## 👋 Contributing
-
-We welcome contributions to the "Learn Python by Examples" project! Whether you want to report a bug, suggest an improvement, or contribute code and documentation, your help is valuable.
-
-Please read our [Contribution Guidelines](./CONTRIBUTION_GUIDELINES.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) before contributing.
-
-## 📜 License
-
-All examples in this repository are under the [MIT license](./LICENSE), allowing for use in any project, including commercial ones.
-
-## 📖 Full Documentation
-
-For a complete and structured view of all project documentation, including vision, requirements, architecture, and development guidelines, please visit our main documentation index:
-
--   [**📚 Full Documentation Index**](./docs/00_documentation_index.md)
-
-## 📚 Additional Resources
-
-To complement your learning, here are some valuable official and unofficial resources:
-
-### Official Resources
-
--   [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
--   [Python for Non-Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
--   [Python for Programmers](https://wiki.python.org/moin/BeginnersGuide/Programmers)
--   [Downloading Python](https://wiki.python.org/moin/BeginnersGuide/Download)
--   [Using Python on Windows](https://docs.python.org/3/faq/windows.html)
--   [Using Python on Linux](https://docs.python.org/3/using/unix.html)
--   [Using Python on macOS](https://docs.python.org/3/using/mac.html)
-
-### Unofficial Resources
-
--   [Python Tutorial](https://python.land/python-tutorial)
--   [Codédex](https://www.codedex.io/python)
--   [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+## 📄 License
+This project is licensed under the terms of the [MIT License](./LICENSE).

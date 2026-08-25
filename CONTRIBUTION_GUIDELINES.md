@@ -1,103 +1,29 @@
-# Contribution Guidelines: Learn Python by Examples
+# 🚀 Contributing to Learn Python by Examples
 
-Thank you for your interest in contributing to the "Learn Python by Examples" project! Your help is essential to make this an even better resource for learning Python.
+Thank you for your interest in contributing! To maintain code health, pedagogical clarity, efficiency, and a welcoming community, we request that all participants follow these structured guidelines.
 
-This document describes how you can participate in the project, whether by reporting bugs, suggesting improvements, or contributing code and documentation.
+## 1. 🐛 Reporting Issues & Bugs
+Before creating a new issue, please search the active repository issue tracker to ensure the problem has not already been reported. When filing an issue, include:
+* 📝 A clear, descriptive title.
+* 📝 Exact steps to reproduce the unexpected behavior.
+* 📝 Expected vs. actual outcomes, including environment specifications (Python version, OS) and terminal logs.
+* 📝 The affected example file (e.g., `code/intermediate/sample_18_exception_handling.py`).
 
-## Code of Conduct
+## 2. 💡 Suggesting Enhancements
+We welcome ideas for new examples, explanations, or optimizations! To propose a change:
+* Open an enhancement issue explaining the explicit use case, target difficulty level (`basic`, `intermediate`, `advanced`), and pedagogical value it adds to the project blueprint.
+* Wait for project maintainers to evaluate and greenlight the architectural impact before submitting code.
 
-To ensure a welcoming and respectful environment for all contributors, we ask you to read and follow our [Code of Conduct](../CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+## 3. 🌿 Pull Request Process & Branching Strategy
+To ensure swift reviews and zero code conflicts, follow this development and submission protocol:
+1. **Fork and Branch:** Fork the repository and create a dedicated feature branch off `main` using a semantic name (e.g., `feat/new-dictionary-sample` or `fix/sample-16-recursion-edge-case`).
+2. **Adhere to Engineering Standards:** Implement your changes adhering strictly to the architecture and style guide laid out in [Engineering Guidelines](./docs/02_engineering_guidelines.md) (PEP 8, Google-style docstrings, type hinting, and twin `.md` documentation).
+3. **Include Twin Documentation:** Every new script `sample_XX_description.py` must include its companion `sample_XX_description.md` file in the same folder explaining concepts, code breakdown, and sample output.
+4. **Open a Pull Request:** Open a Pull Request (PR) targeted at the `main` branch. Ensure your PR description details the explicit problem solved and references any related issue IDs.
+5. **Commit Standards:** Use Conventional Commits formatting (e.g., `feat(samples): add list comprehension example`) with clear, imperative messages under 72 characters.
+6. **Code Review:** A maintainer will review code style compliance, robustness, and pedagogical value before merging.
 
-## How to Contribute
+## ⚖️ Community Code of Conduct
+By participating and contributing to this project, you agree to uphold and respect our community standards at all times.
 
-There are several ways to contribute to the project:
-
-### 1. Reporting Bugs
-
-If you find a bug in the code of an example, in the documentation, or in the repository structure, please let us know.
-
-- **Before reporting:** Search the [GitHub Issues](https://github.com/seyerjo/learn-python-by-examples/issues) to see if the bug has already been reported.
-
-- **How to report:** If you don't find an existing issue for the bug, open a new one in the GitHub repository.
-
-- **Useful information:** When reporting a bug, include as many details as possible:
-
-  - A clear and concise description of the problem.
-
-  - Steps to reproduce the bug.
-
-  - Expected behavior.
-
-  - Actual behavior (what actually happens).
-
-  - The affected file(s).
-
-  - Your Python version and operating system.
-
-### 2. Suggesting Improvements
-
-If you have ideas for new examples, improvements to existing examples, additions to the documentation, or any other suggestions to enhance the project, we'd love to hear them!
-
-- **Before suggesting:** Search the [GitHub Issues](https://github.com/seyerjo/learn-python-by-examples/issues) to see if the suggestion has already been discussed.
-
-- **How to suggest:** Open a new issue in the GitHub repository with the label "Enhancement" or "Suggestion".
-
-- **Useful information:** Describe your suggestion in detail and explain why you think it would be valuable for the project.
-
-### 3. Contributing Code or Documentation
-
-Direct contributions to the code and documentation are very welcome! Follow these steps to submit your contribution:
-
-- **Step 1: Fork the Repository:** If you haven't already, "fork" the `learn-python-by-examples` repository to your GitHub account.
-
-- **Step 2: Clone Your Fork:** Clone your fork to your local machine.
-
-  ```bash
-  git clone [https://github.com/seyerjo/learn-python-by-examples.git](https://github.com/seyerjo/learn-python-by-examples.git)
-  cd learn-python-by-examples
-  ```
-
-- **Step 3: Create a New Branch:** Create a new branch for your contribution. Use a descriptive name for the branch (e.g., `feat/new-list-example` or `fix/dictionary-example-error`).
-
-  ```bash
-  git checkout -b your-branch-name
-  ```
-
-- **Step 4: Make Your Changes:** Implement your changes, whether adding a new example, improving an existing one, fixing a bug, or updating documentation.
-
-  - Make sure to follow the project's [Code Style Guide](docs/09_code_style_guide.md).
-
-  - If adding a new example, make sure to include its `.py` file and corresponding `.md` documentation, following the `sample_0x_description` naming pattern.
-
-  - Test your changes locally to ensure they work as expected.
-
-- **Step 5: Commit Your Changes:** Commit your changes with clear and descriptive messages.
-
-  ```bash
-  git add .
-  git commit -m "feat: Add new example on lists"
-  ```
-
-- **Step 6: Push Your Changes to Your Fork:** Push your new branch to your fork repository on GitHub.
-
-  ```bash
-  git push origin your-branch-name
-  ```
-
-- **Step 7: Open a Pull Request (PR):** Go to your fork repository on GitHub and open a Pull Request from your new branch to the `main` branch of the original `learn-python-by-examples` repository.
-
-- **Step 8: PR Description:** Provide a clear and detailed description of your Pull Request. Explain what changes you have made, why they are necessary, and any other relevant information. Reference related issues if any.
-
-- **Step 9: PR Review:** The project team will review your Pull Request. They may ask questions, suggest changes, or request clarifications. Please respond to comments and make requested adjustments if necessary.
-
-- **Step 10: PR Merge:** Once your Pull Request is approved, it will be merged into the main branch of the project. Congratulations and thank you for your contribution!
-
-## Code Style Guide
-
-It is important that all code and documentation follow the defined standards to maintain project consistency. Please consult the [Code Style Guide](docs/09_code_style_guide.md) document before submitting your code contributions.
-
-## Questions
-
-If you have any questions about how to contribute, feel free to open an issue on GitHub with the label "Question".
-
-We look forward to your contributions!
+> ⚠️ All interactions, code reviews, and issue discussions are strictly governed by the guidelines detailed in the official **`CODE_OF_CONDUCT.md`** file located in the root of this project. Violations will result in temporary or permanent suspension from the repository.
