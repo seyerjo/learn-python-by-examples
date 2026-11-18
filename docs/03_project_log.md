@@ -85,7 +85,7 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 - **Activity:** Merged the expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` directly into `docs/03_project_log.md` and cleaned up obsolete `.archive` subdirectories.
 - **Key Decisions:**
   - Consolidated `sample_24`–`sample_65` specifications into `docs/03_project_log.md` under `### Expansion Roadmap` and updated `TASK-01` to point internally to that section.
-  - Removed `.archive/docs/` (`plan_expansion.md` after merging and obsolete `plan_review.md`), `.archive/code/`, and `.archive/rules/`, retaining `.archive/mbank/` for pending review.
+  - Removed `.archive/docs/` (`plan_expansion.md` after merging and obsolete `plan_review.md`), `.archive/code/`, `.archive/rules/`, and `.archive/mbank/` (retaining the empty `.archive/` folder locally).
 
 ### Milestone [1.2.5] - Streamlined Documentation Architecture & Structure Reorganization (2026-08-25)
 - **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system and reorganized code difficulty folders.
@@ -93,7 +93,7 @@ Detailed example catalog merged from the former expansion plan to implement **TA
   - Standardized on 3 core documentation anchors in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
   - Reorganized code subdirectories into `01_basic/`, `02_intermediate/`, and `03_advanced/` to enforce natural pedagogical sorting in file trees and synchronized all cross-references.
   - Aligned root governance files (`README.md`, `CONTRIBUTION_GUIDELINES.md`, `CODE_OF_CONDUCT.md`) with official workflows.
-  - Archived legacy memory bank and planning documentation to `.archive/mbank/` and `.archive/docs/` (`.archive/docs/` was later merged/removed on 2026-11-18).
+  - Archived legacy memory bank and planning documentation to `.archive/mbank/` and `.archive/docs/` (both were subsequently merged/removed on 2026-11-18).
   - Enriched expansion task `TASK-01` with phase breakdowns, modern `pathlib` preference, and strict credentials security for the AI series.
 
 ### Milestone [1.2.0] - Project-Wide Refactoring & Synchronization (Samples 00-23)

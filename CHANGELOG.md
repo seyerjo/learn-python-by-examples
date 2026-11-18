@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 - Merged the example expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` into `docs/03_project_log.md` and updated active backlog references.
 
 ### Removed
-- Removed obsolete archived planning, draft code, and legacy rule files (`.archive/docs/`, `.archive/code/`, `.archive/rules/`).
+- Removed obsolete archived planning, draft code, legacy rules, and legacy Memory Bank files (`.archive/docs/`, `.archive/code/`, `.archive/rules/`, `.archive/mbank/`).
 
 ## [1.2.5] - 2026-08-25
 
