@@ -28,4 +28,4 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 ## 📧 Reporting & Contact
 Project leaders will follow these standards in all community activities. Infractions, abusive behavior, or harassment can be reported directly to the project administrator via email at `abuse.seyerdev@gmail.com`. All reports will be reviewed promptly and treated with strict confidentiality.
 
-> ⚠️ For explicit operational rules on how to submit code changes, feature branches, and pull requests under these standards, please consult the official **`CONTRIBUTION_GUIDELINES.md`** file located in the project root.
+> ⚠️ For explicit operational rules on how to submit code changes, feature branches, and pull requests under these standards, please consult the official **`CONTRIBUTING_GUIDELINES.md`** file located in the project root.

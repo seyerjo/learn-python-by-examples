@@ -22,14 +22,14 @@ learn-python-by-examples/
 │   └── 03_project_log.md
 ├── .git/info/exclude           # Local exclusions for agent configs & private files
 ├── CHANGELOG.md                # Historical release log (Keep a Changelog standard)
-├── CONTRIBUTING.md             # Community contribution guidelines
+├── CONTRIBUTING_GUIDELINES.md  # Community contribution guidelines
 ├── CODE_OF_CONDUCT.md          # Community code of conduct
 ├── LICENSE                     # Project license (MIT)
 └── README.md                   # Primary project entry point & usage overview
 ```
 
 ### 2. Main Components Breakdown
-- **Root Metadata (`/`):** Contains general repository configuration, public documentation (`README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `LICENSE`), and release history (`CHANGELOG.md`).
+- **Root Metadata (`/`):** Contains general repository configuration, public documentation (`README.md`, `CONTRIBUTING_GUIDELINES.md`, `CODE_OF_CONDUCT.md`, `LICENSE`), and release history (`CHANGELOG.md`).
 - **Project Documentation (`/docs`):** The consolidated 3-file documentation core + root `CHANGELOG.md` maintaining project vision, architecture, and backlog.
 - **Categorized Code Levels (`/code/01_basic`, `/code/02_intermediate`, `/code/03_advanced`):** Isolated folders grouping code examples by pedagogical complexity.
 - **Twin File Standard:** Every script `sample_XX_description.py` has an exact twin `sample_XX_description.md` providing step-by-step technical breakdown, concepts illustrated, and sample execution output.

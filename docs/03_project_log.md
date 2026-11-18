@@ -19,7 +19,7 @@
 - [x] **TASK-09:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
 - [x] **TASK-10:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
 - [x] **TASK-11:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
-- [x] **TASK-12:** Create repository governance files (`LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`).
+- [x] **TASK-12:** Create repository governance files (`LICENSE`, `CONTRIBUTING_GUIDELINES.md`, `CODE_OF_CONDUCT.md`).
 - [x] **TASK-13:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
 
 ### Expansion Roadmap (`sample_24` to `sample_65`)
@@ -86,6 +86,7 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 - **Key Decisions:**
   - Consolidated `sample_24`–`sample_65` specifications into `docs/03_project_log.md` under `### Expansion Roadmap` and updated `TASK-01` to point internally to that section.
   - Removed `.archive/docs/` (`plan_expansion.md` after merging and obsolete `plan_review.md`), `.archive/code/`, `.archive/rules/`, and `.archive/mbank/` (retaining the empty `.archive/` folder locally).
+  - Aligned `README.md`, `CONTRIBUTING_GUIDELINES.md` (renamed from `CONTRIBUTION_GUIDELINES.md`), and `CODE_OF_CONDUCT.md` with the v3.1 community documentation skills and updated cross-references across `/docs`.
 
 ### Milestone [1.2.5] - Streamlined Documentation Architecture & Structure Reorganization (2026-08-25)
 - **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system and reorganized code difficulty folders.

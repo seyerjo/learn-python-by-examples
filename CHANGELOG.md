@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Merged the example expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` into `docs/03_project_log.md` and updated active backlog references.
+- Renamed `CONTRIBUTION_GUIDELINES.md` to `CONTRIBUTING_GUIDELINES.md`, aligned `README.md` with the public open-source layout (`/readme-public`), and updated cross-references in `CODE_OF_CONDUCT.md` and `/docs`.
 
 ### Removed
 - Removed obsolete archived planning, draft code, legacy rules, and legacy Memory Bank files (`.archive/docs/`, `.archive/code/`, `.archive/rules/`, `.archive/mbank/`).

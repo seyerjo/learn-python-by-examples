@@ -5,29 +5,63 @@
 ![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)
 ![Stage](https://img.shields.io/badge/Stage-Production-blue.svg)
 ![Stack](https://img.shields.io/badge/Stack-Python_3.7+-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-red.svg)
+![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+
+---
+
+## 👋 Welcome!
+Welcome to **Learn Python by Examples**! Whether you are taking your very first steps in Python or sharpening your skills in algorithms, input validation, and clean modular design, this repository offers standalone, ready-to-run scripts paired with clear explanations. Feedback, bug reports, new example proposals, and Pull Requests from the community are always warmly welcome!
 
 ---
 
 ## 🎯 Project Overview
 * 👁️ **Vision:** To serve as an essential and practical guide for anyone learning Python, offering clean, structured, and progressively challenging code examples classified by difficulty.
-* 📌 **Core Objectives:**
-  * 🎯 Deliver a growing collection of 100+ Python code examples covering basic syntax, data structures, control flow, algorithms, and design patterns.
-  * 🎯 Categorize all scripts into clearly defined tiers: **Basic** (`code/01_basic`), **Intermediate** (`code/02_intermediate`), and **Advanced** (`code/03_advanced`).
-  * 🎯 Provide dedicated, companion markdown documentation for every single script (`sample_XX_description.md`).
-  * 🎯 Maintain high engineering standards including PEP 8 style, Google-style docstrings, and PEP 484 type hinting.
+* 📌 **Core Highlights:**
+  * 🎯 **Growing Collection:** Roadmap toward 100+ Python code examples covering syntax fundamentals, data structures, control flow, algorithms, and design patterns.
+  * 🎯 **Clear Tiered Structure:** Scripts organized into **Basic** (`code/01_basic`), **Intermediate** (`code/02_intermediate`), and **Advanced** (`code/03_advanced`).
+  * 🎯 **Twin Documentation:** Dedicated companion Markdown guide for every single script (`sample_XX_description.md`).
+  * 🎯 **Modern Engineering Standards:** Consistent adherence to PEP 8 style, Google-style docstrings, and PEP 484 type hinting.
 
 ---
 
-## ⚡ Main Product Features
-* 💎 **Modular Code Examples (FEAT-01):** Standalone, executable Python scripts illustrating specific programming concepts without heavyweight external dependencies (maps to `FR-01`, `FR-02`, `NFR-03`).
-* 💎 **Synchronized Twin Documentation (FEAT-02):** Companion markdown guides paired 1:1 with each script, explaining syntax mechanics, line-by-line breakdown, and expected terminal output (maps to `FR-03`, `FR-04`, `NFR-02`).
-* 💎 **Tiered Repository Architecture (FEAT-03):** Predictable directory layout and standardized two-digit sequential naming (`sample_00` to `sample_23+`) for zero-friction navigation (maps to `FR-05`, `NFR-01`).
-* 💎 **Defensive Error Handling (FEAT-04):** Real-world demonstration of input sanitization, exception interception (`try-except-else-finally`), and graceful error recovery (maps to `NFR-03`).
+## ⚡ Main Features
+* 💎 **Modular Code Examples (`FEAT-01`):** Standalone, executable Python scripts illustrating specific programming concepts without heavyweight external dependencies (maps to `FR-01`, `FR-02`, `NFR-03`).
+* 💎 **Synchronized Twin Documentation (`FEAT-02`):** Companion Markdown guides paired 1:1 with each script, explaining syntax mechanics, step-by-step logic, and expected terminal output (maps to `FR-03`, `FR-04`, `NFR-02`).
+* 💎 **Tiered Repository Architecture (`FEAT-03`):** Predictable directory layout and standardized two-digit sequential naming (`sample_00` to `sample_23+`) for zero-friction navigation (maps to `FR-05`, `NFR-01`).
+* 💎 **Defensive Error Handling (`FEAT-04`):** Practical demonstrations of input sanitization, specific exception interception (`try-except-else-finally`), and graceful error recovery (maps to `NFR-03`).
 
 ---
 
-## 🗺️ Application Workflow & Architecture
+## 🛠️ Getting Started & Installation
+
+### 📋 Prerequisites
+* **Python 3.7+** installed on your system (`python3 --version` or `python --version`).
+* **Git** installed on your system (`git --version`).
+
+### ⚙️ Installation
+```bash
+# 1. Clone the repository
+git clone https://github.com/seyerjo/learn-python-by-examples.git
+cd learn-python-by-examples
+```
+
+---
+
+## 🚀 Quick Usage
+```bash
+# Run a Basic example
+python3 code/01_basic/sample_01_hello_world.py
+
+# Run an Intermediate example
+python3 code/02_intermediate/sample_18_exception_handling.py
+
+# Run an Advanced example
+python3 code/03_advanced/sample_21_binary_search_algorithm.py
+```
+
+---
+
+## 🗺️ Workflow & Architecture
 
 ```mermaid
 graph TD
@@ -52,38 +86,6 @@ graph TD
     L --> N
     N --> O[Console Output & Telemetry]
     O --> A
-```
-
----
-
-## 📚 Project Documentation
-Access the core project documentation inside `/docs`:
-* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements (FR/NFR), and product feature specifications.
-* 🛠️ **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, Mermaid topologies, tech stack justifications, environment setup, and PEP 8 / Google-style coding standards.
-* 📋 **[Project Log](./docs/03_project_log.md):** Active prioritized task backlog (`To-Do List`) and historical development milestone records.
-* 📜 **[Changelog](./CHANGELOG.md):** Chronological version history following the *Keep a Changelog* standard.
-
----
-
-## 🛠️ Getting Started & Installation
-
-### 📋 Prerequisites
-* **Python 3.7+** installed on your system (`python3 --version` or `python --version`).
-* **Git** installed on your system (`git --version`).
-
-### ⚙️ Quick Installation & Execution
-```bash
-# 1. Clone the repository
-git clone https://github.com/seyerjo/learn-python-by-examples.git
-
-# 2. Navigate to the project directory
-cd learn-python-by-examples
-
-# 3. Choose a difficulty level and navigate into it
-cd code/01_basic
-
-# 4. Execute any sample script
-python3 sample_01_hello_world.py
 ```
 
 ---
@@ -128,18 +130,28 @@ python3 sample_01_hello_world.py
 
 ---
 
-## 📜 Version History & Changelog
-* **Current Version:** `1.2.5` (Tracked via [`CHANGELOG.md`](./CHANGELOG.md)).
-* Refer to [`CHANGELOG.md`](./CHANGELOG.md) to inspect recent milestone implementations under `## [Unreleased]` and `## [1.2.5]`.
+## 🤝 Contributing
+Contributions, bug reports, and feature ideas are warmly welcome!
+Please read our **[Contributing Guidelines](./CONTRIBUTING_GUIDELINES.md)** before opening an issue or submitting a Pull Request.
 
 ---
 
-## 🤝 Contributing & Code of Conduct
-Contributions are welcome! Please ensure you review our governing documents before submitting Pull Requests:
-* 🚀 **[Contribution Guidelines](./CONTRIBUTION_GUIDELINES.md):** Bug reporting, feature suggestions, branching strategy, and PR submission workflow.
-* 🤝 **[Code of Conduct](./CODE_OF_CONDUCT.md):** Community standards, inclusive participation pledges, and reporting contacts.
+## ⚖️ Code of Conduct
+We are committed to fostering an open, welcoming, and respectful community. All participants are expected to uphold our **[Code of Conduct](./CODE_OF_CONDUCT.md)**.
 
 ---
 
 ## 📄 License
-This project is licensed under the terms of the [MIT License](./LICENSE).
+This project is licensed under the **MIT** License — see the **[LICENSE](./LICENSE)** file for details.
+
+---
+
+## 📜 Changelog
+Track project milestones and release notes in **[CHANGELOG.md](./CHANGELOG.md)** (currently at `v1.2.5`, with recent updates under `## [Unreleased]`).
+
+---
+
+## 📚 Project Documentation
+* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature map.
+* 🛠️ **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack, and code style guide.
+* 📋 **[Project Log](./docs/03_project_log.md):** Active roadmap (`sample_24` to `sample_65`) and development log.
