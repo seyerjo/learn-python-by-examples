@@ -93,40 +93,40 @@ graph TD
 ## 📝 Code Examples Directory
 
 ### 📗 Basic Level (`code/01_basic`)
-| Script | Documentation | Description |
-| :--- | :--- | :--- |
-| [`sample_00_comments_types.py`](./code/01_basic/sample_00_comments_types.py) | [`sample_00_comments_types.md`](./code/01_basic/sample_00_comments_types.md) | Single-line, multi-line, and inline comment conventions. |
-| [`sample_01_hello_world.py`](./code/01_basic/sample_01_hello_world.py) | [`sample_01_hello_world.md`](./code/01_basic/sample_01_hello_world.md) | Standard entry point and `if __name__ == "__main__":` guard. |
-| [`sample_02_primitives_data_types.py`](./code/01_basic/sample_02_primitives_data_types.py) | [`sample_02_primitives_data_types.md`](./code/01_basic/sample_02_primitives_data_types.md) | Primitive types (`int`, `float`, `str`, `bool`) and `type()`. |
-| [`sample_03_strings_operations.py`](./code/01_basic/sample_03_strings_operations.py) | [`sample_03_strings_operations.md`](./code/01_basic/sample_03_strings_operations.md) | String concatenation, repetition, indexing, and slicing. |
-| [`sample_04_operators.py`](./code/01_basic/sample_04_operators.py) | [`sample_04_operators.md`](./code/01_basic/sample_04_operators.md) | Arithmetic, comparison, and logical operators. |
-| [`sample_05_inputs.py`](./code/01_basic/sample_05_inputs.py) | [`sample_05_inputs.md`](./code/01_basic/sample_05_inputs.md) | Reading console input using `input()` and type casting. |
-| [`sample_06_fundamentals.py`](./code/01_basic/sample_06_fundamentals.py) | [`sample_06_fundamentals.md`](./code/01_basic/sample_06_fundamentals.md) | Variable naming rules, reserved keywords, and dynamic typing. |
-| [`sample_07_flow_control.py`](./code/01_basic/sample_07_flow_control.py) | [`sample_07_flow_control.md`](./code/01_basic/sample_07_flow_control.md) | Conditional branching with `if`, `elif`, and `else`. |
-| [`sample_08_more_fundamentals.py`](./code/01_basic/sample_08_more_fundamentals.py) | [`sample_08_more_fundamentals.md`](./code/01_basic/sample_08_more_fundamentals.md) | Code reusability, function encapsulation, and DRY principle. |
-| [`sample_09_escape_character_and_strings.py`](./code/01_basic/sample_09_escape_character_and_strings.py) | [`sample_09_escape_character_and_strings.md`](./code/01_basic/sample_09_escape_character_and_strings.md) | Escape sequences (`\n`, `\t`, `\\`) and raw string literals (`r"..."`). |
+| # | Topic & Description | Links |
+| :---: | :--- | :---: |
+| `00` | **Comments & Types** — Single-line, multi-line, and inline comment conventions. | [`.py`](./code/01_basic/sample_00_comments_types.py) · [`.md`](./code/01_basic/sample_00_comments_types.md) |
+| `01` | **Hello World** — Standard entry point and `if __name__ == "__main__":` guard. | [`.py`](./code/01_basic/sample_01_hello_world.py) · [`.md`](./code/01_basic/sample_01_hello_world.md) |
+| `02` | **Primitive Data Types** — Primitive types (`int`, `float`, `str`, `bool`) and `type()`. | [`.py`](./code/01_basic/sample_02_primitives_data_types.py) · [`.md`](./code/01_basic/sample_02_primitives_data_types.md) |
+| `03` | **String Operations** — String concatenation, repetition, indexing, and slicing. | [`.py`](./code/01_basic/sample_03_strings_operations.py) · [`.md`](./code/01_basic/sample_03_strings_operations.md) |
+| `04` | **Operators** — Arithmetic, comparison, and logical operators. | [`.py`](./code/01_basic/sample_04_operators.py) · [`.md`](./code/01_basic/sample_04_operators.md) |
+| `05` | **Console Inputs** — Reading console input using `input()` and type casting. | [`.py`](./code/01_basic/sample_05_inputs.py) · [`.md`](./code/01_basic/sample_05_inputs.md) |
+| `06` | **Fundamentals** — Variable naming rules, reserved keywords, and dynamic typing. | [`.py`](./code/01_basic/sample_06_fundamentals.py) · [`.md`](./code/01_basic/sample_06_fundamentals.md) |
+| `07` | **Flow Control** — Conditional branching with `if`, `elif`, and `else`. | [`.py`](./code/01_basic/sample_07_flow_control.py) · [`.md`](./code/01_basic/sample_07_flow_control.md) |
+| `08` | **More Fundamentals** — Code reusability, function encapsulation, and DRY principle. | [`.py`](./code/01_basic/sample_08_more_fundamentals.py) · [`.md`](./code/01_basic/sample_08_more_fundamentals.md) |
+| `09` | **Escape Characters & Strings** — Escape sequences (`\n`, `\t`, `\\`) and raw string literals (`r"..."`). | [`.py`](./code/01_basic/sample_09_escape_character_and_strings.py) · [`.md`](./code/01_basic/sample_09_escape_character_and_strings.md) |
 
 ### 📙 Intermediate Level (`code/02_intermediate`)
-| Script | Documentation | Description |
-| :--- | :--- | :--- |
-| [`sample_10_while_iterations.py`](./code/02_intermediate/sample_10_while_iterations.py) | [`sample_10_while_iterations.md`](./code/02_intermediate/sample_10_while_iterations.md) | While loops, condition checks, and counter increments. |
-| [`sample_11_more_while_iterations.py`](./code/02_intermediate/sample_11_more_while_iterations.py) | [`sample_11_more_while_iterations.md`](./code/02_intermediate/sample_11_more_while_iterations.md) | Nested `while` loops and multi-variable state tracking. |
-| [`sample_12_additional_while_iterations.py`](./code/02_intermediate/sample_12_additional_while_iterations.py) | [`sample_12_additional_while_iterations.md`](./code/02_intermediate/sample_12_additional_while_iterations.md) | Loop control flow with `break` and conditional termination. |
-| [`sample_13_for_iterations.py`](./code/02_intermediate/sample_13_for_iterations.py) | [`sample_13_for_iterations.md`](./code/02_intermediate/sample_13_for_iterations.md) | Sequence traversal with `for` loops and `range()`. |
-| [`sample_14_more_for_iterations.py`](./code/02_intermediate/sample_14_more_for_iterations.py) | [`sample_14_more_for_iterations.md`](./code/02_intermediate/sample_14_more_for_iterations.md) | Iterating over strings, collections, and step ranges. |
-| [`sample_15_functions.py`](./code/02_intermediate/sample_15_functions.py) | [`sample_15_functions.md`](./code/02_intermediate/sample_15_functions.md) | Defining modular functions, parameters, and return values. |
-| [`sample_16_recursive_functions.py`](./code/02_intermediate/sample_16_recursive_functions.py) | [`sample_16_recursive_functions.md`](./code/02_intermediate/sample_16_recursive_functions.md) | Base cases and recursive calls for factorials. |
-| [`sample_17_recursion_limit.py`](./code/02_intermediate/sample_17_recursion_limit.py) | [`sample_17_recursion_limit.md`](./code/02_intermediate/sample_17_recursion_limit.md) | Stack overflow protection and `sys.getrecursionlimit()`. |
-| [`sample_18_exception_handling.py`](./code/02_intermediate/sample_18_exception_handling.py) | [`sample_18_exception_handling.md`](./code/02_intermediate/sample_18_exception_handling.md) | Defensive `try-except-else-finally` blocks and `ValueError` interception. |
+| # | Topic & Description | Links |
+| :---: | :--- | :---: |
+| `10` | **While Iterations** — While loops, condition checks, and counter increments. | [`.py`](./code/02_intermediate/sample_10_while_iterations.py) · [`.md`](./code/02_intermediate/sample_10_while_iterations.md) |
+| `11` | **More While Iterations** — Nested `while` loops and multi-variable state tracking. | [`.py`](./code/02_intermediate/sample_11_more_while_iterations.py) · [`.md`](./code/02_intermediate/sample_11_more_while_iterations.md) |
+| `12` | **Additional While Iterations** — Loop control flow with `break` and conditional termination. | [`.py`](./code/02_intermediate/sample_12_additional_while_iterations.py) · [`.md`](./code/02_intermediate/sample_12_additional_while_iterations.md) |
+| `13` | **For Iterations** — Sequence traversal with `for` loops and `range()`. | [`.py`](./code/02_intermediate/sample_13_for_iterations.py) · [`.md`](./code/02_intermediate/sample_13_for_iterations.md) |
+| `14` | **More For Iterations** — Iterating over strings, collections, and step ranges. | [`.py`](./code/02_intermediate/sample_14_more_for_iterations.py) · [`.md`](./code/02_intermediate/sample_14_more_for_iterations.md) |
+| `15` | **Functions** — Defining modular functions, parameters, and return values. | [`.py`](./code/02_intermediate/sample_15_functions.py) · [`.md`](./code/02_intermediate/sample_15_functions.md) |
+| `16` | **Recursive Functions** — Base cases and recursive calls for factorials. | [`.py`](./code/02_intermediate/sample_16_recursive_functions.py) · [`.md`](./code/02_intermediate/sample_16_recursive_functions.md) |
+| `17` | **Recursion Limit** — Stack overflow protection and `sys.getrecursionlimit()`. | [`.py`](./code/02_intermediate/sample_17_recursion_limit.py) · [`.md`](./code/02_intermediate/sample_17_recursion_limit.md) |
+| `18` | **Exception Handling** — Defensive `try-except-else-finally` blocks and `ValueError` interception. | [`.py`](./code/02_intermediate/sample_18_exception_handling.py) · [`.md`](./code/02_intermediate/sample_18_exception_handling.md) |
 
 ### 📕 Advanced Level (`code/03_advanced`)
-| Script | Documentation | Description |
-| :--- | :--- | :--- |
-| [`sample_19_exhaustive_listing_algorithm.py`](./code/03_advanced/sample_19_exhaustive_listing_algorithm.py) | [`sample_19_exhaustive_listing_algorithm.md`](./code/03_advanced/sample_19_exhaustive_listing_algorithm.md) | Brute-force exhaustive enumeration (guess-and-check). |
-| [`sample_20_solution_approximation_algorithm.py`](./code/03_advanced/sample_20_solution_approximation_algorithm.py) | [`sample_20_solution_approximation_algorithm.md`](./code/03_advanced/sample_20_solution_approximation_algorithm.md) | Numerical root approximation using incremental step tolerances. |
-| [`sample_21_binary_search_algorithm.py`](./code/03_advanced/sample_21_binary_search_algorithm.py) | [`sample_21_binary_search_algorithm.md`](./code/03_advanced/sample_21_binary_search_algorithm.md) | Logarithmic binary search for root finding with iteration counters. |
-| [`sample_22_robust_input_validation.py`](./code/03_advanced/sample_22_robust_input_validation.py) | [`sample_22_robust_input_validation.md`](./code/03_advanced/sample_22_robust_input_validation.md) | Reusable numeric validation loop with bounds checking. |
-| [`sample_23_type_hinting.py`](./code/03_advanced/sample_23_type_hinting.py) | [`sample_23_type_hinting.md`](./code/03_advanced/sample_23_type_hinting.md) | PEP 484 type annotations, function signatures, and static type safety. |
+| # | Topic & Description | Links |
+| :---: | :--- | :---: |
+| `19` | **Exhaustive Listing Algorithm** — Brute-force exhaustive enumeration (guess-and-check). | [`.py`](./code/03_advanced/sample_19_exhaustive_listing_algorithm.py) · [`.md`](./code/03_advanced/sample_19_exhaustive_listing_algorithm.md) |
+| `20` | **Solution Approximation Algorithm** — Numerical root approximation using incremental step tolerances. | [`.py`](./code/03_advanced/sample_20_solution_approximation_algorithm.py) · [`.md`](./code/03_advanced/sample_20_solution_approximation_algorithm.md) |
+| `21` | **Binary Search Algorithm** — Logarithmic binary search for root finding with iteration counters. | [`.py`](./code/03_advanced/sample_21_binary_search_algorithm.py) · [`.md`](./code/03_advanced/sample_21_binary_search_algorithm.md) |
+| `22` | **Robust Input Validation** — Reusable numeric validation loop with bounds checking. | [`.py`](./code/03_advanced/sample_22_robust_input_validation.py) · [`.md`](./code/03_advanced/sample_22_robust_input_validation.md) |
+| `23` | **Type Hinting** — PEP 484 type annotations, function signatures, and static type safety. | [`.py`](./code/03_advanced/sample_23_type_hinting.py) · [`.md`](./code/03_advanced/sample_23_type_hinting.md) |
 
 ---
 
