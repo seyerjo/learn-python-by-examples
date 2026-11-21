@@ -66,7 +66,7 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 ## Examples
 
 <details open>
-<summary><img src="https://img.shields.io/badge/BASIC-10_examples-22c55e?style=flat-square" alt="Basic Level" valign="middle" /> &nbsp;<code>code/01_basic</code></summary>
+<summary><img src="https://img.shields.io/badge/BASIC-10_examples-22c55e?style=flat-square" alt="Basic Level" valign="middle" /></summary>
 
 | # | Topic | Focus | Links |
 | :-: | :--- | :--- | :---: |
@@ -84,7 +84,7 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/INTERMEDIATE-9_examples-eab308?style=flat-square" alt="Intermediate Level" valign="middle" /> &nbsp;<code>code/02_intermediate</code></summary>
+<summary><img src="https://img.shields.io/badge/INTERMEDIATE-9_examples-eab308?style=flat-square" alt="Intermediate Level" valign="middle" /></summary>
 
 | # | Topic | Focus | Links |
 | :-: | :--- | :--- | :---: |
@@ -101,7 +101,7 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 </details>
 
 <details>
-<summary><img src="https://img.shields.io/badge/ADVANCED-5_examples-ef4444?style=flat-square" alt="Advanced Level" valign="middle" /> &nbsp;<code>code/03_advanced</code></summary>
+<summary><img src="https://img.shields.io/badge/ADVANCED-5_examples-ef4444?style=flat-square" alt="Advanced Level" valign="middle" /></summary>
 
 | # | Topic | Focus | Links |
 | :-: | :--- | :--- | :---: |
@@ -139,6 +139,7 @@ graph TD
 learn-python-by-examples/
 ├── .github/
 │   └── assets/
+│       ├── avatar.png
 │       └── banner.png
 ├── code/
 │   ├── 01_basic/           # Samples 00–09 (.py + .md twins)
@@ -187,21 +188,28 @@ Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
 
 <table>
   <tr>
-    <td align="center" width="104">
+    <td align="center" valign="top" width="96">
       <a href="https://github.com/seyerjo">
-        <img src="https://github.com/seyerjo.png?size=96" width="88" alt="Jose Miguel Reyes" />
+        <img src="./.github/assets/avatar.png" width="84" alt="Jose Miguel Reyes" />
       </a>
     </td>
-    <td>
+    <td valign="top">
       <strong>Jose Miguel Reyes</strong><br />
-      Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering. Sharing practical, well-structured repositories to promote real-world engineering habits.<br /><br />
-      <a href="https://github.com/seyerjo"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-      <a href="https://josemreyes.com"><img src="https://img.shields.io/badge/Website-josemreyes.com-0ea5e9?style=flat-square&logo=googlechrome&logoColor=white" alt="Website" /></a>
-      <a href="https://www.linkedin.com/in/seyerjo"><img src="https://img.shields.io/badge/LinkedIn-seyerjo-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-      <a href="https://x.com/seyerjo"><img src="https://img.shields.io/badge/X-@seyerjo-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
-      <a href="https://github.com/seyerjo/learn-python-by-examples/issues"><img src="https://img.shields.io/badge/Feedback-Issues-0969DA?style=flat-square&logo=github&logoColor=white" alt="Issues" /></a>
+      Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering.<br /><br />
+      <em><strong>"Building for tomorrow."</strong></em>
     </td>
   </tr>
 </table>
 
-If you find these examples useful or have a technical question, feel free to star the repository or open an **[Issue](https://github.com/seyerjo/learn-python-by-examples/issues)**.
+<p>
+  <a href="https://github.com/seyerjo"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://josemreyes.com"><img src="https://img.shields.io/badge/Website-josemreyes.com-0ea5e9?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8%2BPGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiLz48cGF0aCBkPSJNMTIgMmExNS4zIDE1LjMgMCAwIDEgNCAxMCAxNS4zIDE1LjMgMCAwIDEtNCAxMCAxNS4zIDE1LjMgMCAwIDEtNC0xMCAxNS4zIDE1LjMgMCAwIDEgNC0xMHoiLz48L3N2Zz4%3D" alt="Website" /></a>
+  <a href="https://www.linkedin.com/in/seyerjo"><img src="https://img.shields.io/badge/LinkedIn-seyerjo-0A66C2?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSAzYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yaDE0bS0uNSAxNS41di01LjNhMy4yNiAzLjI2IDAgMCAwLTMuMjYtMy4yNmMtLjg1IDAtMS44NC41Mi0yLjI4IDEuM3YtMS4xMWgtMi43OXY4LjM3aDIuNzl2LTQuOTNjMC0uNzcuNjItMS40IDEuMzktMS40YTEuNCAxLjQgMCAwIDEgMS40IDEuNHY0LjkzaDIuNzVNNi44OCA4LjU2YTEuNjggMS42OCAwIDAgMCAxLjY4LTEuNjhjMC0uOTMtLjc1LTEuNjktMS42OC0xLjY5YTEuNjkgMS42OSAwIDAgMC0xLjY5IDEuNjljMCAuOTMuNzYgMS42OCAxLjY5IDEuNjhtMS4zOSA5Ljk0di04LjM3SDUuNXY4LjM3aDIuNzd6Ii8%2BPC9zdmc%2B" alt="LinkedIn" /></a>
+  <a href="https://x.com/seyerjo"><img src="https://img.shields.io/badge/X-@seyerjo-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://github.com/seyerjo/learn-python-by-examples/issues"><img src="https://img.shields.io/badge/Feedback-Issues-0969DA?style=flat-square&logo=github&logoColor=white" alt="Issues" /></a>
+</p>
+
+> [!TIP]
+> **Find this repository useful?** Consider giving it a star to support the project and bookmark it for future reference:
+>
+> [![Star this repo](https://img.shields.io/github/stars/seyerjo/learn-python-by-examples?style=flat-square&label=Star%20this%20repo&logo=github&color=eab308)](https://github.com/seyerjo/learn-python-by-examples) &nbsp; Have a technical question or suggestion? Open an **[Issue](https://github.com/seyerjo/learn-python-by-examples/issues)**.
