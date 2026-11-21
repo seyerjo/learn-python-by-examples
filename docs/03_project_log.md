@@ -17,8 +17,8 @@
 ### Completed Tasks
 - [x] **TASK-08:** Consolidate legacy 12-file documentation into a streamlined 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
 - [x] **TASK-09:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
-- [x] **TASK-10:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
-- [x] **TASK-11:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
+- [x] **TASK-10:** Standardize formatting, docstrings across all baseline samples, and PEP 484 type hinting in advanced samples (`sample_19`–`sample_23`).
+- [x] **TASK-11:** Configure code formatting and linting standards (`Black`, `Prettier`).
 - [x] **TASK-12:** Add repository license (`LICENSE`).
 - [x] **TASK-13:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
 

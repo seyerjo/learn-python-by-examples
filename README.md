@@ -34,7 +34,7 @@ Most beginner Python tutorials either show disconnected one-liners without error
 
 - **Zero-framework focus:** Every script relies purely on Python's standard library so learners master the language itself before introducing external dependencies.
 - **1:1 Twin Documentation:** Every `.py` file is paired with an exact `.md` companion explaining the concept, step-by-step execution flow, common pitfalls, and expected terminal output.
-- **Production habits from day one:** Examples enforce PEP 8 formatting, modular `main()` entry guards, PEP 484 type hints, Google-style docstrings, and defensive `try-except` validation.
+- **Progressive production habits:** Every script uses `Black` formatting, modular `main()` entry guards, and docstrings, progressively introducing defensive `try-except` validation (`02_intermediate`) and PEP 484 type hints (`03_advanced`) without overwhelming beginners early on.
 
 ## Quick Start
 
@@ -129,7 +129,7 @@ graph TD
 ```
 
 - **Core Stack:** Plain Python 3 (`3.7+`) and Markdown—deliberately avoiding Jupyter `.ipynb` JSON blobs so diffs stay clean and scripts run directly in any terminal.
-- **Code Standards:** Strictly formatted to PEP 8 (`autopep8` / `Prettier`), documented with Google-style docstrings, and annotated with PEP 484 type hints on public functions.
+- **Code Standards:** Formatted with `Black` (Python) and `Prettier` (Markdown), documented with docstrings across all functions, and progressively introducing PEP 484 type hints in advanced samples (`sample_19`–`sample_23`).
 - **Defensive Coding:** Specific exception types (`ValueError`, `ZeroDivisionError`, etc.) are caught explicitly without bare `except:` blocks, and interactive scripts validate bounds before computation.
 
 <details>

@@ -75,7 +75,7 @@ graph TD
 
 ### Development Tools & Formatters
 - **Mermaid:** Used for rendering visual system topologies and navigation flowcharts directly in markdown.
-- **Formatting & Linting:** `autopep8` and `Prettier` ensure compliance with PEP 8 and markdown formatting standards.
+- **Formatting & Linting:** `Black` (`ms-python.black-formatter`, 88-character line length) and `Prettier` ensure compliance with Python and markdown formatting standards.
 - **Testing:** `pytest` / standard `unittest` used for testing complex functions and algorithmic samples.
 
 ### Evaluated & Excluded Technologies
@@ -117,7 +117,7 @@ python3 sample_01_hello_world.py
 
 ### 1. Core Principles (PEP 8 & Clean Code)
 - **Indentation & Spacing:** Exactly 4 spaces per indentation level. Never use tabs.
-- **Line Length:** Maximum 79 characters for code, 72 characters for comments and docstrings.
+- **Line Length:** Maximum 88 characters for code (Black standard); keep comments and docstrings concise and readable.
 - **Blank Lines:** 2 blank lines before top-level functions and classes; 1 blank line before class methods.
 - **Modularity (DRY):** Break complex operations into clean, reusable, single-responsibility functions. Avoid code duplication.
 
@@ -127,7 +127,7 @@ python3 sample_01_hello_world.py
 - **Constants:** `UPPER_SNAKE_CASE` (e.g., `MAX_RETRIES`, `DEFAULT_TIMEOUT`).
 
 ### 3. Type Hinting (PEP 484)
-Type hints are mandatory for all public functions, arguments, and return types:
+Type hints are mandatory in `03_advanced` (`sample_19`–`sample_23`) and production scripts, while intentionally omitted in `01_basic` and introductory `02_intermediate` samples to avoid beginner syntax noise (with forward-reference notes pointing to `sample_23_type_hinting.py`):
 ```python
 def find_maximum(numbers: list[int | float]) -> int | float:
     """Finds the maximum value in a numeric list."""

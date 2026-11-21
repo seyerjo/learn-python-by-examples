@@ -11,6 +11,11 @@ This example covers:
 """
 
 
+# NOTE: Type hints (PEP 484, e.g., `def add_numbers(a: int, b: int) -> int:`)
+# are recommended in production Python code, but are intentionally omitted here
+# to keep introductory syntax clean. See sample_23_type_hinting.py for details.
+
+
 def add_numbers(a, b):
     """
     Takes two numbers as input and returns their sum.
