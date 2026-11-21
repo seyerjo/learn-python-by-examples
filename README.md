@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./.github/assets/banner.png" alt="Learn Python by Examples Banner" width="840" />
+
 # Learn Python by Examples
 
 **A progressive, hands-on Python curriculum built with standalone scripts, synchronized twin documentation, and defensive engineering patterns.**
@@ -7,46 +9,34 @@
 Designed for learners and developers who want clean, idiomatic Python 3 code—moving step by step from core syntax to algorithmic problem solving and static type safety.
 
 <p>
-  <a href="#-quick-start--expected-output">Quick Start</a> ·
-  <a href="#-key-capabilities--use-cases">Capabilities</a> ·
-  <a href="#-code-examples-directory">Examples Index</a> ·
-  <a href="#-architecture--engineering-decisions">Architecture</a> ·
-  <a href="#-installation--prerequisites">Installation</a> ·
-  <a href="#-author--feedback">Author</a>
+  <a href="#overview">Overview</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#capabilities">Capabilities</a> ·
+  <a href="#examples">Examples</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#installation">Installation</a> ·
+  <a href="#author">Author</a>
 </p>
 
-[![Python](https://img.shields.io/badge/Python-3.7%2B-3776AB.svg?logo=python&logoColor=white)](#-installation--prerequisites)
-[![Examples](https://img.shields.io/badge/Examples-24_Samples-0ea5e9.svg)](#-code-examples-directory)
-[![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)](#-documentation--changelog)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](#-license)
+[![Python](https://img.shields.io/badge/Python-3.7%2B-3776AB.svg?logo=python&logoColor=white)](#installation)
+[![Examples](https://img.shields.io/badge/Examples-24_Samples-0ea5e9.svg)](#examples)
+[![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)](#documentation)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](#license)
 [![Last Commit](https://img.shields.io/github/last-commit/seyerjo/learn-python-by-examples)](https://github.com/seyerjo/learn-python-by-examples/commits/main)
 
 </div>
 
 ---
 
-```mermaid
-graph TD
-    A[Clone Repository] --> B[README.md Index]
-    B --> C[01_basic · Samples 00–09]
-    B --> D[02_intermediate · Samples 10–18]
-    B --> E[03_advanced · Samples 19–23]
-    C --> F[sample_XX_topic.py + .md Twin]
-    D --> F
-    E --> F
-    F --> G[Run Directly via python3 CLI]
-    G --> H[Verified Console Output]
-```
+## Overview
 
-## 🎯 What & Why
-
-Most beginner Python tutorials either show disconnected one-liners without error handling or hide fundamentals behind heavy third-party frameworks. **Learn Python by Examples** takes a strict engineering-first approach:
+Most beginner Python tutorials either show disconnected one-liners without error handling or hide fundamentals behind heavy third-party frameworks. **Learn Python by Examples** takes an engineering-first approach:
 
 * **Zero-framework focus:** Every script relies purely on Python's standard library so learners master the language itself before introducing external dependencies.
 * **1:1 Twin Documentation:** Every `.py` file is paired with an exact `.md` companion explaining the concept, step-by-step execution flow, common pitfalls, and expected terminal output.
 * **Production habits from day one:** Examples enforce PEP 8 formatting, modular `main()` entry guards, PEP 484 type hints, Google-style docstrings, and defensive `try-except` validation.
 
-## ⚡ Quick Start & Expected Output
+## Quick Start
 
 Clone the repository and execute any script directly from the terminal:
 
@@ -66,46 +56,59 @@ Counting words in: ['hello world', 'hello python']
 Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 ```
 
-## 🧩 Key Capabilities & Use Cases
+## Capabilities
 
 * **Graduated Difficulty Curve:** Structured progression across three tiers—from primitive types and control flow (`01_basic`) to loops, recursion, and exceptions (`02_intermediate`), culminating in numerical algorithms and type safety (`03_advanced`).
 * **Algorithmic Comparisons Side by Side:** Samples `19` through `21` solve the same root-finding problem with brute-force enumeration, step approximation, and binary search so learners can observe iteration counts and algorithmic complexity firsthand.
 * **Defensive Input & Error Handling:** Dedicated patterns (`sample_18`, `sample_22`) demonstrate how to intercept `ValueError` and validate numeric bounds cleanly instead of crashing on malformed user input.
 * **Self-Guided Reference Library:** Predictable `sample_XX_topic` naming allows quick lookup as a personal cheat sheet or structured study track (actively expanding from 24 toward 100+ examples).
 
-## 📝 Code Examples Directory
+## Examples
 
-### 🟢 Basic Level (`code/01_basic`)
-* 🟢 **00 — Comments & Types:** Single-line, multi-line, and inline comment conventions — [🐍 Code](./code/01_basic/sample_00_comments_types.py) · [📘 Docs](./code/01_basic/sample_00_comments_types.md)
-* 🟢 **01 — Hello World:** Standard entry point and `if __name__ == "__main__":` guard — [🐍 Code](./code/01_basic/sample_01_hello_world.py) · [📘 Docs](./code/01_basic/sample_01_hello_world.md)
-* 🟢 **02 — Primitive Data Types:** Primitive types (`int`, `float`, `str`, `bool`) and `type()` — [🐍 Code](./code/01_basic/sample_02_primitives_data_types.py) · [📘 Docs](./code/01_basic/sample_02_primitives_data_types.md)
-* 🟢 **03 — String Operations:** String concatenation, repetition, indexing, and slicing — [🐍 Code](./code/01_basic/sample_03_strings_operations.py) · [📘 Docs](./code/01_basic/sample_03_strings_operations.md)
-* 🟢 **04 — Operators:** Arithmetic, comparison, and logical operators — [🐍 Code](./code/01_basic/sample_04_operators.py) · [📘 Docs](./code/01_basic/sample_04_operators.md)
-* 🟢 **05 — Console Inputs:** Reading console input using `input()` and type casting — [🐍 Code](./code/01_basic/sample_05_inputs.py) · [📘 Docs](./code/01_basic/sample_05_inputs.md)
-* 🟢 **06 — Fundamentals:** Variable naming rules, reserved keywords, and dynamic typing — [🐍 Code](./code/01_basic/sample_06_fundamentals.py) · [📘 Docs](./code/01_basic/sample_06_fundamentals.md)
-* 🟢 **07 — Flow Control:** Conditional branching with `if`, `elif`, and `else` — [🐍 Code](./code/01_basic/sample_07_flow_control.py) · [📘 Docs](./code/01_basic/sample_07_flow_control.md)
-* 🟢 **08 — More Fundamentals:** Code reusability, function encapsulation, and DRY principle — [🐍 Code](./code/01_basic/sample_08_more_fundamentals.py) · [📘 Docs](./code/01_basic/sample_08_more_fundamentals.md)
-* 🟢 **09 — Escape Characters & Strings:** Escape sequences (`\n`, `\t`, `\\`) and raw string literals (`r"..."`) — [🐍 Code](./code/01_basic/sample_09_escape_character_and_strings.py) · [📘 Docs](./code/01_basic/sample_09_escape_character_and_strings.md)
+### Basic Level (`code/01_basic`)
+* 🟢 **00 — Comments & Types:** Single-line, multi-line, and inline comment conventions — [Code](./code/01_basic/sample_00_comments_types.py) · [Docs](./code/01_basic/sample_00_comments_types.md)
+* 🟢 **01 — Hello World:** Standard entry point and `if __name__ == "__main__":` guard — [Code](./code/01_basic/sample_01_hello_world.py) · [Docs](./code/01_basic/sample_01_hello_world.md)
+* 🟢 **02 — Primitive Data Types:** Primitive types (`int`, `float`, `str`, `bool`) and `type()` — [Code](./code/01_basic/sample_02_primitives_data_types.py) · [Docs](./code/01_basic/sample_02_primitives_data_types.md)
+* 🟢 **03 — String Operations:** String concatenation, repetition, indexing, and slicing — [Code](./code/01_basic/sample_03_strings_operations.py) · [Docs](./code/01_basic/sample_03_strings_operations.md)
+* 🟢 **04 — Operators:** Arithmetic, comparison, and logical operators — [Code](./code/01_basic/sample_04_operators.py) · [Docs](./code/01_basic/sample_04_operators.md)
+* 🟢 **05 — Console Inputs:** Reading console input using `input()` and type casting — [Code](./code/01_basic/sample_05_inputs.py) · [Docs](./code/01_basic/sample_05_inputs.md)
+* 🟢 **06 — Fundamentals:** Variable naming rules, reserved keywords, and dynamic typing — [Code](./code/01_basic/sample_06_fundamentals.py) · [Docs](./code/01_basic/sample_06_fundamentals.md)
+* 🟢 **07 — Flow Control:** Conditional branching with `if`, `elif`, and `else` — [Code](./code/01_basic/sample_07_flow_control.py) · [Docs](./code/01_basic/sample_07_flow_control.md)
+* 🟢 **08 — More Fundamentals:** Code reusability, function encapsulation, and DRY principle — [Code](./code/01_basic/sample_08_more_fundamentals.py) · [Docs](./code/01_basic/sample_08_more_fundamentals.md)
+* 🟢 **09 — Escape Characters & Strings:** Escape sequences (`\n`, `\t`, `\\`) and raw string literals (`r"..."`) — [Code](./code/01_basic/sample_09_escape_character_and_strings.py) · [Docs](./code/01_basic/sample_09_escape_character_and_strings.md)
 
-### 🟡 Intermediate Level (`code/02_intermediate`)
-* 🟡 **10 — While Iterations:** While loops, condition checks, and counter increments — [🐍 Code](./code/02_intermediate/sample_10_while_iterations.py) · [📘 Docs](./code/02_intermediate/sample_10_while_iterations.md)
-* 🟡 **11 — More While Iterations:** Nested `while` loops and multi-variable state tracking — [🐍 Code](./code/02_intermediate/sample_11_more_while_iterations.py) · [📘 Docs](./code/02_intermediate/sample_11_more_while_iterations.md)
-* 🟡 **12 — Additional While Iterations:** Loop control flow with `break` and conditional termination — [🐍 Code](./code/02_intermediate/sample_12_additional_while_iterations.py) · [📘 Docs](./code/02_intermediate/sample_12_additional_while_iterations.md)
-* 🟡 **13 — For Iterations:** Sequence traversal with `for` loops and `range()` — [🐍 Code](./code/02_intermediate/sample_13_for_iterations.py) · [📘 Docs](./code/02_intermediate/sample_13_for_iterations.md)
-* 🟡 **14 — More For Iterations:** Iterating over strings, collections, and step ranges — [🐍 Code](./code/02_intermediate/sample_14_more_for_iterations.py) · [📘 Docs](./code/02_intermediate/sample_14_more_for_iterations.md)
-* 🟡 **15 — Functions:** Defining modular functions, parameters, and return values — [🐍 Code](./code/02_intermediate/sample_15_functions.py) · [📘 Docs](./code/02_intermediate/sample_15_functions.md)
-* 🟡 **16 — Recursive Functions:** Base cases and recursive calls for factorials — [🐍 Code](./code/02_intermediate/sample_16_recursive_functions.py) · [📘 Docs](./code/02_intermediate/sample_16_recursive_functions.md)
-* 🟡 **17 — Recursion Limit:** Stack overflow protection and `sys.getrecursionlimit()` — [🐍 Code](./code/02_intermediate/sample_17_recursion_limit.py) · [📘 Docs](./code/02_intermediate/sample_17_recursion_limit.md)
-* 🟡 **18 — Exception Handling:** Defensive `try-except-else-finally` blocks and `ValueError` interception — [🐍 Code](./code/02_intermediate/sample_18_exception_handling.py) · [📘 Docs](./code/02_intermediate/sample_18_exception_handling.md)
+### Intermediate Level (`code/02_intermediate`)
+* 🟡 **10 — While Iterations:** While loops, condition checks, and counter increments — [Code](./code/02_intermediate/sample_10_while_iterations.py) · [Docs](./code/02_intermediate/sample_10_while_iterations.md)
+* 🟡 **11 — More While Iterations:** Nested `while` loops and multi-variable state tracking — [Code](./code/02_intermediate/sample_11_more_while_iterations.py) · [Docs](./code/02_intermediate/sample_11_more_while_iterations.md)
+* 🟡 **12 — Additional While Iterations:** Loop control flow with `break` and conditional termination — [Code](./code/02_intermediate/sample_12_additional_while_iterations.py) · [Docs](./code/02_intermediate/sample_12_additional_while_iterations.md)
+* 🟡 **13 — For Iterations:** Sequence traversal with `for` loops and `range()` — [Code](./code/02_intermediate/sample_13_for_iterations.py) · [Docs](./code/02_intermediate/sample_13_for_iterations.md)
+* 🟡 **14 — More For Iterations:** Iterating over strings, collections, and step ranges — [Code](./code/02_intermediate/sample_14_more_for_iterations.py) · [Docs](./code/02_intermediate/sample_14_more_for_iterations.md)
+* 🟡 **15 — Functions:** Defining modular functions, parameters, and return values — [Code](./code/02_intermediate/sample_15_functions.py) · [Docs](./code/02_intermediate/sample_15_functions.md)
+* 🟡 **16 — Recursive Functions:** Base cases and recursive calls for factorials — [Code](./code/02_intermediate/sample_16_recursive_functions.py) · [Docs](./code/02_intermediate/sample_16_recursive_functions.md)
+* 🟡 **17 — Recursion Limit:** Stack overflow protection and `sys.getrecursionlimit()` — [Code](./code/02_intermediate/sample_17_recursion_limit.py) · [Docs](./code/02_intermediate/sample_17_recursion_limit.md)
+* 🟡 **18 — Exception Handling:** Defensive `try-except-else-finally` blocks and `ValueError` interception — [Code](./code/02_intermediate/sample_18_exception_handling.py) · [Docs](./code/02_intermediate/sample_18_exception_handling.md)
 
-### 🔴 Advanced Level (`code/03_advanced`)
-* 🔴 **19 — Exhaustive Listing Algorithm:** Brute-force exhaustive enumeration (guess-and-check) — [🐍 Code](./code/03_advanced/sample_19_exhaustive_listing_algorithm.py) · [📘 Docs](./code/03_advanced/sample_19_exhaustive_listing_algorithm.md)
-* 🔴 **20 — Solution Approximation Algorithm:** Numerical root approximation using incremental step tolerances — [🐍 Code](./code/03_advanced/sample_20_solution_approximation_algorithm.py) · [📘 Docs](./code/03_advanced/sample_20_solution_approximation_algorithm.md)
-* 🔴 **21 — Binary Search Algorithm:** Logarithmic binary search for root finding with iteration counters — [🐍 Code](./code/03_advanced/sample_21_binary_search_algorithm.py) · [📘 Docs](./code/03_advanced/sample_21_binary_search_algorithm.md)
-* 🔴 **22 — Robust Input Validation:** Reusable numeric validation loop with bounds checking — [🐍 Code](./code/03_advanced/sample_22_robust_input_validation.py) · [📘 Docs](./code/03_advanced/sample_22_robust_input_validation.md)
-* 🔴 **23 — Type Hinting:** PEP 484 type annotations, function signatures, and static type safety — [🐍 Code](./code/03_advanced/sample_23_type_hinting.py) · [📘 Docs](./code/03_advanced/sample_23_type_hinting.md)
+### Advanced Level (`code/03_advanced`)
+* 🔴 **19 — Exhaustive Listing Algorithm:** Brute-force exhaustive enumeration (guess-and-check) — [Code](./code/03_advanced/sample_19_exhaustive_listing_algorithm.py) · [Docs](./code/03_advanced/sample_19_exhaustive_listing_algorithm.md)
+* 🔴 **20 — Solution Approximation Algorithm:** Numerical root approximation using incremental step tolerances — [Code](./code/03_advanced/sample_20_solution_approximation_algorithm.py) · [Docs](./code/03_advanced/sample_20_solution_approximation_algorithm.md)
+* 🔴 **21 — Binary Search Algorithm:** Logarithmic binary search for root finding with iteration counters — [Code](./code/03_advanced/sample_21_binary_search_algorithm.py) · [Docs](./code/03_advanced/sample_21_binary_search_algorithm.md)
+* 🔴 **22 — Robust Input Validation:** Reusable numeric validation loop with bounds checking — [Code](./code/03_advanced/sample_22_robust_input_validation.py) · [Docs](./code/03_advanced/sample_22_robust_input_validation.md)
+* 🔴 **23 — Type Hinting:** PEP 484 type annotations, function signatures, and static type safety — [Code](./code/03_advanced/sample_23_type_hinting.py) · [Docs](./code/03_advanced/sample_23_type_hinting.md)
 
-## 📐 Architecture & Engineering Decisions
+## Architecture
+
+```mermaid
+graph TD
+    A[Clone Repository] --> B[README.md Index]
+    B --> C[01_basic · Samples 00–09]
+    B --> D[02_intermediate · Samples 10–18]
+    B --> E[03_advanced · Samples 19–23]
+    C --> F[sample_XX_topic.py + .md Twin]
+    D --> F
+    E --> F
+    F --> G[Run Directly via python3 CLI]
+    G --> H[Verified Console Output]
+```
 
 * **Core Stack:** Plain Python 3 (`3.7+`) and Markdown—deliberately avoiding Jupyter `.ipynb` JSON blobs so diffs stay clean and scripts run directly in any terminal.
 * **Code Standards:** Strictly formatted to PEP 8 (`autopep8` / `Prettier`), documented with Google-style docstrings, and annotated with PEP 484 type hints on public functions.
@@ -116,6 +119,9 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 
 ```text
 learn-python-by-examples/
+├── .github/
+│   └── assets/
+│       └── banner.png
 ├── code/
 │   ├── 01_basic/           # Samples 00–09 (.py + .md twins)
 │   ├── 02_intermediate/    # Samples 10–18 (.py + .md twins)
@@ -131,7 +137,7 @@ learn-python-by-examples/
 
 </details>
 
-## 💻 Installation & Prerequisites
+## Installation
 
 ### Prerequisites
 
@@ -148,18 +154,18 @@ cd learn-python-by-examples
 python3 code/01_basic/sample_01_hello_world.py
 ```
 
-## 📚 Documentation & Changelog
+## Documentation
 
 * **[Changelog](./CHANGELOG.md):** Release history and version milestones (currently `v1.2.5`, with recent updates under `## [Unreleased]`).
 * **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature scope.
 * **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack rationale, and Python style guide.
 * **[Project Log](./docs/03_project_log.md):** Expansion roadmap (`sample_24` to `sample_65`) and development log.
 
-## 📄 License
+## License
 
 Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
 
-## 👤 Author & Feedback
+## Author
 
 Created and maintained by **Jose Miguel Reyes** ([GitHub](https://github.com/seyerjo)).
 
