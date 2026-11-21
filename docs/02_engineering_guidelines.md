@@ -7,9 +7,10 @@ The repository is designed as a file-based educational system optimized for stat
 
 ```text
 learn-python-by-examples/
-├── .agents/                    # Agent rules, workflows, and prompts
-│   ├── rules/                  # Active project rules (v2)
-│   └── workflows/              # Structured operational workflows
+├── .github/
+│   └── assets/                 # Repository README banner and author avatar
+│       ├── avatar.png
+│       └── banner.png
 ├── code/                       # Main educational source code repository
 │   ├── 01_basic/               # Beginner-level scripts and twin documentation
 │   │   ├── sample_01_hello_world.py
@@ -20,7 +21,6 @@ learn-python-by-examples/
 │   ├── 01_project_blueprint.md
 │   ├── 02_engineering_guidelines.md
 │   └── 03_project_log.md
-├── .git/info/exclude           # Local exclusions for agent configs & private files
 ├── CHANGELOG.md                # Historical release log (Keep a Changelog standard)
 ├── LICENSE                     # Project license (MIT)
 └── README.md                   # Primary project entry point & usage overview
@@ -109,7 +109,6 @@ python3 sample_01_hello_world.py
 ### 3. Branching & Git Workflow
 - **Branch Isolation:** Every new feature, sample addition, or structural refactoring must be developed on a dedicated branch (e.g., `feature/<name>`, `refactor/<name>`, `chore/<name>`).
 - **Conventional Commits:** All commit messages must follow standard Conventional Commits formatting (`feat(...)`, `fix(...)`, `docs(...)`, `refactor(...)`, `test(...)`, `chore(...)`) with imperative lower-case summaries under 72 characters.
-- **Agent Local Exclusions:** Workspace-level agent configurations (`.agents/`, `.kilo/`) must reside in `.git/info/exclude` to prevent repository pollution.
 
 ---
 
@@ -167,7 +166,7 @@ def binary_search(elements: list[int], target: int) -> int:
 - **Credential Protection:** Never hardcode secrets or credentials in source code. Retrieve dynamic parameters via `os.getenv()` or local `.env` files.
 
 ### 7. Pedagogical Progression Boundary (Rules by Difficulty Tier)
-Because this repository is an educational progression rather than a monolithic production service, engineering rules from `.agents/rules/project_rules_python_console_and_scripts.md` are introduced progressively by difficulty tier so beginners are not overwhelmed by boilerplate early on:
+Because this repository is designed as a progressive learning path rather than a single production service, engineering practices are introduced incrementally across difficulty tiers—preserving clarity for beginners while building up to full production Python standards in advanced examples:
 
 | Tier | Mandatory From Day One | Intentionally Deferred (Use Forward-Reference Notes) |
 | :--- | :--- | :--- |
