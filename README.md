@@ -195,7 +195,7 @@ Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
     </td>
     <td valign="top">
       <strong>Jose Miguel Reyes</strong><br />
-      Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering.<br /><br />
+      Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering.<br />
       <em><strong>"Building for tomorrow."</strong></em>
     </td>
   </tr>
@@ -205,11 +205,16 @@ Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
   <a href="https://github.com/seyerjo"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://josemreyes.com"><img src="https://img.shields.io/badge/Website-josemreyes.com-0ea5e9?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8%2BPGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiLz48cGF0aCBkPSJNMTIgMmExNS4zIDE1LjMgMCAwIDEgNCAxMCAxNS4zIDE1LjMgMCAwIDEtNCAxMCAxNS4zIDE1LjMgMCAwIDEtNC0xMCAxNS4zIDE1LjMgMCAwIDEgNC0xMHoiLz48L3N2Zz4%3D" alt="Website" /></a>
   <a href="https://www.linkedin.com/in/seyerjo"><img src="https://img.shields.io/badge/LinkedIn-seyerjo-0A66C2?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSAzYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yaDE0bS0uNSAxNS41di01LjNhMy4yNiAzLjI2IDAgMCAwLTMuMjYtMy4yNmMtLjg1IDAtMS44NC41Mi0yLjI4IDEuM3YtMS4xMWgtMi43OXY4LjM3aDIuNzl2LTQuOTNjMC0uNzcuNjItMS40IDEuMzktMS40YTEuNCAxLjQgMCAwIDEgMS40IDEuNHY0LjkzaDIuNzVNNi44OCA4LjU2YTEuNjggMS42OCAwIDAgMCAxLjY4LTEuNjhjMC0uOTMtLjc1LTEuNjktMS42OC0xLjY5YTEuNjkgMS42OSAwIDAgMC0xLjY5IDEuNjljMCAuOTMuNzYgMS42OCAxLjY5IDEuNjhtMS4zOSA5Ljk0di04LjM3SDUuNXY4LjM3aDIuNzd6Ii8%2BPC9zdmc%2B" alt="LinkedIn" /></a>
-  <a href="https://x.com/seyerjo"><img src="https://img.shields.io/badge/X-@seyerjo-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://x.com/seyerjo"><img src="https://img.shields.io/badge/@seyerjo-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
   <a href="https://github.com/seyerjo/learn-python-by-examples/issues"><img src="https://img.shields.io/badge/Feedback-Issues-0969DA?style=flat-square&logo=github&logoColor=white" alt="Issues" /></a>
 </p>
 
-> [!TIP]
+> &nbsp;
+>
 > **Find this repository useful?** Consider giving it a star to support the project and bookmark it for future reference:
 >
-> [![Star this repo](https://img.shields.io/github/stars/seyerjo/learn-python-by-examples?style=flat-square&label=Star%20this%20repo&logo=github&color=eab308)](https://github.com/seyerjo/learn-python-by-examples) &nbsp; Have a technical question or suggestion? Open an **[Issue](https://github.com/seyerjo/learn-python-by-examples/issues)**.
+> [![Star this repo](https://img.shields.io/github/stars/seyerjo/learn-python-by-examples?style=flat-square&label=Star%20this%20repo&logo=github&color=eab308)](https://github.com/seyerjo/learn-python-by-examples)
+>
+> Have a technical question or suggestion? Open an **[Issue](https://github.com/seyerjo/learn-python-by-examples/issues)**.
+>
+> &nbsp;
