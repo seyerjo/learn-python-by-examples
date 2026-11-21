@@ -1,94 +1,77 @@
-# 🚀 Learn Python by Examples
-> A comprehensive, practical Python learning repository featuring self-contained code examples, synchronized twin documentation, and defensive programming patterns.
+<div align="center">
 
-![Status](https://img.shields.io/badge/Status-Active-success.svg)
-![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)
-![Stage](https://img.shields.io/badge/Stage-Production-blue.svg)
-![Stack](https://img.shields.io/badge/Stack-Python_3.7+-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+# Learn Python by Examples
 
----
+**A progressive, hands-on Python curriculum built with standalone scripts, synchronized twin documentation, and defensive engineering patterns.**
 
-## 👋 Welcome!
-Welcome to **Learn Python by Examples**! Whether you are taking your very first steps in Python or sharpening your skills in algorithms, input validation, and clean modular design, this repository offers standalone, ready-to-run scripts paired with clear explanations. Feedback, bug reports, new example proposals, and Pull Requests from the community are always warmly welcome!
+Designed for learners and developers who want clean, idiomatic Python 3 code—moving step by step from core syntax to algorithmic problem solving and static type safety.
 
----
+<p>
+  <a href="#-quick-start--expected-output">Quick Start</a> ·
+  <a href="#-key-capabilities--use-cases">Capabilities</a> ·
+  <a href="#-code-examples-directory">Examples Index</a> ·
+  <a href="#-architecture--engineering-decisions">Architecture</a> ·
+  <a href="#-installation--prerequisites">Installation</a> ·
+  <a href="#-author--feedback">Author</a>
+</p>
 
-## 🎯 Project Overview
-* 👁️ **Vision:** To serve as an essential and practical guide for anyone learning Python, offering clean, structured, and progressively challenging code examples classified by difficulty.
-* 📌 **Core Highlights:**
-  * 🎯 **Growing Collection:** Roadmap toward 100+ Python code examples covering syntax fundamentals, data structures, control flow, algorithms, and design patterns.
-  * 🎯 **Clear Tiered Structure:** Scripts organized into **Basic** (`code/01_basic`), **Intermediate** (`code/02_intermediate`), and **Advanced** (`code/03_advanced`).
-  * 🎯 **Twin Documentation:** Dedicated companion Markdown guide for every single script (`sample_XX_description.md`).
-  * 🎯 **Modern Engineering Standards:** Consistent adherence to PEP 8 style, Google-style docstrings, and PEP 484 type hinting.
+[![Python](https://img.shields.io/badge/Python-3.7%2B-3776AB.svg?logo=python&logoColor=white)](#-installation--prerequisites)
+[![Examples](https://img.shields.io/badge/Examples-24_Samples-0ea5e9.svg)](#-code-examples-directory)
+[![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)](#-documentation--changelog)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](#-license)
+[![Last Commit](https://img.shields.io/github/last-commit/seyerjo/learn-python-by-examples)](https://github.com/seyerjo/learn-python-by-examples/commits/main)
 
----
-
-## ⚡ Main Features
-* 💎 **Modular Code Examples (`FEAT-01`):** Standalone, executable Python scripts illustrating specific programming concepts without heavyweight external dependencies (maps to `FR-01`, `FR-02`, `NFR-03`).
-* 💎 **Synchronized Twin Documentation (`FEAT-02`):** Companion Markdown guides paired 1:1 with each script, explaining syntax mechanics, step-by-step logic, and expected terminal output (maps to `FR-03`, `FR-04`, `NFR-02`).
-* 💎 **Tiered Repository Architecture (`FEAT-03`):** Predictable directory layout and standardized two-digit sequential naming (`sample_00` to `sample_23+`) for zero-friction navigation (maps to `FR-05`, `NFR-01`).
-* 💎 **Defensive Error Handling (`FEAT-04`):** Practical demonstrations of input sanitization, specific exception interception (`try-except-else-finally`), and graceful error recovery (maps to `NFR-03`).
+</div>
 
 ---
-
-## 🛠️ Getting Started & Installation
-
-### 📋 Prerequisites
-* **Python 3.7+** installed on your system (`python3 --version` or `python --version`).
-* **Git** installed on your system (`git --version`).
-
-### ⚙️ Installation
-```bash
-# 1. Clone the repository
-git clone https://github.com/seyerjo/learn-python-by-examples.git
-cd learn-python-by-examples
-```
-
----
-
-## 🚀 Quick Usage
-```bash
-# Run a Basic example
-python3 code/01_basic/sample_01_hello_world.py
-
-# Run an Intermediate example
-python3 code/02_intermediate/sample_18_exception_handling.py
-
-# Run an Advanced example
-python3 code/03_advanced/sample_21_binary_search_algorithm.py
-```
-
----
-
-## 🗺️ Workflow & Architecture
 
 ```mermaid
 graph TD
-    A[Learner / Developer] --> B(Clone Repository)
-    B --> C{Local Workspace}
-    C --> D[README.md]
-    C --> E[code/01_basic]
-    C --> F[code/02_intermediate]
-    C --> G[code/03_advanced]
-    E --> H[sample_XX_description.py]
-    E --> I[sample_XX_description.md]
-    F --> J[sample_YY_description.py]
-    F --> K[sample_YY_description.md]
-    G --> L[sample_ZZ_description.py]
-    G --> M[sample_ZZ_description.md]
-    D --> A
-    I --> A
-    K --> A
-    M --> A
-    H --> N(Run Code via CLI)
-    J --> N
-    L --> N
-    N --> O[Console Output & Telemetry]
-    O --> A
+    A[Clone Repository] --> B[README.md Index]
+    B --> C[01_basic · Samples 00–09]
+    B --> D[02_intermediate · Samples 10–18]
+    B --> E[03_advanced · Samples 19–23]
+    C --> F[sample_XX_topic.py + .md Twin]
+    D --> F
+    E --> F
+    F --> G[Run Directly via python3 CLI]
+    G --> H[Verified Console Output]
 ```
 
----
+## 🎯 What & Why
+
+Most beginner Python tutorials either show disconnected one-liners without error handling or hide fundamentals behind heavy third-party frameworks. **Learn Python by Examples** takes a strict engineering-first approach:
+
+* **Zero-framework focus:** Every script relies purely on Python's standard library so learners master the language itself before introducing external dependencies.
+* **1:1 Twin Documentation:** Every `.py` file is paired with an exact `.md` companion explaining the concept, step-by-step execution flow, common pitfalls, and expected terminal output.
+* **Production habits from day one:** Examples enforce PEP 8 formatting, modular `main()` entry guards, PEP 484 type hints, Google-style docstrings, and defensive `try-except` validation.
+
+## ⚡ Quick Start & Expected Output
+
+Clone the repository and execute any script directly from the terminal:
+
+```bash
+python3 code/03_advanced/sample_23_type_hinting.py
+```
+
+**Expected Output:**
+
+```text
+--- Demonstrating Basic Type Hinting ---
+The result of add_numbers(10, 5) is: 15
+The value of PI (hinted as float) is: 3.14159
+
+--- Demonstrating Complex Type Hinting ---
+Counting words in: ['hello world', 'hello python']
+Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
+```
+
+## 🧩 Key Capabilities & Use Cases
+
+* **Graduated Difficulty Curve:** Structured progression across three tiers—from primitive types and control flow (`01_basic`) to loops, recursion, and exceptions (`02_intermediate`), culminating in numerical algorithms and type safety (`03_advanced`).
+* **Algorithmic Comparisons Side by Side:** Samples `19` through `21` solve the same root-finding problem with brute-force enumeration, step approximation, and binary search so learners can observe iteration counts and algorithmic complexity firsthand.
+* **Defensive Input & Error Handling:** Dedicated patterns (`sample_18`, `sample_22`) demonstrate how to intercept `ValueError` and validate numeric bounds cleanly instead of crashing on malformed user input.
+* **Self-Guided Reference Library:** Predictable `sample_XX_topic` naming allows quick lookup as a personal cheat sheet or structured study track (actively expanding from 24 toward 100+ examples).
 
 ## 📝 Code Examples Directory
 
@@ -122,30 +105,62 @@ graph TD
 * 🔴 **22 — Robust Input Validation:** Reusable numeric validation loop with bounds checking — [🐍 Code](./code/03_advanced/sample_22_robust_input_validation.py) · [📘 Docs](./code/03_advanced/sample_22_robust_input_validation.md)
 * 🔴 **23 — Type Hinting:** PEP 484 type annotations, function signatures, and static type safety — [🐍 Code](./code/03_advanced/sample_23_type_hinting.py) · [📘 Docs](./code/03_advanced/sample_23_type_hinting.md)
 
----
+## 📐 Architecture & Engineering Decisions
 
-## 🤝 Contributing
-Contributions, bug reports, and feature ideas are warmly welcome!
-Please read our **[Contributing Guidelines](./CONTRIBUTING_GUIDELINES.md)** before opening an issue or submitting a Pull Request.
+* **Core Stack:** Plain Python 3 (`3.7+`) and Markdown—deliberately avoiding Jupyter `.ipynb` JSON blobs so diffs stay clean and scripts run directly in any terminal.
+* **Code Standards:** Strictly formatted to PEP 8 (`autopep8` / `Prettier`), documented with Google-style docstrings, and annotated with PEP 484 type hints on public functions.
+* **Defensive Coding:** Specific exception types (`ValueError`, `ZeroDivisionError`, etc.) are caught explicitly without bare `except:` blocks, and interactive scripts validate bounds before computation.
 
----
+<details>
+<summary>Project Structure</summary>
 
-## ⚖️ Code of Conduct
-We are committed to fostering an open, welcoming, and respectful community. All participants are expected to uphold our **[Code of Conduct](./CODE_OF_CONDUCT.md)**.
+```text
+learn-python-by-examples/
+├── code/
+│   ├── 01_basic/           # Samples 00–09 (.py + .md twins)
+│   ├── 02_intermediate/    # Samples 10–18 (.py + .md twins)
+│   └── 03_advanced/        # Samples 19–23 (.py + .md twins)
+├── docs/
+│   ├── 01_project_blueprint.md
+│   ├── 02_engineering_guidelines.md
+│   └── 03_project_log.md
+├── CHANGELOG.md
+├── LICENSE
+└── README.md
+```
 
----
+</details>
+
+## 💻 Installation & Prerequisites
+
+### Prerequisites
+
+* **Python 3.7+** (`python3 --version` or `python --version`)
+* **Git** (`git --version`)
+
+### Setup
+
+```bash
+git clone https://github.com/seyerjo/learn-python-by-examples.git
+cd learn-python-by-examples
+
+# Execute any sample directly
+python3 code/01_basic/sample_01_hello_world.py
+```
+
+## 📚 Documentation & Changelog
+
+* **[Changelog](./CHANGELOG.md):** Release history and version milestones (currently `v1.2.5`, with recent updates under `## [Unreleased]`).
+* **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature scope.
+* **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack rationale, and Python style guide.
+* **[Project Log](./docs/03_project_log.md):** Expansion roadmap (`sample_24` to `sample_65`) and development log.
 
 ## 📄 License
-This project is licensed under the **MIT** License — see the **[LICENSE](./LICENSE)** file for details.
 
----
+Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
 
-## 📜 Changelog
-Track project milestones and release notes in **[CHANGELOG.md](./CHANGELOG.md)** (currently at `v1.2.5`, with recent updates under `## [Unreleased]`).
+## 👤 Author & Feedback
 
----
+Created and maintained by **Jose Miguel Reyes** ([GitHub](https://github.com/seyerjo)).
 
-## 📚 Project Documentation
-* 📘 **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature map.
-* 🛠️ **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack, and code style guide.
-* 📋 **[Project Log](./docs/03_project_log.md):** Active roadmap (`sample_24` to `sample_65`) and development log.
+Questions, feedback, or technical inquiries? Open an **[Issue](https://github.com/seyerjo/learn-python-by-examples/issues)**.
