@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Redesigned `README.md` with a centered showcase header, strict 1:1 section navigation, collapsible color-badged example tables, Mermaid diagram under `## Architecture`, and an Author Card with contact badges and Star callout.
 - Merged the example expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` into `docs/03_project_log.md` and updated active backlog references.
-- Renamed `CONTRIBUTION_GUIDELINES.md` to `CONTRIBUTING_GUIDELINES.md`, aligned `README.md` with the public open-source layout (`/readme-public`), and updated cross-references in `CODE_OF_CONDUCT.md` and `/docs`.
+- Aligned `README.md` with the public layout and updated cross-references across `/docs`.
 
 ### Removed
 - Removed obsolete archived planning, draft code, legacy rules, and legacy Memory Bank files (`.archive/docs/`, `.archive/code/`, `.archive/rules/`, `.archive/mbank/`).
@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Consolidated project documentation into a streamlined 4-anchor architecture (`docs/01_project_blueprint.md`, `docs/02_engineering_guidelines.md`, `docs/03_project_log.md`).
 - Renamed code subdirectories to `01_basic`, `02_intermediate`, and `03_advanced` to enforce natural pedagogical sorting in file trees and synchronized all documentation cross-references.
-- Updated root governance files (`README.md`, `CONTRIBUTION_GUIDELINES.md`, `CODE_OF_CONDUCT.md`) to align with project workflows.
+- Updated root documentation (`README.md`) to align with project workflows.
 - Archived legacy documentation and planning files to `.archive/mbank/` and `.archive/docs/`.
 - Sanitized internal development terminology across all public repository documentation.
 

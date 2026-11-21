@@ -19,7 +19,7 @@
 - [x] **TASK-09:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
 - [x] **TASK-10:** Implement PEP 8 standards, Google-style docstrings, and PEP 484 type hinting across all existing code samples.
 - [x] **TASK-11:** Configure code formatting and linting standards (`autopep8`, `Prettier`).
-- [x] **TASK-12:** Create repository governance files (`LICENSE`, `CONTRIBUTING_GUIDELINES.md`, `CODE_OF_CONDUCT.md`).
+- [x] **TASK-12:** Add repository license (`LICENSE`).
 - [x] **TASK-13:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
 
 ### Expansion Roadmap (`sample_24` to `sample_65`)
@@ -86,21 +86,21 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 - **Key Decisions:**
   - Moved the workflow Mermaid diagram inside `## Architecture` so readers jump directly from the banner into `## Overview` and `## Quick Start`.
   - Replaced bulleted example listings with collapsible 4-column Markdown tables (`BASIC`, `INTERMEDIATE`, `ADVANCED`) to avoid line-wrapped links and scale cleanly toward the 100+ sample goal.
-  - Focused `README.md` on technical showcase and feedback via Issues while keeping `CONTRIBUTING_GUIDELINES.md` and `CODE_OF_CONDUCT.md` intact in the repository.
+  - Focused `README.md` on technical showcase and feedback via Issues.
 
 ### [Unreleased] - Expansion Plan Integration & Archive Cleanup (2026-11-18)
 - **Activity:** Merged the expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` directly into `docs/03_project_log.md` and cleaned up obsolete `.archive` subdirectories.
 - **Key Decisions:**
   - Consolidated `sample_24`–`sample_65` specifications into `docs/03_project_log.md` under `### Expansion Roadmap` and updated `TASK-01` to point internally to that section.
   - Removed `.archive/docs/` (`plan_expansion.md` after merging and obsolete `plan_review.md`), `.archive/code/`, `.archive/rules/`, and `.archive/mbank/` (retaining the empty `.archive/` folder locally).
-  - Aligned `README.md`, `CONTRIBUTING_GUIDELINES.md` (renamed from `CONTRIBUTION_GUIDELINES.md`), and `CODE_OF_CONDUCT.md` with the v3.1 community documentation skills and updated cross-references across `/docs`.
+  - Aligned `README.md` and updated cross-references across `/docs`.
 
 ### Milestone [1.2.5] - Streamlined Documentation Architecture & Structure Reorganization (2026-08-25)
 - **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system and reorganized code difficulty folders.
 - **Key Decisions:**
   - Standardized on 3 core documentation anchors in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
   - Reorganized code subdirectories into `01_basic/`, `02_intermediate/`, and `03_advanced/` to enforce natural pedagogical sorting in file trees and synchronized all cross-references.
-  - Aligned root governance files (`README.md`, `CONTRIBUTION_GUIDELINES.md`, `CODE_OF_CONDUCT.md`) with official workflows.
+  - Aligned root documentation (`README.md`) with official workflows.
   - Archived legacy memory bank and planning documentation to `.archive/mbank/` and `.archive/docs/` (both were subsequently merged/removed on 2026-11-18).
   - Enriched expansion task `TASK-01` with phase breakdowns, modern `pathlib` preference, and strict credentials security for the AI series.
 

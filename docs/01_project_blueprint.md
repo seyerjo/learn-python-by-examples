@@ -37,7 +37,6 @@ A curated, modular repository of standalone and packaged Python code examples or
 - **NFR-02 (Pedagogical Clarity):** Documentation and in-code comments must be clear, concise, beginner-friendly, and written in English.
 - **NFR-03 (Code Correctness & Robustness):** All provided code samples must be fully functional, free of syntax errors, and demonstrate proper error handling where applicable.
 - **NFR-04 (Public Availability):** The project must remain hosted in a public GitHub repository with open access.
-- **NFR-05 (Community Guidelines):** The project must provide clear contribution and conduct guidelines to encourage community collaboration.
 - **NFR-06 (Zero-Friction Setup):** Local environment setup and script execution must require minimal steps and rely primarily on standard Python tooling.
 - **NFR-07 (Consistent Difficulty Gradient):** The progression from `basic` through `intermediate` to `advanced` must follow a coherent, pedagogical complexity curve.
 
