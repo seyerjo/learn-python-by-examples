@@ -3,27 +3,27 @@
 ## To-Do List
 
 ### Active & Pending Tasks
-- [ ] **TASK-00 (Priority: High):** Audit and format baseline examples (`sample_00` to `sample_23`) with `Black` (88-char line length), verify synchronization with their twin `.md` guides, and validate compliance with the pedagogical tier boundaries defined in `docs/02_engineering_guidelines.md` (consolidates former `TASK-06` where applicable to advanced/CLI samples).
+- [ ] **TASK-00 (Priority: High):** Audit and format baseline examples (`sample_00` to `sample_23`) with `Black` (88-char line length), verify synchronization with their twin `.md` guides, and validate compliance with the pedagogical tier boundaries defined in `docs/02_engineering_guidelines.md`.
 - [ ] **TASK-01 (Priority: High):** Execute the expansion plan (detailed in [Expansion Roadmap (`sample_24` to `sample_65`)](#expansion-roadmap-sample_24-to-sample_65) below) to add new basic, intermediate, and advanced examples (`sample_24` to `sample_65`) toward the 100+ milestone:
   - *Phase 1 (Basic / `code/01_basic`):* Implement data structures (`sample_24` to `sample_32`: lists, tuples, dicts, sets, boolean logic, and f-string formatting).
   - *Phase 2 (Intermediate / `code/02_intermediate`):* Implement building blocks (`sample_33` to `sample_50`), prioritizing modern `pathlib` over legacy `os.path` for file I/O, OOP fundamentals, context managers, and packaging (`venv`/`pip`).
   - *Phase 3 (Advanced & AI / `code/03_advanced`):* Implement advanced systems and API series (`sample_51` to `sample_65`), enforcing strict credentials security via `python-dotenv` and `.env.example` (zero hardcoded secrets), async streaming, and LLM tool use / function calling.
-- [ ] **TASK-02 (Priority: Medium):** Add dedicated examples for advanced collection data structures (tuples, dictionary operations, sets, list/dict comprehensions).
-- [ ] **TASK-03 (Priority: Medium):** Add practical File I/O and data serialization samples (`pathlib`, JSON parsing, CSV handling, context managers).
-- [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/02_intermediate` (classes, inheritance, polymorphism, dataclasses).
-- [ ] **TASK-05 (Priority: Medium):** Add practical examples demonstrating popular Python Standard Library modules (`datetime`, `collections`, `itertools`, `argparse`, `logging`).
-- [ ] **TASK-07 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
+- [ ] **TASK-02 (Priority: Medium):** Extend collection coverage beyond `TASK-01` with advanced operations (nested comprehension patterns, `collections.Counter`/`defaultdict`, set algebra edge cases).
+- [ ] **TASK-03 (Priority: Medium):** Extend File I/O and serialization coverage beyond `TASK-01` with deeper real-world scenarios (`pathlib` batch processing, CSV dialects, structured JSON schema validation).
+- [ ] **TASK-04 (Priority: Medium):** Expand object-oriented programming (OOP) beyond `sample_47`–`sample_49` with polymorphism, composition, abstract base classes, and `dataclasses` in `code/02_intermediate`.
+- [ ] **TASK-05 (Priority: Medium):** Add dedicated Standard Library examples beyond `TASK-01` covering `itertools`, `functools`, and structured `logging` (`TIMESTAMP - LEVEL - MESSAGE`).
+- [ ] **TASK-06 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
 
 ### Completed Tasks
-- [x] **TASK-08:** Consolidate legacy 12-file documentation into a streamlined 4-anchor architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
-- [x] **TASK-09:** Systematic code review, modular refactoring, and documentation synchronization for all baseline examples (`sample_00` to `sample_23`).
-- [x] **TASK-10:** Standardize formatting, docstrings across all baseline samples, and PEP 484 type hinting in advanced samples (`sample_19`–`sample_23`).
-- [x] **TASK-11:** Configure code formatting and linting standards (`Black`, `Prettier`).
-- [x] **TASK-12:** Add repository license (`LICENSE`).
-- [x] **TASK-13:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
+- [x] **TASK-07:** Establish streamlined 4-document project architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
+- [x] **TASK-08:** Systematic code review, modular refactoring, and documentation synchronization for baseline examples (`sample_00` to `sample_23`).
+- [x] **TASK-09:** Standardize docstrings across baseline samples and introduce PEP 484 type hinting in advanced samples (`sample_19`–`sample_23`).
+- [x] **TASK-10:** Configure project code formatting and linting standards (`Black`, `Prettier`).
+- [x] **TASK-11:** Add repository license (`LICENSE`).
+- [x] **TASK-12:** Refine and standardize exception handling (`sample_18_exception_handling.py` and `sample_22_robust_input_validation.py`).
 
 ### Expansion Roadmap (`sample_24` to `sample_65`)
-Detailed example catalog merged from the former expansion plan to implement **TASK-01**. Each item must be created sequentially with both its `.py` script and twin `.md` documentation following `docs/02_engineering_guidelines.md`:
+Detailed example catalog to implement **TASK-01**. Each item must be created sequentially with both its `.py` script and twin `.md` documentation following `docs/02_engineering_guidelines.md`:
 
 #### Basic Level (`code/01_basic`) — Focus on Fundamentals
 - `sample_24_lists`: Basic list creation, indexing, and slicing.
@@ -33,7 +33,7 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 - `sample_28_dictionary_methods`: Using `.keys()`, `.values()`, and `.items()`.
 - `sample_29_sets`: Uniqueness, set operations (union, intersection).
 - `sample_30_boolean_logic`: `True`, `False`, and boolean operators in conditions.
-- `sample_31_f-strings_formatting`: Advanced f-string formatting for numbers and alignment.
+- `sample_31_f_strings_formatting`: Advanced f-string formatting for numbers and alignment.
 - `sample_32_user_input_recap`: Summary example combining input, type conversion, and f-strings.
 
 #### Intermediate Level (`code/02_intermediate`) — Focus on Building Blocks
@@ -81,39 +81,36 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 
 ## Development Log
 
-### [Unreleased] - Public Showcase README Overhaul (2026-11-21)
-- **Activity:** Redesigned `README.md` into a portfolio-oriented showcase layout featuring a custom local header banner (`.github/assets/banner.png`), emoji-free headings with 1:1 navigation anchors, collapsible difficulty-badged example tables, and an Author Card (`.github/assets/avatar.png`) with verified contact badges and a Star callout.
+### [Unreleased] - Public Showcase README & Documentation Consolidation (2026-11-21)
+- **Activity:** Redesigned `README.md` into a portfolio-oriented showcase layout and consolidated all 4 core project documents (`README.md`, `CHANGELOG.md`, `01_project_blueprint.md`, `02_engineering_guidelines.md`, and `03_project_log.md`) against the actual codebase.
 - **Key Decisions:**
-  - Moved the workflow Mermaid diagram inside `## Architecture` so readers jump directly from the banner into `## Overview` and `## Quick Start`.
-  - Replaced bulleted example listings with collapsible 4-column Markdown tables (`BASIC`, `INTERMEDIATE`, `ADVANCED`) to avoid line-wrapped links and scale cleanly toward the 100+ sample goal.
-  - Focused `README.md` on technical showcase and feedback via Issues.
+  - Added local visual assets (`.github/assets/banner.png` and `.github/assets/avatar.png`), open-by-default color-badged example tables and project structure (`<details open>`), Mermaid diagram inside `## Architecture`, and a borderless Author Card with verified contact badges and Star callout.
+  - Aligned formatting guidelines to `Black` (88-character limit) and `Prettier`, introduced the pedagogical progression boundary matrix across `01_basic`, `02_intermediate`, and `03_advanced` in `docs/02_engineering_guidelines.md`, logged `TASK-00` for baseline `Black` auditing, and added a PEP 484 forward-reference note in `sample_15_functions.py`.
+  - Focused `README.md` on technical showcase and feedback via GitHub Issues, removing community contribution files and scrubbing legacy/archive references across `/docs` and `CHANGELOG.md`.
 
-### [Unreleased] - Expansion Plan Integration & Archive Cleanup (2026-11-18)
-- **Activity:** Merged the expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` directly into `docs/03_project_log.md` and cleaned up obsolete `.archive` subdirectories.
+### [Unreleased] - Roadmap Integration & Documentation Cleanup (2026-11-18)
+- **Activity:** Integrated the `sample_24`–`sample_65` expansion roadmap directly into `docs/03_project_log.md` and cleaned up obsolete planning drafts.
 - **Key Decisions:**
-  - Consolidated `sample_24`–`sample_65` specifications into `docs/03_project_log.md` under `### Expansion Roadmap` and updated `TASK-01` to point internally to that section.
-  - Removed `.archive/docs/` (`plan_expansion.md` after merging and obsolete `plan_review.md`), `.archive/code/`, `.archive/rules/`, and `.archive/mbank/` (retaining the empty `.archive/` folder locally).
+  - Consolidated `sample_24`–`sample_65` specifications into `docs/03_project_log.md` under `### Expansion Roadmap` and pointed `TASK-01` internally to that section.
   - Aligned `README.md` and updated cross-references across `/docs`.
 
 ### Milestone [1.2.5] - Streamlined Documentation Architecture & Structure Reorganization (2026-08-25)
-- **Activity:** Migrated documentation from the legacy 12-file layout into the consolidated 4-anchor project documentation system and reorganized code difficulty folders.
+- **Activity:** Consolidated project documentation into the streamlined 4-document architecture and reorganized code difficulty folders.
 - **Key Decisions:**
-  - Standardized on 3 core documentation anchors in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
+  - Standardized on 3 core documentation guides in `/docs` (`01_project_blueprint.md`, `02_engineering_guidelines.md`, `03_project_log.md`) plus root `CHANGELOG.md`.
   - Reorganized code subdirectories into `01_basic/`, `02_intermediate/`, and `03_advanced/` to enforce natural pedagogical sorting in file trees and synchronized all cross-references.
-  - Aligned root documentation (`README.md`) with official workflows.
-  - Archived legacy memory bank and planning documentation to `.archive/mbank/` and `.archive/docs/` (both were subsequently merged/removed on 2026-11-18).
-  - Enriched expansion task `TASK-01` with phase breakdowns, modern `pathlib` preference, and strict credentials security for the AI series.
+  - Aligned root documentation (`README.md`) with project workflows and enriched `TASK-01` with phase breakdowns, modern `pathlib` preference, and strict credentials security for the AI series.
 
 ### Milestone [1.2.0] - Project-Wide Refactoring & Synchronization (Samples 00-23)
-- **Summary:** Completed comprehensive quality overhaul of all initial samples.
+- **Summary:** Completed quality overhaul across initial samples.
 - **Key Decisions:**
   - *Modularity:* Refactored monolithic scripts into small, single-purpose functions demonstrating clean architecture.
-  - *Pedagogical Clarity:* Enhanced console outputs and in-code comments, introducing warnings for common beginner errors (such as `ValueError` on unvalidated `int(input())`).
+  - *Pedagogical Clarity:* Enhanced console outputs and in-code comments, introducing warnings for common beginner errors (such as `ValueError` on unvalidated `int(input())` in `sample_05`).
   - *Algorithmic Progression:* Structured advanced samples (`19`, `20`, `21`) into a clear progression (brute-force -> approximation -> binary search) with iteration telemetry.
-  - *Robustness:* Standardized input validation and defensive `try-except` blocks across all interactive samples.
+  - *Robustness:* Standardized input validation and defensive `try-except` blocks across intermediate and advanced interactive samples (`sample_18`, `sample_22`, and algorithmic scripts).
 
 ### Milestone [1.1.0] - Quality & Pedagogy Refactor (Samples 00-10)
-- **Summary:** Systematic refactoring and improvement of basic samples (00 to 10).
+- **Summary:** Systematic refactoring and improvement of basic samples (`00` to `10`).
 - **Key Decisions:**
   - Introduced the DRY (Don't Repeat Yourself) principle in `sample_08`.
   - Enhanced docstrings and comments explaining raw strings, mutability, and type hinting fundamentals.
