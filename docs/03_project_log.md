@@ -3,6 +3,7 @@
 ## To-Do List
 
 ### Active & Pending Tasks
+- [ ] **TASK-00 (Priority: High):** Audit and format baseline examples (`sample_00` to `sample_23`) with `Black` (88-char line length), verify synchronization with their twin `.md` guides, and validate compliance with the pedagogical tier boundaries defined in `docs/02_engineering_guidelines.md` (consolidates former `TASK-06` where applicable to advanced/CLI samples).
 - [ ] **TASK-01 (Priority: High):** Execute the expansion plan (detailed in [Expansion Roadmap (`sample_24` to `sample_65`)](#expansion-roadmap-sample_24-to-sample_65) below) to add new basic, intermediate, and advanced examples (`sample_24` to `sample_65`) toward the 100+ milestone:
   - *Phase 1 (Basic / `code/01_basic`):* Implement data structures (`sample_24` to `sample_32`: lists, tuples, dicts, sets, boolean logic, and f-string formatting).
   - *Phase 2 (Intermediate / `code/02_intermediate`):* Implement building blocks (`sample_33` to `sample_50`), prioritizing modern `pathlib` over legacy `os.path` for file I/O, OOP fundamentals, context managers, and packaging (`venv`/`pip`).
@@ -11,7 +12,6 @@
 - [ ] **TASK-03 (Priority: Medium):** Add practical File I/O and data serialization samples (`pathlib`, JSON parsing, CSV handling, context managers).
 - [ ] **TASK-04 (Priority: Medium):** Implement object-oriented programming (OOP) and class design patterns in `/code/02_intermediate` (classes, inheritance, polymorphism, dataclasses).
 - [ ] **TASK-05 (Priority: Medium):** Add practical examples demonstrating popular Python Standard Library modules (`datetime`, `collections`, `itertools`, `argparse`, `logging`).
-- [ ] **TASK-06 (Priority: Low):** Standardize console execution metadata across baseline samples (add shebang `#!/usr/bin/env python3` and explicit `sys.exit()` status codes where applicable).
 - [ ] **TASK-07 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
 
 ### Completed Tasks

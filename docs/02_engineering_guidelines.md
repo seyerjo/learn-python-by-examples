@@ -165,3 +165,12 @@ def binary_search(elements: list[int], target: int) -> int:
 - **Specific Exception Handling:** Wrap risky I/O or conversion logic in `try-except` blocks catching specific exceptions (`ValueError`, `FileNotFoundError`, `ZeroDivisionError`). Never use bare `except:`.
 - **Subprocess Security:** When executing external system commands, always use `subprocess.run(["cmd", "arg1"], shell=False)`. Never pass raw string chains with `shell=True`.
 - **Credential Protection:** Never hardcode secrets or credentials in source code. Retrieve dynamic parameters via `os.getenv()` or local `.env` files.
+
+### 7. Pedagogical Progression Boundary (Rules by Difficulty Tier)
+Because this repository is an educational progression rather than a monolithic production service, engineering rules from `.agents/rules/project_rules_python_console_and_scripts.md` are introduced progressively by difficulty tier so beginners are not overwhelmed by boilerplate early on:
+
+| Tier | Mandatory From Day One | Intentionally Deferred (Use Forward-Reference Notes) |
+| :--- | :--- | :--- |
+| **Basic (`code/01_basic`, `sample_00`–`09`+)** | `Black` formatting (88 chars), `snake_case` naming, modular `main()` + `if __name__ == "__main__":`, concise docstrings | PEP 484 type hints, `try-except`, shebang (`#!/usr/bin/env python3`), `sys.exit()`, `logging`, `argparse`, `sys.stderr` |
+| **Intermediate (`code/02_intermediate`, `sample_10`–`18`+)** | Everything in Basic + specific `try-except-else-finally` validation for interactive/I/O errors, Google-style `Args:`/`Returns:` docstrings on parameterized functions, `pathlib` for file I/O | PEP 484 type hints (introduced gently via forward-reference notes toward `sample_23`), `argparse`, `logging`, `sys.exit()` |
+| **Advanced & CLI (`code/03_advanced`, `sample_19`–`23`+)** | Everything in Intermediate + mandatory PEP 484 type hints, shebang (`#!/usr/bin/env python3`) & explicit `sys.exit()` codes where applicable, `logging` / `sys.stderr` separation, `argparse` for CLI tools, `.env` / `os.getenv()` secrets management | — (Full production console standards apply) |

@@ -83,7 +83,7 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 
 </details>
 
-<details>
+<details open>
 <summary><img src="https://img.shields.io/badge/INTERMEDIATE-9_examples-eab308?style=flat-square" alt="Intermediate Level" valign="middle" /></summary>
 
 |  #  | Topic                       | Focus                                        |                                                                       Links                                                                       |
@@ -100,7 +100,7 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 
 </details>
 
-<details>
+<details open>
 <summary><img src="https://img.shields.io/badge/ADVANCED-5_examples-ef4444?style=flat-square" alt="Advanced Level" valign="middle" /></summary>
 
 |  #  | Topic                            | Focus                                   |                                                                        Links                                                                        |
@@ -186,19 +186,15 @@ Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
 
 ## Author
 
-<table>
-  <tr>
-    <td align="center" valign="top" width="76">
-      <a href="https://github.com/seyerjo">
-        <img src="./.github/assets/avatar.png" width="96" alt="Jose Miguel Reyes" />
-      </a>
-    </td>
-    <td valign="top">
-      <p><strong>Jose Miguel Reyes</strong><br />
-      Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering.</p>
-      </td>
-  </tr>
-</table>
+<p>
+  <a href="https://github.com/seyerjo">
+    <img src="./.github/assets/avatar.png" width="84" align="left" alt="Jose Miguel Reyes" />
+  </a>
+  <strong>Jose Miguel Reyes</strong><br />
+  Senior IT Consultant, CTO/CIO, and Full Stack Developer focused on Data Analytics, AI, and clean software engineering.
+</p>
+
+<br clear="left" />
 
 <p><em><strong>"Building for tomorrow."</strong></em></p>
 
