@@ -132,7 +132,7 @@ graph TD
 - **Code Standards:** Formatted with `Black` (Python) and `Prettier` (Markdown), documented with docstrings across all functions, and progressively introducing PEP 484 type hints in advanced samples (`sample_19`–`sample_23`).
 - **Defensive Coding:** Specific exception types (`ValueError`, `ZeroDivisionError`, etc.) are caught explicitly without bare `except:` blocks, and interactive scripts validate bounds before computation.
 
-<details>
+<details open>
 <summary>Project Structure</summary>
 
 ```text
