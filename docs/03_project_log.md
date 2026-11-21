@@ -81,6 +81,13 @@ Detailed example catalog merged from the former expansion plan to implement **TA
 
 ## Development Log
 
+### [Unreleased] - Public Showcase README Overhaul (2026-11-21)
+- **Activity:** Redesigned `README.md` into a portfolio-oriented showcase layout featuring a custom local header banner (`.github/assets/banner.png`), emoji-free headings with 1:1 navigation anchors, collapsible difficulty-badged example tables, and an Author Card (`.github/assets/avatar.png`) with verified contact badges and a Star callout.
+- **Key Decisions:**
+  - Moved the workflow Mermaid diagram inside `## Architecture` so readers jump directly from the banner into `## Overview` and `## Quick Start`.
+  - Replaced bulleted example listings with collapsible 4-column Markdown tables (`BASIC`, `INTERMEDIATE`, `ADVANCED`) to avoid line-wrapped links and scale cleanly toward the 100+ sample goal.
+  - Focused `README.md` on technical showcase and feedback via Issues while keeping `CONTRIBUTING_GUIDELINES.md` and `CODE_OF_CONDUCT.md` intact in the repository.
+
 ### [Unreleased] - Expansion Plan Integration & Archive Cleanup (2026-11-18)
 - **Activity:** Merged the expansion roadmap (`sample_24` to `sample_65`) from `.archive/docs/plan_expansion.md` directly into `docs/03_project_log.md` and cleaned up obsolete `.archive` subdirectories.
 - **Key Decisions:**
