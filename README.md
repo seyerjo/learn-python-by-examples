@@ -196,7 +196,7 @@ Licensed under the **MIT** License — see **[LICENSE](./LICENSE)** for details.
 
 <br clear="left" />
 
-<p><em><strong>"Building for tomorrow."</strong></em></p>
+<p><em><strong>"Engineering for the future."</strong></em></p>
 
 <p>
   <a href="https://github.com/seyerjo"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
