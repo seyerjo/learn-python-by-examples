@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -16,15 +17,15 @@ The core pattern remains a `while True` loop combined with `try-except`.
 # understand the type annotations used here (e.g., `-> int`, `-> None`).       #
 # ############################################################################ #
 
-from typing import Union, Type
+import sys
 
 
 def get_valid_number(
     prompt: str,
-    num_type: Type[Union[int, float]] = int,
-    min_val: Union[int, float] = None,
-    max_val: Union[int, float] = None,
-) -> Union[int, float]:
+    num_type: type[int | float] = int,
+    min_val: int | float | None = None,
+    max_val: int | float | None = None,
+) -> int | float:
     """
     Continuously prompts the user until a valid number of a specific type and
     within a specific range is entered.
@@ -91,3 +92,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)

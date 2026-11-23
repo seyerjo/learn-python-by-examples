@@ -7,7 +7,7 @@
 This example demonstrates:
 
 1.  Basic type hints for variables and functions.
-2.  How to use hints for complex/container types like `List` and `Dict`.
+2.  How to use hints for complex/container types like `list` and `dict`.
 3.  How static type checkers use these hints to find bugs.
 
 ## Code
@@ -15,6 +15,7 @@ This example demonstrates:
 The following code shows several examples of type hinting in action.
 
 ```python
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -31,8 +32,11 @@ not enforced by the Python interpreter at runtime. They are primarily for:
 3.  Enhancing IDE support for autocompletion and error checking.
 """
 
-# For complex types like List, Dict, etc., we must import them from the `typing` module.
-from typing import List, Dict
+import sys
+
+# Since Python 3.9+, built-in collection types like `list` and `dict` support
+# type parameters directly (PEP 585), and Python 3.10+ supports `|` for unions.
+# (Legacy Python < 3.9 required importing `List`, `Dict`, `Union` from `typing`.)
 
 
 # --- Example 1: Basic Type Hinting ---
@@ -44,18 +48,33 @@ def add_numbers(a: int, b: int) -> int:
     """
     Adds two integers and returns their sum.
     This function is hinted to take two `int` and return an `int`.
+
+    Args:
+        a (int): The first integer to add.
+        b (int): The second integer to add.
+
+    Returns:
+        int: The sum of a and b.
     """
     return a + b
 
 
 # --- Example 2: Hinting with Complex Types ---
 
-def count_words(phrases: List[str]) -> Dict[str, int]:
+
+def count_words(phrases: list[str]) -> dict[str, int]:
     """
     Takes a list of strings and returns a dictionary with word counts.
-    This demonstrates hinting with imported types like `List` and `Dict`.
+    This demonstrates hinting with built-in generics like `list[str]` and
+    `dict[str, int]`.
+
+    Args:
+        phrases (list[str]): A list of text phrases to tokenize and count.
+
+    Returns:
+        dict[str, int]: A dictionary mapping each word to its occurrence count.
     """
-    word_count: Dict[str, int] = {}
+    word_count: dict[str, int] = {}
     for phrase in phrases:
         for word in phrase.split():
             word_count[word] = word_count.get(word, 0) + 1
@@ -89,6 +108,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)
 ```
 
 ## Explanation
@@ -100,9 +120,9 @@ if __name__ == "__main__":
 
 2.  **Complex Hints**:
 
-    -   `from typing import List, Dict`: To hint container types, we import specialized types from the `typing` module.
-    -   `phrases: List[str]`: This indicates the `phrases` parameter should be a `List` where each element is a `str`.
-    -   `-> Dict[str, int]`: This indicates the function will return a `Dict` where keys are `str` and values are `int`.
+    -   **Built-in Generics (Python 3.9+)**: Built-in collection types such as `list` and `dict` can be parameterized directly without importing from `typing`.
+    -   `phrases: list[str]`: This indicates the `phrases` parameter should be a `list` where each element is a `str`.
+    -   `-> dict[str, int]`: This indicates the function will return a `dict` where keys are `str` and values are `int`.
 
 3.  **Static Analysis in Action**:
     -   The commented-out line `add_numbers("hello", "world")` shows a typical programming error.
@@ -124,4 +144,4 @@ Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 
 -   **Static Analysis Tools**: To get the full benefit of type hints, integrate a static type checker like `mypy` into your development workflow. You can install it via `pip install mypy` and run it from the command line: `mypy your_script.py`.
 -   **Clarity and Maintainability**: Type hints are one of the most effective ways to make your code self-documenting and easier for others (and your future self) to understand and maintain.
--   **Modern Python**: Using type hints is a standard practice in modern Python, especially in larger projects, libraries, and collaborative environments.
+-   **Modern Python (3.10+)**: Built-in generic types (`list[...]`, `dict[...]`, introduced in Python 3.9 via PEP 585) and the union operator (`int | float`, introduced in Python 3.10 via PEP 604) are standard in modern Python. Legacy codebases targeting Python `< 3.9` may still use `from typing import List, Dict, Union`.

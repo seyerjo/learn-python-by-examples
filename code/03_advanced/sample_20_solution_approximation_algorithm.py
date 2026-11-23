@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -16,6 +17,8 @@ This example uses it to find an approximate square root of a number.
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
 # understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
+
+import sys
 
 
 def find_root_by_approximation(target: int) -> None:
@@ -46,8 +49,7 @@ def find_root_by_approximation(target: int) -> None:
     if abs(guess**2 - target) < epsilon:
         print(f"The approximate square root of {target} is {guess:.4f}")
     else:
-        print(
-            f"Failed to find the square root of {target} within the allowed error.")
+        print(f"Failed to find the square root of {target} within the allowed error.")
 
 
 def main() -> None:
@@ -76,3 +78,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)

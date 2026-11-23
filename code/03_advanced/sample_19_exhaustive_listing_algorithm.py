@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -15,6 +16,8 @@ This example uses it to find the integer square root of a number.
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
 # understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
+
+import sys
 
 
 def find_square_root(target: int) -> None:
@@ -65,3 +68,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)

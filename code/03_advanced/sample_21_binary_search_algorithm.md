@@ -20,6 +20,7 @@ This approach converges on a solution exponentially faster than linear methods.
 The following code implements the binary search algorithm to find the approximate square root of a user-provided number.
 
 ```python
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -37,6 +38,8 @@ This example uses it to find the approximate square root of a number.
 # sample_23_type_hinting.py. It is recommended to review that example to fully #
 # understand the type annotations used here (e.g., `-> None`, `-> int`).       #
 # ############################################################################ #
+
+import sys
 
 
 def find_root_by_binary_search(target: int) -> None:
@@ -96,6 +99,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)
 ```
 
 ## Explanation

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # MAIN CODE
 
 """
@@ -14,8 +15,11 @@ not enforced by the Python interpreter at runtime. They are primarily for:
 3.  Enhancing IDE support for autocompletion and error checking.
 """
 
-# For complex types like List, Dict, etc., we must import them from the `typing` module.
-from typing import List, Dict
+import sys
+
+# Since Python 3.9+, built-in collection types like `list` and `dict` support
+# type parameters directly (PEP 585), and Python 3.10+ supports `|` for unions.
+# (Legacy Python < 3.9 required importing `List`, `Dict`, `Union` from `typing`.)
 
 
 # --- Example 1: Basic Type Hinting ---
@@ -27,18 +31,33 @@ def add_numbers(a: int, b: int) -> int:
     """
     Adds two integers and returns their sum.
     This function is hinted to take two `int` and return an `int`.
+
+    Args:
+        a (int): The first integer to add.
+        b (int): The second integer to add.
+
+    Returns:
+        int: The sum of a and b.
     """
     return a + b
 
 
 # --- Example 2: Hinting with Complex Types ---
 
-def count_words(phrases: List[str]) -> Dict[str, int]:
+
+def count_words(phrases: list[str]) -> dict[str, int]:
     """
     Takes a list of strings and returns a dictionary with word counts.
-    This demonstrates hinting with imported types like `List` and `Dict`.
+    This demonstrates hinting with built-in generics like `list[str]` and
+    `dict[str, int]`.
+
+    Args:
+        phrases (list[str]): A list of text phrases to tokenize and count.
+
+    Returns:
+        dict[str, int]: A dictionary mapping each word to its occurrence count.
     """
-    word_count: Dict[str, int] = {}
+    word_count: dict[str, int] = {}
     for phrase in phrases:
         for word in phrase.split():
             word_count[word] = word_count.get(word, 0) + 1
@@ -72,3 +91,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.exit(0)
