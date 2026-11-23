@@ -69,7 +69,7 @@ graph TD
 ## Tech Stack Justifications
 
 ### Core Technologies
-- **Python (3.7+):** Primary language. Chosen for its clean readability, high expressiveness, widespread adoption, and rich standard library (`sys`, `os`, `math`, `collections`, `logging`, `argparse`, `pathlib`).
+- **Python (3.10+):** Primary language. Chosen for its clean readability, high expressiveness, widespread adoption, and rich standard library (`sys`, `os`, `math`, `collections`, `logging`, `argparse`, `pathlib`).
 - **Markdown:** Chosen for all project documentation due to its lightweight syntax, broad compatibility, native rendering on GitHub, and support for diagrams (Mermaid).
 - **Git & GitHub:** Chosen as the industry-standard version control system and open collaboration platform for code hosting, issue tracking, and peer reviews.
 
@@ -88,7 +88,7 @@ graph TD
 ## Development & Environment Setup
 
 ### 1. Prerequisites
-- **Python 3.7+** installed (`python3 --version` or `python --version`).
+- **Python 3.10+** installed (`python3 --version` or `python --version`).
 - **Git** installed (`git --version`).
 
 ### 2. Local Setup & Execution Workflow

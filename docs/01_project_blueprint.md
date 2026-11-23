@@ -23,7 +23,7 @@ A curated repository of standalone Python code examples organized by difficulty 
 ## Requirements
 
 ### Functional Requirements (FR)
-- **FR-01:** The project must contain a collection of standalone and modular code examples written in modern Python (`3.7+`).
+- **FR-01:** The project must contain a collection of standalone and modular code examples written in modern Python (`3.10+`).
 - **FR-02:** Code examples must be organized and classified into dedicated difficulty tiers: `01_basic`, `02_intermediate`, and `03_advanced`.
 - **FR-03:** Each code example (`sample_XX_description.py`) must be accompanied by its corresponding twin documentation file (`sample_XX_description.md`).
 - **FR-04:** Each documentation file must explain the code's pedagogical purpose, concepts illustrated, step-by-step workflow, and expected console output.
