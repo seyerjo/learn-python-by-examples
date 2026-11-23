@@ -24,17 +24,32 @@ def show_naming_conventions():
     """Prints best practices for naming in Python, as per PEP 8."""
     print("--- Naming Conventions (PEP 8) ---")
     print("The most common and important conventions are:")
-    print("  - `snake_case`: Used for variables and functions. It's the standard for most names.")
+    print(
+        "  - `snake_case`: Used for variables and functions. "
+        "It's the standard for most names."
+    )
     print("    (e.g., `user_name`, `calculate_total()`).")
-    print("  - `PascalCase`: Used for classes. This is a key distinction from variables.")
+    print(
+        "  - `PascalCase`: Used for classes. "
+        "This is a key distinction from variables."
+    )
     print("    (e.g., `class MyNewClass:`).")
-    print("  - `ALL_CAPS`: Used for constants — variables whose values are not intended to change.")
+    print(
+        "  - `ALL_CAPS`: Used for constants — "
+        "variables whose values are not intended to change."
+    )
     print("    (e.g., `PI = 3.14`, `MAX_CONNECTIONS = 5`).")
 
     print("\nOther Important Considerations:")
-    print("  - **Descriptiveness**: Names should be clear and descriptive, not single letters.")
+    print(
+        "  - **Descriptiveness**: Names should be clear and descriptive, "
+        "not single letters."
+    )
     print("    (e.g., `customer_address` is better than `addr` or `c_a`).")
-    print("  - **Leading Underscore**: A name starting with an underscore (e.g., `_internal_value`)")
+    print(
+        "  - **Leading Underscore**: A name starting with an underscore "
+        "(e.g., `_internal_value`)"
+    )
     print("    is a convention that tells other programmers it's for internal use.")
     print()
 
@@ -75,7 +90,9 @@ def demonstrate_string_input_and_len():
     print(greeting)
 
     # The len() function returns the number of characters in a string.
-    message = f"Did you know that the length of this greeting is {len(greeting)} characters?"
+    message = (
+        f"Did you know that the length of this greeting is {len(greeting)} characters?"
+    )
     print(message)
     print()
 

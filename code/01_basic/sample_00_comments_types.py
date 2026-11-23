@@ -37,6 +37,13 @@ def main():
     # The print() function is used to output text to the console.
     print(calculation_result)  # Inline comment after a function call.
 
+    # Comment explaining a part of the code.
+    # The following code block handles the ZeroDivisionError exception.
+    try:
+        result = 10 / 0
+    except ZeroDivisionError:
+        print("Cannot divide by zero!")
+
 
 if __name__ == "__main__":
     main()
@@ -45,11 +52,3 @@ if __name__ == "__main__":
 # Code commented out, ignored by the interpreter.
 # if True:
 #     print("This code will not be executed")
-
-# Comment explaining a part of the code.
-# The following code block handles the ZeroDivisionError exception.
-
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("Cannot divide by zero!")

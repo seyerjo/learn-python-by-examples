@@ -13,7 +13,7 @@ This example demonstrates how to print "Hello, World!" to the console in Python 
 def main():
     """Prints 'Hello, World!' to the console."""
     print("Hello, World!")  # Using double quotes
-    print('Hello, World!')  # Using single quotes
+    print('Hello, World!')  # Using single quotes  # fmt: skip
 
 
 # The `if __name__ == "__main__":` block is a standard best practice in Python.

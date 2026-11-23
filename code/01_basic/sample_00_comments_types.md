@@ -44,6 +44,13 @@ def main():
     # The print() function is used to output text to the console.
     print(calculation_result)  # Inline comment after a function call.
 
+    # Comment explaining a part of the code.
+    # The following code block handles the ZeroDivisionError exception.
+    try:
+        result = 10 / 0
+    except ZeroDivisionError:
+        print("Cannot divide by zero!")
+
 
 if __name__ == "__main__":
     main()
@@ -52,14 +59,6 @@ if __name__ == "__main__":
 # Code commented out, ignored by the interpreter.
 # if True:
 #     print("This code will not be executed")
-
-# Comment explaining a part of the code.
-# The following code block handles the ZeroDivisionError exception.
-
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
 ```
 
 ## Explanation
@@ -76,7 +75,7 @@ except ZeroDivisionError:
 
 6.  **Main Execution Block**: The `if __name__ == "__main__":` block is standard Python practice. It ensures that the code inside the `main()` function only runs when the script is executed directly, and not when it's imported as a module into another script.
 
-7.  **Descriptive Comments**: Comments can also be used to explain the purpose of a subsequent block of code, as seen before the `try...except` block.
+7.  **Descriptive Comments**: Comments can also be used to explain the purpose of a subsequent block of code, as seen inside `main()` before the `try...except` block.
 
 ## Expected Output
 

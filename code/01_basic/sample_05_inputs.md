@@ -37,8 +37,10 @@ def demonstrate_string_input():
 def demonstrate_numeric_input():
     """Shows how to handle numeric input and the need for type conversion."""
     print("--- Numeric Input ---")
-    print("The input() function returns a string, so we must convert it to a "
-          "number for math.")
+    print(
+        "The input() function returns a string, so we must convert it to a "
+        "number for math."
+    )
 
     # Step-by-step conversion
     age_str = input("Enter your age: ")

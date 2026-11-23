@@ -25,16 +25,16 @@ def main():
     none_variable = None
 
     # Using the 'type' function to determine data types.
-    print(type(integer_variable))       # int
-    print(type(float_variable))         # float
-    print(type(complex_variable))       # complex
-    print(type(string_variable))        # str
-    print(type(list_variable))          # list
-    print(type(tuple_variable))         # tuple
-    print(type(dictionary_variable))    # dictionary
-    print(type(set_variable))           # set
-    print(type(boolean_variable))       # bool
-    print(type(none_variable))          # NoneType
+    print(type(integer_variable))  # int
+    print(type(float_variable))  # float
+    print(type(complex_variable))  # complex
+    print(type(string_variable))  # str
+    print(type(list_variable))  # list
+    print(type(tuple_variable))  # tuple
+    print(type(dictionary_variable))  # dictionary
+    print(type(set_variable))  # set
+    print(type(boolean_variable))  # bool
+    print(type(none_variable))  # NoneType
 
 
 if __name__ == "__main__":

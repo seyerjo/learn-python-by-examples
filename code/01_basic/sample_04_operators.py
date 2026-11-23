@@ -85,8 +85,10 @@ def demonstrate_identity_operators():
 def main():
     """Main function to demonstrate all operator types."""
     # Add introductory note about functions, as per user feedback
-    print("This script is organized into functions to demonstrate each "
-          "operator type clearly.")
+    print(
+        "This script is organized into functions to demonstrate each "
+        "operator type clearly."
+    )
     print("We will cover functions in detail in a later example.\n")
 
     demonstrate_arithmetic_operators()

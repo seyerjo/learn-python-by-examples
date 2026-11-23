@@ -15,7 +15,8 @@ A note on functions:
 - This code is organized into 'functions' (e.g., `def demonstrate_slicing():`).
 - A function is a reusable block of code that performs a specific task.
 - Using functions helps keep our code clean, organized, and easy to read.
-- We will cover functions in much more detail in a later example (sample_15_functions.py).
+- We will cover functions in much more detail in a later example
+  (sample_15_functions.py).
 """
 
 
@@ -29,8 +30,8 @@ def demonstrate_concatenation_and_repetition():
 
     # Simple concatenation using the '+' operator
     concatenated = first_string + second_string
-    print("'", first_string, "' + '", second_string, "' = '", concatenated,
-        "'", sep="")
+    print("'", first_string, "' + '", second_string, "' = '", concatenated, "'", sep="")
+    # The sep="" argument prevents print() from adding extra spaces between items.
 
     # Repetition using the '*' operator
     triplicate = first_string * 3

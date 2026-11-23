@@ -42,7 +42,7 @@ def demonstrate_quotes():
     """Demonstrates how to include quotes inside a string."""
     print("--- Escaping Quotes (\\' and \\\") ---")
     # You can escape quotes to include them in a string literal.
-    print("She said, \"It's a beautiful day!\"")
+    print("She said, \"It's a beautiful day!\"")  # fmt: skip
     # Alternatively, use the other type of quote for the string itself.
     print('He replied, "Indeed it is."')
     print()
@@ -54,7 +54,7 @@ def demonstrate_interactive_example():
     first_name = input("What's your first name?: ")
     last_name = input("What's your last name?: ")
     # Using \n for newlines and \" to wrap the name in quotes.
-    print(f"\nYour name is:\n\t\"{first_name} {last_name}\"")
+    print(f"\nYour name is:\n\t\"{first_name} {last_name}\"")  # fmt: skip
     print()
 
 

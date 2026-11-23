@@ -82,18 +82,20 @@ def demonstrate_identity_operators():
     c = a
     print(f"a = {a}, b = {b}, c = a")
     # 'is' checks if two variables point to the exact same object in memory
-    print(f"a is b -> {a is b}")
-    print(f"a is c -> {a is c}")
+    print(f"a is b -> {a is b}")  # False, they are different objects
+    print(f"a is c -> {a is c}")  # True, they point to the same object
     # '==' checks if the values of the objects are equal
-    print(f"a == b -> {a == b}")
+    print(f"a == b -> {a == b}")  # True, their contents are the same
     print()
 
 
 def main():
     """Main function to demonstrate all operator types."""
     # Add introductory note about functions, as per user feedback
-    print("This script is organized into functions to demonstrate each "
-          "operator type clearly.")
+    print(
+        "This script is organized into functions to demonstrate each "
+        "operator type clearly."
+    )
     print("We will cover functions in detail in a later example.\n")
 
     demonstrate_arithmetic_operators()
