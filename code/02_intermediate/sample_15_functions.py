@@ -10,7 +10,6 @@ This example covers:
 - Calling functions using positional and keyword arguments.
 """
 
-
 # NOTE: Type hints (PEP 484, e.g., `def add_numbers(a: int, b: int) -> int:`)
 # are recommended in production Python code, but are intentionally omitted here
 # to keep introductory syntax clean. See sample_23_type_hinting.py for details.

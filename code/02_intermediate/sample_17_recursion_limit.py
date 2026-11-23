@@ -16,6 +16,9 @@ def countdown(n):
     """
     A simple recursive function that counts down from n.
     This function is designed to demonstrate hitting the recursion limit.
+
+    Args:
+        n (int): The starting integer to count down from.
     """
     # This print helps visualize the recursion, but it will stop when the
     # error occurs, so you won't see it count all the way down.
@@ -48,7 +51,9 @@ def main():
     except RecursionError as e:
         # 4. When the recursion limit is hit, this block will execute.
         print(f"\nSuccessfully caught the expected error: {e}")
-        print("This error prevents a stack overflow, which could crash the interpreter.")
+        print(
+            "This error prevents a stack overflow, which could crash the interpreter."
+        )
 
 
 if __name__ == "__main__":

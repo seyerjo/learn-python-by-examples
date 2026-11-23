@@ -30,7 +30,9 @@ def demonstrate_nested_loops():
         while inner_count <= 4:
             # This print statement is inside the inner loop.
             print(
-                f"  - Inner loop iteration: (Outer: {outer_count}, Inner: {inner_count})")
+                "  - Inner loop iteration: "
+                f"(Outer: {outer_count}, Inner: {inner_count})"
+            )
             # 5. Increment the inner loop counter.
             inner_count += 1
 

@@ -49,7 +49,10 @@ def demonstrate_nested_loops():
         # 4. The inner loop will run as long as inner_count is less than or equal to 4.
         while inner_count <= 4:
             # This print statement is inside the inner loop.
-            print(f"  - Inner loop iteration: (Outer: {outer_count}, Inner: {inner_count})")
+            print(
+                "  - Inner loop iteration: "
+                f"(Outer: {outer_count}, Inner: {inner_count})"
+            )
             # 5. Increment the inner loop counter.
             inner_count += 1
 
