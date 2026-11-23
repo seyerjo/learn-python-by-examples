@@ -3,7 +3,6 @@
 ## To-Do List
 
 ### Active & Pending Tasks
-- [ ] **TASK-00 (Priority: High):** Audit and format baseline examples (`sample_00` to `sample_23`) with `Black` (88-char line length), verify synchronization with their twin `.md` guides, and validate compliance with the pedagogical tier boundaries defined in `docs/02_engineering_guidelines.md`.
 - [ ] **TASK-01 (Priority: High):** Execute the expansion plan (detailed in [Expansion Roadmap (`sample_24` to `sample_65`)](#expansion-roadmap-sample_24-to-sample_65) below) to add new basic, intermediate, and advanced examples (`sample_24` to `sample_65`) toward the 100+ milestone:
   - *Phase 1 (Basic / `code/01_basic`):* Implement data structures (`sample_24` to `sample_32`: lists, tuples, dicts, sets, boolean logic, and f-string formatting).
   - *Phase 2 (Intermediate / `code/02_intermediate`):* Implement building blocks (`sample_33` to `sample_50`), prioritizing modern `pathlib` over legacy `os.path` for file I/O, OOP fundamentals, context managers, and packaging (`venv`/`pip`).
@@ -15,6 +14,7 @@
 - [ ] **TASK-06 (Priority: Low):** Add automated test suites with `pytest` for advanced algorithmic samples to verify mathematical and computational correctness.
 
 ### Completed Tasks
+- [x] **TASK-00:** Audited and formatted all 24 baseline examples (`sample_00` to `sample_23`) with `Black` (88-char line length), modernized Python `3.10+` type hints (`sample_22`–`sample_23`), enforced `#!/usr/bin/env python3` and `sys.exit(0)` in `code/03_advanced/`, and resynchronized all 24 twin `.md` guides.
 - [x] **TASK-07:** Establish streamlined 4-document project architecture (`/docs/01_project_blueprint.md`, `/docs/02_engineering_guidelines.md`, `/docs/03_project_log.md`, `CHANGELOG.md`).
 - [x] **TASK-08:** Systematic code review, modular refactoring, and documentation synchronization for baseline examples (`sample_00` to `sample_23`).
 - [x] **TASK-09:** Standardize docstrings across baseline samples and introduce PEP 484 type hinting in advanced samples (`sample_19`–`sample_23`).
@@ -80,6 +80,13 @@ Detailed example catalog to implement **TASK-01**. Each item must be created seq
 ---
 
 ## Development Log
+
+### [Unreleased] - Python 3.10+ Requirement & Baseline Audit (TASK-00) (2026-11-23)
+- **Activity:** Updated minimum Python requirement to `3.10+` across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and completed `TASK-00` baseline audit (`sample_00`–`sample_23`).
+- **Key Decisions:**
+  - Modernized `sample_22_robust_input_validation.py` and `sample_23_type_hinting.py` to Python `3.10+` PEP 585/604 typing (`list[...]`, `dict[...]`, `type[...]`, `|`) and verified `code/03_advanced/` with `mypy`.
+  - Enforced `#!/usr/bin/env python3` and explicit `sys.exit(0)` across all `code/03_advanced/` scripts, added missing Google-style `Args:`/`Returns:` docstrings (`sample_17`, `sample_23`), and moved `sample_00` module-level `try-except` execution into `main()`.
+  - Formatted all 24 baseline scripts with `Black` (using `# fmt: skip` in `sample_01` and `sample_09` to preserve quote-escaping lessons) and synchronized all 24 `.py`/`.md` pairs.
 
 ### [Unreleased] - Public Showcase README & Documentation Consolidation (2026-11-21)
 - **Activity:** Redesigned `README.md` into a portfolio-oriented showcase layout and consolidated all 4 core project documents (`README.md`, `CHANGELOG.md`, `01_project_blueprint.md`, `02_engineering_guidelines.md`, and `03_project_log.md`) against the actual codebase.

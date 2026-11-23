@@ -11,9 +11,14 @@ All notable changes to this project will be documented in this file.
 - Added a pedagogical forward-reference note for PEP 484 type hints in `code/02_intermediate/sample_15_functions.py`.
 
 ### Changed
+- Bumped the minimum supported Python version from `3.7+` to `3.10+` across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and modernized type annotations in `sample_22` and `sample_23` to PEP 585/604 syntax.
+- Audited and formatted all 24 baseline scripts (`sample_00`–`sample_23`) with `Black` (88-character line length), added `#!/usr/bin/env python3` and `sys.exit(0)` across `code/03_advanced/`, and resynchronized all twin `.md` documentation files.
 - Redesigned `README.md` with a centered showcase header, strict 1:1 section navigation, open-by-default color-badged example tables and project structure, Mermaid diagram under `## Architecture`, and a borderless Author Card with contact badges and Star callout.
 - Aligned formatting and typing documentation across `README.md`, `docs/02_engineering_guidelines.md`, and `docs/03_project_log.md` to `Black` (88-character line length), `Prettier`, and progressive adoption of `try-except` and PEP 484 type hints.
 - Merged the example expansion roadmap (`sample_24` to `sample_65`) into `docs/03_project_log.md` and synchronized cross-references across `/docs`.
+
+### Fixed
+- Moved module-level `try-except` execution in `sample_00_comments_types.py` inside `main()` to prevent side effects on import, added missing `Args:`/`Returns:` Google docstrings in `sample_17` and `sample_23`, and resolved pre-existing `.py`/`.md` code block drifts.
 
 ### Removed
 - Removed obsolete archived planning, draft code, and legacy documentation files.
