@@ -147,8 +147,7 @@ learn-python-by-examples/
 │   └── 03_advanced/        # Samples 19–23 (.py + .md twins)
 ├── docs/
 │   ├── 01_project_blueprint.md
-│   ├── 02_engineering_guidelines.md
-│   └── 03_project_log.md
+│   └── 02_engineering_guidelines.md
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
@@ -178,7 +177,6 @@ python3 code/01_basic/sample_01_hello_world.py
 - **[Changelog](./CHANGELOG.md):** Release history and version milestones (currently `v1.2.5`, with recent updates under `## [Unreleased]`).
 - **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature scope.
 - **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack rationale, and Python style guide.
-- **[Project Log](./docs/03_project_log.md):** Expansion roadmap (`sample_24` to `sample_65`) and development log.
 
 ## License
 

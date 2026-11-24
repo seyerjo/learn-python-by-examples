@@ -17,10 +17,9 @@ learn-python-by-examples/
 │   │   └── sample_01_hello_world.md
 │   ├── 02_intermediate/        # Intermediate-level scripts (control flow, functions, OOP)
 │   └── 03_advanced/            # Advanced scripts (algorithms, optimization, generators)
-├── docs/                       # Consolidated project documentation (3 core guides)
+├── docs/                       # Public project documentation (blueprint & guidelines)
 │   ├── 01_project_blueprint.md
-│   ├── 02_engineering_guidelines.md
-│   └── 03_project_log.md
+│   └── 02_engineering_guidelines.md
 ├── CHANGELOG.md                # Historical release log (Keep a Changelog standard)
 ├── LICENSE                     # Project license (MIT)
 └── README.md                   # Primary project entry point & usage overview
@@ -28,7 +27,7 @@ learn-python-by-examples/
 
 ### 2. Main Components Breakdown
 - **Root Metadata (`/`):** Contains general repository configuration, public documentation (`README.md`, `LICENSE`), and release history (`CHANGELOG.md`).
-- **Project Documentation (`/docs`):** The consolidated 3-file documentation core + root `CHANGELOG.md` maintaining project vision, architecture, and backlog.
+- **Project Documentation (`/docs`):** The public documentation guides (`01_project_blueprint.md` and `02_engineering_guidelines.md`) + root `CHANGELOG.md` maintaining project vision, architecture, and release history.
 - **Categorized Code Levels (`/code/01_basic`, `/code/02_intermediate`, `/code/03_advanced`):** Isolated folders grouping code examples by pedagogical complexity.
 - **Twin File Standard:** Every script `sample_XX_description.py` has an exact twin `sample_XX_description.md` providing step-by-step technical breakdown, concepts illustrated, and sample execution output.
 
