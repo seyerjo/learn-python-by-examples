@@ -1,71 +1,65 @@
 #!/usr/bin/env python3
-# MAIN CODE
+"""Demonstrates exhaustive enumeration (guess and check) for integer square roots."""
 
-"""
-Demonstrates the EXHAUSTIVE ENUMERATION algorithm, also known as GUESS AND CHECK.
-
-This algorithm finds a solution to a problem by trying every possible answer
-(enumerating all possibilities) until the correct one is found. It is a simple
-brute-force approach.
-
-This example uses it to find the integer square root of a number.
-"""
-
-# ############################################################################ #
-# NOTE: This example uses Type Hinting, a concept explained in detail in      #
-# sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> None`, `-> int`).       #
-# ############################################################################ #
+# Uses PEP 484 type hints; see sample_23_type_hinting.py.
 
 import sys
 
 
 def find_square_root(target: int) -> None:
-    """
-    Finds the integer square root of a target number using exhaustive enumeration.
+    """Finds the integer square root of a target number via exhaustive enumeration.
 
     Args:
-        target (int): The number to find the square root of.
+        target: Non-negative integer whose integer square root is tested.
     """
     guess: int = 0
     iterations: int = 0
 
-    # We keep guessing until our guess squared is greater than or equal to the target.
     while guess**2 < target:
         guess += 1
         iterations += 1
 
     print(f"Algorithm finished after {iterations} iterations.")
 
-    # After the loop, we check if we found an exact square root.
     if guess**2 == target:
         print(f"The exact square root of {target} is {guess}.")
     else:
         print(f"{target} does not have an exact integer square root.")
 
 
-def main() -> None:
-    """
-    Main function to get user input and run the algorithm.
+def main() -> int:
+    """Prompts for a non-negative integer and runs exhaustive enumeration.
+
+    Returns:
+        Exit status code (0 on completion, 130 if interrupted via Ctrl-C).
     """
     print("--- Exhaustive Enumeration: Integer Square Root Finder ---")
 
-    # Get a valid non-negative integer from the user.
-    while True:
-        try:
-            target_number: int = int(input("Enter a non-negative integer: "))
-            if target_number < 0:
-                print("Error: Please enter a non-negative integer.")
-                continue
-            break
-        except ValueError:
-            print("Invalid input. Please enter a valid integer.")
+    try:
+        while True:
+            try:
+                target_number: int = int(input("Enter a non-negative integer: "))
+                if target_number < 0:
+                    print(
+                        "Error: Please enter a non-negative integer.",
+                        file=sys.stderr,
+                    )
+                    continue
+                break
+            except ValueError:
+                print(
+                    "Invalid input. Please enter a valid integer.",
+                    file=sys.stderr,
+                )
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.", file=sys.stderr)
+        return 130
 
-    print()  # Add a blank line for readability.
+    print()
     find_square_root(target_number)
     print()
+    return 0
 
 
 if __name__ == "__main__":
-    main()
-    sys.exit(0)
+    raise SystemExit(main())

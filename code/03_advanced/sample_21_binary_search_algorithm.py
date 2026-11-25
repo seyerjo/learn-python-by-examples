@@ -1,51 +1,30 @@
 #!/usr/bin/env python3
-# MAIN CODE
+"""Demonstrates continuous binary search for approximating square roots."""
 
-"""
-Demonstrates the BINARY SEARCH algorithm adapted for finding a numerical solution.
-
-This "divide and conquer" algorithm is significantly more efficient than linear
-methods like exhaustive enumeration or simple approximation. Instead of checking
-every value, it repeatedly divides the search space in half.
-
-This example uses it to find the approximate square root of a number.
-"""
-
-# ############################################################################ #
-# NOTE: This example uses Type Hinting, a concept explained in detail in      #
-# sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> None`, `-> int`).       #
-# ############################################################################ #
+# Uses PEP 484 type hints; see sample_23_type_hinting.py.
 
 import sys
 
 
 def find_root_by_binary_search(target: int) -> None:
-    """
-    Finds an approximate square root using a binary search algorithm.
+    """Approximates the square root of a target integer via binary search.
 
     Args:
-        target (int): The number to find the square root of.
+        target: Non-negative integer whose square root is approximated.
     """
-    epsilon: float = 0.01  # Our margin of error.
+    epsilon: float = 0.01
     low: float = 0.0
-    # The answer can't be larger than the target itself (unless target is < 1).
+    # Upper bound is at least 1.0 so targets in [0, 1) stay inside the search space.
     high: float = max(1.0, float(target))
     guess: float = (high + low) / 2
     iterations: int = 0
 
-    # Continue as long as our guess is not "close enough".
     while abs(guess**2 - target) >= epsilon:
-        # If our guess is too low, we know the answer is in the upper half
-        # of the current search space. So, we move the 'low' boundary up.
         if guess**2 < target:
             low = guess
-        # If our guess is too high, the answer is in the lower half.
-        # So, we move the 'high' boundary down.
         else:
             high = guess
 
-        # The new guess is the midpoint of the *new*, smaller search space.
         guess = (high + low) / 2
         iterations += 1
 
@@ -53,28 +32,39 @@ def find_root_by_binary_search(target: int) -> None:
     print(f"The approximate square root of {target} is {guess:.4f}")
 
 
-def main() -> None:
-    """
-    Main function to get user input and run the algorithm.
+def main() -> int:
+    """Prompts for a non-negative integer and runs binary search.
+
+    Returns:
+        Exit status code (0 on completion, 130 if interrupted via Ctrl-C).
     """
     print("--- Binary Search: Square Root Finder ---")
 
-    # Get a valid non-negative integer from the user.
-    while True:
-        try:
-            target_number: int = int(input("Enter a non-negative integer: "))
-            if target_number < 0:
-                print("Error: Please enter a non-negative integer.")
-                continue
-            break
-        except ValueError:
-            print("Invalid input. Please enter a valid integer.")
+    try:
+        while True:
+            try:
+                target_number: int = int(input("Enter a non-negative integer: "))
+                if target_number < 0:
+                    print(
+                        "Error: Please enter a non-negative integer.",
+                        file=sys.stderr,
+                    )
+                    continue
+                break
+            except ValueError:
+                print(
+                    "Invalid input. Please enter a valid integer.",
+                    file=sys.stderr,
+                )
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.", file=sys.stderr)
+        return 130
 
-    print()  # Add a blank line for readability.
+    print()
     find_root_by_binary_search(target_number)
     print()
+    return 0
 
 
 if __name__ == "__main__":
-    main()
-    sys.exit(0)
+    raise SystemExit(main())

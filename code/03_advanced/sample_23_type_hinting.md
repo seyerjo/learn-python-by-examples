@@ -1,136 +1,58 @@
-# Advanced: Type Hinting (PEP 484)
+# Modern Type Hinting (PEP 484 / 585 / 604)
 
-**Type Hinting** is a feature introduced in PEP 484 that allows developers to formally indicate the expected data types for variables, function parameters, and return values. It is a cornerstone of modern, robust Python development.
+Annotate variables, parameters, and return types using modern Python `3.11+` syntax, and verify them statically with `mypy --strict`.
 
-**Key Idea**: While Python remains a dynamically-typed language (meaning the interpreter does not enforce these hints at runtime), type hints provide immense value for code quality and maintainability.
+**Source code:** [`sample_23_type_hinting.py`](./sample_23_type_hinting.py) · **Level:** Advanced
 
-This example demonstrates:
+## Core Concept
 
-1.  Basic type hints for variables and functions.
-2.  How to use hints for complex/container types like `list` and `dict`.
-3.  How static type checkers use these hints to find bugs.
+Python remains dynamically typed at runtime—the interpreter does not block mismatched types during execution. **Type hints** serve as machine-checkable contracts for static analyzers (`mypy`, `pyright`) and IDE language servers (`Pylance`), catching type bugs *before* code runs without adding runtime overhead.
 
-## Code
+## Guided Walkthrough
 
-The following code shows several examples of type hinting in action.
+1. **Scalar annotations:** `PI: float = 3.14159` and `add_numbers(a: int, b: int) -> int` declare expected scalar types directly in code; per Google docstring conventions, those types are not repeated in `Args:`/`Returns:`:
 
 ```python
-#!/usr/bin/env python3
-# MAIN CODE
-
-"""
-Demonstrates TYPE HINTING in Python (PEP 484).
-
-Type Hinting allows developers to indicate the expected data types for
-variables, function parameters, and return values.
-
-IMPORTANT: Python remains a dynamically-typed language. These "hints" are
-not enforced by the Python interpreter at runtime. They are primarily for:
-1.  Improving code readability and self-documentation.
-2.  Allowing static analysis tools (like `mypy`) to catch type-related
-    errors before the code is even run.
-3.  Enhancing IDE support for autocompletion and error checking.
-"""
-
-import sys
-
-# Since Python 3.9+, built-in collection types like `list` and `dict` support
-# type parameters directly (PEP 585), and Python 3.10+ supports `|` for unions.
-# (Legacy Python < 3.9 required importing `List`, `Dict`, `Union` from `typing`.)
-
-
-# --- Example 1: Basic Type Hinting ---
-
-PI: float = 3.14159  # Variable with a type hint.
+PI: float = 3.14159
 
 
 def add_numbers(a: int, b: int) -> int:
-    """
-    Adds two integers and returns their sum.
-    This function is hinted to take two `int` and return an `int`.
-
-    Args:
-        a (int): The first integer to add.
-        b (int): The second integer to add.
-
-    Returns:
-        int: The sum of a and b.
-    """
     return a + b
+```
 
+2. **Built-in generic collections (PEP 585) and unions (PEP 604):** In modern Python (`3.11+`), parameterize `list[str]` and `dict[str, int]` directly without importing legacy `typing.List` or `typing.Dict` (and use `int | float` for unions as seen in [`sample_22_robust_input_validation.py`](./sample_22_robust_input_validation.py)):
 
-# --- Example 2: Hinting with Complex Types ---
-
-
+```python
 def count_words(phrases: list[str]) -> dict[str, int]:
-    """
-    Takes a list of strings and returns a dictionary with word counts.
-    This demonstrates hinting with built-in generics like `list[str]` and
-    `dict[str, int]`.
-
-    Args:
-        phrases (list[str]): A list of text phrases to tokenize and count.
-
-    Returns:
-        dict[str, int]: A dictionary mapping each word to its occurrence count.
-    """
     word_count: dict[str, int] = {}
     for phrase in phrases:
         for word in phrase.split():
             word_count[word] = word_count.get(word, 0) + 1
     return word_count
-
-
-def main() -> None:
-    """Main function to demonstrate type hinting."""
-    print("--- Demonstrating Basic Type Hinting ---")
-    result: int = add_numbers(10, 5)
-    print(f"The result of add_numbers(10, 5) is: {result}")
-    print(f"The value of PI (hinted as float) is: {PI}\n")
-
-    print("--- Demonstrating Complex Type Hinting ---")
-    sentences = ["hello world", "hello python"]
-    counts = count_words(sentences)
-    print(f"Counting words in: {sentences}")
-    print(f"Resulting dictionary: {counts}\n")
-
-    # --- Example of a Type Error ---
-    # The following line, if uncommented, would be flagged as an error by a
-    # static type checker like `mypy` because we are passing strings to a
-    # function that expects integers.
-    #
-    # mypy would report:
-    # error: Argument 1 to "add_numbers" has incompatible type "str"; expected "int"
-    # error: Argument 2 to "add_numbers" has incompatible type "str"; expected "int"
-    #
-    # add_numbers("hello", "world")
-
-
-if __name__ == "__main__":
-    main()
-    sys.exit(0)
 ```
 
-## Explanation
+3. **Catching bugs statically:** If `main()` called `add_numbers("hello", "world")`, Python would concatenate `"helloworld"` at runtime instead of failing loudly—whereas a static checker flags both arguments immediately before execution:
 
-1.  **Basic Hints**:
-
-    -   `PI: float = 3.14159`: We declare that `PI` is intended to be a `float`.
-    -   `def add_numbers(a: int, b: int) -> int:`: This signature clearly states the function expects two `int` arguments and will return an `int`.
-
-2.  **Complex Hints**:
-
-    -   **Built-in Generics (Python 3.9+)**: Built-in collection types such as `list` and `dict` can be parameterized directly without importing from `typing`.
-    -   `phrases: list[str]`: This indicates the `phrases` parameter should be a `list` where each element is a `str`.
-    -   `-> dict[str, int]`: This indicates the function will return a `dict` where keys are `str` and values are `int`.
-
-3.  **Static Analysis in Action**:
-    -   The commented-out line `add_numbers("hello", "world")` shows a typical programming error.
-    -   While Python would run this line and concatenate the strings, a **static type checker** like `mypy` would analyze the code _before execution_ and report an error, because the function was called with types that do not match its hints. This helps catch bugs early.
-
-## Expected Output
-
+```text
+error: Argument 1 to "add_numbers" has incompatible type "str"; expected "int"
+error: Argument 2 to "add_numbers" has incompatible type "str"; expected "int"
 ```
+
+## Running the Example
+
+```bash
+python3 code/03_advanced/sample_23_type_hinting.py
+```
+
+To verify static type safety across the advanced directory:
+
+```bash
+uvx mypy --strict code/03_advanced
+```
+
+### Expected Output
+
+```text
 --- Demonstrating Basic Type Hinting ---
 The result of add_numbers(10, 5) is: 15
 The value of PI (hinted as float) is: 3.14159
@@ -140,8 +62,9 @@ Counting words in: ['hello world', 'hello python']
 Resulting dictionary: {'hello': 2, 'world': 1, 'python': 1}
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   **Static Analysis Tools**: To get the full benefit of type hints, integrate a static type checker like `mypy` into your development workflow. You can install it via `pip install mypy` and run it from the command line: `mypy your_script.py`.
--   **Clarity and Maintainability**: Type hints are one of the most effective ways to make your code self-documenting and easier for others (and your future self) to understand and maintain.
--   **Modern Python (3.10+)**: Built-in generic types (`list[...]`, `dict[...]`, introduced in Python 3.9 via PEP 585) and the union operator (`int | float`, introduced in Python 3.10 via PEP 604) are standard in modern Python. Legacy codebases targeting Python `< 3.9` may still use `from typing import List, Dict, Union`.
+- Type hints are **not** enforced at runtime; pair them with `mypy --strict` or `pyright`/`Pylance` to catch mismatches early.
+- Use modern native generics (`list[...]`, `dict[...]`) and pipe unions (`int | None`) instead of legacy `typing.List`, `Dict`, `Optional`, and `Union`.
+- When signatures carry PEP 484 type annotations, omit redundant types from Google-style `Args:`/`Returns:` docstrings so docs never drift from signatures.
+- This completes the 24-sample baseline (`sample_00`–`sample_23`); upcoming expansions (`sample_24`+) build directly on these patterns.

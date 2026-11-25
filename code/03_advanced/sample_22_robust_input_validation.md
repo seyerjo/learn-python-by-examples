@@ -1,132 +1,52 @@
-# Advanced: Robust and Reusable Input Validation
+# Reusable, Type-Safe Input Validation
 
-A fundamental principle of good software design is creating reusable components. This example takes the concept of robust input validation from `sample_18` and elevates it into a powerful, flexible, and reusable function that can handle various numeric types and constraints.
+Generalize defensive `while True` / `try-except` input loops into one reusable function supporting dynamic numeric converters and optional bounds.
 
-## Concept: Generalizing the Validation Logic
+**Source code:** [`sample_22_robust_input_validation.py`](./sample_22_robust_input_validation.py) · **Level:** Advanced
 
-Instead of writing a separate validation loop for every specific need (e.g., one for integers, one for floats, one for numbers in a range), we can create a single, more intelligent function.
+## Core Concept
 
-This example builds a `get_valid_number` function that accepts parameters to control:
+Writing separate validation loops for every integer, float, or range prompt duplicates code across an application. Because functions and types (`int`, `float`) are first-class objects in Python, a single parameterized helper can handle type conversion, optional lower/upper bounds, and `sys.stderr` error reporting cleanly.
 
-1.  **The desired number type** (e.g., `int` or `float`).
-2.  An optional **minimum allowed value**.
-3.  An optional **maximum allowed value**.
+## Guided Walkthrough
 
-This approach is highly reusable and makes the main program logic cleaner and more readable.
-
-## Code
-
-The following code defines the generic `get_valid_number` function and then calls it three times in `main()` to demonstrate its flexibility.
+1. **Flexible signature with PEP 585/604 types:** `get_valid_number` accepts a converter (`num_type: type[int | float] = int`) and optional `min_val` / `max_val` bounds defaulting to `None`:
 
 ```python
-#!/usr/bin/env python3
-# MAIN CODE
-
-"""
-Demonstrates a ROBUST AND REUSABLE INPUT VALIDATION function.
-
-A common task in programming is getting a specific type of numerical input
-from a user within a certain range. This example builds a single, flexible
-function that can be reused for integers, floats, and ranges.
-
-The core pattern remains a `while True` loop combined with `try-except`.
-"""
-
-# ############################################################################ #
-# NOTE: This example uses Type Hinting, a concept explained in detail in      #
-# sample_23_type_hinting.py. It is recommended to review that example to fully #
-# understand the type annotations used here (e.g., `-> int`, `-> None`).       #
-# ############################################################################ #
-
-import sys
-
-
 def get_valid_number(
     prompt: str,
     num_type: type[int | float] = int,
     min_val: int | float | None = None,
     max_val: int | float | None = None,
 ) -> int | float:
-    """
-    Continuously prompts the user until a valid number of a specific type and
-    within a specific range is entered.
+```
 
-    Args:
-        prompt (str): The message to display to the user.
-        num_type (type): The required number type (e.g., `int` or `float`).
-        min_val (int or float, optional): The minimum allowed value.
-        max_val (int or float, optional): The maximum allowed value.
+2. **Safe bounds checking and `sys.stderr` diagnostics:** Inside `while True`, `min_val is not None` (rather than truthiness `if min_val:`) ensures valid zero bounds (`0` or `0.0`) are enforced, and validation errors write to `sys.stderr`:
 
-    Returns:
-        A valid number of the specified type and within the specified range.
-    """
-    while True:
-        try:
-            # 1. Attempt to get and convert the input to the desired type.
-            user_input = input(prompt)
-            number = num_type(user_input)
-
-            # 2. Check if the number is above the minimum value.
+```python
+            number = num_type(input(prompt))
+            # Explicit `is not None` prevents 0 or 0.0 bounds from being skipped.
             if min_val is not None and number < min_val:
-                print(f"Error: The value must be at least {min_val}.")
-                continue  # Ask for input again.
-
-            # 3. Check if the number is below the maximum value.
-            if max_val is not None and number > max_val:
-                print(f"Error: The value must be no more than {max_val}.")
-                continue  # Ask for input again.
-
-            # 4. If all checks pass, return the valid number.
-            return number
-
-        except ValueError:
-            # This catches errors from the type conversion (e.g., `int("abc")`).
-            print(f"Invalid input. Please enter a valid {num_type.__name__}.")
-
-
-def main() -> None:
-    """Main function to demonstrate robust and flexible input validation."""
-    print("--- Demonstrating a general-purpose number validation function ---\n")
-
-    # Example 1: Get any integer.
-    age = get_valid_number("Please enter your age (any integer): ")
-    print(f"Valid age entered: {age}\n")
-
-    # Example 2: Get a float between 0.0 and 1.0.
-    probability = get_valid_number(
-        "Enter a probability (a decimal between 0.0 and 1.0): ",
-        num_type=float,
-        min_val=0.0,
-        max_val=1.0,
-    )
-    print(f"Valid probability entered: {probability}\n")
-
-    # Example 3: Get an integer within a specific range.
-    rating = get_valid_number(
-        "Please rate our service (an integer from 1 to 5): ",
-        num_type=int,
-        min_val=1,
-        max_val=5,
-    )
-    print(f"Valid rating entered: {rating}\n")
-
-
-if __name__ == "__main__":
-    main()
-    sys.exit(0)
+                print(
+                    f"Error: The value must be at least {min_val}.",
+                    file=sys.stderr,
+                )
+                continue
 ```
 
-## Explanation
+3. **Reusability in `main() -> int`:** `main()` calls `get_valid_number` three times (unbounded `int`, bounded `float` `[0.0, 1.0]`, bounded `int` `[1, 5]`) and catches `KeyboardInterrupt` to exit with code `130`.
 
-1.  **Function Signature**: The function `get_valid_number` has a flexible signature with optional arguments (`min_val` and `max_val`) that default to `None`. This means if you don't provide them, the range checks are skipped.
-2.  **Type Conversion**: The line `number = num_type(user_input)` is the key to its flexibility. `num_type` is a parameter, so if you pass `int`, it will execute `int(user_input)`; if you pass `float`, it will execute `float(user_input)`. This is a powerful use of functions as first-class objects in Python.
-3.  **Range Checks**: The code checks `if min_val is not None` before attempting the comparison. This is important because `0` is a valid minimum value, and a simple `if min_val:` would incorrectly evaluate to `False`.
-4.  **`continue`**: If a range check fails, the `continue` statement skips the rest of the current loop iteration and immediately asks the user for input again.
-5.  **Reusability in `main()`**: The `main` function demonstrates how easy it is to call the same function for three different validation scenarios, making the main logic clean and readable.
+## Running the Example
 
-## Expected Output
-
+```bash
+python3 code/03_advanced/sample_22_robust_input_validation.py
 ```
+
+### Expected Output
+
+With sample inputs `thirty`, `30`, `1.5`, `0.75`, `6`, and `5` (combining `stdout` and `stderr` in terminal view):
+
+```text
 --- Demonstrating a general-purpose number validation function ---
 
 Please enter your age (any integer): thirty
@@ -144,3 +64,10 @@ Error: The value must be no more than 5.
 Please rate our service (an integer from 1 to 5): 5
 Valid rating entered: 5
 ```
+
+## Key Takeaways
+
+- Always compare optional numeric bounds with `is not None` so `0` and `0.0` are never skipped as falsy.
+- Passing `int` or `float` as `num_type` leverages Python's first-class callables to eliminate duplicated loops.
+- Sending validation errors to `sys.stderr` keeps standard output clean if results are piped or logged separately.
+- Next: master Python type annotations and static checking in [`sample_23_type_hinting.md`](./sample_23_type_hinting.md).
