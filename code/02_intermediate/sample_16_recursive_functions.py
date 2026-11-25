@@ -1,76 +1,55 @@
-# MAIN CODE
-
-"""
-Demonstrates recursive functions in Python.
-
-A recursive function is a function that calls itself to solve a problem.
-This example shows two common use cases:
-1.  Calculating the factorial of a number.
-2.  Recursively validating user input until it is correct.
-"""
+"""Demonstrates recursion with a factorial calculator and recursive input retry."""
 
 
 def factorial(n):
-    """
-    Calculates the factorial of a non-negative integer recursively.
-
-    A factorial is the product of all positive integers up to that number.
-    e.g., 5! = 5 * 4 * 3 * 2 * 1 = 120.
+    """Calculates the factorial of a non-negative integer recursively.
 
     Args:
-        n (int): A non-negative integer.
+        n: Non-negative integer whose factorial is computed.
 
     Returns:
-        int: The factorial of n.
+        Factorial of n (n!).
 
     Raises:
-        ValueError: If n is a negative number.
+        ValueError: If n is negative.
     """
-    # Validate input: Factorial is not defined for negative numbers.
     if n < 0:
         raise ValueError("Factorial is not defined for negative numbers.")
 
-    # Base case: The condition that stops the recursion.
-    # The factorial of 0 is 1.
+    # Base case stops the recursion.
     if n == 0:
         return 1
 
-    # Recursive step: The function calls itself with a smaller version
-    # of the problem.
     return n * factorial(n - 1)
 
 
 def get_non_negative_integer():
-    """
-    Recursively prompts the user until a non-negative integer is entered.
+    """Prompts recursively until the user enters a non-negative integer.
 
     Returns:
-        int: A valid non-negative integer from the user.
+        Valid non-negative integer entered by the user.
     """
     try:
         num = int(input("Enter a non-negative integer (e.g., 0, 1, 5): "))
         if num >= 0:
             return num
-        else:
-            print("The number must be non-negative. Please try again.")
-            return get_non_negative_integer()  # Recursive call
+        print("The number must be non-negative. Please try again.")
+        return get_non_negative_integer()
     except ValueError:
         print("Invalid input. Please enter a valid integer.")
-        return get_non_negative_integer()  # Recursive call
+        return get_non_negative_integer()
 
 
 def main():
-    """Main function to demonstrate recursive functions."""
+    """Prompts for an integer and prints its recursively computed factorial."""
     print("--- Recursive Factorial Calculator ---")
-
     number_to_calculate = get_non_negative_integer()
 
     try:
         result = factorial(number_to_calculate)
         print(f"\nThe factorial of {number_to_calculate} is {result}.\n")
-    except ValueError as e:
-        # This part will catch the error raised by our validation.
-        print(f"Error: {e}")
+    except ValueError as err:
+        print(f"Error: {err}")
 
 
 if __name__ == "__main__":

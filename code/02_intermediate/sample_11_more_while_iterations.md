@@ -1,88 +1,41 @@
-# Nested `while` Loops in Python
+# Nested `while` Loops
 
-This example demonstrates the use of **nested `while` loops**. A nested loop is a loop that is placed inside another loop.
+Combine an outer and inner `while` loop to process two-dimensional structures or generate paired combinations.
 
-## Concept
+**Source code:** [`sample_11_more_while_iterations.py`](./sample_11_more_while_iterations.py) · **Level:** Intermediate
 
-In a nested loop structure, the following happens:
+## Core Concept
 
-1.  The **outer loop** starts and executes its first iteration.
-2.  The **inner loop** is then executed completely (from its beginning to its end).
-3.  Once the inner loop finishes, the outer loop proceeds to its next iteration.
-4.  This process repeats until the outer loop has completed all its iterations.
+A **nested loop** places one loop inside the body of another. For every single step of the outer loop, the inner loop runs through its full cycle from start to finish before the outer loop advances.
 
-This structure is very useful for tasks that involve iterating over two-dimensional data (like a grid or a matrix) or for generating combinations of items from two different sets.
+## Guided Walkthrough
 
-## Code
-
-The following code uses a nested `while` loop to show how the iterations of the outer and inner loops interact.
+1. **Outer loop setup and inner counter reset:** The critical rule of nested loops is initializing `inner_count = 1` *inside* the outer `while` block so the inner loop restarts cleanly on every outer pass:
 
 ```python
-# MAIN CODE
+outer_count = 1
+while outer_count <= 3:
+    print(f"\n[Outer Loop Iteration {outer_count}]")
+    # Reset inner counter on every outer iteration.
+    inner_count = 1
 
-"""
-Demonstrates nested while loops in Python.
-
-A nested loop is a loop inside another loop. The inner loop will be executed
-one full time for each iteration of the outer loop. This is useful for working
-with two-dimensional data structures or creating combinations of items.
-"""
-
-
-def demonstrate_nested_loops():
-    """
-    Shows how to use nested while loops to print combinations of numbers.
-    """
-    print("--- Nested While Loops Example ---")
-    # 1. Initialization of the outer loop counter.
-    outer_count = 1
-    print("Starting the outer loop.")
-
-    # 2. The outer loop will run as long as outer_count is less than or equal to 3.
-    while outer_count <= 3:
-        print(f"\n[Outer Loop Iteration {outer_count}]")
-
-        # 3. Initialization of the inner loop counter.
-        # This happens *every time* the outer loop runs an iteration.
-        inner_count = 1
-
-        # 4. The inner loop will run as long as inner_count is less than or equal to 4.
-        while inner_count <= 4:
-            # This print statement is inside the inner loop.
-            print(
-                "  - Inner loop iteration: "
-                f"(Outer: {outer_count}, Inner: {inner_count})"
-            )
-            # 5. Increment the inner loop counter.
-            inner_count += 1
-
-        print(f"[Finished Inner Loop for Outer: {outer_count}]")
-        # 6. Increment the outer loop counter.
-        outer_count += 1
-
-    print("\nAll loops have completed.")
-
-
-def main():
-    """Main function to demonstrate nested while loops."""
-    demonstrate_nested_loops()
-
-
-if __name__ == "__main__":
-    main()
+    while inner_count <= 4:
+        print(f"  - Inner loop iteration: (Outer: {outer_count}, Inner: {inner_count})")
+        inner_count += 1
+    outer_count += 1
 ```
 
-## Explanation
+2. **Total iterations:** With 3 outer iterations and 4 inner iterations per pass, the inner print statement executes $3 \times 4 = 12$ times.
 
-1.  **`outer_count`**: This variable controls the outer loop. It starts at 1 and the loop continues as long as `outer_count` is less than or equal to 3.
-2.  **`inner_count`**: This variable controls the inner loop. It is **reset to 1 at the beginning of each iteration of the outer loop**.
-3.  **Execution Flow**: For each single iteration of the outer loop (e.g., when `outer_count` is 1), the inner loop runs completely (from `inner_count` = 1 to 4). This results in a printout of all combinations of the outer and inner counter values.
+## Running the Example
 
-## Expected Output
-
-When you run this code, the output will clearly show how the inner loop completes its full cycle for each step of the outer loop:
-
+```bash
+python3 code/02_intermediate/sample_11_more_while_iterations.py
 ```
+
+### Expected Output
+
+```text
 --- Nested While Loops Example ---
 Starting the outer loop.
 
@@ -110,7 +63,8 @@ Starting the outer loop.
 All loops have completed.
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   Be careful with the initialization of the inner loop's counter. It almost always needs to be reset inside the outer loop.
--   Nested loops can be computationally expensive. If the outer loop runs N times and the inner loop runs M times, the code inside the inner loop will be executed N \* M times.
+- Always reset the inner loop state inside the outer loop; forgetting to reset `inner_count = 1` causes the inner loop to run only on the first outer pass.
+- Watch computational growth: nesting an $N$-step loop inside an $M$-step loop yields $M \times N$ inner executions.
+- Next: see how `break` behaves inside nested loops and `while True` in [`sample_12_additional_while_iterations.md`](./sample_12_additional_while_iterations.md).

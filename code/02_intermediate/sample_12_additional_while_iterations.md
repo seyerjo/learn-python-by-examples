@@ -1,93 +1,49 @@
 # Advanced `while` Loop Control with `break`
 
-This example demonstrates more advanced ways to control `while` loops using the `break` statement. The `break` statement immediately terminates the innermost loop it is in, allowing for more flexible control over loop execution.
+Understand how `break` scopes to the innermost loop and how the `while True` / `break` pattern models interactive loops cleanly.
 
-We will explore two key patterns:
+**Source code:** [`sample_12_additional_while_iterations.py`](./sample_12_additional_while_iterations.py) · **Level:** Intermediate
 
-1.  Using `break` to exit an inner loop in a nested loop structure.
-2.  Using the `while True` and `break` pattern for event-driven loops.
+## Core Concept
 
-## Code
+`break` exits only the **innermost** enclosing loop, leaving any outer loop running normally. Combining `break` with `while True` lets you write clear event-driven loops where the exit condition is checked in the middle of the loop body rather than duplicated before and inside the loop.
 
-The following code contains two distinct examples demonstrating these concepts.
+## Guided Walkthrough
+
+1. **`break` scope in nested loops:** When `inner_count == 3`, `break` stops the inner loop early while `outer_count` still finishes all 3 iterations:
 
 ```python
-# MAIN CODE
-
-"""
-Demonstrates advanced control of while loops using the `break` statement.
-
-This example covers two common use cases for `break`:
-1.  Exiting an inner loop prematurely in a nested loop structure.
-2.  Creating an "infinite" loop with `while True` that is controlled by an
-    internal condition.
-"""
-
-
-def demonstrate_break_in_nested_loop():
-    """
-    Shows how `break` affects only the innermost loop it is in.
-    """
-    print("--- Example 1: `break` in a Nested Loop ---")
-    outer_count = 1
-    while outer_count <= 3:
-        print(f"\n[Outer Loop Iteration {outer_count}]")
-        inner_count = 1
-        # This inner loop is intended to run 5 times.
-        while inner_count <= 5:
-            print(f"  - Inner loop is at: {inner_count}")
-            # The `break` statement will exit the *inner loop* only.
-            if inner_count == 3:
-                print("  - Found 3! Breaking the inner loop.")
-                break
-            inner_count += 1
-        print("[Inner loop finished]")
-        outer_count += 1
-    print("\nNested loop demonstration complete.\n")
-
-
-def demonstrate_while_true_with_break():
-    """
-    Demonstrates the common pattern of using `while True` with a `break`
-    for loops that don't have a simple counter-based condition.
-    """
-    print("--- Example 2: `while True` with `break` ---")
-    print("This loop will continue until you type 'quit'.")
-    while True:  # This creates a seemingly infinite loop.
-        user_input = input("Enter a command: ")
-        if user_input.lower() == "quit":
-            print("  - 'quit' detected. Breaking the loop.")
-            break  # This is the crucial exit condition.
-        print(f"  You entered: '{user_input}'. The loop continues...")
-
-    print("Loop has been successfully terminated.")
-
-
-def main():
-    """Main function to demonstrate `break` in while loops."""
-    demonstrate_break_in_nested_loop()
-    demonstrate_while_true_with_break()
-
-
-if __name__ == "__main__":
-    main()
+while inner_count <= 5:
+    print(f"  - Inner loop is at: {inner_count}")
+    if inner_count == 3:
+        print("  - Found 3! Breaking the inner loop.")
+        # break exits only the innermost loop.
+        break
+    inner_count += 1
 ```
 
-## Explanation
+2. **The `while True` / `break` pattern:** `demonstrate_while_true_with_break()` reads commands continuously until `user_input.strip().lower() == "quit"`, avoiding an artificial initial dummy value for `user_input`:
 
-### Example 1: `break` in a Nested Loop
-
--   **Concept**: When `break` is used inside a nested loop, it only terminates the **innermost loop** where it is located. The outer loop is unaffected and continues its normal execution.
--   **In the code**: The inner loop is designed to count from 1 to 5. However, the `if inner_count == 3:` condition causes a `break`, so the inner loop never counts past 3. The outer loop, however, continues to run its full 3 iterations.
-
-### Example 2: The `while True / break` Pattern
-
--   **Concept**: This is a very common and powerful pattern in Python. You create a loop that runs indefinitely (`while True`) and then use one or more `if` conditions inside the loop to determine the point at which to `break` out of it. This is ideal for situations where the exit condition is complex or depends on events happening inside the loop (like user input).
--   **In the code**: The loop continues to ask for user input. The only way to stop it is by typing "quit", which triggers the `break` statement.
-
-## Expected Output
-
+```python
+while True:
+    user_input = input("Enter a command: ")
+    if user_input.strip().lower() == "quit":
+        print("  - 'quit' detected. Breaking the loop.")
+        break
+    print(f"  You entered: '{user_input}'. The loop continues...")
 ```
+
+## Running the Example
+
+```bash
+python3 code/02_intermediate/sample_12_additional_while_iterations.py
+```
+
+### Expected Output
+
+With sample inputs `hello`, `world`, and `quit`:
+
+```text
 --- Example 1: `break` in a Nested Loop ---
 
 [Outer Loop Iteration 1]
@@ -124,7 +80,9 @@ Enter a command: quit
 Loop has been successfully terminated.
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   The `break` statement provides a clean way to exit a loop based on a specific condition, making your code more readable than using complex flag variables.
--   Always ensure that a `while True` loop has a reliable `break` condition to avoid creating an actual infinite loop that freezes your program.
+- `break` terminates only its immediate enclosing loop; outer loops remain unaffected.
+- `while True` + `break` is the idiomatic Python pattern for input validation loops (you will pair it with `try-except` in [`sample_22_robust_input_validation.md`](../03_advanced/sample_22_robust_input_validation.md)).
+- Always verify every `while True` loop has a reachable `break` or `return` exit path.
+- Next: iterate directly over sequences with [`sample_13_for_iterations.md`](./sample_13_for_iterations.md).

@@ -1,22 +1,14 @@
-# MAIN CODE
-
-"""
-Demonstrates various uses of the while loop in Python, from a simple
-counter to more advanced control with user input, break, and continue.
-"""
+"""Demonstrates while loops using counters, user input, break, and continue."""
 
 
 def demonstrate_counter_loop():
-    """Demonstrates a basic while loop as a counter."""
+    """Demonstrates a basic counter-controlled while loop."""
     print("--- Example 1: Simple Counter Loop ---")
-    # 1. Initialization: Start with a counter variable.
     counter = 0
     print(f"Starting the loop. Counter is initially {counter}.")
 
-    # 2. Condition: The loop will continue as long as this is True.
     while counter < 5:
         print(f"  - Inside the loop. Counter is now: {counter}")
-        # 3. Update: Increment the counter. Without this, it would be an infinite loop!
         counter += 1
 
     print(f"Loop finished. Final value of counter is {counter}.\n")
@@ -26,8 +18,7 @@ def demonstrate_interactive_loop():
     """Demonstrates a while loop controlled by user input."""
     print("--- Example 2: Interactive Loop ---")
     command = ""
-    # The loop continues as long as the user's command is not 'quit'.
-    while command.lower() != "quit":
+    while command.strip().lower() != "quit":
         command = input("Enter a command (or 'quit' to exit): ")
         print(f"  You entered: {command}")
 
@@ -35,7 +26,7 @@ def demonstrate_interactive_loop():
 
 
 def demonstrate_loop_control():
-    """Demonstrates using 'break' and 'continue' inside a while loop."""
+    """Demonstrates skipping and terminating iterations with continue and break."""
     print("--- Example 3: Loop Control with break and continue ---")
     numbers = [1, 5, -2, 8, 0, 3, -7]
     index = 0
@@ -43,15 +34,16 @@ def demonstrate_loop_control():
 
     while index < len(numbers):
         num = numbers[index]
-        index += 1  # Increment index early to avoid infinite loop on 'continue'
+        # Increment early so 'continue' cannot trigger an infinite loop.
+        index += 1
 
         if num < 0:
             print(f"  Skipping negative number: {num}")
-            continue  # Skip the rest of this iteration and go to the next
+            continue
 
         if num == 0:
             print("  Found a zero. Breaking the loop.")
-            break  # Exit the loop entirely
+            break
 
         print(f"  Processing number: {num}")
 
@@ -59,7 +51,7 @@ def demonstrate_loop_control():
 
 
 def main():
-    """Main function to demonstrate all while loop examples."""
+    """Runs all while loop demonstrations."""
     demonstrate_counter_loop()
     demonstrate_interactive_loop()
     demonstrate_loop_control()
