@@ -16,14 +16,14 @@ To be an essential and practical guide for anyone interested in learning Python,
 Beginning programmers and practitioners learning Python often struggle to find practical, standalone, and progressively challenging code examples that demonstrate engineering best practices, error handling, and idiomatic patterns with contextual explanations.
 
 ### General Description of the Solution
-A curated repository of standalone Python code examples organized by difficulty tiers, accompanied 1:1 by twin markdown documentation for each script, demonstrating standard library capabilities, `Black`-formatted modern syntax, and progressive defensive programming patterns.
+A curated repository of standalone Python code examples organized by difficulty tiers, accompanied 1:1 by twin markdown mini-manuals for each script, demonstrating standard library capabilities, `Ruff`-formatted modern syntax, and progressive defensive programming patterns.
 
 ---
 
 ## Requirements
 
 ### Functional Requirements (FR)
-- **FR-01:** The project must contain a collection of standalone and modular code examples written in modern Python (`3.10+`).
+- **FR-01:** The project must contain a collection of standalone and modular code examples written in modern Python (`3.11+`).
 - **FR-02:** Code examples must be organized and classified into dedicated difficulty tiers: `01_basic`, `02_intermediate`, and `03_advanced`.
 - **FR-03:** Each code example (`sample_XX_description.py`) must be accompanied by its corresponding twin documentation file (`sample_XX_description.md`).
 - **FR-04:** Each documentation file must explain the code's pedagogical purpose, concepts illustrated, step-by-step workflow, and expected console output.
@@ -35,7 +35,7 @@ A curated repository of standalone Python code examples organized by difficulty 
 ### Non-Functional Requirements (NFR)
 - **NFR-01 (Usability & Navigation):** The repository directory layout must be intuitive, predictable, and simple to browse across all operating systems.
 - **NFR-02 (Pedagogical Clarity):** Documentation and in-code comments must be clear, concise, beginner-friendly, and written in English.
-- **NFR-03 (Code Correctness & Robustness):** All provided code samples must be functional, free of syntax errors, formatted consistently (`Black`), and demonstrate progressive error handling appropriate to their tier.
+- **NFR-03 (Code Correctness & Robustness):** All provided code samples must be functional, free of syntax errors, linted and formatted consistently (`Ruff`), and demonstrate progressive error handling appropriate to their tier.
 - **NFR-04 (Public Showcase Availability):** The project is hosted in a public GitHub repository as a solo-authored technical showcase and open educational reference, welcoming questions and feedback via GitHub Issues.
 - **NFR-05 (Zero-Friction Setup):** Local environment setup and script execution must require minimal steps and rely primarily on standard Python tooling.
 - **NFR-06 (Consistent Difficulty Gradient):** The progression from `01_basic` through `02_intermediate` to `03_advanced` must follow a coherent pedagogical curve without overwhelming beginners with premature boilerplate.
@@ -55,15 +55,15 @@ A curated repository of standalone Python code examples organized by difficulty 
   - *Missing External Resources:* Upcoming File I/O and API examples handle missing paths, timeouts, and missing credentials defensively using `pathlib` and `try-except`.
 - **Validation Rules:**
   - Every script must include a modular `main()` function and an `if __name__ == "__main__":` entry guard.
-  - Progressive rules (PEP 484 type hints, shebang `#!/usr/bin/env python3`, explicit `sys.exit()` codes, `logging`, and `argparse`) are enforced according to the tier boundary table in `docs/02_engineering_guidelines.md`.
+  - Progressive rules (PEP 585/604 type hints, shebang `#!/usr/bin/env python3`, testable `main() -> int` exit codes via `raise SystemExit(main())`, graceful `KeyboardInterrupt` (`130`), `sys.stderr` error routing, `logging`, and `argparse`) are enforced according to the tier boundary table in `docs/02_engineering_guidelines.md`.
 
-### FEAT-02: Synchronized Twin Documentation
-- **Description:** Comprehensive markdown documentation paired 1:1 with each script (`sample_XX_description.md`) residing in the same directory.
+### FEAT-02: Synchronized Twin Documentation (Mini-Manual Standard)
+- **Description:** Cohesive markdown mini-manual paired 1:1 with each script (`sample_XX_description.md`) residing in the same directory.
 - **Associated Requirements:** FR-03, FR-04, FR-06, FR-08, NFR-02
-- **Detailed Operation:** Readers open the markdown twin to inspect the conceptual breakdown, code explanations, and expected output before or after running the Python script.
+- **Detailed Operation:** Each `.md` twin links directly to its sibling `.py` script and guides the reader progressively from core concept through short, focused code snippets to expected console output and key takeaways—avoiding full-script copy-paste duplication and keeping `.py` comments concise and non-redundant per Section 8 of `docs/02_engineering_guidelines.md`.
 - **Edge Cases & Validation:**
-  - *Documentation Drift:* Documentation must be updated synchronously whenever code logic or parameters change.
-  - *Output Discrepancies:* Sample output blocks in documentation must match exact console execution output.
+  - *Documentation Drift:* Focused snippets and expected output blocks must be updated synchronously whenever code logic or outputs change.
+  - *Redundancy & Contradictions:* `.py` comments must explain intent/edge cases concisely without repeating `.md` textbook prose, and `.md` guides must never duplicate the entire `.py` file verbatim.
 
 ### FEAT-03: Structured & Predictable Repository Architecture
 - **Description:** Standardized directory hierarchy and naming convention (`sample_00_description.py` / `sample_00_description.md`) enforcing consistency across all levels.

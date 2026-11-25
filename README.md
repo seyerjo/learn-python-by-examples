@@ -18,7 +18,7 @@ Designed for learners and developers who want clean, idiomatic Python 3 code—m
   <a href="#author">Author</a>
 </p>
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](#installation)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg?logo=python&logoColor=white)](#installation)
 [![Examples](https://img.shields.io/badge/Examples-24_Samples-0ea5e9.svg)](#examples)
 [![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)](#documentation)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](#license)
@@ -33,8 +33,8 @@ Designed for learners and developers who want clean, idiomatic Python 3 code—m
 Most beginner Python tutorials either show disconnected one-liners without error handling or hide fundamentals behind heavy third-party frameworks. **Learn Python by Examples** takes an engineering-first approach:
 
 - **Zero-framework focus:** Every script relies purely on Python's standard library so learners master the language itself before introducing external dependencies.
-- **1:1 Twin Documentation:** Every `.py` file is paired with an exact `.md` companion explaining the concept, step-by-step execution flow, common pitfalls, and expected terminal output.
-- **Progressive production habits:** Every script uses `Black` formatting, modular `main()` entry guards, and docstrings, progressively introducing defensive `try-except` validation (`02_intermediate`) and PEP 484 type hints (`03_advanced`) without overwhelming beginners early on.
+- **1:1 Twin Mini-Manuals:** Every `.py` file is paired with an exact `.md` companion that links directly to the script and walks learners through the core concept, focused code snippets, verified terminal output, and key takeaways without copy-paste bloat.
+- **Progressive production habits:** Every script uses `Ruff` linting/formatting, modular `main()` entry guards, and concise Google docstrings, progressively introducing defensive `try-except` validation (`02_intermediate`) and `mypy`-checked PEP 484 type hints, `main() -> int` / `SystemExit`, and `sys.stderr` error routing (`03_advanced`) without overwhelming beginners early on.
 
 ## Quick Start
 
@@ -128,8 +128,8 @@ graph TD
     G --> H[Verified Console Output]
 ```
 
-- **Core Stack:** Plain Python 3 (`3.10+`) and Markdown—deliberately avoiding Jupyter `.ipynb` JSON blobs so diffs stay clean and scripts run directly in any terminal.
-- **Code Standards:** Formatted with `Black` (Python) and `Prettier` (Markdown), documented with docstrings across all functions, and progressively introducing PEP 484 type hints in advanced samples (`sample_19`–`sample_23`).
+- **Core Stack:** Plain Python 3 (`3.11+`) and Markdown—deliberately avoiding Jupyter `.ipynb` JSON blobs so diffs stay clean and scripts run directly in any terminal.
+- **Code Standards:** Linted and formatted with `Ruff` (Python) and `Prettier` (Markdown), documented with Google-style docstrings, and progressively enforcing `mypy`-checked PEP 484 type hints, `main() -> int` / `SystemExit`, and `sys.stderr` error routing in advanced samples (`sample_19`–`sample_23`).
 - **Defensive Coding:** Specific exception types (`ValueError`, `ZeroDivisionError`, etc.) are caught explicitly without bare `except:` blocks, and interactive scripts validate bounds before computation.
 
 <details open>
@@ -159,7 +159,7 @@ learn-python-by-examples/
 
 ### Prerequisites
 
-- **Python 3.10+** (`python3 --version` or `python --version`)
+- **Python 3.11+** (`python3 --version` or `python --version`)
 - **Git** (`git --version`)
 
 ### Setup

@@ -8,12 +8,13 @@ All notable changes to this project will be documented in this file.
 - Added local repository visual assets (`.github/assets/banner.png` and `.github/assets/avatar.png`) for the root `README.md`.
 - Added the pedagogical progression boundary matrix (`01_basic`, `02_intermediate`, `03_advanced`) in `docs/02_engineering_guidelines.md`.
 - Added a pedagogical forward-reference note for PEP 484 type hints in `code/02_intermediate/sample_15_functions.py`.
+- Documented the Twin `.py` / `.md` Authoring Standard (Option A mini-manual template with direct script links, focused snippets, and concise commenting rules) in `docs/02_engineering_guidelines.md`.
 
 ### Changed
-- Bumped the minimum supported Python version from `3.7+` to `3.10+` across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and modernized type annotations in `sample_22` and `sample_23` to PEP 585/604 syntax.
-- Audited and formatted all 24 baseline scripts (`sample_00`–`sample_23`) with `Black` (88-character line length), added `#!/usr/bin/env python3` and `sys.exit(0)` across `code/03_advanced/`, and resynchronized all twin `.md` documentation files.
+- Bumped the minimum supported Python version from `3.7+` to `3.11+` (after Python 3.10 reached End-of-Life in October 2026) across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and modernized type annotations in `sample_22` and `sample_23` to PEP 585/604 syntax.
+- Audited and formatted all 24 baseline scripts (`sample_00`–`sample_23`) (88-character line length), added `#!/usr/bin/env python3` and `sys.exit(0)` across `code/03_advanced/`, and resynchronized all twin `.md` documentation files.
 - Redesigned `README.md` with a centered showcase header, strict 1:1 section navigation, open-by-default color-badged example tables and project structure, Mermaid diagram under `## Architecture`, and a borderless Author Card with contact badges, updated tagline (`"Engineering for the future."`), and Star callout.
-- Aligned formatting and typing documentation across `README.md` and `docs/02_engineering_guidelines.md` to `Black` (88-character line length), `Prettier`, and progressive adoption of `try-except` and PEP 484 type hints.
+- Aligned engineering guidelines and documentation across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md` with modern 2026 standards (`Ruff`, `uv`, `mypy --strict`, `main() -> int` + `raise SystemExit(main())`, graceful `KeyboardInterrupt` `130`, `sys.stderr` error routing, and Google docstrings without repeated PEP 484 types).
 - Scoped public `/docs` references in `README.md` and `docs/02_engineering_guidelines.md` to `01_project_blueprint.md` and `02_engineering_guidelines.md`.
 
 ### Fixed
