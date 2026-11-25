@@ -1,97 +1,53 @@
-# Flow Control in Python
+# Conditional Flow Control (`if`, `elif`, `else`)
 
-This example illustrates fundamental techniques for controlling the flow of a program using conditional statements. It covers three core patterns:
+Branch program execution based on numeric comparisons, compound boolean ranges, and nested conditionals.
 
-1.  A basic `if-elif-else` chain for multiple exclusive conditions.
-2.  Using logical operators like `and` within an `if` statement to check for multiple conditions simultaneously.
-3.  Nested `if` statements to handle sub-conditions.
+**Source code:** [`sample_07_flow_control.py`](./sample_07_flow_control.py) · **Level:** Basic
 
-## Code
+## Core Concept
+
+Conditional statements let a program choose different execution paths depending on runtime data. Python evaluates each branch in order and runs only the **first** matching block, using 4-space indentation to define which statements belong to each branch.
+
+## Guided Walkthrough
+
+1. **Mutually exclusive branching (`if-elif-else`):** `demonstrate_if_elif_else()` compares two integers and guarantees exactly one of three messages runs.
+
+2. **Range checks with `and` and boundary validation:** `demonstrate_logical_flow()` checks `age < 0` first so negative numbers do not silently fall into the `"senior citizen"` `else` branch:
 
 ```python
-# MAIN CODE
-
-"""
-Demonstrates basic flow control in Python using if-elif-else,
-logical operators, and nested if statements.
-"""
-
-
-def demonstrate_if_elif_else():
-    """Compares two integers to show basic if-elif-else structure."""
-    print("--- Example 1: Basic if-elif-else ---")
-    # IMPORTANT: The int() function will cause a ValueError if you enter
-    # non-numeric text. A robust solution is covered in sample_18.
-    num_1 = int(input("Enter the first integer: "))
-    num_2 = int(input("Enter the second integer: "))
-
-    if num_1 > num_2:
-        result = f"The first number ({num_1}) is greater than the second ({num_2})."
-    elif num_1 < num_2:
-        result = f"The second number ({num_2}) is greater than the first ({num_1})."
-    else:
-        result = f"Both numbers are equal ({num_1})."
-    print(f"Result: {result}\n")
-
-
-def demonstrate_logical_flow():
-    """Uses the 'and' operator to check if a number is within a range."""
-    print("--- Example 2: Flow Control with Logical 'and' ---")
-    # IMPORTANT: Vulnerable to ValueError. See sample_18 for the solution.
-    age = int(input("Enter your age: "))
-
-    if age > 0 and age < 18:
-        print("You are a minor.")
-    elif age >= 18 and age < 65:
-        print("You are an adult.")
-    else:
-        print("You are a senior citizen.")
-    print()
-
-
-def demonstrate_nested_if():
-    """Shows a nested if statement to check a sub-condition."""
-    print("--- Example 3: Nested if Statements ---")
-    # Using .lower() to make the comparison case-insensitive
-    user_role = input("Enter user role (admin/user): ").lower()
-    is_active_str = input("Is the user active? (yes/no): ").lower()
-
-    if user_role == "admin":
-        print("Admin access granted.")
-        # This 'if' is nested inside the first one.
-        if is_active_str == "yes":
-            print("User is active and can make changes.")
-        else:
-            print("User is inactive and has read-only access.")
-    else:
-        print("General user access granted.")
-    print()
-
-
-def main():
-    """Main function to demonstrate all flow control examples."""
-    demonstrate_if_elif_else()
-    demonstrate_logical_flow()
-    demonstrate_nested_if()
-
-
-if __name__ == "__main__":
-    main()
+if age < 0:
+    print("Age cannot be negative.")
+elif age >= 0 and age < 18:
+    print("You are a minor.")
+elif age >= 18 and age < 65:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
 ```
 
-## Explanation
+3. **Input normalization and nested `if`:** Calling `.strip().lower()` cleans accidental spaces and casing before checking sub-conditions inside an outer branch:
 
-1.  **`if-elif-else` Chain**: This is the standard way to check a series of mutually exclusive conditions. Python evaluates each condition from top to bottom and executes the code block for the _first_ one that is `True`. If none are `True`, the `else` block is executed.
+```python
+user_role = input("Enter user role (admin/user): ").strip().lower()
+is_active_str = input("Is the user active? (yes/no): ").strip().lower()
 
-2.  **Logical Operators in `if`**: You can create more complex conditions by combining them with logical operators. The `and` operator requires _both_ conditions to be `True` for the entire expression to be `True`. This is perfect for checking if a value falls within a range.
-
-3.  **Nested `if` Statements**: Placing one `if` statement inside another allows for more granular control. The inner `if` is only checked if the outer `if`'s condition is met. This is useful for checking a secondary condition after a primary one has been confirmed.
-
-## Expected Output
-
-The output is interactive and will depend on your inputs. Here is an example of a complete session:
-
+if user_role == "admin":
+    print("Admin access granted.")
+    if is_active_str == "yes":
+        print("User is active and can make changes.")
 ```
+
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_07_flow_control.py
+```
+
+### Expected Output
+
+With sample inputs `25`, `50`, `35`, `admin`, and `yes`:
+
+```text
 --- Example 1: Basic if-elif-else ---
 Enter the first integer: 25
 Enter the second integer: 50
@@ -106,11 +62,12 @@ Enter user role (admin/user): admin
 Is the user active? (yes/no): yes
 Admin access granted.
 User is active and can make changes.
-
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   Flow control statements like `if`, `elif`, and `else` are the fundamental building blocks for creating programs that can make decisions.
--   Pay close attention to indentation. In Python, the indentation level defines which block of code a statement belongs to.
--   **`ValueError` Risk**: The examples that convert input to an integer with `int()` will crash if you provide text. The correct, robust way to handle this is with `try-except` blocks, which is covered in `sample_18_exception_handling.py`.
+- Always handle boundary/edge cases (like `age < 0`) explicitly instead of letting unexpected values fall through into a catch-all `else`.
+- Normalize string comparisons from `input()` with `.strip().lower()`.
+- Keep nesting shallow where possible; deeply nested `if` blocks become harder to read.
+- **Note:** Entering non-numeric text for integers raises `ValueError` (handled safely in [`sample_18_exception_handling.md`](../02_intermediate/sample_18_exception_handling.md)).
+- Next: eliminate repeated logic with [`sample_08_more_fundamentals.md`](./sample_08_more_fundamentals.md).

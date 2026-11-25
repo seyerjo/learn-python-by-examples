@@ -9,16 +9,20 @@ All notable changes to this project will be documented in this file.
 - Added the pedagogical progression boundary matrix (`01_basic`, `02_intermediate`, `03_advanced`) in `docs/02_engineering_guidelines.md`.
 - Added a pedagogical forward-reference note for PEP 484 type hints in `code/02_intermediate/sample_15_functions.py`.
 - Documented the Twin `.py` / `.md` Authoring Standard (Option A mini-manual template with direct script links, focused snippets, and concise commenting rules) in `docs/02_engineering_guidelines.md`.
+- Added root `pyproject.toml` configuring `Ruff` (`py311`, `lf`, tier-specific `EXE002` ignores for Basic/Intermediate) and `mypy` (`strict = true`).
+- Added a dedicated `demonstrate_raw_strings()` section in `code/01_basic/sample_09_escape_character_and_strings.py` and its twin guide.
 
 ### Changed
 - Bumped the minimum supported Python version from `3.7+` to `3.11+` (after Python 3.10 reached End-of-Life in October 2026) across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and modernized type annotations in `sample_22` and `sample_23` to PEP 585/604 syntax.
 - Audited and formatted all 24 baseline scripts (`sample_00`–`sample_23`) (88-character line length), added `#!/usr/bin/env python3` and `sys.exit(0)` across `code/03_advanced/`, and resynchronized all twin `.md` documentation files.
+- Modernized the Basic tier (`code/01_basic`, `sample_00`–`sample_09`): removed legacy `# MAIN CODE` headers, normalized all 20 `.py`/`.md` files to Unix `LF`, enforced `Ruff` lint/formatting, trimmed redundant comments, and rewrote all 10 guides using the Option A mini-manual template.
 - Redesigned `README.md` with a centered showcase header, strict 1:1 section navigation, open-by-default color-badged example tables and project structure, Mermaid diagram under `## Architecture`, and a borderless Author Card with contact badges, updated tagline (`"Engineering for the future."`), and Star callout.
 - Aligned engineering guidelines and documentation across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md` with modern 2026 standards (`Ruff`, `uv`, `mypy --strict`, `main() -> int` + `raise SystemExit(main())`, graceful `KeyboardInterrupt` `130`, `sys.stderr` error routing, and Google docstrings without repeated PEP 484 types).
 - Scoped public `/docs` references in `README.md` and `docs/02_engineering_guidelines.md` to `01_project_blueprint.md` and `02_engineering_guidelines.md`.
 
 ### Fixed
 - Moved module-level `try-except` execution in `sample_00_comments_types.py` inside `main()` to prevent side effects on import, added missing `Args:`/`Returns:` Google docstrings in `sample_17` and `sample_23`, and resolved pre-existing `.py`/`.md` code block drifts.
+- Fixed Basic tier issues across `code/01_basic/`: removed premature `try/except` in `sample_00` and stray review note in `sample_04`, fixed `variable_x` print mismatch and `UPPER_SNAKE_CASE` naming in `sample_06`, guarded negative `age` values in `sample_07`, used raw docstrings in `sample_09`, and corrected the outdated unordered `dict` description in `sample_02_primitives_data_types.md`.
 
 ### Removed
 - Removed obsolete archived planning, draft code, and legacy documentation files.

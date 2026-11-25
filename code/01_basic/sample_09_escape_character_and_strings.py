@@ -1,21 +1,15 @@
-# MAIN CODE
-
-"""
-Examples of working with strings and escape characters in Python.
-
-Demonstrates newlines, tabs, backslashes, and quote escaping.
-"""
+r"""Demonstrates escape sequences (\n, \t, \\, quotes) and raw strings in Python."""
 
 
 def demonstrate_newline():
-    """Demonstrates the newline character `\n`."""
+    r"""Demonstrates the newline escape sequence `\n`."""
     print("--- Newline Character (\\n) ---")
     print("This string will be split across...\n...two separate lines.")
     print()
 
 
 def demonstrate_tab():
-    """Demonstrates the tab character `\t`."""
+    r"""Demonstrates the horizontal tab escape sequence `\t`."""
     print("--- Tab Character (\\t) ---")
     print("You can create columns:\nCol1\tCol2\tCol3")
     print("A\tB\tC")
@@ -23,39 +17,45 @@ def demonstrate_tab():
 
 
 def demonstrate_backslash():
-    """Demonstrates how to escape the backslash character `\\`."""
+    r"""Demonstrates escaping literal backslashes with `\\`."""
     print("--- Backslash Character (\\\\) ---")
-    # To print a single backslash, you need to escape it with another one.
     print("This is a single backslash: \\")
-    print("Useful for file paths in strings: C:\\Users\\Name")
+    print("Useful for Windows paths: C:\\Users\\Name")
+    print()
+
+
+def demonstrate_raw_strings():
+    r"""Demonstrates raw strings (`r"..."`) that treat backslashes literally."""
+    print('--- Raw Strings (r"...") ---')
+    # Raw strings avoid double-escaping in paths and regular expressions.
+    windows_path = r"C:\Users\Name\Documents"
+    print(f"Raw string path: {windows_path}")
     print()
 
 
 def demonstrate_quotes():
-    """Demonstrates how to include quotes inside a string."""
+    r"""Demonstrates escaping quotes or alternating quote styles."""
     print("--- Escaping Quotes (\\' and \\\") ---")
-    # You can escape quotes to include them in a string literal.
     print("She said, \"It's a beautiful day!\"")  # fmt: skip
-    # Alternatively, use the other type of quote for the string itself.
     print('He replied, "Indeed it is."')
     print()
 
 
 def demonstrate_interactive_example():
-    """Combines user input with escape characters."""
+    """Combines user input with newline, tab, and escaped-quote formatting."""
     print("--- Interactive Example ---")
     first_name = input("What's your first name?: ")
     last_name = input("What's your last name?: ")
-    # Using \n for newlines and \" to wrap the name in quotes.
     print(f"\nYour name is:\n\t\"{first_name} {last_name}\"")  # fmt: skip
     print()
 
 
 def main():
-    """Main function to demonstrate all escape character examples."""
+    """Runs all escape sequence and raw string demonstrations."""
     demonstrate_newline()
     demonstrate_tab()
     demonstrate_backslash()
+    demonstrate_raw_strings()
     demonstrate_quotes()
     demonstrate_interactive_example()
 

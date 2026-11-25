@@ -1,8 +1,4 @@
-# MAIN CODE
-
-"""
-Example demonstrating various operators in Python.
-"""
+"""Demonstrates Python's arithmetic, comparison, logical, and identity operators."""
 
 
 def demonstrate_arithmetic_operators():
@@ -15,7 +11,7 @@ def demonstrate_arithmetic_operators():
     print(f"{a} / {b} = {a / b}")
     print(f"{a} // {b} (Integer Division) = {a // b}")
     print(f"{a} % {b} (Modulo) = {a % b}")
-    print(f"{a} ** {b} (Exponent) = {a ** b}")
+    print(f"{a} ** {b} (Exponent) = {a**b}")
     print()
 
 
@@ -33,7 +29,7 @@ def demonstrate_comparison_operators():
 
 
 def demonstrate_logical_operators():
-    """Demonstrates 'and', 'or', 'not' operators."""
+    """Demonstrates 'and', 'or', and 'not' operators."""
     print("--- Logical Operators ---")
     p, q = True, False
     print(f"{p} and {q} -> {p and q}")
@@ -43,15 +39,15 @@ def demonstrate_logical_operators():
 
 
 def demonstrate_assignment_operators():
-    """Demonstrates operators for assigning values to variables."""
+    """Demonstrates compound assignment operators."""
     print("--- Assignment Operators ---")
     x = 10
     print(f"Initial x = {x}")
-    x += 5  # Equivalent to x = x + 5
+    x += 5  # Shorthand for x = x + 5
     print(f"x += 5 -> x = {x}")
-    x -= 3  # Equivalent to x = x - 3
+    x -= 3
     print(f"x -= 3 -> x = {x}")
-    x *= 2  # Equivalent to x = x * 2
+    x *= 2
     print(f"x *= 2 -> x = {x}")
     print()
 
@@ -68,29 +64,21 @@ def demonstrate_membership_operators():
 
 
 def demonstrate_identity_operators():
-    """Demonstrates 'is' and 'is not' to check object identity."""
+    """Demonstrates 'is' and '==' to contrast identity with value equality."""
     print("--- Identity Operators ---")
     a = [1, 2, 3]
     b = [1, 2, 3]
     c = a
     print(f"a = {a}, b = {b}, c = a")
-    # 'is' checks if two variables point to the exact same object in memory
-    print(f"a is b -> {a is b}")  # False, they are different objects
-    print(f"a is c -> {a is c}")  # True, they point to the same object
-    # '==' checks if the values of the objects are equal
-    print(f"a == b -> {a == b}")  # True, their contents are the same
+    # 'is' compares memory identity; '==' compares values.
+    print(f"a is b -> {a is b}")
+    print(f"a is c -> {a is c}")
+    print(f"a == b -> {a == b}")
     print()
 
 
 def main():
-    """Main function to demonstrate all operator types."""
-    # Add introductory note about functions, as per user feedback
-    print(
-        "This script is organized into functions to demonstrate each "
-        "operator type clearly."
-    )
-    print("We will cover functions in detail in a later example.\n")
-
+    """Runs all operator category demonstrations."""
     demonstrate_arithmetic_operators()
     demonstrate_comparison_operators()
     demonstrate_logical_operators()

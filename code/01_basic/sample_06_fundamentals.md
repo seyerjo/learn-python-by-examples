@@ -1,162 +1,76 @@
 # Python Fundamentals: Naming, Keywords, and Dynamic Typing
 
-This example demonstrates several fundamental concepts in Python, structured as a mini-lesson. It covers:
+Apply PEP 8 naming conventions, inspect Python's reserved keywords, observe dynamic typing in action, and measure text with `len()`.
 
--   Best practices and conventions for naming variables, functions, and classes according to PEP 8.
--   How to see Python's list of reserved keywords.
--   The concept of "dynamic typing," where a variable can hold different data types.
--   A practical example combining user input, f-strings, and the `len()` function.
+**Source code:** [`sample_06_fundamentals.py`](./sample_06_fundamentals.py) · **Level:** Basic
 
-## Code
+## Core Concept
+
+Consistent naming makes Python code immediately readable across any codebase. Python also enforces a small list of reserved keywords you cannot reuse as identifiers, while allowing variable names to be rebound to objects of different types at runtime (**dynamic typing**).
+
+## Guided Walkthrough
+
+1. **PEP 8 naming conventions:** `show_naming_conventions()` prints Python's standard identifier styles:
+   - `snake_case` for variables and functions (`user_name`, `calculate_total()`)
+   - `PascalCase` for classes (`MyNewClass`)
+   - `UPPER_SNAKE_CASE` for constants (`MAX_CONNECTIONS = 5`)
+   - Leading underscore for internal helpers or values (`_internal_value`)
+
+2. **Reserved keywords:** Python's standard-library `keyword` module exposes `keyword.kwlist`, the exact set of words reserved for language syntax (`if`, `for`, `def`, `True`, etc.):
 
 ```python
-# MAIN CODE
-
-"""
-Demonstrates Python fundamentals: variable naming, reserved keywords,
-dynamic typing, and combining inputs with string operations.
-"""
-
 import keyword
 
-
-def show_naming_conventions():
-    """Prints best practices for naming in Python, as per PEP 8."""
-    print("--- Naming Conventions (PEP 8) ---")
-    print("The most common and important conventions are:")
-    print(
-        "  - `snake_case`: Used for variables and functions. "
-        "It's the standard for most names."
-    )
-    print("    (e.g., `user_name`, `calculate_total()`).")
-    print(
-        "  - `PascalCase`: Used for classes. "
-        "This is a key distinction from variables."
-    )
-    print("    (e.g., `class MyNewClass:`).")
-    print(
-        "  - `ALL_CAPS`: Used for constants — "
-        "variables whose values are not intended to change."
-    )
-    print("    (e.g., `PI = 3.14`, `MAX_CONNECTIONS = 5`).")
-
-    print("\nOther Important Considerations:")
-    print(
-        "  - **Descriptiveness**: Names should be clear and descriptive, "
-        "not single letters."
-    )
-    print("    (e.g., `customer_address` is better than `addr` or `c_a`).")
-    print(
-        "  - **Leading Underscore**: A name starting with an underscore "
-        "(e.g., `_internal_value`)"
-    )
-    print("    is a convention that tells other programmers it's for internal use.")
-    print()
-
-
-def show_reserved_keywords():
-    """Prints the list of Python's reserved keywords."""
-    print("--- Python Reserved Keywords ---")
-    print("These words have special meaning and cannot be used as variable names:")
-    # The 'keyword' module provides facilities for checking if a string is a keyword.
-    print(keyword.kwlist)
-    print()
-
-
-def demonstrate_dynamic_typing():
-    """
-    Demonstrates that a variable in Python can refer to different types
-    of objects at different times.
-    """
-    print("--- Dynamic Typing Demonstration ---")
-    # A variable is just a name for an object.
-    # You can reassign the name to a different object, even of a different type.
-    my_variable = 1  # Initially an integer
-    print(f"variable_x is '{my_variable}' of type {type(my_variable)}")
-
-    my_variable = 3.75  # Now it's a float
-    print(f"variable_x is now '{my_variable}' of type {type(my_variable)}")
-
-    my_variable = "hello"  # And now it's a string
-    print(f"variable_x is now '{my_variable}' of type {type(my_variable)}")
-    print()
-
-
-def demonstrate_string_input_and_len():
-    """Gets user input and demonstrates string formatting and length."""
-    print("--- Input, F-Strings, and Length ---")
-    name = input("What's your name?: ")
-    greeting = f"Hi {name}, my best regards."
-    print(greeting)
-
-    # The len() function returns the number of characters in a string.
-    message = (
-        f"Did you know that the length of this greeting is {len(greeting)} characters?"
-    )
-    print(message)
-    print()
-
-
-def main():
-    """Main function to demonstrate all concepts."""
-    show_naming_conventions()
-    show_reserved_keywords()
-    demonstrate_dynamic_typing()
-    demonstrate_string_input_and_len()
-
-
-if __name__ == "__main__":
-    main()
+print(keyword.kwlist)
 ```
 
-## Explanation
+3. **Dynamic typing:** Reassigning `my_variable` from an `int` to a `float` and then a `str` binds the name to a new object each time:
 
-1.  **Naming Conventions (PEP 8)**: The script begins by printing a comprehensive guide to Python's standard naming conventions. Following these makes code more readable and consistent with the wider Python community. The key styles are `snake_case` for variables/functions, `PascalCase` for classes, and `ALL_CAPS` for constants.
-
-2.  **Reserved Keywords**: It then imports the `keyword` module to print a list of all reserved words in Python (like `if`, `for`, `def`, etc.). These words have special functions and cannot be used as names for your variables.
-
-3.  **Dynamic Typing**: This section shows one of Python's core features. A variable (`my_variable`) is first assigned an integer, then a float, and finally a string. The `type()` function confirms that the variable's type changes along with the object it points to.
-
-4.  **Input, F-Strings, and `len()`**: The final part combines concepts. It takes user input, uses an f-string to create a personalized greeting, and then uses the `len()` function to calculate and report the length of that greeting.
-
-## Expected Output
-
-The output will be a sequence of informational sections, with the last part being interactive. An example session might look like this (the keyword list may vary slightly between Python versions):
-
+```python
+my_variable = 1
+print(f"my_variable is '{my_variable}' of type {type(my_variable)}")
+my_variable = 3.75
+print(f"my_variable is now '{my_variable}' of type {type(my_variable)}")
 ```
+
+4. **Combining input and `len()`:** `demonstrate_string_input_and_len()` builds a greeting via an f-string and reports its exact character count.
+
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_06_fundamentals.py
+```
+
+### Expected Output
+
+With sample input `Alex` (note that `keyword.kwlist` reflects Python 3.11+):
+
+```text
 --- Naming Conventions (PEP 8) ---
-The most common and important conventions are:
-  - `snake_case`: Used for variables and functions. It's the standard for most names.
-    (e.g., `user_name`, `calculate_total()`).
-  - `PascalCase`: Used for classes. This is a key distinction from variables.
-    (e.g., `class MyNewClass:`).
-  - `ALL_CAPS`: Used for constants — variables whose values are not intended to change.
-    (e.g., `PI = 3.14`, `MAX_CONNECTIONS = 5`).
-
-Other Important Considerations:
-  - **Descriptiveness**: Names should be clear and descriptive, not single letters.
-    (e.g., `customer_address` is better than `addr` or `c_a`).
-  - **Leading Underscore**: A name starting with an underscore (e.g., `_internal_value`)
-    is a convention that tells other programmers it's for internal use.
+  - snake_case: Variables and functions (e.g., user_name, calculate_total()).
+  - PascalCase: Classes (e.g., class MyNewClass:).
+  - UPPER_SNAKE_CASE: Constants (e.g., PI = 3.14, MAX_CONNECTIONS = 5).
+  - Descriptive names: Prefer customer_address over addr or c_a.
+  - Leading underscore: Indicates internal use (e.g., _internal_value).
 
 --- Python Reserved Keywords ---
 These words have special meaning and cannot be used as variable names:
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
 --- Dynamic Typing Demonstration ---
-variable_x is '1' of type <class 'int'>
-variable_x is now '3.75' of type <class 'float'>
-variable_x is now 'hello' of type <class 'str'>
+my_variable is '1' of type <class 'int'>
+my_variable is now '3.75' of type <class 'float'>
+my_variable is now 'hello' of type <class 'str'>
 
 --- Input, F-Strings, and Length ---
 What's your name?: Alex
 Hi Alex, my best regards.
-Did you know that the length of this greeting is 25 characters?
-
+Length of this greeting: 25 characters.
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   Adhering to PEP 8 naming conventions is highly recommended as it makes your code more readable to other Python developers.
--   Python's flexibility with dynamic typing is powerful, but it also means you need to be mindful of what type of data your variables are holding at any given time.
--   To help manage the flexibility of dynamic typing and prevent errors, modern Python supports **Type Hinting**, which allows you to declare the expected type of a variable. This is an advanced topic covered in `sample_23_type_hinting.py`.
+- Follow PEP 8 naming consistently so readers recognize constants, variables, functions, and classes at a glance.
+- Never name variables after reserved keywords (`class`, `from`, `import`) or built-in functions (`list`, `str`, `len`).
+- Dynamic typing gives flexibility, while **type hinting** (covered in [`sample_23_type_hinting.md`](../03_advanced/sample_23_type_hinting.md)) helps large codebases catch type mismatches before runtime.
+- Next: make decisions in code with [`sample_07_flow_control.md`](./sample_07_flow_control.md).

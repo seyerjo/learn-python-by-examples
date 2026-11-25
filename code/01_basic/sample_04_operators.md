@@ -1,130 +1,51 @@
-# Operators in Python
+# Python Operators Overview
 
-This example illustrates the various operators available in Python, categorized by their function. The code is structured into separate functions for clarity, with descriptive print statements to make the output easy to understand.
+Understand Python's six foundational operator families: arithmetic, comparison, logical, assignment, membership, and identity.
 
-## Code
+**Source code:** [`sample_04_operators.py`](./sample_04_operators.py) · **Level:** Basic
+
+## Core Concept
+
+Operators are symbols and keywords that compute values, compare data, test membership, and combine boolean conditions. Knowing the exact difference between value equality (`==`) and object identity (`is`) prevents subtle bugs when working with mutable objects.
+
+*(Note: Each operator family lives in its own helper function for clarity; defining functions is covered in [`sample_15_functions.md`](../02_intermediate/sample_15_functions.md).)*
+
+## Guided Walkthrough
+
+1. **Arithmetic operators** distinguish true division (`/`, always returns a `float`) from floor division (`//`), modulo remainder (`%`), and exponentiation (`**`):
 
 ```python
-# MAIN CODE
-
-"""
-Example demonstrating various operators in Python.
-"""
-
-
-def demonstrate_arithmetic_operators():
-    """Demonstrates basic arithmetic operators."""
-    print("--- Arithmetic Operators ---")
-    a, b = 10, 3
-    print(f"{a} + {b} = {a + b}")
-    print(f"{a} - {b} = {a - b}")
-    print(f"{a} * {b} = {a * b}")
-    print(f"{a} / {b} = {a / b}")
-    print(f"{a} // {b} (Integer Division) = {a // b}")
-    print(f"{a} % {b} (Modulo) = {a % b}")
-    print(f"{a} ** {b} (Exponent) = {a ** b}")
-    print()
-
-
-def demonstrate_comparison_operators():
-    """Demonstrates operators that compare two values."""
-    print("--- Comparison Operators ---")
-    a, b = 5, 10
-    print(f"{a} == {b} -> {a == b}")
-    print(f"{a} != {b} -> {a != b}")
-    print(f"{a} < {b} -> {a < b}")
-    print(f"{a} > {b} -> {a > b}")
-    print(f"{a} <= {b} -> {a <= b}")
-    print(f"{a} >= {b} -> {a >= b}")
-    print()
-
-
-def demonstrate_logical_operators():
-    """Demonstrates 'and', 'or', 'not' operators."""
-    print("--- Logical Operators ---")
-    p, q = True, False
-    print(f"{p} and {q} -> {p and q}")
-    print(f"{p} or {q} -> {p or q}")
-    print(f"not {p} -> {not p}")
-    print()
-
-
-def demonstrate_assignment_operators():
-    """Demonstrates operators for assigning values to variables."""
-    print("--- Assignment Operators ---")
-    x = 10
-    print(f"Initial x = {x}")
-    x += 5  # Equivalent to x = x + 5
-    print(f"x += 5 -> x = {x}")
-    x -= 3  # Equivalent to x = x - 3
-    print(f"x -= 3 -> x = {x}")
-    x *= 2  # Equivalent to x = x * 2
-    print(f"x *= 2 -> x = {x}")
-    print()
-
-
-def demonstrate_membership_operators():
-    """Demonstrates 'in' and 'not in' operators for sequences."""
-    print("--- Membership Operators ---")
-    example_list = [1, 2, 3, 4, 5]
-    print(f"List = {example_list}")
-    print(f"3 in {example_list} -> {3 in example_list}")
-    print(f"6 in {example_list} -> {6 in example_list}")
-    print(f"3 not in {example_list} -> {3 not in example_list}")
-    print()
-
-
-def demonstrate_identity_operators():
-    """Demonstrates 'is' and 'is not' to check object identity."""
-    print("--- Identity Operators ---")
-    a = [1, 2, 3]
-    b = [1, 2, 3]
-    c = a
-    print(f"a = {a}, b = {b}, c = a")
-    # 'is' checks if two variables point to the exact same object in memory
-    print(f"a is b -> {a is b}")  # False, they are different objects
-    print(f"a is c -> {a is c}")  # True, they point to the same object
-    # '==' checks if the values of the objects are equal
-    print(f"a == b -> {a == b}")  # True, their contents are the same
-    print()
-
-
-def main():
-    """Main function to demonstrate all operator types."""
-    # Add introductory note about functions, as per user feedback
-    print(
-        "This script is organized into functions to demonstrate each "
-        "operator type clearly."
-    )
-    print("We will cover functions in detail in a later example.\n")
-
-    demonstrate_arithmetic_operators()
-    demonstrate_comparison_operators()
-    demonstrate_logical_operators()
-    demonstrate_assignment_operators()
-    demonstrate_membership_operators()
-    demonstrate_identity_operators()
-
-
-if __name__ == "__main__":
-    main()
+a, b = 10, 3
+print(f"{a} / {b} = {a / b}")
+print(f"{a} // {b} (Integer Division) = {a // b}")
+print(f"{a} % {b} (Modulo) = {a % b}")
+print(f"{a} ** {b} (Exponent) = {a**b}")
 ```
 
-## Explanation
+2. **Comparison and logical operators** evaluate conditions to `True` or `False` (`==`, `!=`, `<`, `>`, `<=`, `>=`, combined via `and`, `or`, `not`).
 
-1.  **Arithmetic Operators**: Used for mathematical operations (`+`, `-`, `*`, `/`, `//`, `%`, `**`).
-2.  **Comparison (Relational) Operators**: Used to compare two values and result in a boolean (`True` or `False`) (`==`, `!=`, `<`, `>`, `<=`, `>=`).
-3.  **Logical Operators**: Used to combine conditional statements (`and`, `or`, `not`).
-4.  **Assignment Operators**: Used to assign values to variables. Compound operators (`+=`, `-=`, etc.) perform an operation and an assignment in one step.
-5.  **Membership Operators**: Used to test if a sequence is presented in an object (`in`, `not in`).
-6.  **Identity Operators**: Used to compare the memory locations of two objects (`is`, `is not`). This is different from `==`, which compares the values.
+3. **Compound assignment and membership:** Operators like `+=`, `-=`, and `*=` update a variable concisely (`x += 5`), while `in` and `not in` check whether an element exists inside a sequence.
 
-## Expected Output
+4. **Identity (`is`) vs. equality (`==`):** Two distinct lists can contain equal values (`==` is `True`) while occupying different locations in memory (`is` is `False`):
 
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+print(f"a is b -> {a is b}")
+print(f"a is c -> {a is c}")
+print(f"a == b -> {a == b}")
 ```
-This script is organized into functions to demonstrate each operator type clearly.
-We will cover functions in detail in a later example.
 
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_04_operators.py
+```
+
+### Expected Output
+
+```text
 --- Arithmetic Operators ---
 10 + 3 = 13
 10 - 3 = 7
@@ -164,10 +85,10 @@ a = [1, 2, 3], b = [1, 2, 3], c = a
 a is b -> False
 a is c -> True
 a == b -> True
-
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   The distinction between `is` (identity) and `==` (equality) is a key concept. `is` checks if two variables refer to the _same object_ in memory, while `==` checks if the _values_ of the objects are equivalent.
--   Operators are fundamental building blocks in Python for performing virtually any computation or logic.
+- Use `==` when comparing values (numbers, strings, lists) and reserve `is` for singletons like `None` (`if value is None:`).
+- Remember `/` always produces a `float` (`10 / 2 == 5.0`), whereas `//` performs floor division.
+- Next: learn how programs read keyboard data in [`sample_05_inputs.md`](./sample_05_inputs.md).

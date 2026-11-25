@@ -1,90 +1,43 @@
-# Escape Characters in Python Strings
+# Escape Characters and Raw Strings
 
-This example demonstrates how to use escape characters to include special characters within a string, such as newlines, tabs, backslashes, and quotes.
+Include newlines, tabs, literal backslashes, and mixed quotes in Python strings—and learn when raw strings (`r"..."`) are cleaner.
 
-## Code
+**Source code:** [`sample_09_escape_character_and_strings.py`](./sample_09_escape_character_and_strings.py) · **Level:** Basic
+
+## Core Concept
+
+Inside standard string literals, the backslash (`\`) starts an **escape sequence** that represents special whitespace (`\n`, `\t`) or escapes delimiters (`\"`, `\'`, `\\`). When a string needs many literal backslashes—such as Windows paths or regular expressions—prefixing it with `r"..."` creates a **raw string** that disables escape processing.
+
+## Guided Walkthrough
+
+1. **Whitespace and literal backslashes:** `\n` breaks to a new line, `\t` inserts a horizontal tab, and `\\` prints a single backslash:
 
 ```python
-# MAIN CODE
-
-"""
-Examples of working with strings and escape characters in Python.
-
-Demonstrates newlines, tabs, backslashes, and quote escaping.
-"""
-
-
-def demonstrate_newline():
-    """Demonstrates the newline character `\n`."""
-    print("--- Newline Character (\\n) ---")
-    print("This string will be split across...\n...two separate lines.")
-    print()
-
-
-def demonstrate_tab():
-    """Demonstrates the tab character `\t`."""
-    print("--- Tab Character (\\t) ---")
-    print("You can create columns:\nCol1\tCol2\tCol3")
-    print("A\tB\tC")
-    print()
-
-
-def demonstrate_backslash():
-    """Demonstrates how to escape the backslash character `\\`."""
-    print("--- Backslash Character (\\\\) ---")
-    # To print a single backslash, you need to escape it with another one.
-    print("This is a single backslash: \\")
-    print("Useful for file paths in strings: C:\\Users\\Name")
-    print()
-
-
-def demonstrate_quotes():
-    """Demonstrates how to include quotes inside a string."""
-    print("--- Escaping Quotes (\\' and \\\") ---")
-    # You can escape quotes to include them in a string literal.
-    print("She said, \"It's a beautiful day!\"")  # fmt: skip
-    # Alternatively, use the other type of quote for the string itself.
-    print('He replied, "Indeed it is."')
-    print()
-
-
-def demonstrate_interactive_example():
-    """Combines user input with escape characters."""
-    print("--- Interactive Example ---")
-    first_name = input("What's your first name?: ")
-    last_name = input("What's your last name?: ")
-    # Using \n for newlines and \" to wrap the name in quotes.
-    print(f"\nYour name is:\n\t\"{first_name} {last_name}\"")  # fmt: skip
-    print()
-
-
-def main():
-    """Main function to demonstrate all escape character examples."""
-    demonstrate_newline()
-    demonstrate_tab()
-    demonstrate_backslash()
-    demonstrate_quotes()
-    demonstrate_interactive_example()
-
-
-if __name__ == "__main__":
-    main()
+print("This string will be split across...\n...two separate lines.")
+print("You can create columns:\nCol1\tCol2\tCol3")
+print("Useful for Windows paths: C:\\Users\\Name")
 ```
 
-## Explanation
+2. **Raw strings (`r"..."`):** Prefixing a literal with `r` keeps every backslash intact without doubling them:
 
-Escape characters, which begin with a backslash (`\`), are used to signal that the character following it has a special meaning. The most common are:
-
-1.  **`\n` (Newline)**: Inserts a line break, moving the cursor to the beginning of the next line.
-2.  **`\t` (Tab)**: Inserts a horizontal tab, which is useful for aligning text in columns.
-3.  **`\\` (Backslash)**: Since the backslash is the escape character itself, you need to use two of them (`\\`) to print a single, literal backslash.
-4.  **`\"` and `\'` (Quotes)**: These allow you to include double or single quotes inside a string literal that is defined by the same type of quote. An easier alternative is often to just use the other quote type to define the string (e.g., use single quotes for the string if it contains double quotes).
-
-## Expected Output
-
-The output will be a series of demonstrations, with the last one being interactive. An example session:
-
+```python
+windows_path = r"C:\Users\Name\Documents"
+print(f"Raw string path: {windows_path}")
 ```
+
+3. **Quotes inside strings:** Either escape the inner quote (`\"`) or wrap the string in the opposite quote style (`'...'` around double quotes). Notice `# fmt: skip` preserves the escaped `\"` lesson when formatting with `Ruff`.
+
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_09_escape_character_and_strings.py
+```
+
+### Expected Output
+
+With sample inputs `John` and `Doe`:
+
+```text
 --- Newline Character (\n) ---
 This string will be split across...
 ...two separate lines.
@@ -96,7 +49,10 @@ A	B	C
 
 --- Backslash Character (\\) ---
 This is a single backslash: \
-Useful for file paths in strings: C:\Users\Name
+Useful for Windows paths: C:\Users\Name
+
+--- Raw Strings (r"...") ---
+Raw string path: C:\Users\Name\Documents
 
 --- Escaping Quotes (\' and \") ---
 She said, "It's a beautiful day!"
@@ -108,10 +64,11 @@ What's your last name?: Doe
 
 Your name is:
 	"John Doe"
-
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   **Raw Strings**: For strings that contain many backslashes, like Windows file paths, it can be cumbersome to escape each one. Python offers **raw strings** for this. By prefixing a string with an `r`, you tell Python to treat backslashes as literal characters.
-    -   Example: `path = r"C:\Users\New_User\Documents"` is easier to write and read than `path = "C:\\Users\\New_User\\Documents"`
+- Use `r"..."` (raw strings) for regex patterns and Windows-style paths—noting one edge case: a raw string cannot end with an odd number of trailing backslashes (e.g., `r"C:\"` is invalid).
+- Also use raw docstrings (`r"""..."""`) whenever a docstring mentions `\n` or `\t` to avoid Python `SyntaxWarning` on invalid escape sequences.
+- Alternating outer quotes (`'He said, "Hi."'`) is usually cleaner than escaping with `\"`.
+- Next: advance to loops in [`sample_10_while_iterations.md`](../02_intermediate/sample_10_while_iterations.md).

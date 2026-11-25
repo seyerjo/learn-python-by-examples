@@ -1,131 +1,64 @@
-# String Operations in Python
+# String Operations: Joining, Indexing, Slicing, and F-Strings
 
-This example demonstrates various common operations that can be performed on strings in Python. The code is structured into separate functions to clearly illustrate each concept, introducing basic formatting first and then the more modern f-string method.
+Manipulate text in Python using `+` concatenation, `*` repetition, `len()`, indexing, slicing, and modern f-strings.
 
-## Code
+**Source code:** [`sample_03_strings_operations.py`](./sample_03_strings_operations.py) · **Level:** Basic
+
+## Core Concept
+
+In Python, a string (`str`) is an **immutable sequence** of characters. Because it is a sequence, you can measure its length with `len()` and read individual characters or substrings by position—without ever modifying the original string in place.
+
+*(Note: The script groups each topic into separate helper functions such as `demonstrate_slicing()` to stay clean; functions are covered in depth later in [`sample_15_functions.md`](../02_intermediate/sample_15_functions.md).)*
+
+## Guided Walkthrough
+
+1. **Concatenation and repetition:** Use `+` to join strings and `*` to repeat them. Passing `sep=""` to `print()` prevents spaces between comma-separated arguments:
 
 ```python
-# MAIN CODE
-
-"""
-Example demonstrating various string operations in Python.
-
-A note on functions:
-
-- This code is organized into 'functions' (e.g., `def demonstrate_slicing():`).
-- A function is a reusable block of code that performs a specific task.
-- Using functions helps keep our code clean, organized, and easy to read.
-- We will cover functions in much more detail in a later example
-  (sample_15_functions.py).
-"""
-
-
-def demonstrate_concatenation_and_repetition():
-    """Demonstrates string concatenation and repetition."""
-    print("--- Concatenation and Repetition ---")
-    first_string = "123"
-    second_string = "456"
-    hip_string = "Hip"
-    hurra_string = "Hurra"
-
-    # Simple concatenation using the '+' operator
-    concatenated = first_string + second_string
-    print("'", first_string, "' + '", second_string, "' = '", concatenated, "'", sep="")
-    # The sep="" argument prevents print() from adding extra spaces between items.
-
-    # Repetition using the '*' operator
-    triplicate = first_string * 3
-    print("'", first_string, "' * 3 = '", triplicate, "'", sep="")
-
-    # Combined repetition and concatenation
-    cheer = ((hip_string + " ") * 2) + hurra_string
-    print("Cheer example:", cheer)
-    print()
-
-
-def demonstrate_length_and_indexing():
-    """Demonstrates calculating length and accessing characters by index."""
-    print("--- Length and Indexing ---")
-    large_string = """This is a large string
-    that spans multiple lines
-    and contains various characters."""
-    world_string = "World"
-
-    # Get the total number of characters in a string
-    print("Length of the large string is:", len(large_string))
-
-    # Access individual characters using zero-based indexing
-    print("First character of 'World':", world_string[0])
-    print("Third character of 'World':", world_string[2])
-    print("Last character of 'World':", world_string[-1])
-    print()
-
-
-def demonstrate_slicing():
-    """Demonstrates extracting substrings using slicing."""
-    print("--- String Slicing ---")
-    world_string = "World"
-
-    # Slice from index 2 to the end
-    print("Slice [2:]:", world_string[2:])
-
-    # Slice from the beginning to index 3 (exclusive)
-    print("Slice [:3]:", world_string[:3])
-
-    # Slice from the beginning to the second-to-last character
-    print("Slice [:-1]:", world_string[:-1])
-
-    # Slice with a step (every second character)
-    print("Slice [::2]:", world_string[::2])
-    print()
-
-
-def demonstrate_f_strings():
-    """Demonstrates the use of f-strings for modern formatting."""
-    print("--- F-String Formatting (Modern Method) ---")
-    world_string = "World"
-
-    # Embedding variables directly into a string
-    sentence = f"I am a citizen of the {world_string}"
-    print("f-string sentence:", sentence)
-
-    # Repetition with f-strings
-    repeated = f"I am a citizen of the {world_string}, " * 2
-    print("f-string repeated:", repeated)
-    print()
-
-
-def main():
-    """Main function to demonstrate all string operations."""
-    demonstrate_concatenation_and_repetition()
-    demonstrate_length_and_indexing()
-    demonstrate_slicing()
-    demonstrate_f_strings()
-
-
-if __name__ == "__main__":
-    main()
+concatenated = first_string + second_string
+print("'", first_string, "' + '", second_string, "' = '", concatenated, "'", sep="")
+cheer = ((hip_string + " ") * 2) + hurra_string
 ```
 
-## Explanation
+2. **Length and indexing:** `len()` counts every character (including spaces and newlines inside `"""..."""`). Indexes start at `0` from the left and `-1` from the right:
 
-1.  **Concatenation**: Joining two or more strings together using the `+` operator.
-2.  **Repetition**: Repeating a string multiple times using the `*` operator.
-3.  **Length (`len()`)**: Calculating the total number of characters in a string.
-4.  **Indexing**: Accessing individual characters in a string using their numerical index (starting from 0).
-5.  **Slicing**: Extracting a portion of a string using a `[start:stop:step]` syntax.
-6.  **F-Strings**: A modern and readable way to embed expressions and variables inside string literals. This is often the preferred method for string formatting.
-
-## Expected Output
-
+```python
+print("Length of the large string is:", len(large_string))
+print("First character of 'World':", world_string[0])
+print("Last character of 'World':", world_string[-1])
 ```
+
+3. **Slicing (`[start:stop:step]`):** Extracts a substring where `start` is inclusive and `stop` is exclusive; `step` controls the stride:
+
+```python
+print("Slice [2:]:", world_string[2:])  # 'rld'
+print("Slice [:3]:", world_string[:3])  # 'Wor' (indices 0, 1, 2)
+print("Slice [:-1]:", world_string[:-1])  # 'Worl'
+print("Slice [::2]:", world_string[::2])  # 'Wrd'
+```
+
+4. **F-strings (`f"..."`):** Embed variables directly inside `{...}` for clean, readable formatting:
+
+```python
+sentence = f"I am a citizen of the {world_string}"
+```
+
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_03_strings_operations.py
+```
+
+### Expected Output
+
+```text
 --- Concatenation and Repetition ---
 '123' + '456' = '123456'
 '123' * 3 = '123123123'
 Cheer example: Hip Hip Hurra
 
 --- Length and Indexing ---
-Length of the large string is: 67
+Length of the large string is: 89
 First character of 'World': W
 Third character of 'World': r
 Last character of 'World': d
@@ -138,12 +71,12 @@ Slice [::2]: Wrd
 
 --- F-String Formatting (Modern Method) ---
 f-string sentence: I am a citizen of the World
-f-string repeated: I am a citizen of the World, I am a citizen of the World,
-
+f-string repeated: I am a citizen of the World, I am a citizen of the World, 
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   **Modularity**: Structuring code into smaller, single-purpose functions makes it easier to read, test, and maintain.
--   **Immutability**: Strings in Python are immutable. Operations like concatenation or slicing don't change the original string; they create and return a new one.
--   **Formatting**: While older methods like using commas in `print` work, f-strings are generally preferred in modern Python for their clarity and power.
+- Strings are **immutable**: every operation returns a brand-new string.
+- Remember that `stop` in `text[start:stop]` is **exclusive** (`"World"[:3]` gives `"Wor"`, not `"Worl"`).
+- Prefer f-strings (`f"..."`) over manual `+` concatenation when mixing text and variables.
+- Next: explore Python operators in [`sample_04_operators.md`](./sample_04_operators.md).

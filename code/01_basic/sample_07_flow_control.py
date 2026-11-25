@@ -1,16 +1,10 @@
-# MAIN CODE
-
-"""
-Demonstrates basic flow control in Python using if-elif-else,
-logical operators, and nested if statements.
-"""
+"""Demonstrates conditional flow control with if-elif-else, 'and', and nested checks."""
 
 
 def demonstrate_if_elif_else():
-    """Compares two integers to show basic if-elif-else structure."""
+    """Compares two integers using an if-elif-else chain."""
     print("--- Example 1: Basic if-elif-else ---")
-    # IMPORTANT: The int() function will cause a ValueError if you enter
-    # non-numeric text. A robust solution is covered in sample_18.
+    # int() raises ValueError on non-numeric input; handled safely in sample_18.
     num_1 = int(input("Enter the first integer: "))
     num_2 = int(input("Enter the second integer: "))
 
@@ -24,12 +18,13 @@ def demonstrate_if_elif_else():
 
 
 def demonstrate_logical_flow():
-    """Uses the 'and' operator to check if a number is within a range."""
+    """Classifies an age into ranges using logical 'and'."""
     print("--- Example 2: Flow Control with Logical 'and' ---")
-    # IMPORTANT: Vulnerable to ValueError. See sample_18 for the solution.
     age = int(input("Enter your age: "))
 
-    if age > 0 and age < 18:
+    if age < 0:
+        print("Age cannot be negative.")
+    elif age >= 0 and age < 18:
         print("You are a minor.")
     elif age >= 18 and age < 65:
         print("You are an adult.")
@@ -39,15 +34,14 @@ def demonstrate_logical_flow():
 
 
 def demonstrate_nested_if():
-    """Shows a nested if statement to check a sub-condition."""
+    """Uses nested conditionals to verify role and active status."""
     print("--- Example 3: Nested if Statements ---")
-    # Using .lower() to make the comparison case-insensitive
-    user_role = input("Enter user role (admin/user): ").lower()
-    is_active_str = input("Is the user active? (yes/no): ").lower()
+    # Strip whitespace and normalize casing before comparing user text.
+    user_role = input("Enter user role (admin/user): ").strip().lower()
+    is_active_str = input("Is the user active? (yes/no): ").strip().lower()
 
     if user_role == "admin":
         print("Admin access granted.")
-        # This 'if' is nested inside the first one.
         if is_active_str == "yes":
             print("User is active and can make changes.")
         else:
@@ -58,7 +52,7 @@ def demonstrate_nested_if():
 
 
 def main():
-    """Main function to demonstrate all flow control examples."""
+    """Runs all flow control demonstrations."""
     demonstrate_if_elif_else()
     demonstrate_logical_flow()
     demonstrate_nested_if()

@@ -1,54 +1,33 @@
-# MAIN CODE
+"""Demonstrates comment styles, docstrings, and basic module structure in Python."""
 
-#  This is a single-line comment.
-
-"""
-This is a multi-line comment also known as a docstring.
-It is often used at the beginning of a module, function,
-or class to document functions, classes, modules, etc.
-"""
-
-# Inline comment after a line of code.
-INITIAL_VALUE = 10  # This is an inline comment.
-
-# Example of a function with a docstring.
+# Single-line comment explaining a module-level constant.
+INITIAL_VALUE = 10  # Inline comment explaining an expression or value.
 
 
 def calculate_square(number):
     """Calculate the square of a number.
 
     Args:
-        number (int): The number to be squared.
+        number: The numeric value to square.
 
     Returns:
-        int: The square of the input number.
+        The squared value.
     """
-    square_value = number * number
-    return square_value
-
-
-# Example of calling a function and printing the result.
+    return number * number
 
 
 def main():
-    """Main function to demonstrate example usage."""
-    # Call the function and print the result.
+    """Demonstrates calling a documented function and using constants."""
     calculation_result = calculate_square(5)
-    # The print() function is used to output text to the console.
-    print(calculation_result)  # Inline comment after a function call.
+    print(f"5 squared = {calculation_result}")
 
-    # Comment explaining a part of the code.
-    # The following code block handles the ZeroDivisionError exception.
-    try:
-        result = 10 / 0
-    except ZeroDivisionError:
-        print("Cannot divide by zero!")
+    # Combine the module constant with the function result.
+    total = INITIAL_VALUE + calculation_result
+    print(f"{INITIAL_VALUE} + {calculation_result} = {total}")
 
 
 if __name__ == "__main__":
     main()
 
-
-# Code commented out, ignored by the interpreter.
-# if True:
-#     print("This code will not be executed")
+# Commented-out code is ignored by the Python interpreter:
+# print("This line will not run.")

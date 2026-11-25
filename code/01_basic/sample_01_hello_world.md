@@ -1,48 +1,49 @@
-# Hello World in Python
+# Hello World and the `__main__` Guard
 
-This example demonstrates how to print "Hello, World!" to the console in Python and introduces the standard structure for a runnable script.
+Write your first runnable Python script using `print()`, quote delimiters, and the standard `if __name__ == "__main__":` entry guard.
 
-## Code
+**Source code:** [`sample_01_hello_world.py`](./sample_01_hello_world.py) · **Level:** Basic
+
+## Core Concept
+
+Python executes a file from top to bottom. Placing your program's entry logic inside a `main()` function and calling it behind `if __name__ == "__main__":` ensures the script runs automatically when invoked from a terminal, yet stays quiet if another file imports it as a module.
+
+## Guided Walkthrough
+
+1. **Printing text with double or single quotes:** Both `"..."` and `'...'` create valid string literals in Python:
 
 ```python
-# MAIN CODE
-
-"""Example of printing 'Hello, World!' to the console."""
-
-
 def main():
-    """Prints 'Hello, World!' to the console."""
-    print("Hello, World!")  # Using double quotes
-    print('Hello, World!')  # Using single quotes  # fmt: skip
+    """Prints 'Hello, World!' using double and single quotes."""
+    print("Hello, World!")
+    print('Hello, World!')  # fmt: skip
+```
 
+2. **The `__main__` entry guard:** Python automatically sets the special `__name__` variable to `"__main__"` only when a file is executed directly (`python3 sample_01_hello_world.py`). When imported by another script, `__name__` equals the module name instead:
 
-# The `if __name__ == "__main__":` block is a standard best practice in Python.
-# It ensures that the `main()` function is called only when the script is
-# executed directly (not when it is imported as a module into another script).
-# This makes your code more reusable and organized.
+```python
 if __name__ == "__main__":
     main()
 ```
 
-## Explanation
+*(Notice `# fmt: skip` on the single-quoted line: it tells `Ruff` to keep the single quotes intact so both quote styles stay visible in this lesson.)*
 
-1.  **`print()` function**: This is the basic function used to output text to the console.
-2.  **`main()` function**: It's a convention to place the main logic of your script inside a function, typically named `main`. This helps organize the code.
-3.  **`if __name__ == "__main__":`**: This is a crucial construct in Python.
-    - `__name__` is a special variable that Python automatically sets.
-    - When you run your script directly, Python sets `__name__` to the string `"__main__"`.
-    - If your script is imported by another script, `__name__` is set to the script's filename.
-    - Therefore, this `if` statement checks "Am I being run directly?". If `True`, it calls the `main()` function. This prevents the `main()` function from running automatically when the file is just imported.
+## Running the Example
 
-## Expected Output
-
-When you run this code, you should see the following output:
-
+```bash
+python3 code/01_basic/sample_01_hello_world.py
 ```
+
+### Expected Output
+
+```text
 Hello, World!
 Hello, World!
 ```
 
-## Points to Consider
+## Key Takeaways
 
-- Using a `main` function and the `if __name__ == "__main__":` guard is a standard best practice that makes your code more modular, reusable, and easier to read, even for simple scripts.
+- `print()` writes text to standard output followed by a newline by default.
+- Double and single quotes behave identically in Python; pick one consistent style (double quotes by default) unless a string contains the other quote character.
+- Adopt `def main():` + `if __name__ == "__main__":` from day one to keep every script modular and import-safe.
+- Next: explore Python's core data types in [`sample_02_primitives_data_types.md`](./sample_02_primitives_data_types.md).

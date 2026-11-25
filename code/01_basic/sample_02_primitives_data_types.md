@@ -1,64 +1,48 @@
-# Primitive Data Types in Python
+# Built-in Data Types and `type()`
 
-This example illustrates the basic data types available in Python, including numeric types, sequences, mappings, and more.
+Inspect Python's core scalar types and built-in collection types at runtime using the `type()` function.
 
-## Code
+**Source code:** [`sample_02_primitives_data_types.py`](./sample_02_primitives_data_types.py) · **Level:** Basic
+
+## Core Concept
+
+Python is **dynamically typed**: variables do not require explicit type declarations because every value carries its own type at runtime. Calling `type(value)` reveals the exact class of any object—covering both scalar values (`int`, `float`, `complex`, `str`, `bool`, `NoneType`) and core container types (`list`, `tuple`, `dict`, `set`).
+
+## Guided Walkthrough
+
+1. **Scalar and special types** hold single values:
 
 ```python
-# MAIN CODE
-
-"""Example demonstrating various primitive data types in Python."""
-
-
-def main():
-    """Main function to demonstrate example usage."""
-    # Variables of different data types.
-    integer_variable = 1
-    float_variable = 3.14
-    complex_variable = 1 + 2j
-    string_variable = "Hello, Coder!"
-    list_variable = [1, 2, 3]
-    tuple_variable = (4.0, 5.5, 6.9)
-    dictionary_variable = {"key": "value"}
-    set_variable = {7, 8, 9}
-    boolean_variable = False
-    none_variable = None
-
-    # Using the 'type' function to determine data types.
-    print(type(integer_variable))  # int
-    print(type(float_variable))  # float
-    print(type(complex_variable))  # complex
-    print(type(string_variable))  # str
-    print(type(list_variable))  # list
-    print(type(tuple_variable))  # tuple
-    print(type(dictionary_variable))  # dictionary
-    print(type(set_variable))  # set
-    print(type(boolean_variable))  # bool
-    print(type(none_variable))  # NoneType
-
-
-if __name__ == "__main__":
-    main()
+integer_variable = 1  # int: whole numbers
+float_variable = 3.14  # float: decimal numbers
+complex_variable = 1 + 2j  # complex: real + imaginary parts
+string_variable = "Hello, Coder!"  # str: immutable text
+boolean_variable = False  # bool: True or False
+none_variable = None  # NoneType: explicit absence of a value
 ```
 
-## Explanation
+2. **Built-in collection types** group multiple values with different ordering and mutability guarantees:
 
-1.  **Integers (`int`)**: Whole numbers, like `1`, `10`, or `-5`.
-2.  **Floats (`float`)**: Numbers with a fractional part, like `3.14` or `-0.5`.
-3.  **Complex (`complex`)**: Numbers with a real and imaginary part, like `1 + 2j`.
-4.  **Strings (`str`)**: Sequences of characters, like `"Hello, Coder!"`.
-5.  **Lists (`list`)**: Ordered, mutable sequences of items, like `[1, 2, 3]`.
-6.  **Tuples (`tuple`)**: Ordered, immutable sequences of items, like `(4.0, 5.5, 6.9)`.
-7.  **Dictionaries (`dict`)**: Unordered collections of key-value pairs, like `{"key": "value"}`.
-8.  **Sets (`set`)**: Unordered collections of unique items, like `{7, 8, 9}`.
-9.  **Booleans (`bool`)**: Logical values that can be either `True` or `False`.
-10. **NoneType (`None`)**: Represents the absence of a value.
-
-## Expected Output
-
-When you run this code, you should see the following output, which shows the class (type) of each variable:
-
+```python
+list_variable = [1, 2, 3]  # Ordered, mutable sequence
+tuple_variable = (4.0, 5.5, 6.9)  # Ordered, immutable sequence
+dictionary_variable = {
+    "key": "value"
+}  # Key-value map (preserves insertion order since Python 3.7+)
+set_variable = {7, 8, 9}  # Unordered collection of unique items
 ```
+
+3. **Runtime inspection:** Passing each variable to `print(type(...))` outputs its underlying class name.
+
+## Running the Example
+
+```bash
+python3 code/01_basic/sample_02_primitives_data_types.py
+```
+
+### Expected Output
+
+```text
 <class 'int'>
 <class 'float'>
 <class 'complex'>
@@ -71,8 +55,9 @@ When you run this code, you should see the following output, which shows the cla
 <class 'NoneType'>
 ```
 
-## Points to Consider
+## Key Takeaways
 
--   Python is a dynamically-typed language, meaning you don't have to explicitly declare the data type of a variable.
--   The `type()` function is a useful built-in tool for debugging and understanding the data you are working with.
--   **Mutability**: Some types are _mutable_ (their value can change), like `list`, `dict`, and `set`. Others are _immutable_ (their value cannot change after creation), like `int`, `float`, `str`, and `tuple`.
+- Every variable name points to a typed object, so `type()` is a quick diagnostic tool during debugging.
+- **Mutability matters:** `list`, `dict`, and `set` can be modified in place after creation, whereas `int`, `float`, `complex`, `str`, `tuple`, `bool`, and `NoneType` are immutable.
+- Unlike `set`, Python dictionaries (`dict`) preserve key insertion order as part of the language specification since Python 3.7+.
+- Next: work with text values in detail in [`sample_03_strings_operations.md`](./sample_03_strings_operations.md).

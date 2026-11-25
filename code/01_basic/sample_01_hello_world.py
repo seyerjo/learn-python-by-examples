@@ -1,17 +1,12 @@
-# MAIN CODE
-
-"""Example of printing 'Hello, World!' to the console."""
+"""Demonstrates printing 'Hello, World!' and the __main__ entry guard."""
 
 
 def main():
-    """Prints 'Hello, World!' to the console."""
-    print("Hello, World!")  # Using double quotes
-    print('Hello, World!')  # Using single quotes  # fmt: skip
+    """Prints 'Hello, World!' using double and single quotes."""
+    print("Hello, World!")
+    print('Hello, World!')  # fmt: skip
 
 
-# The `if __name__ == "__main__":` block is a standard best practice in Python.
-# It ensures that the `main()` function is called only when the script is
-# executed directly (not when it is imported as a module into another script).
-# This makes your code more reusable and organized.
+# Run main() only when executed directly, not when imported as a module.
 if __name__ == "__main__":
     main()
