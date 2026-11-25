@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Hardened `.gitignore` to ignore `.env.*` variants (while keeping `!.env.example` tracked) as well as `*.pem` and `*.key` private key files.
+
 ## [2.0.0] - 2026-11-25
 
 ### Added
