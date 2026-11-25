@@ -20,7 +20,7 @@ Designed for learners and developers who want clean, idiomatic Python 3 code—m
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg?logo=python&logoColor=white)](#installation)
 [![Examples](https://img.shields.io/badge/Examples-24_Samples-0ea5e9.svg)](#examples)
-[![Version](https://img.shields.io/badge/Version-v1.2.5-blue.svg)](#documentation)
+[![Version](https://img.shields.io/badge/Version-v2.0.0-blue.svg)](#documentation)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](#license)
 [![Last Commit](https://img.shields.io/github/last-commit/seyerjo/learn-python-by-examples)](https://github.com/seyerjo/learn-python-by-examples/commits/main)
 
@@ -150,6 +150,7 @@ learn-python-by-examples/
 │   └── 02_engineering_guidelines.md
 ├── CHANGELOG.md
 ├── LICENSE
+├── pyproject.toml
 └── README.md
 ```
 
@@ -174,7 +175,7 @@ python3 code/01_basic/sample_01_hello_world.py
 
 ## Documentation
 
-- **[Changelog](./CHANGELOG.md):** Release history and version milestones (currently `v1.2.5`, with recent updates under `## [Unreleased]`).
+- **[Changelog](./CHANGELOG.md):** Release history and version milestones (currently `v2.0.0`).
 - **[Project Blueprint](./docs/01_project_blueprint.md):** Vision, functional/non-functional requirements, and feature scope.
 - **[Engineering Guidelines](./docs/02_engineering_guidelines.md):** Technical architecture, tech stack rationale, and Python style guide.
 

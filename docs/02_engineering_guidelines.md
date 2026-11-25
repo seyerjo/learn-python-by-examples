@@ -22,6 +22,7 @@ learn-python-by-examples/
 │   └── 02_engineering_guidelines.md
 ├── CHANGELOG.md                # Historical release log (Keep a Changelog standard)
 ├── LICENSE                     # Project license (MIT)
+├── pyproject.toml              # Ruff & mypy configuration
 └── README.md                   # Primary project entry point & usage overview
 ```
 

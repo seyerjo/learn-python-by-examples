@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-11-25
+
 ### Added
 - Added local repository visual assets (`.github/assets/banner.png` and `.github/assets/avatar.png`) for the root `README.md`.
 - Added the pedagogical progression boundary matrix (`01_basic`, `02_intermediate`, `03_advanced`) in `docs/02_engineering_guidelines.md`.
@@ -14,7 +16,6 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Bumped the minimum supported Python version from `3.7+` to `3.11+` (after Python 3.10 reached End-of-Life in October 2026) across `README.md`, `docs/01_project_blueprint.md`, and `docs/02_engineering_guidelines.md`, and modernized type annotations in `sample_22` and `sample_23` to PEP 585/604 syntax.
-- Audited and formatted all 24 baseline scripts (`sample_00`–`sample_23`) (88-character line length), added `#!/usr/bin/env python3` and `sys.exit(0)` across `code/03_advanced/`, and resynchronized all twin `.md` documentation files.
 - Modernized the Basic tier (`code/01_basic`, `sample_00`–`sample_09`): removed legacy `# MAIN CODE` headers, normalized all 20 `.py`/`.md` files to Unix `LF`, enforced `Ruff` lint/formatting, trimmed redundant comments, and rewrote all 10 guides using the Option A mini-manual template.
 - Modernized the Intermediate tier (`code/02_intermediate`, `sample_10`–`sample_18`): removed legacy `# MAIN CODE` headers, normalized all 18 `.py`/`.md` files to Unix `LF`, enforced `Ruff` lint/formatting, trimmed redundant comments, normalized interactive `quit` checks in `sample_10` and `sample_12`, verified output in `sample_13`, `sample_14`, and `sample_17`, and rewrote all 9 guides using the Option A mini-manual template.
 - Modernized the Advanced tier (`code/03_advanced`, `sample_19`–`sample_23`): removed legacy `# MAIN CODE` headers and ASCII note boxes, normalized all 10 `.py`/`.md` files to Unix `LF`, refactored `main() -> int` + `raise SystemExit(main())`, added graceful `KeyboardInterrupt` handling (exit `130`) and `sys.stderr` validation routing (`sample_19`–`sample_22`), removed duplicated types from Google docstrings, verified with `Ruff` and `mypy --strict`, updated verified iteration counts in `sample_20`/`sample_21`, and rewrote all 5 guides using the Option A mini-manual template.
